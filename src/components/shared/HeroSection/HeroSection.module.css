@@ -1,0 +1,107 @@
+.hero {
+  position: relative;
+  min-height: min(740px, 84vh);
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 25%, #f1f5f9 100%);
+  color: var(--color-text-inverse);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 86% 18%, rgba(69, 81, 230, 0.34), transparent 38%),
+    radial-gradient(ellipse at 12% 86%, rgba(99, 102, 241, 0.24), transparent 44%),
+    linear-gradient(90deg, rgba(10, 16, 28, 0.9) 0%, rgba(26, 32, 44, 0.72) 48%, rgba(10, 16, 28, 0.2) 100%),
+    linear-gradient(180deg, rgba(10, 16, 28, 0.06) 0%, rgba(10, 16, 28, 0.78) 100%);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  padding: 150px 0 52px;
+}
+
+.content {
+  max-width: 780px;
+}
+
+.eyebrow {
+  width: fit-content;
+  margin: 0;
+  border: 1px solid rgba(69, 81, 230, 0.1);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-raised);
+  padding: 10px 18px;
+  color: var(--color-brand);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: 0 4px 20px rgba(69, 81, 230, 0.15);
+}
+
+.title {
+  max-width: 900px;
+  margin: 24px 0 0;
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  line-height: 1.1;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.description {
+  max-width: 680px;
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(0.95rem, 2vw, 1.2rem);
+  line-height: var(--line-height-body);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: 28px;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.badge {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.12);
+  padding: 8px 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  backdrop-filter: blur(12px);
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: 620px;
+  }
+
+  .inner {
+    padding-top: 122px;
+    padding-bottom: 36px;
+  }
+
+  .eyebrow {
+    padding: 8px 14px;
+    font-size: var(--font-size-xs);
+  }
+}

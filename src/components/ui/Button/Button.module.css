@@ -1,0 +1,95 @@
+.button {
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  padding: 0 28px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  transition:
+    background var(--transition-standard),
+    color var(--transition-standard),
+    border-color var(--transition-standard),
+    box-shadow var(--transition-standard),
+    transform var(--transition-standard);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 4px rgba(69, 81, 230, 0.16),
+    var(--shadow-brand);
+}
+
+.label,
+.icon {
+  position: relative;
+}
+
+.icon {
+  transition: transform var(--transition-standard);
+}
+
+.button:hover .icon {
+  transform: translateX(2px);
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--color-brand), var(--color-brand-bright));
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-brand);
+}
+
+.primary:hover {
+  background: linear-gradient(135deg, var(--color-brand-strong), var(--color-brand));
+  box-shadow: 0 12px 35px rgba(69, 81, 230, 0.4);
+}
+
+.secondary {
+  border-color: var(--color-brand);
+  background: var(--color-surface-raised);
+  color: var(--color-brand);
+  box-shadow: 0 4px 15px rgba(69, 81, 230, 0.1);
+}
+
+.secondary:hover {
+  border-color: var(--color-brand);
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
+  box-shadow: 0 12px 35px rgba(69, 81, 230, 0.3);
+}
+
+.ghost {
+  border-color: var(--color-border);
+  background: var(--color-surface-raised);
+  color: var(--color-text-primary);
+  box-shadow: none;
+}
+
+.ghost:hover {
+  border-color: var(--color-border-strong);
+  background: var(--color-brand-soft);
+  color: var(--color-brand);
+  box-shadow: 0 8px 25px rgba(69, 81, 230, 0.12);
+}
+
+@media (max-width: 640px) {
+  .button {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 22px;
+    font-size: var(--font-size-sm);
+  }
+}

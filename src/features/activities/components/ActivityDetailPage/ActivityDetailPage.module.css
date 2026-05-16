@@ -1,0 +1,67 @@
+.section {
+  padding: var(--space-section) 0;
+}
+
+.surface {
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.gridSurface {
+  background-color: #f8fafc;
+  background-image:
+    linear-gradient(rgba(69, 81, 230, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(69, 81, 230, 0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.header {
+  margin-bottom: var(--space-xl);
+}
+
+.splitHeader {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: var(--space-lg);
+  align-items: end;
+  margin-bottom: var(--space-xl);
+}
+
+.contactIntro {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.notes {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+  list-style: none;
+}
+
+.note {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-raised);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-lg);
+}
+
+@media (max-width: 880px) {
+  .splitHeader,
+  .contactIntro,
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}

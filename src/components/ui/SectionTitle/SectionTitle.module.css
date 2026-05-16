@@ -1,0 +1,45 @@
+.block {
+  max-width: 760px;
+  display: grid;
+  gap: 14px;
+}
+
+.eyebrow {
+  width: fit-content;
+  margin: 0;
+  color: var(--color-brand);
+  border: 1px solid rgba(69, 81, 230, 0.1);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-raised);
+  padding: 10px 18px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0;
+  text-transform: none;
+  box-shadow: 0 4px 20px rgba(69, 81, 230, 0.15);
+}
+
+.title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.subtitle {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: var(--line-height-body);
+}
+
+@media (max-width: 640px) {
+  .eyebrow {
+    padding: 8px 14px;
+    font-size: var(--font-size-xs);
+  }
+}
