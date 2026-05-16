@@ -34,7 +34,7 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
         <Link href="/" className={styles.brand}>
           <span className={styles.logo}>
             <Image
-              src="/escxv-logo.svg"
+              src="/escxv-logo.png"
               alt=""
               width={36}
               height={36}

@@ -34,15 +34,12 @@
 }
 
 .logo {
-  width: 46px;
-  height: 46px;
-  display: grid;
-  place-items: center;
-  flex: none;
+  display: flex;
+  width: 66px;
+  height: 66px;
   border: 0;
   border-radius: 12px;
   background: var(--color-surface-raised);
-  padding: 5px;
   box-shadow: 0 4px 16px rgba(69, 81, 230, 0.15);
   transition:
     transform var(--transition-standard),
