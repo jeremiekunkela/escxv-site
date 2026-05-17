@@ -1,11 +1,10 @@
-import { getOpenActivities } from "@/features/activities/data-access/activities";
+import { getActivities } from "@/features/activities/data-access/activities";
 import { getActivityRoute, routes } from "@/lib/constants/routes";
 import { getClubInfo } from "@/features/club/data-access/club";
 import type { FooterContent, NavigationContent, NavigationLink } from "@/features/navigation/types/navigation";
 
 const mainLinks: NavigationLink[] = [
   { label: "Accueil", href: routes.home },
-  { label: "Infos pratiques", href: routes.practicalInfo },
 ];
 
 export function getNavigationContent(): NavigationContent {
@@ -18,7 +17,7 @@ export function getNavigationContent(): NavigationContent {
       arrondissement: club.arrondissement,
     },
     mainLinks,
-    activityLinks: getOpenActivities().map((activity) => ({
+    activityLinks: getActivities().map((activity) => ({
       label: activity.title,
       href: getActivityRoute(activity.slug),
     })),

@@ -46,11 +46,23 @@ export function ActivityLocationCards({ locations }: ActivityLocationCardsProps)
                 ))}
               </ul>
             ) : null}
-            <div className={styles.mapLink}>
-              <Button href={location.mapUrl} target="_blank" rel="noreferrer">
-                Voir la carte
-              </Button>
-            </div>
+            {location.mapEmbedUrl ? (
+              <div className={styles.mapEmbed}>
+                <iframe
+                  src={location.mapEmbedUrl}
+                  title={`Carte - ${location.name}`}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            ) : (
+              <div className={styles.mapLink}>
+                <Button href={location.mapUrl} target="_blank" rel="noreferrer">
+                  Voir la carte
+                </Button>
+              </div>
+            )}
           </div>
         </article>
       ))}

@@ -1,8 +1,4 @@
-import type { ActivityPublic, ActivityStatus } from "@/features/activities/types/activity";
-
-export function formatStatus(status: ActivityStatus) {
-  return status === "open" ? "Ouverte" : "Bientot";
-}
+import type { ActivityPublic } from "@/features/activities/types/activity";
 
 export function formatEuro(amount: number) {
   return `${amount} €`;

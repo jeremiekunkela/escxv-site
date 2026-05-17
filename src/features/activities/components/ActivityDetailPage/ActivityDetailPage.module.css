@@ -27,29 +27,7 @@
 }
 
 .contactIntro {
-  display: grid;
-  grid-template-columns: 0.8fr 1fr;
-  gap: var(--space-lg);
   margin-bottom: var(--space-xl);
-}
-
-.notes {
-  display: grid;
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-body);
-  list-style: none;
-}
-
-.note {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background: var(--color-surface-raised);
-  padding: 20px;
-  box-shadow: var(--shadow-sm);
 }
 
 .contactGrid {
@@ -60,7 +38,6 @@
 
 @media (max-width: 880px) {
   .splitHeader,
-  .contactIntro,
   .contactGrid {
     grid-template-columns: 1fr;
   }

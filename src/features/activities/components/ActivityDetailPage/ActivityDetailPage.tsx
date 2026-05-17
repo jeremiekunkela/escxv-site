@@ -103,13 +103,6 @@ export function ActivityDetailPage({ activity }: ActivityDetailPageProps) {
                 title={content.contactTitle}
                 subtitle={content.contactText}
               />
-              <ul className={styles.notes}>
-                {content.contactNotes.map((note) => (
-                  <li key={note} className={styles.note}>
-                    {note}
-                  </li>
-                ))}
-              </ul>
             </div>
             <div className={styles.contactGrid}>
               <ActivityContactBlocks contacts={activity.contacts} />

@@ -7,21 +7,33 @@
     "icon": "🥋",
     "shortDescription": "Art martial de maitrise, de precision et de discipline dans un cadre progressif.",
     "description": "Une pratique martiale axee sur la technique, la posture et le controle, avec une progression adaptee aux adolescents et aux adultes.",
-    "category": ["arts-martiaux"],
-    "publics": ["adolescents", "adultes"],
-    "tags": ["technique", "coordination", "discipline"],
-    "status": "coming-soon",
+    "category": [
+      "arts-martiaux"
+    ],
+    "publics": [
+      "adolescents",
+      "adultes"
+    ],
+    "tags": [
+      "technique",
+      "coordination",
+      "discipline"
+    ],
     "image": "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section aikibudo",
       "heroTitle": "Aikibudo a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Arts martiaux", "Adolescents", "Adultes"],
+      "heroBadges": [
+        "Arts martiaux",
+        "Adolescents",
+        "Adultes"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -35,8 +47,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -52,10 +63,20 @@
     "icon": "🏃",
     "shortDescription": "Sprint, demi-fond, sauts et travail technique pour enfants, jeunes et adultes.",
     "description": "La section athletisme de l'ESC XV accueille les pratiquants du loisir a la competition, avec un travail centre sur la piste, la vitesse et la progression technique.",
-    "category": ["athle-running"],
-    "publics": ["enfants", "adolescents", "adultes"],
-    "tags": ["piste", "sprint", "demi-fond", "competition"],
-    "status": "open",
+    "category": [
+      "athle-running"
+    ],
+    "publics": [
+      "enfants",
+      "adolescents",
+      "adultes"
+    ],
+    "tags": [
+      "piste",
+      "sprint",
+      "demi-fond",
+      "competition"
+    ],
     "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
@@ -66,7 +87,12 @@
       "heroPrimaryCtaHref": "https://escxv.monclub.app/",
       "heroSecondaryCtaLabel": "Voir les horaires",
       "heroSecondaryCtaHref": "#horaires",
-      "heroBadges": ["Jeunes", "Piste", "Sprint", "Demi-fond"],
+      "heroBadges": [
+        "Jeunes",
+        "Piste",
+        "Sprint",
+        "Demi-fond"
+      ],
       "introEyebrow": "Presentation",
       "introTitle": "Une section ouverte a tous les niveaux",
       "introText": "La section athletisme de l'ESC XV propose une progression lisible entre decouverte, travail technique, pratique reguliere et objectifs de competition sur piste.",
@@ -91,30 +117,28 @@
       "formEmailLabel": "Email",
       "formPhoneLabel": "Telephone",
       "formMessageLabel": "Message",
-      "formSubmitLabel": "Envoyer",
-      "contactNotes": [
-        "Les categories d'age exactes peuvent varier selon l'encadrement de la saison.",
-        "Le lien d'inscription reste externe et aucune logique d'envoi n'est activee sur cette page."
-      ]
+      "formSubmitLabel": "Envoyer"
     },
     "programs": [
       {
         "title": "Ecole d'athle et jeunes",
         "audience": "Enfants et adolescents",
         "description": "Decouverte de la course, des sauts et des lancers avec une progression technique accessible et un cadre collectif.",
-        "tags": ["Initiation", "Coordination", "Jeunes"]
+        "tags": [
+          "Initiation",
+          "Coordination",
+          "Jeunes"
+        ]
       },
       {
         "title": "Sprint et demi-fond",
         "audience": "Adolescents et adultes",
         "description": "Travail de vitesse, de foullee, de placement et d'endurance specifique pour progresser de facon structuree.",
-        "tags": ["Piste", "Technique", "Competition"]
-      },
-      {
-        "title": "Sauts et technique",
-        "audience": "Adultes",
-        "description": "Atelier technique pour travailler impulsion, coordination et sensations de course sans melanger les pratiques running.",
-        "tags": ["Sauts", "Technique", "Piste"]
+        "tags": [
+          "Piste",
+          "Technique",
+          "Competition"
+        ]
       }
     ],
     "locations": [
@@ -125,9 +149,15 @@
         "city": "Paris",
         "postalCode": "75015",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Centre+sportif+de+La+Plaine+Paris+75015",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.5874898712914!2d2.2909721765913282!3d48.827931671328024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67148258f5ebf%3A0x10de109f3d2c443f!2sCentre%20Sportif%20La%20Plaine!5e0!3m2!1sfr!2sfr!4v1779035821251!5m2!1sfr!2sfr",
         "image": "https://images.unsplash.com/photo-1575318634028-6a0cfcb60c59?auto=format&fit=crop&w=1200&q=80",
         "description": "Site de proximite adapte aux seances piste, aux gammes et au travail technique en semaine.",
-        "tags": ["Piste", "Technique", "Vestiaires"]
+        "tags": [
+          "Piste 372m",
+          "Saut en longueur",
+          "Vestiaires",
+          "Gradins"
+        ]
       },
       {
         "id": "sablonniere",
@@ -136,9 +166,14 @@
         "city": "Paris",
         "postalCode": "75015",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Complexe+sportif+Sablonniere+Paris+75015",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.743135041512!2d2.299360576592251!3d48.84403807133016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6703c5a97ca25%3A0x1a397aa06ea0b07a!2sComplexe%20sportif%20Sablonni%C3%A8re!5e0!3m2!1sfr!2sfr!4v1779035883120!5m2!1sfr!2sfr",
         "image": "https://images.unsplash.com/photo-1518604666860-9ed391f76460?auto=format&fit=crop&w=1200&q=80",
         "description": "Lieu utile pour les seances jeunes du week-end et certains regroupements techniques.",
-        "tags": ["Jeunes", "Week-end", "Technique"]
+        "tags": [
+          "Piste 192m",
+          "Saut en longueur",
+          "Lancer du poids"
+        ]
       }
     ],
     "schedules": [
@@ -148,8 +183,14 @@
         "day": "mardi",
         "startTime": "18:00",
         "endTime": "19:30",
-        "publics": ["adolescents"],
-        "tags": ["jeunes", "sprint", "demi-fond"],
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "jeunes",
+          "sprint",
+          "demi-fond"
+        ],
         "notes": "Creneau jeunes et travail piste en debut de semaine."
       },
       {
@@ -158,8 +199,15 @@
         "day": "jeudi",
         "startTime": "18:30",
         "endTime": "20:00",
-        "publics": ["adolescents", "adultes"],
-        "tags": ["sprint", "demi-fond", "competition"],
+        "publics": [
+          "adolescents",
+          "adultes"
+        ],
+        "tags": [
+          "sprint",
+          "demi-fond",
+          "competition"
+        ],
         "notes": "Seance technique et endurance specifique."
       },
       {
@@ -168,8 +216,12 @@
         "day": "samedi",
         "startTime": "10:30",
         "endTime": "12:00",
-        "publics": ["adultes"],
-        "tags": ["technique"],
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "technique"
+        ],
         "notes": "Travail technique de fin de semaine avec appuis et coordination."
       }
     ],
@@ -201,10 +253,10 @@
     "contacts": [
       {
         "id": "contact-athletisme",
-        "name": "Section Athletisme ESC XV",
-        "role": "Contact section",
+        "name": "Contactez nous",
+        "role": "Nos coordonnées",
         "email": "escxv.athletisme@gmail.com",
-        "phone": null
+        "phone": "01 45 75 23 36"
       }
     ]
   },
@@ -216,21 +268,33 @@
     "icon": "🏸",
     "shortDescription": "Une pratique dynamique pour jouer en simple, double ou loisir.",
     "description": "Le badminton melange vitesse, coordination et lecture du jeu, avec une pratique accessible en loisir comme en progression technique.",
-    "category": ["raquette"],
-    "publics": ["adolescents", "adultes"],
-    "tags": ["raquette", "indoor", "cardio"],
-    "status": "coming-soon",
+    "category": [
+      "raquette"
+    ],
+    "publics": [
+      "adolescents",
+      "adultes"
+    ],
+    "tags": [
+      "raquette",
+      "indoor",
+      "cardio"
+    ],
     "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section badminton",
       "heroTitle": "Badminton a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Raquette", "Adolescents", "Adultes"],
+      "heroBadges": [
+        "Raquette",
+        "Adolescents",
+        "Adultes"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -244,8 +308,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -261,21 +324,34 @@
     "icon": "⚾",
     "shortDescription": "Sport collectif de precision, coordination et esprit d'equipe.",
     "description": "Le baseball propose un cadre collectif, technique et strategique pour progresser en equipe.",
-    "category": ["collectif"],
-    "publics": ["enfants", "adolescents", "adultes"],
-    "tags": ["collectif", "plein air", "coordination"],
-    "status": "coming-soon",
+    "category": [
+      "collectif"
+    ],
+    "publics": [
+      "enfants",
+      "adolescents",
+      "adultes"
+    ],
+    "tags": [
+      "collectif",
+      "plein air",
+      "coordination"
+    ],
     "image": "https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section baseball",
       "heroTitle": "Baseball a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Collectif", "Enfants", "Adultes"],
+      "heroBadges": [
+        "Collectif",
+        "Enfants",
+        "Adultes"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -289,8 +365,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -306,21 +381,35 @@
     "icon": "🥁",
     "shortDescription": "Mouvement, rythme et expression corporelle entre art martial et danse.",
     "description": "La capoeira relie mouvement, musicalite et coordination dans une pratique collective et expressive.",
-    "category": ["arts-martiaux", "danse"],
-    "publics": ["enfants", "adolescents", "adultes"],
-    "tags": ["mobilite", "rythme", "culture"],
-    "status": "coming-soon",
+    "category": [
+      "arts-martiaux",
+      "danse"
+    ],
+    "publics": [
+      "enfants",
+      "adolescents",
+      "adultes"
+    ],
+    "tags": [
+      "mobilite",
+      "rythme",
+      "culture"
+    ],
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section capoeira",
       "heroTitle": "Capoeira a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Mobilite", "Culture", "Collectif"],
+      "heroBadges": [
+        "Mobilite",
+        "Culture",
+        "Collectif"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -334,8 +423,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -351,10 +439,18 @@
     "icon": "🏃",
     "shortDescription": "Running, endurance et preparation trail pour adultes.",
     "description": "Une activite autonome pour courir regulierement, preparer un objectif et progresser en groupe sur route et sentiers.",
-    "category": ["athle-running"],
-    "publics": ["adultes"],
-    "tags": ["running", "trail", "endurance", "sorties"],
-    "status": "open",
+    "category": [
+      "athle-running"
+    ],
+    "publics": [
+      "adultes"
+    ],
+    "tags": [
+      "running",
+      "trail",
+      "endurance",
+      "sorties"
+    ],
     "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
@@ -365,7 +461,12 @@
       "heroPrimaryCtaHref": "https://escxv.monclub.app/",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Running", "Trail", "Adultes", "Sorties"],
+      "heroBadges": [
+        "Running",
+        "Trail",
+        "Adultes",
+        "Sorties"
+      ],
       "introEyebrow": "Presentation",
       "introTitle": "Une section autonome pour courir",
       "introText": "La section course a pied / trail de l'ESC XV s'adresse aux adultes qui veulent courir en groupe, travailler l'endurance et preparer des objectifs de saison.",
@@ -390,30 +491,38 @@
       "formEmailLabel": "Email",
       "formPhoneLabel": "Telephone",
       "formMessageLabel": "Message",
-      "formSubmitLabel": "Envoyer",
-      "contactNotes": [
-        "Les sorties peuvent etre ajustees selon la meteo et les objectifs du groupe.",
-        "Le lien d'inscription reste externe et aucune logique d'envoi n'est activee sur cette page."
-      ]
+      "formSubmitLabel": "Envoyer"
     },
     "programs": [
       {
         "title": "Footing et endurance",
         "audience": "Adultes",
         "description": "Courir regulierement, travailler le fond et construire une base aerobie durable.",
-        "tags": ["Endurance", "Regularite", "Running"]
+        "tags": [
+          "Endurance",
+          "Regularite",
+          "Running"
+        ]
       },
       {
         "title": "Preparation trail",
         "audience": "Adultes",
         "description": "Sorties plus longues avec denivele, gestion de rythme et adaptation aux objectifs de trail.",
-        "tags": ["Trail", "Sorties longues", "Denivele"]
+        "tags": [
+          "Trail",
+          "Sorties longues",
+          "Denivele"
+        ]
       },
       {
         "title": "Seances fractionnees",
         "audience": "Adultes",
         "description": "Travail de rythme et d'allure pour progresser sans perdre la logique collective du groupe.",
-        "tags": ["Vitesse", "Allure", "Groupe"]
+        "tags": [
+          "Vitesse",
+          "Allure",
+          "Groupe"
+        ]
       }
     ],
     "locations": [
@@ -426,7 +535,11 @@
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Parc+Andre-Citroen+Paris+75015",
         "image": "https://images.unsplash.com/photo-1501706362039-c6e8096b42de?auto=format&fit=crop&w=1200&q=80",
         "description": "Point de rendez-vous pratique pour les sorties footing et les boucles d'endurance dans le 15e.",
-        "tags": ["Running", "Sortie", "Paris 15"]
+        "tags": [
+          "Running",
+          "Sortie",
+          "Paris 15"
+        ]
       },
       {
         "id": "georges-brassens",
@@ -437,7 +550,11 @@
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Parc+Georges-Brassens+Paris+75015",
         "image": "https://images.unsplash.com/photo-1519834785169-98f0b1e81f3d?auto=format&fit=crop&w=1200&q=80",
         "description": "Lieu utile pour les seances plus rythmees et les debuts de sorties trail urbain.",
-        "tags": ["Trail", "Parc", "Endurance"]
+        "tags": [
+          "Trail",
+          "Parc",
+          "Endurance"
+        ]
       }
     ],
     "schedules": [
@@ -447,8 +564,14 @@
         "day": "mardi",
         "startTime": "19:00",
         "endTime": "20:15",
-        "publics": ["adultes"],
-        "tags": ["endurance", "footing", "technique"],
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "endurance",
+          "footing",
+          "technique"
+        ],
         "notes": "Sortie rythme et travail d'endurance."
       },
       {
@@ -457,8 +580,14 @@
         "day": "jeudi",
         "startTime": "18:30",
         "endTime": "20:00",
-        "publics": ["adultes"],
-        "tags": ["fractionne", "allure", "preparation trail"],
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "fractionne",
+          "allure",
+          "preparation trail"
+        ],
         "notes": "Seance de progression et de preparation trail."
       },
       {
@@ -467,8 +596,14 @@
         "day": "samedi",
         "startTime": "09:30",
         "endTime": "11:30",
-        "publics": ["adultes"],
-        "tags": ["sortie longue", "trail", "groupe"],
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "sortie longue",
+          "trail",
+          "groupe"
+        ],
         "notes": "Sortie longue pour construire la resistance."
       }
     ],
@@ -501,21 +636,34 @@
     "icon": "💃",
     "shortDescription": "Expression, rythme et energie dans une pratique artistique collective.",
     "description": "Une activite corporelle axee sur le rythme, l'expression et la progression de groupe.",
-    "category": ["danse"],
-    "publics": ["enfants", "adolescents", "adultes"],
-    "tags": ["rythme", "expression", "collectif"],
-    "status": "coming-soon",
+    "category": [
+      "danse"
+    ],
+    "publics": [
+      "enfants",
+      "adolescents",
+      "adultes"
+    ],
+    "tags": [
+      "rythme",
+      "expression",
+      "collectif"
+    ],
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section danse moderne",
       "heroTitle": "Danse moderne a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Danse", "Expression", "Rythme"],
+      "heroBadges": [
+        "Danse",
+        "Expression",
+        "Rythme"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -529,8 +677,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -546,21 +693,34 @@
     "icon": "🧗",
     "shortDescription": "Grimper, gagner en confiance et developper force, equilibre et lecture.",
     "description": "Une pratique de grimpe progressive pour gagner en confiance, en technique et en autonomie.",
-    "category": ["escalade"],
-    "publics": ["enfants", "adolescents", "adultes"],
-    "tags": ["force", "equilibre", "confiance"],
-    "status": "coming-soon",
+    "category": [
+      "escalade"
+    ],
+    "publics": [
+      "enfants",
+      "adolescents",
+      "adultes"
+    ],
+    "tags": [
+      "force",
+      "equilibre",
+      "confiance"
+    ],
     "image": "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section escalade",
       "heroTitle": "Escalade a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Escalade", "Confiance", "Technique"],
+      "heroBadges": [
+        "Escalade",
+        "Confiance",
+        "Technique"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -574,8 +734,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -591,10 +750,20 @@
     "icon": "⚽",
     "shortDescription": "Groupes enfants, jeunes et adultes, entre ecole de foot, loisir et competition.",
     "description": "La section football propose des creneaux distincts pour l'ecole de foot, les jeunes et les adultes, avec une lecture plus claire des lieux et des tarifs.",
-    "category": ["collectif"],
-    "publics": ["enfants", "adolescents", "adultes"],
-    "tags": ["collectif", "matchs", "loisir", "competition"],
-    "status": "open",
+    "category": [
+      "collectif"
+    ],
+    "publics": [
+      "enfants",
+      "adolescents",
+      "adultes"
+    ],
+    "tags": [
+      "collectif",
+      "matchs",
+      "loisir",
+      "competition"
+    ],
     "image": "https://images.unsplash.com/photo-1517747614396-d21a78b850e8?auto=format&fit=crop&w=1600&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
@@ -605,7 +774,12 @@
       "heroPrimaryCtaHref": "https://escxv.monclub.app/",
       "heroSecondaryCtaLabel": "Voir les horaires",
       "heroSecondaryCtaHref": "#horaires",
-      "heroBadges": ["Ecole de foot", "Jeunes", "Adultes", "Competition"],
+      "heroBadges": [
+        "Ecole de foot",
+        "Jeunes",
+        "Adultes",
+        "Competition"
+      ],
       "introEyebrow": "Presentation",
       "introTitle": "Des parcours lisibles par public",
       "introText": "La page centralise les informations utiles pour comprendre rapidement a quel creneau s'adresser selon l'age, le niveau et l'objectif de pratique.",
@@ -630,30 +804,38 @@
       "formEmailLabel": "Email",
       "formPhoneLabel": "Telephone",
       "formMessageLabel": "Message",
-      "formSubmitLabel": "Envoyer",
-      "contactNotes": [
-        "Les categories exactes par annee de naissance restent a valider avec la section.",
-        "Le lien d'inscription reste externe et aucune logique de soumission n'est branchee ici."
-      ]
+      "formSubmitLabel": "Envoyer"
     },
     "programs": [
       {
         "title": "Ecole de foot",
         "audience": "Enfants",
         "description": "Decouverte du jeu, motricite, coordination et apprentissage des fondamentaux dans un cadre securisant.",
-        "tags": ["Enfants", "Apprentissage", "Collectif"]
+        "tags": [
+          "Enfants",
+          "Apprentissage",
+          "Collectif"
+        ]
       },
       {
         "title": "Parcours jeunes",
         "audience": "Adolescents",
         "description": "Seances structurees pour progresser techniquement, comprendre le jeu et s'inscrire dans une dynamique d'equipe.",
-        "tags": ["Jeunes", "Technique", "Matchs"]
+        "tags": [
+          "Jeunes",
+          "Technique",
+          "Matchs"
+        ]
       },
       {
         "title": "Loisir et competition",
         "audience": "Adultes",
         "description": "Des groupes adultes pour pratiquer regulierement, garder du rythme ou rejoindre une logique plus competitive.",
-        "tags": ["Adultes", "Loisir", "Competition"]
+        "tags": [
+          "Adultes",
+          "Loisir",
+          "Competition"
+        ]
       }
     ],
     "locations": [
@@ -666,7 +848,11 @@
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Parc+omnisports+Suzanne-Lenglen+Paris+75015",
         "image": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1200&q=80",
         "description": "Grand site sportif du 15e arrondissement, retenu ici comme lieu principal de pratique pour la section football.",
-        "tags": ["Terrain", "Collectif", "Paris 15"]
+        "tags": [
+          "Terrain",
+          "Collectif",
+          "Paris 15"
+        ]
       }
     ],
     "schedules": [
@@ -676,8 +862,13 @@
         "day": "mercredi",
         "startTime": "14:00",
         "endTime": "16:00",
-        "publics": ["enfants"],
-        "tags": ["ecole de foot", "initiation"],
+        "publics": [
+          "enfants"
+        ],
+        "tags": [
+          "ecole de foot",
+          "initiation"
+        ],
         "notes": "Creneau de decouverte et de progression pour les plus jeunes."
       },
       {
@@ -686,8 +877,14 @@
         "day": "samedi",
         "startTime": "09:30",
         "endTime": "12:30",
-        "publics": ["adolescents"],
-        "tags": ["jeunes", "matchs", "technique"],
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "jeunes",
+          "matchs",
+          "technique"
+        ],
         "notes": "Organisation type pour les groupes jeunes du week-end."
       },
       {
@@ -696,8 +893,14 @@
         "day": "jeudi",
         "startTime": "20:00",
         "endTime": "22:00",
-        "publics": ["adultes"],
-        "tags": ["adultes", "loisir", "competition"],
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "adultes",
+          "loisir",
+          "competition"
+        ],
         "notes": "Creneau adulte en soiree, donne a confirmer."
       }
     ],
@@ -748,21 +951,32 @@
     "icon": "🤸",
     "shortDescription": "Bouger regulierement, entretenir mobilite, tonicite et equilibre.",
     "description": "Une pratique d'entretien physique pour garder du mouvement et une forme reguliere.",
-    "category": ["forme"],
-    "publics": ["adultes"],
-    "tags": ["mobilite", "tonicite", "equilibre"],
-    "status": "coming-soon",
+    "category": [
+      "forme"
+    ],
+    "publics": [
+      "adultes"
+    ],
+    "tags": [
+      "mobilite",
+      "tonicite",
+      "equilibre"
+    ],
     "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section gymnastique d'entretien",
       "heroTitle": "Gymnastique d'entretien a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Forme", "Mobilite", "Adultes"],
+      "heroBadges": [
+        "Forme",
+        "Mobilite",
+        "Adultes"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -776,8 +990,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -793,21 +1006,34 @@
     "icon": "🥋",
     "shortDescription": "Discipline, respect, technique et progression par ceintures.",
     "description": "Le judo combine apprentissage technique, progression individuelle et cadre collectif structurant.",
-    "category": ["arts-martiaux"],
-    "publics": ["enfants", "adolescents", "adultes"],
-    "tags": ["respect", "technique", "progression"],
-    "status": "coming-soon",
+    "category": [
+      "arts-martiaux"
+    ],
+    "publics": [
+      "enfants",
+      "adolescents",
+      "adultes"
+    ],
+    "tags": [
+      "respect",
+      "technique",
+      "progression"
+    ],
     "image": "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section judo",
       "heroTitle": "Judo a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Judo", "Technique", "Respect"],
+      "heroBadges": [
+        "Judo",
+        "Technique",
+        "Respect"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -821,8 +1047,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -838,21 +1063,34 @@
     "icon": "🏊",
     "shortDescription": "Apprentissage, perfectionnement et endurance selon niveau.",
     "description": "Une activite aquatique progressive pour apprendre, se perfectionner et nager regulierement.",
-    "category": ["eau"],
-    "publics": ["enfants", "adolescents", "adultes"],
-    "tags": ["eau", "technique", "endurance"],
-    "status": "coming-soon",
+    "category": [
+      "eau"
+    ],
+    "publics": [
+      "enfants",
+      "adolescents",
+      "adultes"
+    ],
+    "tags": [
+      "eau",
+      "technique",
+      "endurance"
+    ],
     "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section natation",
       "heroTitle": "Natation a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Natation", "Technique", "Endurance"],
+      "heroBadges": [
+        "Natation",
+        "Technique",
+        "Endurance"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -866,8 +1104,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -883,21 +1120,32 @@
     "icon": "◌",
     "shortDescription": "Renforcement profond, posture et controle du mouvement.",
     "description": "Une pratique de forme axee sur le gainage, la posture et la qualite du mouvement.",
-    "category": ["forme"],
-    "publics": ["adultes"],
-    "tags": ["posture", "gainage", "mobilite"],
-    "status": "coming-soon",
+    "category": [
+      "forme"
+    ],
+    "publics": [
+      "adultes"
+    ],
+    "tags": [
+      "posture",
+      "gainage",
+      "mobilite"
+    ],
     "image": "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section pilates",
       "heroTitle": "Pilates a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Pilates", "Gainage", "Adultes"],
+      "heroBadges": [
+        "Pilates",
+        "Gainage",
+        "Adultes"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -911,8 +1159,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -928,21 +1175,32 @@
     "icon": "💪",
     "shortDescription": "Seances toniques pour developper force, gainage et condition physique.",
     "description": "Une pratique forme et condition physique pour entretenir la tonicite et la regularite.",
-    "category": ["forme"],
-    "publics": ["adultes"],
-    "tags": ["force", "gainage", "condition physique"],
-    "status": "coming-soon",
+    "category": [
+      "forme"
+    ],
+    "publics": [
+      "adultes"
+    ],
+    "tags": [
+      "force",
+      "gainage",
+      "condition physique"
+    ],
     "image": "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section renforcement musculaire",
       "heroTitle": "Renforcement musculaire a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Renfo", "Force", "Adultes"],
+      "heroBadges": [
+        "Renfo",
+        "Force",
+        "Adultes"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -956,8 +1214,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -973,21 +1230,33 @@
     "icon": "👦",
     "shortDescription": "Creneau multisports pour enfants, pense pour decouvrir et bouger.",
     "description": "Une offre multisports enfants pour varier les pratiques et garder une approche ludique en milieu de semaine.",
-    "category": ["forme", "collectif"],
-    "publics": ["enfants"],
-    "tags": ["multisports", "enfants", "decouverte"],
-    "status": "coming-soon",
+    "category": [
+      "forme",
+      "collectif"
+    ],
+    "publics": [
+      "enfants"
+    ],
+    "tags": [
+      "multisports",
+      "enfants",
+      "decouverte"
+    ],
     "image": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section sport mercredi",
       "heroTitle": "Sport mercredi a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Enfants", "Multisports", "Mercredi"],
+      "heroBadges": [
+        "Enfants",
+        "Multisports",
+        "Mercredi"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -1001,8 +1270,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -1018,21 +1286,32 @@
     "icon": "⌁",
     "shortDescription": "Souplesse, mobilite et recuperation dans une pratique accessible.",
     "description": "Une activite douce pour entretenir la mobilite et recuperer sans charge excessive.",
-    "category": ["forme"],
-    "publics": ["adultes"],
-    "tags": ["souplesse", "mobilite", "recuperation"],
-    "status": "coming-soon",
+    "category": [
+      "forme"
+    ],
+    "publics": [
+      "adultes"
+    ],
+    "tags": [
+      "souplesse",
+      "mobilite",
+      "recuperation"
+    ],
     "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section stretching",
       "heroTitle": "Stretching a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Souplesse", "Mobilite", "Adultes"],
+      "heroBadges": [
+        "Souplesse",
+        "Mobilite",
+        "Adultes"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -1046,8 +1325,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -1063,21 +1341,34 @@
     "icon": "🎾",
     "shortDescription": "Cours et pratique selon niveau, creneau et objectif.",
     "description": "Une activite raquette qui melange apprentissage technique, regularite et jeu.",
-    "category": ["raquette"],
-    "publics": ["enfants", "adolescents", "adultes"],
-    "tags": ["raquette", "technique", "match"],
-    "status": "coming-soon",
+    "category": [
+      "raquette"
+    ],
+    "publics": [
+      "enfants",
+      "adolescents",
+      "adultes"
+    ],
+    "tags": [
+      "raquette",
+      "technique",
+      "match"
+    ],
     "image": "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section tennis",
       "heroTitle": "Tennis a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Raquette", "Technique", "Match"],
+      "heroBadges": [
+        "Raquette",
+        "Technique",
+        "Match"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -1091,8 +1382,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -1108,21 +1398,33 @@
     "icon": "🏓",
     "shortDescription": "Reflexes, precision et jeu rapide dans une activite accessible.",
     "description": "Une activite de salle technique et vive, adaptee aux jeunes comme aux adultes.",
-    "category": ["raquette"],
-    "publics": ["adolescents", "adultes"],
-    "tags": ["raquette", "precision", "salle"],
-    "status": "coming-soon",
+    "category": [
+      "raquette"
+    ],
+    "publics": [
+      "adolescents",
+      "adultes"
+    ],
+    "tags": [
+      "raquette",
+      "precision",
+      "salle"
+    ],
     "image": "https://images.unsplash.com/photo-1611251135345-18c56206b863?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section tennis de table",
       "heroTitle": "Tennis de table a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Raquette", "Precision", "Salle"],
+      "heroBadges": [
+        "Raquette",
+        "Precision",
+        "Salle"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -1136,8 +1438,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -1153,21 +1454,33 @@
     "icon": "🏐",
     "shortDescription": "Jeu collectif, coordination et pratique conviviale en salle.",
     "description": "Une pratique collective orientee coordination, jeu et regularite de groupe.",
-    "category": ["collectif"],
-    "publics": ["adolescents", "adultes"],
-    "tags": ["equipe", "salle", "loisir"],
-    "status": "coming-soon",
+    "category": [
+      "collectif"
+    ],
+    "publics": [
+      "adolescents",
+      "adultes"
+    ],
+    "tags": [
+      "equipe",
+      "salle",
+      "loisir"
+    ],
     "image": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section volley-ball",
       "heroTitle": "Volley-ball a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Collectif", "Salle", "Adolescents"],
+      "heroBadges": [
+        "Collectif",
+        "Salle",
+        "Adolescents"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -1181,8 +1494,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -1198,21 +1510,32 @@
     "icon": "🧘",
     "shortDescription": "Respiration, mobilite et equilibre pour une pratique reguliere.",
     "description": "Une pratique douce pour gagner en mobilite, respiration et stabilite au quotidien.",
-    "category": ["forme"],
-    "publics": ["adultes"],
-    "tags": ["respiration", "mobilite", "bien-etre"],
-    "status": "coming-soon",
+    "category": [
+      "forme"
+    ],
+    "publics": [
+      "adultes"
+    ],
+    "tags": [
+      "respiration",
+      "mobilite",
+      "bien-etre"
+    ],
     "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": null,
     "content": {
       "heroEyebrow": "Section yoga",
       "heroTitle": "Yoga a Paris 15",
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroPrimaryCtaLabel": "Bientot disponible",
+      "heroPrimaryCtaLabel": "Contacter la section",
       "heroPrimaryCtaHref": "#contact",
       "heroSecondaryCtaLabel": "Retour a l'accueil",
       "heroSecondaryCtaHref": "/",
-      "heroBadges": ["Yoga", "Respiration", "Adultes"],
+      "heroBadges": [
+        "Yoga",
+        "Respiration",
+        "Adultes"
+      ],
       "introTitle": "Presentation de la section",
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesTitle": "Horaires",
@@ -1226,8 +1549,7 @@
       "contactTitle": "Contact",
       "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
       "contactFormTitle": "Laisser un message",
-      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle.",
-      "contactNotes": []
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],

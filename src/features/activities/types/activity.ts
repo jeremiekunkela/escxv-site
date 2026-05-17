@@ -10,8 +10,6 @@ export type ActivityCategory =
 
 export type ActivityPublic = "enfants" | "adolescents" | "adultes";
 
-export type ActivityStatus = "open" | "coming-soon";
-
 export type Program = {
   title: string;
   audience: string;
@@ -53,7 +51,6 @@ export type ActivityContent = {
   formPhoneLabel?: string;
   formMessageLabel?: string;
   formSubmitLabel?: string;
-  contactNotes: string[];
 };
 
 export type ActivityLocation = {
@@ -63,6 +60,7 @@ export type ActivityLocation = {
   city: string;
   postalCode: string;
   mapUrl: string;
+  mapEmbedUrl?: string;
   image?: string | null;
   description?: string;
   tags?: string[];
@@ -113,7 +111,6 @@ export type Activity = {
   category: ActivityCategory[];
   publics: ActivityPublic[];
   tags: string[];
-  status: ActivityStatus;
   image: string;
   registrationUrl: string | null;
   content: ActivityContent;

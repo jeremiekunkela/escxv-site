@@ -12,7 +12,7 @@ import {
   useActivityFilters,
   visibleActivityFilters,
 } from "@/features/activities/hooks/useActivityFilters";
-import { formatPublicLabel, formatStatus } from "@/lib/utils";
+import { formatPublicLabel } from "@/lib/utils";
 import type { Activity } from "@/features/activities/types/activity";
 import styles from "./ActivityExplorer.module.css";
 
@@ -96,10 +96,7 @@ export function ActivityExplorer({
 
         {filteredActivities.length > 0 ? (
           <div className={styles.grid}>
-            {filteredActivities.map((activity) => {
-              const isAvailable = activity.status === "open";
-
-              return (
+            {filteredActivities.map((activity) => (
                 <article key={activity.slug} className={styles.card}>
                   <div className={styles.media}>
                     <Image
@@ -127,20 +124,14 @@ export function ActivityExplorer({
                     <p className={styles.summary}>{activity.shortDescription}</p>
                     <p className={styles.audience}>{activity.description}</p>
                     <div className={styles.cardFooter}>
-                      <span className={styles.status}>{formatStatus(activity.status)}</span>
-                      {isAvailable ? (
-                        <Link href={getActivityHref(activity)} className={styles.cardLink}>
-                          Voir la page
-                          <ArrowUpRight aria-hidden="true" size={17} />
-                        </Link>
-                      ) : (
-                        <span className={styles.unavailable}>A venir</span>
-                      )}
+                      <Link href={getActivityHref(activity)} className={styles.cardLink}>
+                        Voir la page
+                        <ArrowUpRight aria-hidden="true" size={17} />
+                      </Link>
                     </div>
                   </div>
                 </article>
-              );
-            })}
+              ))}
           </div>
         ) : (
           <div className={styles.empty}>

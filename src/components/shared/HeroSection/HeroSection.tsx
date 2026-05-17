@@ -10,7 +10,7 @@ type HeroSectionProps = {
   description: string;
   imageUrl: string;
   primaryCta: Cta;
-  secondaryCta: Cta;
+  secondaryCta?: Cta;
   badges?: string[];
 };
 
@@ -41,9 +41,11 @@ export function HeroSection({
           <p className={styles.description}>{description}</p>
           <div className={styles.actions}>
             <Button href={primaryCta.href}>{primaryCta.label}</Button>
-            <Button href={secondaryCta.href} variant="secondary">
-              {secondaryCta.label}
-            </Button>
+            {secondaryCta ? (
+              <Button href={secondaryCta.href} variant="secondary">
+                {secondaryCta.label}
+              </Button>
+            ) : null}
           </div>
           {badges.length > 0 ? (
             <ul className={styles.badges}>

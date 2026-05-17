@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import type { FocusEvent, KeyboardEvent } from "react";
 import type { NavigationContent } from "@/features/navigation/types/navigation";
 import styles from "./SiteHeader.module.css";
 
@@ -14,6 +15,7 @@ type SiteHeaderClientProps = {
 export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
   const [openDropdown, setOpenDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownId = "activities-dropdown";
 
   useEffect(() => {
     if (!openDropdown) return;
@@ -27,6 +29,25 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, [openDropdown]);
+
+  function closeDropdownWhenFocusLeaves(event: FocusEvent<HTMLDivElement>) {
+    const nextFocusedElement = event.relatedTarget;
+
+    if (!dropdownRef.current || !nextFocusedElement) {
+      setOpenDropdown(false);
+      return;
+    }
+
+    if (!dropdownRef.current.contains(nextFocusedElement)) {
+      setOpenDropdown(false);
+    }
+  }
+
+  function handleDropdownKeyDown(event: KeyboardEvent<HTMLDivElement>) {
+    if (event.key === "Escape") {
+      setOpenDropdown(false);
+    }
+  }
 
   return (
     <header className={styles.header}>
@@ -58,32 +79,39 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
             </Link>
           ))}
           {navigation.activityLinks.length > 0 ? (
-            <div className={styles.dropdownWrapper} ref={dropdownRef}>
-              <div
-                className={styles.dropdownInner}
-                onMouseEnter={() => setOpenDropdown(true)}
-                onMouseLeave={() => setOpenDropdown(false)}
-              >
+            <div
+              className={styles.dropdownWrapper}
+              ref={dropdownRef}
+              onMouseEnter={() => setOpenDropdown(true)}
+              onMouseLeave={() => setOpenDropdown(false)}
+              onFocus={() => setOpenDropdown(true)}
+              onBlur={closeDropdownWhenFocusLeaves}
+              onKeyDown={handleDropdownKeyDown}
+            >
+              <div className={styles.dropdownInner}>
                 <button
                   type="button"
                   className={styles.navLink}
                   aria-haspopup="menu"
+                  aria-controls={dropdownId}
                   aria-expanded={openDropdown}
                   onClick={() => setOpenDropdown((value) => !value)}
-                  onFocus={() => setOpenDropdown(true)}
-                  onBlur={() => setTimeout(() => setOpenDropdown(false), 120)}
                 >
                   Activites
+                  <ChevronDown
+                    aria-hidden="true"
+                    className={openDropdown ? styles.dropdownIconOpen : styles.dropdownIcon}
+                    size={16}
+                  />
                 </button>
                 {openDropdown ? (
                   <div
-                    className={
-                      navigation.activityLinks.length > 8
-                        ? `${styles.dropdownMenu} ${styles.grid}`
-                        : styles.dropdownMenu
-                    }
+                    id={dropdownId}
+                    className={styles.dropdownMenu}
                     role="menu"
+                    aria-label="Activites"
                   >
+                    <div className={styles.dropdownHeader}>Toutes les activites</div>
                     {navigation.activityLinks.map((item) => (
                       <Link
                         key={item.href}
@@ -93,7 +121,7 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
                         tabIndex={0}
                         onClick={() => setOpenDropdown(false)}
                       >
-                        {item.label}
+                        <span>{item.label}</span>
                       </Link>
                     ))}
                   </div>
@@ -119,7 +147,7 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
                 <summary className={styles.mobileLink} tabIndex={0}>
                   Activites
                 </summary>
-                <div>
+                <div className={styles.mobileSubmenu}>
                   {navigation.activityLinks.map((item) => (
                     <Link key={item.href} href={item.href} className={styles.mobileLink}>
                       {item.label}

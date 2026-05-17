@@ -2,31 +2,11 @@
   "hero": {
     "eyebrow": "Club omnisports de quartier depuis 1910",
     "title": "Le sport a Paris 15, en version claire et utile.",
-    "subtitle": "Retrouvez les activites, les horaires et les infos pratiques de l'ESC XV sans naviguer dans plusieurs sources.",
+    "subtitle": "Retrouvez les activites, les horaires et les contacts de l'ESC XV sans naviguer dans plusieurs sources.",
     "imageUrl": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1800&q=80",
     "badges": ["Paris 15", "Omnisports", "Saison 2025/2026"],
     "primaryCtaLabel": "Trouver une activite",
-    "primaryCtaHref": "#activities",
-    "secondaryCtaLabel": "Infos pratiques",
-    "secondaryCtaHref": "#practical-info"
-  },
-  "practicalInfo": {
-    "eyebrow": "Pratique",
-    "title": "Infos pratiques",
-    "items": [
-      {
-        "title": "Inscription",
-        "description": "Les inscriptions se font activite par activite via les liens externes quand ils sont disponibles."
-      },
-      {
-        "title": "Contacts",
-        "description": "Chaque page activite regroupe ses propres contacts pour eviter les allers-retours entre sections."
-      },
-      {
-        "title": "Donnees saison",
-        "description": "Les horaires et tarifs affiches sont centralises par activite pour faciliter une future migration vers Directus."
-      }
-    ]
+    "primaryCtaHref": "#activities"
   },
   "activitiesSection": {
     "eyebrow": "Activites",
