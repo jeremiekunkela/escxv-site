@@ -8,6 +8,7 @@ import { ActivityLocationCards } from "@/features/activities/components/Activity
 import { ActivityPriceBlocks } from "@/features/activities/components/ActivityPriceBlocks/ActivityPriceBlocks";
 import { ActivityProgramCards } from "@/features/activities/components/ActivityProgramCards/ActivityProgramCards";
 import { ActivityScheduleCards } from "@/features/activities/components/ActivityScheduleCards/ActivityScheduleCards";
+import { ActivityTrainerCards } from "@/features/activities/components/ActivityTrainerCards/ActivityTrainerCards";
 import type { Activity } from "@/features/activities/types/activity";
 import styles from "./ActivityDetailPage.module.css";
 
@@ -22,6 +23,8 @@ const SECTION_COPY = {
   schedulesEyebrow: "Horaires",
   schedulesTitle: "Creneaux",
   schedulesNoticeTitle: "Horaires a confirmer",
+  trainersEyebrow: "Entraineurs",
+  trainersTitle: "L'equipe d'encadrement",
   pricesEyebrow: "Tarifs",
   pricesTitle: "Tarifs de la saison",
   locationsEyebrow: "Lieux",
@@ -41,6 +44,8 @@ export function ActivityDetailPage({ activity }: ActivityDetailPageProps) {
   const hasPrices = activity.prices.length > 0;
   const hasLocations = activity.locations.length > 0;
   const hasContacts = activity.contacts.length > 0;
+  const trainers = activity.trainers ?? [];
+  const hasTrainers = trainers.length > 0;
   const schedulesSubtitle = getContentOrFallback(
     content.schedulesSubtitle,
     "Retrouvez ici les creneaux actuellement communiques par la section.",
@@ -48,6 +53,10 @@ export function ActivityDetailPage({ activity }: ActivityDetailPageProps) {
   const schedulesNoticeText = getContentOrFallback(
     content.schedulesNoticeText,
     "Les horaires seront communiques par la section des qu'ils seront confirmes.",
+  );
+  const trainersSubtitle = getContentOrFallback(
+    content.trainersSubtitle,
+    "Rencontrez les entraineurs et reperes pratiques associes a leurs creneaux.",
   );
   const locationsSubtitle = getContentOrFallback(
     content.locationsSubtitle,
@@ -131,6 +140,24 @@ export function ActivityDetailPage({ activity }: ActivityDetailPageProps) {
             )}
           </Container>
         </section>
+
+        {hasTrainers ? (
+          <section id="entraineurs" className={styles.section}>
+            <Container>
+              <div className={styles.header}>
+                <SectionTitle
+                  eyebrow={SECTION_COPY.trainersEyebrow}
+                  title={SECTION_COPY.trainersTitle}
+                  subtitle={trainersSubtitle}
+                />
+              </div>
+              <ActivityTrainerCards
+                trainers={trainers}
+                schedules={activity.schedules}
+              />
+            </Container>
+          </section>
+        ) : null}
 
         <section id="pratique" className={styles.section}>
           <Container>

@@ -66,7 +66,8 @@
         "Demi-fond"
       ],
       "introText": "La section athletisme de l'ESC XV propose une progression lisible entre decouverte, travail technique, pratique reguliere et objectifs de competition sur piste.",
-      "schedulesNoticeText": "Les creneaux affiches servent de base de travail pour la saison 2025/2026 et doivent encore etre confirmes par la section."
+      "schedulesNoticeText": "Les creneaux affiches servent de base de travail pour la saison 2025/2026 et doivent encore etre confirmes par la section.",
+      "trainersSubtitle": "Des entraineurs identifies par groupe pour mieux reperer les creneaux et lieux de pratique."
     },
     "programs": [
       {
@@ -271,6 +272,42 @@
         "role": "Nos coordonnées",
         "email": "escxv.athletisme@gmail.com",
         "phone": "01 45 75 23 36"
+      }
+    ],
+    "trainers": [
+      {
+        "id": "claire-martin",
+        "firstName": "Claire",
+        "lastName": "Martin",
+        "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80",
+        "description": "Claire accompagne les groupes jeunes sur la technique de course, la coordination et la progression reguliere sur piste.",
+        "specialties": [
+          "Eveil athletique",
+          "Technique de course",
+          "Coordination"
+        ],
+        "scheduleIds": [
+          "athle-jeunes-mardi-la-plaine-1800",
+          "athle-jeunes-jeudi-la-plaine-1830",
+          "athle-eveil-samedi-sablonniere-1030"
+        ]
+      },
+      {
+        "id": "julien-bernard",
+        "firstName": "Julien",
+        "lastName": "Bernard",
+        "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=80",
+        "description": "Julien suit les pratiquants adolescents et adultes avec un travail centre sur la vitesse, le demi-fond et la preparation de competition.",
+        "specialties": [
+          "Sprint",
+          "Demi-fond",
+          "Competition"
+        ],
+        "locationId": "la-plaine",
+        "scheduleIds": [
+          "athle-adultes-mardi-la-plaine-1800",
+          "athle-adultes-jeudi-la-plaine-1830"
+        ]
       }
     ]
   },

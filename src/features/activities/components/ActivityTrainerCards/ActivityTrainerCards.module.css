@@ -1,0 +1,143 @@
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-raised);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition-standard),
+    box-shadow var(--transition-standard),
+    border-color var(--transition-standard);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.card:hover .image {
+  transform: scale(1.03);
+}
+
+.media {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(69, 81, 230, 0.08), rgba(8, 21, 36, 0.08));
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  align-items: center;
+  padding: 20px 24px;
+}
+
+.identity {
+  display: grid;
+  gap: 8px;
+  min-width: 220px;
+}
+
+.eyebrow {
+  width: fit-content;
+  margin: 0;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-soft);
+  color: var(--color-brand);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.name {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: clamp(1.55rem, 2vw, 1.85rem);
+  line-height: 1.1;
+}
+
+.description {
+  margin: 0;
+  flex: 1 1 260px;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex: 1 1 220px;
+}
+
+.scheduleRow {
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  padding-top: 2px;
+}
+
+.scheduleTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  color: var(--color-brand);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.scheduleList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scheduleItem {
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 999px;
+  background: var(--color-surface-muted);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+@media (max-width: 640px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .body {
+    padding: 18px;
+  }
+
+  .media {
+    height: 180px;
+  }
+}
