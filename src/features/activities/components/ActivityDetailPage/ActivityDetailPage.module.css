@@ -34,6 +34,7 @@
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: var(--space-lg);
+  align-items: start;
 }
 
 @media (max-width: 880px) {

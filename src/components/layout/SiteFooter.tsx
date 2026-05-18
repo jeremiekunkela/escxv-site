@@ -15,7 +15,7 @@ export function SiteFooter() {
           <div className={styles.brandHeader}>
             <span className={styles.logo}>
               <Image
-                src="/escxv-logo.svg"
+                src="/escxv-logo.png"
                 alt=""
                 width={44}
                 height={44}

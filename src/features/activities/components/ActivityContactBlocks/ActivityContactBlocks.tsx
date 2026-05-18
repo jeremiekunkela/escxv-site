@@ -6,7 +6,19 @@ type ActivityContactBlocksProps = {
   contacts: ActivityContact[];
 };
 
+function toPhoneHref(phone: string) {
+  return `tel:${phone.replace(/[^\d+]/g, "")}`;
+}
+
 export function ActivityContactBlocks({ contacts }: ActivityContactBlocksProps) {
+  if (contacts.length === 0) {
+    return (
+      <div className={styles.empty}>
+        Les coordonnees de la section ne sont pas encore disponibles.
+      </div>
+    );
+  }
+
   return (
     <div className={styles.grid}>
       {contacts.map((contact) => (
@@ -19,10 +31,10 @@ export function ActivityContactBlocks({ contacts }: ActivityContactBlocksProps) 
               {contact.email}
             </a>
             {contact.phone ? (
-              <p className={styles.phone}>
+              <a href={toPhoneHref(contact.phone)} className={`${styles.link} ${styles.phone}`}>
                 <Phone aria-hidden="true" size={18} />
                 {contact.phone}
-              </p>
+              </a>
             ) : null}
           </div>
         </article>

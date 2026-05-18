@@ -27,7 +27,14 @@
         "Arts martiaux",
         "Adolescents",
         "Adultes"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -41,7 +48,7 @@
     "title": "Athletisme",
     "shortName": "Athle",
     "icon": "🏃",
-    "shortDescription": "Sprint, demi-fond et école d'athletisme pour enfants",
+    "shortDescription": "Sprint, demi-fond, sauts et travail technique pour enfants, jeunes et adultes.",
     "description": "La section athletisme de l'ESC XV accueille les pratiquants du loisir a la competition, avec un travail centre sur la piste, la vitesse et la progression technique.",
     "category": [
       "athle-running"
@@ -52,6 +59,7 @@
       "adultes"
     ],
     "tags": [
+      "piste",
       "sprint",
       "demi-fond",
       "competition"
@@ -61,22 +69,28 @@
     "content": {
       "heroSubtitle": "Sprint, demi-fond, sauts et travail technique pour enfants, jeunes et adultes.",
       "heroBadges": [
-        "Ecole d'athletisme",
+        "Jeunes",
+        "Piste",
         "Sprint",
         "Demi-fond"
       ],
       "introText": "La section athletisme de l'ESC XV propose une progression lisible entre decouverte, travail technique, pratique reguliere et objectifs de competition sur piste.",
-      "schedulesNoticeText": "Les creneaux affiches servent de base de travail pour la saison 2025/2026 et doivent encore etre confirmes par la section."
+      "schedulesSubtitle": "Chaque seance correspond a un vrai creneau et a un lieu identifie.",
+      "schedulesNoticeText": "Les creneaux affiches servent de base de travail pour la saison 2025/2026 et doivent encore etre confirmes par la section.",
+      "pricesSubtitle": "Le budget est detaille entre cotisation club, participation activite et frais optionnels.",
+      "locationsSubtitle": "Les lieux mentionnes sont relies a chaque seance et faciles a retrouver sur une carte.",
+      "contactText": "Utilisez les coordonnees ci-dessous pour poser une question sur une seance d'essai, l'inscription ou le bon groupe.",
+      "contactFormText": "Le formulaire reste volontairement statique pour cette phase de maquettage."
     },
     "programs": [
       {
-        "title": "Ecole d'athletisme",
-        "audience": "Enfants",
+        "title": "Ecole d'athle et jeunes",
+        "audience": "Enfants et adolescents",
         "description": "Decouverte de la course, des sauts et des lancers avec une progression technique accessible et un cadre collectif.",
         "tags": [
           "Initiation",
           "Coordination",
-          "Loisir"
+          "Jeunes"
         ]
       },
       {
@@ -84,7 +98,7 @@
         "audience": "Adolescents et adultes",
         "description": "Travail de vitesse, de foullee, de placement et d'endurance specifique pour progresser de facon structuree.",
         "tags": [
-          "Progression",
+          "Piste",
           "Technique",
           "Competition"
         ]
@@ -99,7 +113,7 @@
         "postalCode": "75015",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Centre+sportif+de+La+Plaine+Paris+75015",
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.5874898712914!2d2.2909721765913282!3d48.827931671328024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67148258f5ebf%3A0x10de109f3d2c443f!2sCentre%20Sportif%20La%20Plaine!5e0!3m2!1sfr!2sfr!4v1779035821251!5m2!1sfr!2sfr",
-        "image": "https://images.unsplash.com/photo-1651164999214-ab345f4c6c2d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "https://images.unsplash.com/photo-1575318634028-6a0cfcb60c59?auto=format&fit=crop&w=1200&q=80",
         "description": "Site de proximite adapte aux seances piste, aux gammes et au travail technique en semaine.",
         "tags": [
           "Piste 372m",
@@ -116,7 +130,7 @@
         "postalCode": "75015",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Complexe+sportif+Sablonniere+Paris+75015",
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.743135041512!2d2.299360576592251!3d48.84403807133016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6703c5a97ca25%3A0x1a397aa06ea0b07a!2sComplexe%20sportif%20Sablonni%C3%A8re!5e0!3m2!1sfr!2sfr!4v1779035883120!5m2!1sfr!2sfr",
-        "image": "",
+        "image": "https://images.unsplash.com/photo-1518604666860-9ed391f76460?auto=format&fit=crop&w=1200&q=80",
         "description": "Lieu utile pour les seances jeunes du week-end et certains regroupements techniques.",
         "tags": [
           "Piste 192m",
@@ -125,120 +139,55 @@
         ]
       }
     ],
-"schedules": [
-  {
-    "id": "athle-jeunes-mardi-la-plaine-1800",
-    "locationId": "la-plaine",
-    "day": "mardi",
-    "startTime": "18:00",
-    "endTime": "19:30",
-    "publics": [
-      "adolescents"
+    "schedules": [
+      {
+        "id": "athle-mardi-la-plaine-1800",
+        "locationId": "la-plaine",
+        "day": "mardi",
+        "startTime": "18:00",
+        "endTime": "19:30",
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "jeunes",
+          "sprint",
+          "demi-fond"
+        ],
+        "notes": "Creneau jeunes et travail piste en debut de semaine."
+      },
+      {
+        "id": "athle-jeudi-la-plaine-1830",
+        "locationId": "la-plaine",
+        "day": "jeudi",
+        "startTime": "18:30",
+        "endTime": "20:00",
+        "publics": [
+          "adolescents",
+          "adultes"
+        ],
+        "tags": [
+          "sprint",
+          "demi-fond",
+          "competition"
+        ],
+        "notes": "Seance technique et endurance specifique."
+      },
+      {
+        "id": "athle-samedi-sablonniere-1030",
+        "locationId": "sablonniere",
+        "day": "samedi",
+        "startTime": "10:30",
+        "endTime": "12:00",
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "technique"
+        ],
+        "notes": "Travail technique de fin de semaine avec appuis et coordination."
+      }
     ],
-    "tags": [
-      "jeunes",
-      "minime",
-      "cadet",
-      "athletisme"
-    ],
-    "groupLabel": "Minime a cadet (2008 a 2011)"
-  },
-  {
-    "id": "athle-adultes-mardi-la-plaine-1800",
-    "locationId": "la-plaine",
-    "day": "mardi",
-    "startTime": "18:00",
-    "endTime": "19:30",
-    "publics": [
-      "adultes"
-    ],
-    "tags": [
-      "sprint",
-      "demi-fond"
-    ],
-    "notes": "Seance sprint et demi-fond adultes tous niveaux."
-  },
-  {
-    "id": "athle-jeunes-jeudi-la-plaine-1830",
-    "locationId": "la-plaine",
-    "day": "jeudi",
-    "startTime": "18:30",
-    "endTime": "20:00",
-    "publics": [
-      "adolescents"
-    ],
-    "tags": [
-      "jeunes",
-      "minime",
-      "cadet",
-      "athletisme"
-    ],
-    "groupLabel": "Minime a cadet (2008 a 2011)"
-  },
-  {
-    "id": "athle-adultes-jeudi-la-plaine-1830",
-    "locationId": "la-plaine",
-    "day": "jeudi",
-    "startTime": "18:30",
-    "endTime": "20:00",
-    "publics": [
-      "adultes"
-    ],
-    "tags": [
-      "sprint",
-      "demi-fond",
-      "competition"
-    ],
-    "notes": "Seance technique et endurance specifique."
-  },
-  {
-    "id": "athle-jeunes-samedi-sablonniere-0900",
-    "locationId": "sablonniere",
-    "day": "samedi",
-    "startTime": "09:00",
-    "endTime": "10:30",
-    "publics": [
-      "adolescents"
-    ],
-    "tags": [
-      "jeunes",
-      "minime",
-      "cadet"
-    ],
-    "groupLabel": "Minime a cadet (2008 a 2011)"
-  },
-  {
-    "id": "athle-adultes-samedi-sablonniere-0900",
-    "locationId": "sablonniere",
-    "day": "samedi",
-    "startTime": "09:00",
-    "endTime": "10:30",
-    "publics": [
-      "adultes"
-    ],
-    "tags": [
-      "sprint",
-      "demi-fond"
-    ],
-    "notes": "Seance sprint et demi-fond adultes."
-  },
-  {
-    "id": "athle-eveil-samedi-sablonniere-1030",
-    "locationId": "sablonniere",
-    "day": "samedi",
-    "startTime": "10:30",
-    "endTime": "12:00",
-    "publics": [
-      "enfants"
-    ],
-    "tags": [
-      "eveil",
-      "benjamin",
-      "jeunes"
-    ],
-    "groupLabel": "Eveil a benjamin (2011 a 2018)"
-  }
-],
     "prices": [
       {
         "id": "athletisme-2025-2026-jeunes",
@@ -257,7 +206,7 @@
       {
         "id": "athletisme-2025-2026-adultes",
         "season": "2025/2026",
-        "label": "Sprint, demi-fond",
+        "label": "Sprint, demi-fond et technique",
         "clubFee": 75,
         "activityFee": 155,
         "total": 230,
@@ -302,7 +251,14 @@
         "Raquette",
         "Adolescents",
         "Adultes"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -339,7 +295,14 @@
         "Collectif",
         "Enfants",
         "Adultes"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -377,7 +340,14 @@
         "Mobilite",
         "Culture",
         "Collectif"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -414,7 +384,14 @@
         "Trail",
         "Adultes",
         "Sorties"
-      ]
+      ],
+      "introText": "La section course a pied / trail de l'ESC XV s'adresse aux adultes qui veulent courir en groupe, travailler l'endurance et preparer des objectifs de saison.",
+      "schedulesSubtitle": "Des creneaux dedies aux sorties et a la preparation d'objectif.",
+      "schedulesNoticeText": "Les creneaux affiches sont une base de travail saison 2025/2026 et doivent encore etre confirmes par la section.",
+      "pricesSubtitle": "Le budget est detaille entre cotisation club, participation activite et frais optionnels.",
+      "locationsSubtitle": "Les points de depart et parcours sont centralises pour la preparation des seances.",
+      "contactText": "Utilisez les coordonnees ci-dessous pour poser une question sur une seance d'essai, l'inscription ou un objectif trail.",
+      "contactFormText": "Le formulaire reste volontairement statique pour cette phase de maquettage."
     },
     "programs": [
       {
@@ -448,8 +425,88 @@
         ]
       }
     ],
-    "locations": [],
-    "schedules": [],
+    "locations": [
+      {
+        "id": "andre-citroen",
+        "name": "Parc Andre-Citroen",
+        "address": "2 rue Balard",
+        "city": "Paris",
+        "postalCode": "75015",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Parc+Andre-Citroen+Paris+75015",
+        "image": "https://images.unsplash.com/photo-1501706362039-c6e8096b42de?auto=format&fit=crop&w=1200&q=80",
+        "description": "Point de rendez-vous pratique pour les sorties footing et les boucles d'endurance dans le 15e.",
+        "tags": [
+          "Running",
+          "Sortie",
+          "Paris 15"
+        ]
+      },
+      {
+        "id": "georges-brassens",
+        "name": "Parc Georges-Brassens",
+        "address": "2 place Jacques Marette",
+        "city": "Paris",
+        "postalCode": "75015",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Parc+Georges-Brassens+Paris+75015",
+        "image": "https://images.unsplash.com/photo-1519834785169-98f0b1e81f3d?auto=format&fit=crop&w=1200&q=80",
+        "description": "Lieu utile pour les seances plus rythmees et les debuts de sorties trail urbain.",
+        "tags": [
+          "Trail",
+          "Parc",
+          "Endurance"
+        ]
+      }
+    ],
+    "schedules": [
+      {
+        "id": "cap-mardi-citroen-1900",
+        "locationId": "andre-citroen",
+        "day": "mardi",
+        "startTime": "19:00",
+        "endTime": "20:15",
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "endurance",
+          "footing",
+          "technique"
+        ],
+        "notes": "Sortie rythme et travail d'endurance."
+      },
+      {
+        "id": "cap-jeudi-brassens-1830",
+        "locationId": "georges-brassens",
+        "day": "jeudi",
+        "startTime": "18:30",
+        "endTime": "20:00",
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "fractionne",
+          "allure",
+          "preparation trail"
+        ],
+        "notes": "Seance de progression et de preparation trail."
+      },
+      {
+        "id": "cap-samedi-brassens-0930",
+        "locationId": "georges-brassens",
+        "day": "samedi",
+        "startTime": "09:30",
+        "endTime": "11:30",
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "sortie longue",
+          "trail",
+          "groupe"
+        ],
+        "notes": "Sortie longue pour construire la resistance."
+      }
+    ],
     "prices": [
       {
         "id": "captrail-2025-2026",
@@ -461,7 +518,15 @@
         "extraFees": []
       }
     ],
-    "contacts": []
+    "contacts": [
+      {
+        "id": "contact-captrail",
+        "name": "Section Course a pied / Trail ESC XV",
+        "role": "Contact section",
+        "email": "courseapied@escxv.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "danse-moderne",
@@ -492,7 +557,14 @@
         "Danse",
         "Expression",
         "Rythme"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -529,7 +601,14 @@
         "Escalade",
         "Confiance",
         "Technique"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -568,7 +647,14 @@
         "Jeunes",
         "Adultes",
         "Competition"
-      ]
+      ],
+      "introText": "La page centralise les informations utiles pour comprendre rapidement a quel creneau s'adresser selon l'age, le niveau et l'objectif de pratique.",
+      "schedulesSubtitle": "Chaque seance est rattachee a un lieu unique pour eviter les ambiguities de lecture.",
+      "schedulesNoticeText": "Les horaires affiches servent de maquette de contenu et restent a confirmer avec la section avant publication officielle.",
+      "pricesSubtitle": "Les montants affiches sont ranges par public pour faciliter la comparaison.",
+      "locationsSubtitle": "Le lieu principal retenu pour la maquette est centralise avec une carte et les informations d'acces.",
+      "contactText": "Les coordonnees de section sont affichees a cote d'un formulaire statique, sans systeme d'envoi actif a ce stade.",
+      "contactFormText": "Le formulaire sert uniquement a maquetter l'experience de contact."
     },
     "programs": [
       {
@@ -602,8 +688,72 @@
         ]
       }
     ],
-    "locations": [],
-    "schedules": [],
+    "locations": [
+      {
+        "id": "suzanne-lenglen",
+        "name": "Parc omnisports Suzanne-Lenglen",
+        "address": "2 rue Louis Armand",
+        "city": "Paris",
+        "postalCode": "75015",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Parc+omnisports+Suzanne-Lenglen+Paris+75015",
+        "image": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1200&q=80",
+        "description": "Grand site sportif du 15e arrondissement, retenu ici comme lieu principal de pratique pour la section football.",
+        "tags": [
+          "Terrain",
+          "Collectif",
+          "Paris 15"
+        ]
+      }
+    ],
+    "schedules": [
+      {
+        "id": "football-mercredi-lenglen-1400",
+        "locationId": "suzanne-lenglen",
+        "day": "mercredi",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "publics": [
+          "enfants"
+        ],
+        "tags": [
+          "ecole de foot",
+          "initiation"
+        ],
+        "notes": "Creneau de decouverte et de progression pour les plus jeunes."
+      },
+      {
+        "id": "football-samedi-lenglen-0930",
+        "locationId": "suzanne-lenglen",
+        "day": "samedi",
+        "startTime": "09:30",
+        "endTime": "12:30",
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "jeunes",
+          "matchs",
+          "technique"
+        ],
+        "notes": "Organisation type pour les groupes jeunes du week-end."
+      },
+      {
+        "id": "football-semaine-lenglen-2000",
+        "locationId": "suzanne-lenglen",
+        "day": "jeudi",
+        "startTime": "20:00",
+        "endTime": "22:00",
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "adultes",
+          "loisir",
+          "competition"
+        ],
+        "notes": "Creneau adulte en soiree, donne a confirmer."
+      }
+    ],
     "prices": [
       {
         "id": "football-2025-2026-enfants",
@@ -633,7 +783,15 @@
         "extraFees": []
       }
     ],
-    "contacts": []
+    "contacts": [
+      {
+        "id": "contact-football",
+        "name": "Section Football ESC XV",
+        "role": "Contact section",
+        "email": "football@escxv.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "gymnastique-entretien",
@@ -662,7 +820,14 @@
         "Forme",
         "Mobilite",
         "Adultes"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -699,7 +864,14 @@
         "Judo",
         "Technique",
         "Respect"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -736,7 +908,14 @@
         "Natation",
         "Technique",
         "Endurance"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -771,7 +950,14 @@
         "Pilates",
         "Gainage",
         "Adultes"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -806,7 +992,14 @@
         "Renfo",
         "Force",
         "Adultes"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -842,7 +1035,14 @@
         "Enfants",
         "Multisports",
         "Mercredi"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -877,7 +1077,14 @@
         "Souplesse",
         "Mobilite",
         "Adultes"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -914,7 +1121,14 @@
         "Raquette",
         "Technique",
         "Match"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -950,7 +1164,14 @@
         "Raquette",
         "Precision",
         "Salle"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -986,7 +1207,14 @@
         "Collectif",
         "Salle",
         "Adolescents"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],
@@ -1021,7 +1249,14 @@
         "Yoga",
         "Respiration",
         "Adultes"
-      ]
+      ],
+      "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
+      "schedulesSubtitle": "Les creneaux seront publies ici.",
+      "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
+      "pricesSubtitle": "Les tarifs seront ajoutes ici.",
+      "locationsSubtitle": "Les lieux seront centralises ici.",
+      "contactText": "Le contact de section sera ajoute des que la page sera ouverte.",
+      "contactFormText": "Formulaire statique en attente d'activation fonctionnelle."
     },
     "programs": [],
     "locations": [],

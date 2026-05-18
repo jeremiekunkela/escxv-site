@@ -18,39 +18,15 @@ export type Program = {
 };
 
 export type ActivityContent = {
-  heroEyebrow: string;
-  heroTitle: string;
-  heroSubtitle: string;
-  heroPrimaryCtaLabel: string;
-  heroPrimaryCtaHref: string;
-  heroSecondaryCtaLabel: string;
-  heroSecondaryCtaHref: string;
+  heroSubtitle?: string;
   heroBadges: string[];
-  introTitle: string;
-  introText: string;
-  introEyebrow?: string;
-  schedulesTitle: string;
-  schedulesSubtitle: string;
-  schedulesEyebrow?: string;
-  schedulesNoticeTitle: string;
-  schedulesNoticeText: string;
-  pricesTitle: string;
-  pricesSubtitle: string;
-  pricesEyebrow?: string;
-  locationsTitle: string;
-  locationsSubtitle: string;
-  locationsEyebrow?: string;
-  contactTitle: string;
-  contactText: string;
-  contactEyebrow?: string;
-  contactFormTitle: string;
-  contactFormText: string;
-  formEyebrow?: string;
-  formNameLabel?: string;
-  formEmailLabel?: string;
-  formPhoneLabel?: string;
-  formMessageLabel?: string;
-  formSubmitLabel?: string;
+  introText?: string;
+  schedulesSubtitle?: string;
+  schedulesNoticeText?: string;
+  pricesSubtitle?: string;
+  locationsSubtitle?: string;
+  contactText?: string;
+  contactFormText?: string;
 };
 
 export type ActivityLocation = {
@@ -74,6 +50,7 @@ export type ActivitySchedule = {
   endTime: string;
   publics: ActivityPublic[];
   tags: string[];
+  groupLabel?: string;
   notes?: string;
 };
 

@@ -7,29 +7,47 @@ type ActivityContactFormProps = {
 };
 
 export function ActivityContactForm({ content }: ActivityContactFormProps) {
+  const contactFormText =
+    content.contactFormText && content.contactFormText.trim().length > 0
+      ? content.contactFormText
+      : "Formulaire statique en attente d'activation fonctionnelle.";
+
   return (
     <div className={styles.card}>
-      <p className={styles.eyebrow}>{content.formEyebrow ?? content.contactFormTitle}</p>
-      <h3 className={styles.title}>{content.contactFormTitle}</h3>
-      <p className={styles.text}>{content.contactFormText}</p>
+      <p className={styles.eyebrow}>Formulaire</p>
+      <h3 className={styles.title}>Envoyer un message</h3>
+      <p className={styles.text}>{contactFormText}</p>
       <form className={styles.form}>
         <label className={styles.label}>
-          {content.formNameLabel ?? "Nom"}
+          Nom
           <input type="text" className={styles.field} />
         </label>
         <label className={styles.label}>
-          {content.formEmailLabel ?? "Email"}
+          Email
           <input type="email" className={styles.field} />
         </label>
         <label className={styles.label}>
-          {content.formPhoneLabel ?? "Telephone"}
+          Telephone
           <input type="tel" className={styles.field} />
         </label>
         <label className={styles.label}>
-          {content.formMessageLabel ?? "Message"}
+          Sujet de votre demande *
+          <select className={styles.field} defaultValue="" required>
+            <option value="" disabled>
+              Selectionnez un sujet
+            </option>
+            <option value="inscription">Inscription</option>
+            <option value="cours-essai">Cours d&apos;essai</option>
+            <option value="horaires">Horaires</option>
+            <option value="tarifs">Tarifs</option>
+            <option value="autre">Autre demande</option>
+          </select>
+        </label>
+        <label className={styles.label}>
+          Message
           <textarea className={`${styles.field} ${styles.textarea}`} />
         </label>
-        <Button type="button">{content.formSubmitLabel ?? "Envoyer"}</Button>
+        <Button type="button">Envoyer</Button>
       </form>
     </div>
   );

@@ -10,6 +10,12 @@ type ActivityLocationCardsProps = {
 };
 
 export function ActivityLocationCards({ locations }: ActivityLocationCardsProps) {
+  if (locations.length === 0) {
+    return (
+      <div className={styles.empty}>Les lieux de pratique ne sont pas encore renseignes.</div>
+    );
+  }
+
   return (
     <div className={styles.grid}>
       {locations.map((location) => (
