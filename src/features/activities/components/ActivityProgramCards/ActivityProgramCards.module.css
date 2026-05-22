@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;
 }
 
@@ -53,10 +53,4 @@
   margin: 18px 0 0;
   padding: 0;
   list-style: none;
-}
-
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
 }
