@@ -10,6 +10,7 @@ import { ActivityProgramCards } from "@/features/activities/components/ActivityP
 import { ActivityScheduleCards } from "@/features/activities/components/ActivityScheduleCards/ActivityScheduleCards";
 import { ActivityTrainerCards } from "@/features/activities/components/ActivityTrainerCards/ActivityTrainerCards";
 import { NewsList } from "@/features/news/components/NewsList/NewsList";
+import type { ReactNode } from "react";
 import type { Activity } from "@/features/activities/types/activity";
 import type { NewsItem } from "@/features/news/types/news";
 import styles from "./ActivityDetailPage.module.css";
@@ -17,6 +18,16 @@ import styles from "./ActivityDetailPage.module.css";
 type ActivityDetailPageProps = {
   activity: Activity;
   news?: NewsItem[];
+};
+
+type DetailSectionProps = {
+  id?: string;
+  className?: string;
+  headerClassName?: string;
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  children: ReactNode;
 };
 
 const SECTION_COPY = {
@@ -40,6 +51,27 @@ const SECTION_COPY = {
 
 function getContentOrFallback(content: string | undefined, fallback: string) {
   return content && content.trim().length > 0 ? content : fallback;
+}
+
+function DetailSection({
+  id,
+  className = styles.section,
+  headerClassName = styles.header,
+  eyebrow,
+  title,
+  subtitle,
+  children,
+}: DetailSectionProps) {
+  return (
+    <section id={id} className={className}>
+      <Container>
+        <div className={headerClassName}>
+          <SectionTitle eyebrow={eyebrow} title={title} subtitle={subtitle} />
+        </div>
+        {children}
+      </Container>
+    </section>
+  );
 }
 
 export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPageProps) {
@@ -104,64 +136,53 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
       />
 
       <main>
-        <section id="programmes" className={styles.section}>
-          <Container>
-            <div className={styles.header}>
-              <SectionTitle
-                eyebrow={SECTION_COPY.introEyebrow}
-                title={SECTION_COPY.introTitle}
-                subtitle={hasPrograms ? introText : undefined}
-              />
-            </div>
-            {hasPrograms ? (
-              <ActivityProgramCards programs={activity.programs} />
-            ) : (
-              <InfoBlock title="Contenu en preparation">
-                Le detail des programmes sera ajoute ici quand la section aura valide sa
-                presentation.
-              </InfoBlock>
-            )}
-          </Container>
-        </section>
+        <DetailSection
+          id="programmes"
+          eyebrow={SECTION_COPY.introEyebrow}
+          title={SECTION_COPY.introTitle}
+          subtitle={hasPrograms ? introText : undefined}
+        >
+          {hasPrograms ? (
+            <ActivityProgramCards programs={activity.programs} />
+          ) : (
+            <InfoBlock title="Contenu en preparation">
+              Le detail des programmes sera ajoute ici quand la section aura valide sa
+              presentation.
+            </InfoBlock>
+          )}
+        </DetailSection>
 
-        <section id="horaires" className={`${styles.section} ${styles.gridSurface}`}>
-          <Container>
-            <div className={styles.header}>
-              <SectionTitle
-                eyebrow={SECTION_COPY.schedulesEyebrow}
-                title={SECTION_COPY.schedulesTitle}
-                subtitle={hasSchedules ? schedulesSubtitle : undefined}
-              />
-            </div>
-            {hasSchedules ? (
-              <ActivityScheduleCards
-                schedules={activity.schedules}
-                locations={activity.locations}
-              />
-            ) : (
-              <InfoBlock title={SECTION_COPY.schedulesNoticeTitle}>
-                {schedulesNoticeText}
-              </InfoBlock>
-            )}
-          </Container>
-        </section>
+        <DetailSection
+          id="horaires"
+          className={`${styles.section} ${styles.gridSurface}`}
+          eyebrow={SECTION_COPY.schedulesEyebrow}
+          title={SECTION_COPY.schedulesTitle}
+          subtitle={hasSchedules ? schedulesSubtitle : undefined}
+        >
+          {hasSchedules ? (
+            <ActivityScheduleCards
+              schedules={activity.schedules}
+              locations={activity.locations}
+            />
+          ) : (
+            <InfoBlock title={SECTION_COPY.schedulesNoticeTitle}>
+              {schedulesNoticeText}
+            </InfoBlock>
+          )}
+        </DetailSection>
 
         {hasTrainers ? (
-          <section id="entraineurs" className={styles.section}>
-            <Container>
-              <div className={styles.header}>
-                <SectionTitle
-                  eyebrow={SECTION_COPY.trainersEyebrow}
-                  title={SECTION_COPY.trainersTitle}
-                  subtitle={trainersSubtitle}
-                />
-              </div>
-              <ActivityTrainerCards
-                trainers={trainers}
-                schedules={activity.schedules}
-              />
-            </Container>
-          </section>
+          <DetailSection
+            id="entraineurs"
+            eyebrow={SECTION_COPY.trainersEyebrow}
+            title={SECTION_COPY.trainersTitle}
+            subtitle={trainersSubtitle}
+          >
+            <ActivityTrainerCards
+              trainers={trainers}
+              schedules={activity.schedules}
+            />
+          </DetailSection>
         ) : null}
 
         <NewsList
@@ -175,65 +196,54 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
           showActivityLink={false}
         />
 
-        <section id="pratique" className={styles.section}>
-          <Container>
-            <div className={styles.header}>
-              <SectionTitle
-                eyebrow={SECTION_COPY.pricesEyebrow}
-                title={SECTION_COPY.pricesTitle}
-                subtitle={hasPrices ? pricesSubtitle : undefined}
-              />
-            </div>
-            {hasPrices ? (
-              <ActivityPriceBlocks prices={activity.prices} />
-            ) : (
-              <InfoBlock title="Tarifs en attente">
-                Les tarifs seront ajoutes ici des que la section aura confirme sa grille.
-              </InfoBlock>
-            )}
-          </Container>
-        </section>
+        <DetailSection
+          id="pratique"
+          eyebrow={SECTION_COPY.pricesEyebrow}
+          title={SECTION_COPY.pricesTitle}
+          subtitle={hasPrices ? pricesSubtitle : undefined}
+        >
+          {hasPrices ? (
+            <ActivityPriceBlocks prices={activity.prices} />
+          ) : (
+            <InfoBlock title="Tarifs en attente">
+              Les tarifs seront ajoutes ici des que la section aura confirme sa grille.
+            </InfoBlock>
+          )}
+        </DetailSection>
 
-        <section className={`${styles.section} ${styles.surface}`}>
-          <Container>
-            <div className={styles.header}>
-              <SectionTitle
-                eyebrow={SECTION_COPY.locationsEyebrow}
-                title={SECTION_COPY.locationsTitle}
-                subtitle={hasLocations ? locationsSubtitle : undefined}
-              />
-            </div>
-            {hasLocations ? (
-              <ActivityLocationCards locations={activity.locations} />
-            ) : (
-              <InfoBlock title="Lieux en attente">
-                Les lieux de pratique seront centralises ici quand ils auront ete confirmes.
-              </InfoBlock>
-            )}
-          </Container>
-        </section>
+        <DetailSection
+          className={`${styles.section} ${styles.surface}`}
+          eyebrow={SECTION_COPY.locationsEyebrow}
+          title={SECTION_COPY.locationsTitle}
+          subtitle={hasLocations ? locationsSubtitle : undefined}
+        >
+          {hasLocations ? (
+            <ActivityLocationCards locations={activity.locations} />
+          ) : (
+            <InfoBlock title="Lieux en attente">
+              Les lieux de pratique seront centralises ici quand ils auront ete confirmes.
+            </InfoBlock>
+          )}
+        </DetailSection>
 
-        <section id="contact" className={styles.section}>
-          <Container>
-            <div className={styles.contactIntro}>
-              <SectionTitle
-                eyebrow={SECTION_COPY.contactEyebrow}
-                title={SECTION_COPY.contactTitle}
-                subtitle={hasContacts ? contactText : undefined}
-              />
+        <DetailSection
+          id="contact"
+          headerClassName={styles.contactIntro}
+          eyebrow={SECTION_COPY.contactEyebrow}
+          title={SECTION_COPY.contactTitle}
+          subtitle={hasContacts ? contactText : undefined}
+        >
+          {hasContacts ? (
+            <div className={styles.contactGrid}>
+              <ActivityContactBlocks contacts={activity.contacts} />
+              <ActivityContactForm content={content} />
             </div>
-            {hasContacts ? (
-              <div className={styles.contactGrid}>
-                <ActivityContactBlocks contacts={activity.contacts} />
-                <ActivityContactForm content={content} />
-              </div>
-            ) : (
-              <InfoBlock title="Contact en attente">
-                {emptyContactText}
-              </InfoBlock>
-            )}
-          </Container>
-        </section>
+          ) : (
+            <InfoBlock title="Contact en attente">
+              {emptyContactText}
+            </InfoBlock>
+          )}
+        </DetailSection>
       </main>
     </>
   );

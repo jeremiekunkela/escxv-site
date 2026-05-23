@@ -11,6 +11,15 @@ export type NewsOption<T extends string> = {
   label: string;
 };
 
+type NewsScopePredicate = (newsItem: NewsItem) => boolean;
+
+const scopePredicates: Record<NewsScopeFilter, NewsScopePredicate> = {
+  all: () => true,
+  club: (newsItem) => newsItem.activitySlug === null,
+  activity: (newsItem) => newsItem.activitySlug !== null,
+  pinned: (newsItem) => newsItem.isPinned,
+};
+
 function normalizeSearch(value: string) {
   return value
     .normalize("NFD")
@@ -60,18 +69,18 @@ function getYearOptions(news: NewsItem[]) {
 }
 
 function getBlockSearchText(newsItem: NewsItem) {
+  const blockSearchTextByType = {
+    heading: (block) => [block.title, block.subtitle].filter(Boolean).join(" "),
+    image: (block) => [block.alt, block.caption].filter(Boolean).join(" "),
+    text: (block) => block.paragraphs.join(" "),
+  } satisfies {
+    [Type in NonNullable<NewsItem["blocks"]>[number]["type"]]: (
+      block: Extract<NonNullable<NewsItem["blocks"]>[number], { type: Type }>,
+    ) => string;
+  };
+
   return (newsItem.blocks ?? [])
-    .map((block) => {
-      if (block.type === "heading") {
-        return [block.title, block.subtitle].filter(Boolean).join(" ");
-      }
-
-      if (block.type === "image") {
-        return [block.alt, block.caption].filter(Boolean).join(" ");
-      }
-
-      return block.paragraphs.join(" ");
-    })
+    .map((block) => blockSearchTextByType[block.type](block as never))
     .join(" ");
 }
 
@@ -94,29 +103,10 @@ export function useNewsFilters(
 
   const filteredNews = useMemo(() => {
     const normalizedQuery = normalizeSearch(query);
+    const matchesScope = scopePredicates[scopeFilter];
 
     return news
       .filter((newsItem) => {
-        const matchesScope = (() => {
-          if (scopeFilter === "all") {
-            return true;
-          }
-
-          if (scopeFilter === "club") {
-            return newsItem.activitySlug === null;
-          }
-
-          if (scopeFilter === "activity") {
-            return newsItem.activitySlug !== null;
-          }
-
-          if (scopeFilter === "pinned") {
-            return newsItem.isPinned;
-          }
-
-          return true;
-        })();
-
         const matchesActivity =
           activityFilter === "all" || newsItem.activitySlug === activityFilter;
         const matchesYear =
@@ -142,7 +132,7 @@ export function useNewsFilters(
         );
 
         return (
-          matchesScope
+          matchesScope(newsItem)
           && matchesActivity
           && matchesYear
           && searchableText.includes(normalizedQuery)

@@ -77,15 +77,6 @@
   box-shadow: 0 0 0 4px rgba(69, 81, 230, 0.1);
 }
 
-.srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-}
-
 .searchIcon {
   color: var(--color-text-secondary);
   flex: none;

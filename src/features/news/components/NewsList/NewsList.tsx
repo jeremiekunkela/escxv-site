@@ -29,6 +29,11 @@ type NewsListProps = {
   emptyState?: ReactNode;
 };
 
+type NewsCardProps = {
+  newsItem: NewsItem;
+  showActivityLink: boolean;
+};
+
 const dateFormatter = new Intl.DateTimeFormat("fr-FR", {
   day: "numeric",
   month: "long",
@@ -43,28 +48,9 @@ function getNewsScopeLabel(newsItem: NewsItem) {
   return newsItem.activitySlug ? "Section" : "Club";
 }
 
-export function NewsList({
-  news,
-  eyebrow = "Actualités",
-  title,
-  subtitle,
-  ctaLabel,
-  surface = "plain",
-  presentation = "grid",
-  carouselLayout = "multi",
-  showActivityLink = true,
-  controls,
-  summary,
-  emptyState,
-}: NewsListProps) {
-  const shouldUseCarousel = presentation === "carousel" && news.length > 3;
-
-  if (news.length === 0 && !emptyState) {
-    return null;
-  }
-
-  const newsCards = news.map((newsItem) => (
-    <article key={newsItem.id} className={styles.card} data-news-card>
+function NewsCard({ newsItem, showActivityLink }: NewsCardProps) {
+  return (
+    <article className={styles.card} data-news-card>
       {newsItem.coverImage ? (
         <div className={styles.media}>
           <Image
@@ -121,6 +107,35 @@ export function NewsList({
         </div>
       </div>
     </article>
+  );
+}
+
+export function NewsList({
+  news,
+  eyebrow = "Actualités",
+  title,
+  subtitle,
+  ctaLabel,
+  surface = "plain",
+  presentation = "grid",
+  carouselLayout = "multi",
+  showActivityLink = true,
+  controls,
+  summary,
+  emptyState,
+}: NewsListProps) {
+  const shouldUseCarousel = presentation === "carousel" && news.length > 3;
+
+  if (news.length === 0 && !emptyState) {
+    return null;
+  }
+
+  const newsCards = news.map((newsItem) => (
+    <NewsCard
+      key={newsItem.id}
+      newsItem={newsItem}
+      showActivityLink={showActivityLink}
+    />
   ));
 
   return (

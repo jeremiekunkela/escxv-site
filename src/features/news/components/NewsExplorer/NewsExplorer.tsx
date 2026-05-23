@@ -47,7 +47,7 @@ export function NewsExplorer({
         <div className={styles.controls}>
           <div className={styles.controlsGrid}>
             <label className={styles.searchBar}>
-              <span className={styles.srOnly}>Rechercher une actualité</span>
+              <span className="sr-only">Rechercher une actualité</span>
               <Search aria-hidden="true" className={styles.searchIcon} size={20} />
               <input
                 value={query}

@@ -23,6 +23,49 @@ type ActivityExplorerProps = {
   subtitle: string;
 };
 
+type ActivityCardProps = {
+  activity: Activity;
+};
+
+function ActivityCard({ activity }: ActivityCardProps) {
+  return (
+    <article className={styles.card}>
+      <div className={styles.media}>
+        <Image
+          src={activity.image}
+          alt=""
+          fill
+          sizes="(min-width: 1180px) 33vw, (min-width: 768px) 50vw, 100vw"
+          className={styles.cardImage}
+        />
+        <div className={styles.mediaOverlay} />
+        <div className={styles.mediaText}>
+          <p className={styles.category}>
+            {activity.category.map((value) => categoryLabels[value]).join(" - ")}
+          </p>
+          <h3 className={styles.cardTitle}>{activity.title}</h3>
+        </div>
+      </div>
+
+      <div className={styles.cardBody}>
+        <div className={styles.ageGroups}>
+          {activity.publics.map((publicItem) => (
+            <Badge key={publicItem}>{formatPublicLabel(publicItem)}</Badge>
+          ))}
+        </div>
+        <p className={styles.summary}>{activity.shortDescription}</p>
+        <p className={styles.audience}>{activity.description}</p>
+        <div className={styles.cardFooter}>
+          <Link href={getActivityHref(activity)} className={styles.cardLink}>
+            Voir la page
+            <ArrowUpRight aria-hidden="true" size={17} />
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 export function ActivityExplorer({
   activities,
   eyebrow,
@@ -51,7 +94,7 @@ export function ActivityExplorer({
         <div className={styles.controls}>
           <div className={styles.controlsGrid}>
             <label className={styles.searchBar}>
-              <span className={styles.srOnly}>Rechercher une activite</span>
+              <span className="sr-only">Rechercher une activite</span>
               <Search aria-hidden="true" className={styles.searchIcon} size={20} />
               <input
                 value={query}
@@ -97,41 +140,8 @@ export function ActivityExplorer({
         {filteredActivities.length > 0 ? (
           <div className={styles.grid}>
             {filteredActivities.map((activity) => (
-                <article key={activity.slug} className={styles.card}>
-                  <div className={styles.media}>
-                    <Image
-                      src={activity.image}
-                      alt=""
-                      fill
-                      sizes="(min-width: 1180px) 33vw, (min-width: 768px) 50vw, 100vw"
-                      className={styles.cardImage}
-                    />
-                    <div className={styles.mediaOverlay} />
-                    <div className={styles.mediaText}>
-                      <p className={styles.category}>
-                        {activity.category.map((value) => categoryLabels[value]).join(" - ")}
-                      </p>
-                      <h3 className={styles.cardTitle}>{activity.title}</h3>
-                    </div>
-                  </div>
-
-                  <div className={styles.cardBody}>
-                    <div className={styles.ageGroups}>
-                      {activity.publics.map((publicItem) => (
-                        <Badge key={publicItem}>{formatPublicLabel(publicItem)}</Badge>
-                      ))}
-                    </div>
-                    <p className={styles.summary}>{activity.shortDescription}</p>
-                    <p className={styles.audience}>{activity.description}</p>
-                    <div className={styles.cardFooter}>
-                      <Link href={getActivityHref(activity)} className={styles.cardLink}>
-                        Voir la page
-                        <ArrowUpRight aria-hidden="true" size={17} />
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              ))}
+              <ActivityCard key={activity.slug} activity={activity} />
+            ))}
           </div>
         ) : (
           <div className={styles.empty}>

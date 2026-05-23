@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import styles from "./Button.module.css";
 
@@ -13,6 +14,26 @@ type ButtonProps = {
   rel?: string;
   icon?: "arrowLeft" | "arrowRight" | "none";
 };
+
+const iconByName = {
+  arrowLeft: (
+    <ArrowLeft
+      aria-hidden="true"
+      size={18}
+      strokeWidth={2.5}
+      className={cn(styles.icon, styles.iconLeft)}
+    />
+  ),
+  arrowRight: (
+    <ArrowRight
+      aria-hidden="true"
+      size={18}
+      strokeWidth={2.5}
+      className={styles.icon}
+    />
+  ),
+  none: null,
+} satisfies Record<NonNullable<ButtonProps["icon"]>, ReactNode>;
 
 export function Button({
   href,
@@ -31,22 +52,7 @@ export function Button({
     variant === "ghost" && styles.ghost,
     className,
   );
-  const iconElement =
-    icon === "none" ? null : icon === "arrowLeft" ? (
-      <ArrowLeft
-        aria-hidden="true"
-        size={18}
-        strokeWidth={2.5}
-        className={cn(styles.icon, styles.iconLeft)}
-      />
-    ) : (
-      <ArrowRight
-        aria-hidden="true"
-        size={18}
-        strokeWidth={2.5}
-        className={styles.icon}
-      />
-    );
+  const iconElement = iconByName[icon];
 
   if (href) {
     return (

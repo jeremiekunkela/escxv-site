@@ -4,16 +4,12 @@ import type { NewsItem } from "@/features/news/types/news";
 const allNews = news as NewsItem[];
 
 function sortByPublishedAtDesc(newsItems: NewsItem[]) {
-  return [...newsItems].sort((firstItem, secondItem) => {
-    if (firstItem.isPinned !== secondItem.isPinned) {
-      return Number(secondItem.isPinned) - Number(firstItem.isPinned);
-    }
-
-    return (
-      new Date(secondItem.publishedAt).getTime() -
-      new Date(firstItem.publishedAt).getTime()
-    );
-  });
+  return [...newsItems].sort(
+    (firstItem, secondItem) =>
+      Number(secondItem.isPinned) - Number(firstItem.isPinned)
+      || new Date(secondItem.publishedAt).getTime()
+        - new Date(firstItem.publishedAt).getTime(),
+  );
 }
 
 export function getPublishedNews() {
@@ -42,24 +38,17 @@ export function getNewsByActivitySlug(activitySlug: string) {
 
 export function getRelatedNews(currentSlug: string, limit = 3) {
   const currentNews = getNewsBySlug(currentSlug);
+  const scoreRelatedness = (newsItem: NewsItem) =>
+    Number(newsItem.activitySlug === currentNews?.activitySlug)
+    + Number(newsItem.type === currentNews?.type);
 
-  if (!currentNews) {
-    return [];
-  }
-
-  const otherNews = getPublishedNews().filter(
-    (newsItem) => newsItem.slug !== currentSlug,
-  );
-  const prioritizedNews = otherNews.sort((firstItem, secondItem) => {
-    const firstScore =
-      Number(firstItem.activitySlug === currentNews.activitySlug) +
-      Number(firstItem.type === currentNews.type);
-    const secondScore =
-      Number(secondItem.activitySlug === currentNews.activitySlug) +
-      Number(secondItem.type === currentNews.type);
-
-    return secondScore - firstScore;
-  });
-
-  return prioritizedNews.slice(0, limit);
+  return currentNews
+    ? getPublishedNews()
+        .filter((newsItem) => newsItem.slug !== currentSlug)
+        .sort(
+          (firstItem, secondItem) =>
+            scoreRelatedness(secondItem) - scoreRelatedness(firstItem),
+        )
+        .slice(0, limit)
+    : [];
 }

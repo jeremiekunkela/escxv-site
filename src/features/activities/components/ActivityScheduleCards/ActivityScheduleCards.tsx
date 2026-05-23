@@ -14,14 +14,55 @@ type ActivityScheduleCardsProps = {
 
 const PUBLIC_ORDER: ActivityPublic[] = ["enfants", "adolescents", "adultes"];
 
+type ScheduleGroup = {
+  key: string;
+  publics: ActivityPublic[];
+  schedules: ActivitySchedule[];
+};
+
+function sortPublics(publics: ActivityPublic[]) {
+  return [...publics].sort(
+    (left, right) => PUBLIC_ORDER.indexOf(left) - PUBLIC_ORDER.indexOf(right),
+  );
+}
+
 function getPublicGroupKey(publics: ActivityPublic[]) {
-  return [...publics]
-    .sort((left, right) => PUBLIC_ORDER.indexOf(left) - PUBLIC_ORDER.indexOf(right))
-    .join("|");
+  return sortPublics(publics).join("|");
 }
 
 function formatHour(value: string) {
   return value.replace(":", "h");
+}
+
+function groupSchedulesByPublic(schedules: ActivitySchedule[]) {
+  return Array.from(
+    schedules
+      .reduce((groups, schedule) => {
+        const key = getPublicGroupKey(schedule.publics);
+        const group = groups.get(key) ?? {
+          key,
+          publics: sortPublics(schedule.publics),
+          schedules: [],
+        };
+
+        group.schedules.push(schedule);
+        return groups.set(key, group);
+      }, new Map<string, ScheduleGroup>())
+      .values(),
+  );
+}
+
+function groupSchedulesByLocation(schedules: ActivitySchedule[]) {
+  return Array.from(
+    schedules.reduce(
+      (items, schedule) =>
+        items.set(schedule.locationId, [
+          ...(items.get(schedule.locationId) ?? []),
+          schedule,
+        ]),
+      new Map<string, ActivitySchedule[]>(),
+    ),
+  );
 }
 
 export function ActivityScheduleCards({ schedules, locations }: ActivityScheduleCardsProps) {
@@ -29,29 +70,8 @@ export function ActivityScheduleCards({ schedules, locations }: ActivitySchedule
     return <p className={styles.empty}>Aucun creneau n&apos;est encore renseigne.</p>;
   }
 
-  const groupedSchedules = Array.from(
-    schedules
-      .reduce((groups, schedule) => {
-        const key = getPublicGroupKey(schedule.publics);
-        const currentGroup = groups.get(key);
-
-        if (currentGroup) {
-          currentGroup.schedules.push(schedule);
-          return groups;
-        }
-
-        groups.set(key, {
-          key,
-          publics: [...schedule.publics].sort(
-            (left, right) => PUBLIC_ORDER.indexOf(left) - PUBLIC_ORDER.indexOf(right),
-          ),
-          schedules: [schedule],
-        });
-
-        return groups;
-      }, new Map<string, { key: string; publics: ActivityPublic[]; schedules: ActivitySchedule[] }>())
-      .values(),
-  );
+  const locationsById = new Map(locations.map((location) => [location.id, location]));
+  const groupedSchedules = groupSchedulesByPublic(schedules);
 
   return (
     <div className={styles.list}>
@@ -64,19 +84,7 @@ export function ActivityScheduleCards({ schedules, locations }: ActivitySchedule
           ),
         );
 
-        const schedulesByLocation = Array.from(
-          group.schedules.reduce((items, schedule) => {
-            const currentLocationSchedules = items.get(schedule.locationId);
-
-            if (currentLocationSchedules) {
-              currentLocationSchedules.push(schedule);
-              return items;
-            }
-
-            items.set(schedule.locationId, [schedule]);
-            return items;
-          }, new Map<string, ActivitySchedule[]>()),
-        );
+        const schedulesByLocation = groupSchedulesByLocation(group.schedules);
 
         return (
           <article key={group.key} className={styles.card}>
@@ -98,7 +106,7 @@ export function ActivityScheduleCards({ schedules, locations }: ActivitySchedule
 
               <div className={styles.scheduleGroups}>
                 {schedulesByLocation.map(([locationId, locationSchedules]) => {
-                  const location = locations.find((item) => item.id === locationId);
+                  const location = locationsById.get(locationId);
 
                   return (
                     <section key={locationId} className={styles.schedule}>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { Badge } from "@/components/ui/Badge/Badge";
 import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
@@ -11,6 +12,12 @@ import styles from "./NewsArticlePage.module.css";
 type NewsArticlePageProps = {
   newsItem: NewsItem;
   relatedNews: NewsItem[];
+};
+
+type ArticleBlockRenderProps<Block extends NewsArticleBlock> = {
+  block: Block;
+  newsItem: NewsItem;
+  index: number;
 };
 
 const dateFormatter = new Intl.DateTimeFormat("fr-FR", {
@@ -27,23 +34,106 @@ function getNewsScopeLabel(newsItem: NewsItem) {
   return newsItem.activitySlug ? "Section" : "Club";
 }
 
+function getArticleBlocks(newsItem: NewsItem): NewsArticleBlock[] {
+  return newsItem.blocks && newsItem.blocks.length > 0
+    ? newsItem.blocks
+    : [
+        {
+          type: "heading",
+          title: "Actualite",
+        },
+        {
+          type: "text",
+          paragraphs: [newsItem.content],
+        },
+      ];
+}
+
+function ArticleHeadingBlock({
+  block,
+  newsItem,
+  index,
+}: ArticleBlockRenderProps<Extract<NewsArticleBlock, { type: "heading" }>>) {
+  return (
+    <header
+      key={`${newsItem.slug}-heading-${index}`}
+      className={styles.articleHeading}
+    >
+      <h2 className={styles.sectionTitle}>{block.title}</h2>
+      {block.subtitle ? (
+        <p className={styles.sectionSubtitle}>{block.subtitle}</p>
+      ) : null}
+    </header>
+  );
+}
+
+function ArticleImageBlock({
+  block,
+  newsItem,
+  index,
+}: ArticleBlockRenderProps<Extract<NewsArticleBlock, { type: "image" }>>) {
+  const isWide = block.size === "wide";
+
+  return (
+    <figure
+      key={`${newsItem.slug}-image-${index}`}
+      className={isWide ? `${styles.figure} ${styles.figureWide}` : styles.figure}
+    >
+      <div className={styles.figureMedia}>
+        <Image
+          src={block.src}
+          alt={block.alt}
+          fill
+          sizes={isWide ? "(min-width: 1180px) 65vw, 100vw" : "(min-width: 1180px) 44vw, 100vw"}
+          className={styles.figureImage}
+        />
+      </div>
+      {block.caption ? (
+        <figcaption className={styles.caption}>{block.caption}</figcaption>
+      ) : null}
+    </figure>
+  );
+}
+
+function ArticleTextBlock({
+  block,
+  newsItem,
+  index,
+}: ArticleBlockRenderProps<Extract<NewsArticleBlock, { type: "text" }>>) {
+  return (
+    <div key={`${newsItem.slug}-text-${index}`} className={styles.sectionBody}>
+      {block.paragraphs.map((paragraph, paragraphIndex) => (
+        <p key={`${newsItem.slug}-${index}-${paragraphIndex}`}>{paragraph}</p>
+      ))}
+    </div>
+  );
+}
+
+const articleBlockRenderers = {
+  heading: ArticleHeadingBlock,
+  image: ArticleImageBlock,
+  text: ArticleTextBlock,
+} satisfies {
+  [Type in NewsArticleBlock["type"]]: (
+    props: ArticleBlockRenderProps<Extract<NewsArticleBlock, { type: Type }>>,
+  ) => ReactNode;
+};
+
+function ArticleBlock({
+  block,
+  newsItem,
+  index,
+}: ArticleBlockRenderProps<NewsArticleBlock>) {
+  const Renderer = articleBlockRenderers[block.type];
+
+  return <Renderer block={block as never} newsItem={newsItem} index={index} />;
+}
+
 export function NewsArticlePage({
   newsItem,
   relatedNews,
 }: NewsArticlePageProps) {
-  const articleBlocks: NewsArticleBlock[] =
-    newsItem.blocks && newsItem.blocks.length > 0
-      ? newsItem.blocks
-      : [
-          {
-            type: "heading",
-            title: "Actualite",
-          },
-          {
-            type: "text",
-            paragraphs: [newsItem.content],
-          },
-        ];
+  const articleBlocks = getArticleBlocks(newsItem);
 
   return (
     <>
@@ -98,66 +188,14 @@ export function NewsArticlePage({
           <Container>
             <div className={styles.layout}>
               <article className={styles.article}>
-                {articleBlocks.map((block, index) => {
-                  if (block.type === "heading") {
-                    return (
-                      <header
-                        key={`${newsItem.slug}-heading-${index}`}
-                        className={styles.articleHeading}
-                      >
-                        <h2 className={styles.sectionTitle}>{block.title}</h2>
-                        {block.subtitle ? (
-                          <p className={styles.sectionSubtitle}>{block.subtitle}</p>
-                        ) : null}
-                      </header>
-                    );
-                  }
-
-                  if (block.type === "image") {
-                    return (
-                      <figure
-                        key={`${newsItem.slug}-image-${index}`}
-                        className={
-                          block.size === "wide"
-                            ? `${styles.figure} ${styles.figureWide}`
-                            : styles.figure
-                        }
-                      >
-                        <div className={styles.figureMedia}>
-                          <Image
-                            src={block.src}
-                            alt={block.alt}
-                            fill
-                            sizes={
-                              block.size === "wide"
-                                ? "(min-width: 1180px) 65vw, 100vw"
-                                : "(min-width: 1180px) 44vw, 100vw"
-                            }
-                            className={styles.figureImage}
-                          />
-                        </div>
-                        {block.caption ? (
-                          <figcaption className={styles.caption}>
-                            {block.caption}
-                          </figcaption>
-                        ) : null}
-                      </figure>
-                    );
-                  }
-
-                  return (
-                    <div
-                      key={`${newsItem.slug}-text-${index}`}
-                      className={styles.sectionBody}
-                    >
-                      {block.paragraphs.map((paragraph, paragraphIndex) => (
-                        <p key={`${newsItem.slug}-${index}-${paragraphIndex}`}>
-                          {paragraph}
-                        </p>
-                      ))}
-                    </div>
-                  );
-                })}
+                {articleBlocks.map((block, index) => (
+                  <ArticleBlock
+                    key={`${newsItem.slug}-${block.type}-${index}`}
+                    block={block}
+                    newsItem={newsItem}
+                    index={index}
+                  />
+                ))}
               </article>
 
               <aside className={styles.sidebar}>
