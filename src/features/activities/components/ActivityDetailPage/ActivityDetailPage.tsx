@@ -9,11 +9,14 @@ import { ActivityPriceBlocks } from "@/features/activities/components/ActivityPr
 import { ActivityProgramCards } from "@/features/activities/components/ActivityProgramCards/ActivityProgramCards";
 import { ActivityScheduleCards } from "@/features/activities/components/ActivityScheduleCards/ActivityScheduleCards";
 import { ActivityTrainerCards } from "@/features/activities/components/ActivityTrainerCards/ActivityTrainerCards";
+import { NewsList } from "@/features/news/components/NewsList/NewsList";
 import type { Activity } from "@/features/activities/types/activity";
+import type { NewsItem } from "@/features/news/types/news";
 import styles from "./ActivityDetailPage.module.css";
 
 type ActivityDetailPageProps = {
   activity: Activity;
+  news?: NewsItem[];
 };
 
 const SECTION_COPY = {
@@ -29,6 +32,8 @@ const SECTION_COPY = {
   pricesTitle: "Tarifs de la saison",
   locationsEyebrow: "Lieux",
   locationsTitle: "Lieux de pratique",
+  newsEyebrow: "Actualités",
+  newsTitle: "Actualités de la section",
   contactEyebrow: "Contact",
   contactTitle: "Contacter la section",
 } as const;
@@ -37,7 +42,7 @@ function getContentOrFallback(content: string | undefined, fallback: string) {
   return content && content.trim().length > 0 ? content : fallback;
 }
 
-export function ActivityDetailPage({ activity }: ActivityDetailPageProps) {
+export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPageProps) {
   const { content } = activity;
   const hasPrograms = activity.programs.length > 0;
   const hasSchedules = activity.schedules.length > 0;
@@ -158,6 +163,17 @@ export function ActivityDetailPage({ activity }: ActivityDetailPageProps) {
             </Container>
           </section>
         ) : null}
+
+        <NewsList
+          news={news}
+          eyebrow={SECTION_COPY.newsEyebrow}
+          title={SECTION_COPY.newsTitle}
+          subtitle={`Des apercus rapides pour la section ${activity.title}, avec un acces vers chaque actualite complete.`}
+          surface="soft"
+          presentation="carousel"
+          carouselLayout="single"
+          showActivityLink={false}
+        />
 
         <section id="pratique" className={styles.section}>
           <Container>

@@ -5,6 +5,7 @@ import {
   getActivityBySlug,
   getActivitySlugs,
 } from "@/features/activities/data-access/activities";
+import { getNewsByActivitySlug } from "@/features/news/data-access/news";
 
 type ActivityPageProps = {
   params: Promise<{ slug: string }>;
@@ -40,5 +41,10 @@ export default async function ActivityPage({ params }: ActivityPageProps) {
     notFound();
   }
 
-  return <ActivityDetailPage activity={activity} />;
+  return (
+    <ActivityDetailPage
+      activity={activity}
+      news={getNewsByActivitySlug(activity.slug)}
+    />
+  );
 }

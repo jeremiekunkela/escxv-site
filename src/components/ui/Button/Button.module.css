@@ -46,6 +46,10 @@
   transform: translateX(2px);
 }
 
+.button:hover .iconLeft {
+  transform: translateX(-2px);
+}
+
 .primary {
   background: linear-gradient(135deg, var(--color-brand), var(--color-brand-bright));
   color: var(--color-text-inverse);

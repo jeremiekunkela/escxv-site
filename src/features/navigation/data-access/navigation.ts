@@ -5,6 +5,7 @@ import type { FooterContent, NavigationContent, NavigationLink } from "@/feature
 
 const mainLinks: NavigationLink[] = [
   { label: "Accueil", href: routes.home },
+  { label: "Actualités", href: routes.news },
 ];
 
 export function getNavigationContent(): NavigationContent {
