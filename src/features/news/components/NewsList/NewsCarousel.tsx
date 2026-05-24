@@ -18,6 +18,8 @@ type NewsCarouselProps = {
   children: ReactNode;
 };
 
+const NEWS_PREVIEW_CARD_SELECTOR = "[data-news-preview-card]";
+
 function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
@@ -36,9 +38,9 @@ export function NewsCarousel({
 
   const scrollToSlide = useCallback((slideIndex: number) => {
     const carousel = carouselRef.current;
-    const slide = carousel?.querySelectorAll<HTMLElement>("[data-news-card]")[
-      slideIndex
-    ];
+    const slide = carousel?.querySelectorAll<HTMLElement>(
+      NEWS_PREVIEW_CARD_SELECTOR,
+    )[slideIndex];
 
     if (!slide) {
       return;
@@ -77,7 +79,7 @@ export function NewsCarousel({
 
     scrollFrameRef.current = window.requestAnimationFrame(() => {
       const slides = Array.from(
-        carousel.querySelectorAll<HTMLElement>("[data-news-card]"),
+        carousel.querySelectorAll<HTMLElement>(NEWS_PREVIEW_CARD_SELECTOR),
       );
 
       if (slides.length === 0) {

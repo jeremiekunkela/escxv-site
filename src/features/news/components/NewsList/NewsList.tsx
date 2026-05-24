@@ -1,16 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import { Badge } from "@/components/ui/Badge/Badge";
 import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
 import { NewsCarousel } from "@/features/news/components/NewsList/NewsCarousel";
-import {
-  getActivityRoute,
-  getNewsRoute,
-  routes,
-} from "@/lib/constants/routes";
+import { getNewsRoute, routes } from "@/lib/constants/routes";
 import type { NewsItem } from "@/features/news/types/news";
 import styles from "./NewsList.module.css";
 
@@ -23,15 +18,13 @@ type NewsListProps = {
   surface?: "plain" | "soft";
   presentation?: "grid" | "carousel";
   carouselLayout?: "multi" | "single";
-  showActivityLink?: boolean;
   controls?: ReactNode;
   summary?: ReactNode;
   emptyState?: ReactNode;
 };
 
-type NewsCardProps = {
+type NewsPreviewCardProps = {
   newsItem: NewsItem;
-  showActivityLink: boolean;
 };
 
 const dateFormatter = new Intl.DateTimeFormat("fr-FR", {
@@ -48,9 +41,9 @@ function getNewsScopeLabel(newsItem: NewsItem) {
   return newsItem.activitySlug ? "Section" : "Club";
 }
 
-function NewsCard({ newsItem, showActivityLink }: NewsCardProps) {
+function NewsPreviewCard({ newsItem }: NewsPreviewCardProps) {
   return (
-    <article className={styles.card} data-news-card>
+    <article className={styles.card} data-news-preview-card>
       {newsItem.coverImage ? (
         <div className={styles.media}>
           <Image
@@ -88,22 +81,9 @@ function NewsCard({ newsItem, showActivityLink }: NewsCardProps) {
         <p className={styles.excerpt}>{newsItem.excerpt}</p>
 
         <div className={styles.actions}>
-          <Button
-            href={getNewsRoute(newsItem.slug)}
-            variant="secondary"
-            className={styles.cardButton}
-          >
+          <Button href={getNewsRoute(newsItem.slug)} variant="secondary">
             En savoir plus
           </Button>
-
-          {showActivityLink && newsItem.activitySlug ? (
-            <Link
-              href={getActivityRoute(newsItem.activitySlug)}
-              className={styles.inlineLink}
-            >
-              Voir la section liee
-            </Link>
-          ) : null}
         </div>
       </div>
     </article>
@@ -119,7 +99,6 @@ export function NewsList({
   surface = "plain",
   presentation = "grid",
   carouselLayout = "multi",
-  showActivityLink = true,
   controls,
   summary,
   emptyState,
@@ -133,11 +112,7 @@ export function NewsList({
   }
 
   const newsCards = news.map((newsItem) => (
-    <NewsCard
-      key={newsItem.id}
-      newsItem={newsItem}
-      showActivityLink={showActivityLink}
-    />
+    <NewsPreviewCard key={newsItem.id} newsItem={newsItem} />
   ));
 
   return (

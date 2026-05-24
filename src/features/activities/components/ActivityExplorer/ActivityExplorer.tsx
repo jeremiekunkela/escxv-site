@@ -23,11 +23,11 @@ type ActivityExplorerProps = {
   subtitle: string;
 };
 
-type ActivityCardProps = {
+type ActivityExplorerCardProps = {
   activity: Activity;
 };
 
-function ActivityCard({ activity }: ActivityCardProps) {
+function ActivityExplorerCard({ activity }: ActivityExplorerCardProps) {
   return (
     <article className={styles.card}>
       <div className={styles.media}>
@@ -140,7 +140,7 @@ export function ActivityExplorer({
         {filteredActivities.length > 0 ? (
           <div className={styles.grid}>
             {filteredActivities.map((activity) => (
-              <ActivityCard key={activity.slug} activity={activity} />
+              <ActivityExplorerCard key={activity.slug} activity={activity} />
             ))}
           </div>
         ) : (

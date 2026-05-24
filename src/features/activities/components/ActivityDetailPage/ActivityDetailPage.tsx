@@ -20,7 +20,7 @@ type ActivityDetailPageProps = {
   news?: NewsItem[];
 };
 
-type DetailSectionProps = {
+type ActivityDetailPageSectionProps = {
   id?: string;
   className?: string;
   headerClassName?: string;
@@ -30,7 +30,7 @@ type DetailSectionProps = {
   children: ReactNode;
 };
 
-const SECTION_COPY = {
+const ACTIVITY_DETAIL_PAGE_COPY = {
   heroEyebrow: "Section",
   introEyebrow: "Presentation",
   introTitle: "La section",
@@ -53,7 +53,7 @@ function getContentOrFallback(content: string | undefined, fallback: string) {
   return content && content.trim().length > 0 ? content : fallback;
 }
 
-function DetailSection({
+function ActivityDetailPageSection({
   id,
   className = styles.section,
   headerClassName = styles.header,
@@ -61,7 +61,7 @@ function DetailSection({
   title,
   subtitle,
   children,
-}: DetailSectionProps) {
+}: ActivityDetailPageSectionProps) {
   return (
     <section id={id} className={className}>
       <Container>
@@ -126,7 +126,7 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
   return (
     <>
       <HeroSection
-        eyebrow={SECTION_COPY.heroEyebrow}
+        eyebrow={ACTIVITY_DETAIL_PAGE_COPY.heroEyebrow}
         title={activity.title}
         description={heroSubtitle}
         imageUrl={activity.image}
@@ -136,10 +136,10 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
       />
 
       <main>
-        <DetailSection
+        <ActivityDetailPageSection
           id="programmes"
-          eyebrow={SECTION_COPY.introEyebrow}
-          title={SECTION_COPY.introTitle}
+          eyebrow={ACTIVITY_DETAIL_PAGE_COPY.introEyebrow}
+          title={ACTIVITY_DETAIL_PAGE_COPY.introTitle}
           subtitle={hasPrograms ? introText : undefined}
         >
           {hasPrograms ? (
@@ -150,13 +150,13 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
               presentation.
             </InfoBlock>
           )}
-        </DetailSection>
+        </ActivityDetailPageSection>
 
-        <DetailSection
+        <ActivityDetailPageSection
           id="horaires"
           className={`${styles.section} ${styles.gridSurface}`}
-          eyebrow={SECTION_COPY.schedulesEyebrow}
-          title={SECTION_COPY.schedulesTitle}
+          eyebrow={ACTIVITY_DETAIL_PAGE_COPY.schedulesEyebrow}
+          title={ACTIVITY_DETAIL_PAGE_COPY.schedulesTitle}
           subtitle={hasSchedules ? schedulesSubtitle : undefined}
         >
           {hasSchedules ? (
@@ -165,41 +165,40 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
               locations={activity.locations}
             />
           ) : (
-            <InfoBlock title={SECTION_COPY.schedulesNoticeTitle}>
+            <InfoBlock title={ACTIVITY_DETAIL_PAGE_COPY.schedulesNoticeTitle}>
               {schedulesNoticeText}
             </InfoBlock>
           )}
-        </DetailSection>
+        </ActivityDetailPageSection>
 
         {hasTrainers ? (
-          <DetailSection
+          <ActivityDetailPageSection
             id="entraineurs"
-            eyebrow={SECTION_COPY.trainersEyebrow}
-            title={SECTION_COPY.trainersTitle}
+            eyebrow={ACTIVITY_DETAIL_PAGE_COPY.trainersEyebrow}
+            title={ACTIVITY_DETAIL_PAGE_COPY.trainersTitle}
             subtitle={trainersSubtitle}
           >
             <ActivityTrainerCards
               trainers={trainers}
               schedules={activity.schedules}
             />
-          </DetailSection>
+          </ActivityDetailPageSection>
         ) : null}
 
         <NewsList
           news={news}
-          eyebrow={SECTION_COPY.newsEyebrow}
-          title={SECTION_COPY.newsTitle}
+          eyebrow={ACTIVITY_DETAIL_PAGE_COPY.newsEyebrow}
+          title={ACTIVITY_DETAIL_PAGE_COPY.newsTitle}
           subtitle={`Des apercus rapides pour la section ${activity.title}, avec un acces vers chaque actualite complete.`}
           surface="soft"
           presentation="carousel"
           carouselLayout="single"
-          showActivityLink={false}
         />
 
-        <DetailSection
+        <ActivityDetailPageSection
           id="pratique"
-          eyebrow={SECTION_COPY.pricesEyebrow}
-          title={SECTION_COPY.pricesTitle}
+          eyebrow={ACTIVITY_DETAIL_PAGE_COPY.pricesEyebrow}
+          title={ACTIVITY_DETAIL_PAGE_COPY.pricesTitle}
           subtitle={hasPrices ? pricesSubtitle : undefined}
         >
           {hasPrices ? (
@@ -209,12 +208,12 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
               Les tarifs seront ajoutes ici des que la section aura confirme sa grille.
             </InfoBlock>
           )}
-        </DetailSection>
+        </ActivityDetailPageSection>
 
-        <DetailSection
+        <ActivityDetailPageSection
           className={`${styles.section} ${styles.surface}`}
-          eyebrow={SECTION_COPY.locationsEyebrow}
-          title={SECTION_COPY.locationsTitle}
+          eyebrow={ACTIVITY_DETAIL_PAGE_COPY.locationsEyebrow}
+          title={ACTIVITY_DETAIL_PAGE_COPY.locationsTitle}
           subtitle={hasLocations ? locationsSubtitle : undefined}
         >
           {hasLocations ? (
@@ -224,13 +223,13 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
               Les lieux de pratique seront centralises ici quand ils auront ete confirmes.
             </InfoBlock>
           )}
-        </DetailSection>
+        </ActivityDetailPageSection>
 
-        <DetailSection
+        <ActivityDetailPageSection
           id="contact"
           headerClassName={styles.contactIntro}
-          eyebrow={SECTION_COPY.contactEyebrow}
-          title={SECTION_COPY.contactTitle}
+          eyebrow={ACTIVITY_DETAIL_PAGE_COPY.contactEyebrow}
+          title={ACTIVITY_DETAIL_PAGE_COPY.contactTitle}
           subtitle={hasContacts ? contactText : undefined}
         >
           {hasContacts ? (
@@ -243,7 +242,7 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
               {emptyContactText}
             </InfoBlock>
           )}
-        </DetailSection>
+        </ActivityDetailPageSection>
       </main>
     </>
   );

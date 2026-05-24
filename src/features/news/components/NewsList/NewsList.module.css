@@ -282,27 +282,8 @@
 
 .actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-  align-items: center;
   margin-top: auto;
   padding-top: var(--space-lg);
-}
-
-.cardButton {
-  width: fit-content;
-}
-
-.inlineLink {
-  width: fit-content;
-  display: inline-flex;
-  color: var(--color-brand);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-}
-
-.inlineLink:hover {
-  color: var(--color-brand-strong);
 }
 
 .empty {

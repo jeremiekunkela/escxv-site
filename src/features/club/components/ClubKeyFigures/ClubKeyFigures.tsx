@@ -1,12 +1,12 @@
 import { Container } from "@/components/ui/Container/Container";
 import type { KeyFigure } from "@/types/content";
-import styles from "./KeyFigures.module.css";
+import styles from "./ClubKeyFigures.module.css";
 
-type KeyFiguresProps = {
+type ClubKeyFiguresProps = {
   figures: KeyFigure[];
 };
 
-export function KeyFigures({ figures }: KeyFiguresProps) {
+export function ClubKeyFigures({ figures }: ClubKeyFiguresProps) {
   return (
     <section aria-labelledby="figures-title" className={styles.section}>
       <Container>

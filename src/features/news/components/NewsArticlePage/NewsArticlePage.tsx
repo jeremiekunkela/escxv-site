@@ -14,7 +14,7 @@ type NewsArticlePageProps = {
   relatedNews: NewsItem[];
 };
 
-type ArticleBlockRenderProps<Block extends NewsArticleBlock> = {
+type NewsArticleBlockRenderProps<Block extends NewsArticleBlock> = {
   block: Block;
   newsItem: NewsItem;
   index: number;
@@ -34,7 +34,7 @@ function getNewsScopeLabel(newsItem: NewsItem) {
   return newsItem.activitySlug ? "Section" : "Club";
 }
 
-function getArticleBlocks(newsItem: NewsItem): NewsArticleBlock[] {
+function getNewsArticleBlocks(newsItem: NewsItem): NewsArticleBlock[] {
   return newsItem.blocks && newsItem.blocks.length > 0
     ? newsItem.blocks
     : [
@@ -49,11 +49,11 @@ function getArticleBlocks(newsItem: NewsItem): NewsArticleBlock[] {
       ];
 }
 
-function ArticleHeadingBlock({
+function NewsArticleHeadingBlock({
   block,
   newsItem,
   index,
-}: ArticleBlockRenderProps<Extract<NewsArticleBlock, { type: "heading" }>>) {
+}: NewsArticleBlockRenderProps<Extract<NewsArticleBlock, { type: "heading" }>>) {
   return (
     <header
       key={`${newsItem.slug}-heading-${index}`}
@@ -67,11 +67,11 @@ function ArticleHeadingBlock({
   );
 }
 
-function ArticleImageBlock({
+function NewsArticleImageBlock({
   block,
   newsItem,
   index,
-}: ArticleBlockRenderProps<Extract<NewsArticleBlock, { type: "image" }>>) {
+}: NewsArticleBlockRenderProps<Extract<NewsArticleBlock, { type: "image" }>>) {
   const isWide = block.size === "wide";
 
   return (
@@ -95,11 +95,11 @@ function ArticleImageBlock({
   );
 }
 
-function ArticleTextBlock({
+function NewsArticleTextBlock({
   block,
   newsItem,
   index,
-}: ArticleBlockRenderProps<Extract<NewsArticleBlock, { type: "text" }>>) {
+}: NewsArticleBlockRenderProps<Extract<NewsArticleBlock, { type: "text" }>>) {
   return (
     <div key={`${newsItem.slug}-text-${index}`} className={styles.sectionBody}>
       {block.paragraphs.map((paragraph, paragraphIndex) => (
@@ -109,31 +109,37 @@ function ArticleTextBlock({
   );
 }
 
-const articleBlockRenderers = {
-  heading: ArticleHeadingBlock,
-  image: ArticleImageBlock,
-  text: ArticleTextBlock,
+const newsArticleBlockRenderers = {
+  heading: NewsArticleHeadingBlock,
+  image: NewsArticleImageBlock,
+  text: NewsArticleTextBlock,
 } satisfies {
   [Type in NewsArticleBlock["type"]]: (
-    props: ArticleBlockRenderProps<Extract<NewsArticleBlock, { type: Type }>>,
+    props: NewsArticleBlockRenderProps<Extract<NewsArticleBlock, { type: Type }>>,
   ) => ReactNode;
 };
 
-function ArticleBlock({
+function NewsArticleContentBlock({
   block,
   newsItem,
   index,
-}: ArticleBlockRenderProps<NewsArticleBlock>) {
-  const Renderer = articleBlockRenderers[block.type];
+}: NewsArticleBlockRenderProps<NewsArticleBlock>) {
+  const NewsArticleBlockRenderer = newsArticleBlockRenderers[block.type];
 
-  return <Renderer block={block as never} newsItem={newsItem} index={index} />;
+  return (
+    <NewsArticleBlockRenderer
+      block={block as never}
+      newsItem={newsItem}
+      index={index}
+    />
+  );
 }
 
 export function NewsArticlePage({
   newsItem,
   relatedNews,
 }: NewsArticlePageProps) {
-  const articleBlocks = getArticleBlocks(newsItem);
+  const newsArticleBlocks = getNewsArticleBlocks(newsItem);
 
   return (
     <>
@@ -188,8 +194,8 @@ export function NewsArticlePage({
           <Container>
             <div className={styles.layout}>
               <article className={styles.article}>
-                {articleBlocks.map((block, index) => (
-                  <ArticleBlock
+                {newsArticleBlocks.map((block, index) => (
+                  <NewsArticleContentBlock
                     key={`${newsItem.slug}-${block.type}-${index}`}
                     block={block}
                     newsItem={newsItem}
