@@ -237,6 +237,8 @@ export function NewsArticlePage({
             title="Autres actualites"
             subtitle="Poursuivez la lecture avec d'autres nouvelles du club et des sections."
             surface="soft"
+            presentation="carousel"
+            carouselLayout="single"
           />
         ) : null}
       </main>

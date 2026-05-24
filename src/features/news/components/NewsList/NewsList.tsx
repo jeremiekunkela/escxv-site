@@ -124,7 +124,9 @@ export function NewsList({
   summary,
   emptyState,
 }: NewsListProps) {
-  const shouldUseCarousel = presentation === "carousel" && news.length > 3;
+  const shouldUseCarousel =
+    presentation === "carousel"
+    && (carouselLayout === "single" ? news.length > 0 : news.length > 3);
 
   if (news.length === 0 && !emptyState) {
     return null;

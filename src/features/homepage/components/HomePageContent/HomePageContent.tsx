@@ -49,6 +49,7 @@ export function HomePageContent({
           title="Actualités du club"
           subtitle="Des apercus rapides des dernieres annonces du club, avec un acces vers chaque page detaillee."
           ctaLabel="Toutes les actualités"
+          surface="soft"
           presentation="carousel"
           carouselLayout="single"
         />
