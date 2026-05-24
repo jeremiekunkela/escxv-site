@@ -5,12 +5,23 @@ import Link from "next/link";
 import { ChevronDown, Menu } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import type { FocusEvent, KeyboardEvent } from "react";
-import type { NavigationContent } from "@/features/navigation/types/navigation";
+import type {
+  NavigationContent,
+  NavigationLink,
+} from "@/features/navigation/types/navigation";
 import styles from "./SiteHeader.module.css";
 
 type SiteHeaderClientProps = {
   navigation: NavigationContent;
 };
+
+function ActivityLinkIcon({ item }: { item: NavigationLink }) {
+  return (
+    <span className={styles.activityPictogram} aria-hidden="true">
+      {item.iconName ?? "sports"}
+    </span>
+  );
+}
 
 export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -121,6 +132,7 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
                         tabIndex={0}
                         onClick={() => setOpenDropdown(false)}
                       >
+                        <ActivityLinkIcon item={item} />
                         <span>{item.label}</span>
                       </Link>
                     ))}
@@ -150,6 +162,7 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
                 <div className={styles.mobileSubmenu}>
                   {navigation.activityLinks.map((item) => (
                     <Link key={item.href} href={item.href} className={styles.mobileLink}>
+                      <ActivityLinkIcon item={item} />
                       {item.label}
                     </Link>
                   ))}

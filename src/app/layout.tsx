@@ -22,6 +22,14 @@ export const metadata: Metadata = {
   },
   description: club.description,
   metadataBase: new URL("https://escxv.fr"),
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/escxv-logo.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/escxv-logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" data-scroll-behavior="smooth">
       <body className={`${inter.className} ${inter.variable}`}>
         <ScrollReveal />
         <SiteHeader />

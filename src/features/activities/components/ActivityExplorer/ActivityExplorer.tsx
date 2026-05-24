@@ -26,16 +26,11 @@ type ActivityExplorerProps = {
 
 type ActivityExplorerCardProps = {
   activity: Activity;
-  index: number;
 };
 
-function ActivityExplorerCard({ activity, index }: ActivityExplorerCardProps) {
+function ActivityExplorerCard({ activity }: ActivityExplorerCardProps) {
   return (
-    <article
-      className={styles.card}
-      data-reveal="zoom"
-      style={{ "--reveal-delay": `${Math.min(index, 5) * 60}ms` } as CSSProperties}
-    >
+    <article className={styles.card}>
       <div className={styles.media}>
         <Image
           src={activity.image}
@@ -138,26 +133,18 @@ export function ActivityExplorer({
           </div>
         </div>
 
-        <div
-          className={styles.countRow}
-          data-reveal="fade"
-          style={{ "--reveal-delay": "180ms" } as CSSProperties}
-        >
-          <p className={styles.count}>
-            {filteredActivities.length} activite
-            {filteredActivities.length > 1 ? "s" : ""} affichee
-            {filteredActivities.length > 1 ? "s" : ""}
-          </p>
-          <p className={styles.total}>{activities.length} activites ESC XV</p>
-        </div>
-
         {filteredActivities.length > 0 ? (
-          <div className={styles.grid}>
-            {filteredActivities.map((activity, index) => (
+          <div
+            className={
+              filteredActivities.length === 1
+                ? `${styles.grid} ${styles.gridSingle}`
+                : styles.grid
+            }
+          >
+            {filteredActivities.map((activity) => (
               <ActivityExplorerCard
                 key={activity.slug}
                 activity={activity}
-                index={index}
               />
             ))}
           </div>

@@ -56,6 +56,14 @@
   --layout-gutter: 32px;
 }
 
+@font-face {
+  font-family: "Material Symbols Rounded";
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url("/fonts/material-symbols-rounded.ttf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
 }

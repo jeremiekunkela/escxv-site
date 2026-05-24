@@ -129,25 +129,15 @@
   box-shadow: 0 8px 25px rgba(69, 81, 230, 0.25);
 }
 
-.countRow {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-md);
-  margin: var(--space-lg) 0;
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-}
-
-.count,
-.total {
-  margin: 0;
-}
-
 .grid {
+  margin-top: var(--space-lg);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 18px;
+}
+
+.gridSingle {
+  grid-template-columns: 1fr;
 }
 
 .card {
@@ -172,9 +162,19 @@
   transform: scale(1.05);
 }
 
+.gridSingle .card {
+  min-height: 360px;
+  display: grid;
+  grid-template-columns: minmax(280px, 42%) minmax(0, 1fr);
+}
+
 .media {
   position: relative;
   min-height: 250px;
+}
+
+.gridSingle .media {
+  min-height: 100%;
 }
 
 .cardImage {
@@ -282,7 +282,12 @@
     grid-template-columns: 1fr;
   }
 
-  .countRow {
-    display: grid;
+  .gridSingle .card {
+    min-height: 0;
+    display: block;
+  }
+
+  .gridSingle .media {
+    min-height: 250px;
   }
 }
