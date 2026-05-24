@@ -18,16 +18,13 @@ export function ActivityLocationCards({ locations }: ActivityLocationCardsProps)
     );
   }
 
-  const gridClassName =
-    locations.length === 1 ? `${styles.grid} ${styles.singleGrid}` : styles.grid;
-
   return (
-    <div className={gridClassName}>
+    <div className={styles.grid}>
       {locations.map((location, index) => (
         <article
           id={getActivityLocationAnchorId(location.id)}
           key={location.id}
-          className={styles.card}
+          className={location.image ? styles.card : `${styles.card} ${styles.withoutMedia}`}
           data-reveal="zoom"
           style={{ "--reveal-delay": `${index * 70}ms` } as CSSProperties}
         >
@@ -37,7 +34,7 @@ export function ActivityLocationCards({ locations }: ActivityLocationCardsProps)
                 src={location.image}
                 alt=""
                 fill
-                sizes="(min-width: 768px) 33vw, 100vw"
+                sizes="(max-width: 640px) 100vw, 360px"
                 className={styles.image}
               />
             </div>

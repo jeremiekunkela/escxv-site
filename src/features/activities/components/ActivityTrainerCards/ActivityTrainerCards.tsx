@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Clock3 } from "lucide-react";
+import { Award, Clock3, UserRound } from "lucide-react";
 import { Badge } from "@/components/ui/Badge/Badge";
 import { capitalize } from "@/lib/utils";
 import type { CSSProperties } from "react";
@@ -13,6 +13,10 @@ type ActivityTrainerCardsProps = {
 
 function formatHour(value: string) {
   return value.replace(":", "h");
+}
+
+function getInitials(trainer: ActivityTrainer) {
+  return `${trainer.firstName.charAt(0)}${trainer.lastName.charAt(0)}`.toUpperCase();
 }
 
 export function ActivityTrainerCards({ trainers, schedules }: ActivityTrainerCardsProps) {
@@ -35,53 +39,81 @@ export function ActivityTrainerCards({ trainers, schedules }: ActivityTrainerCar
             data-reveal="zoom"
             style={{ "--reveal-delay": `${index * 70}ms` } as CSSProperties}
           >
-            {trainer.photo ? (
-              <div className={styles.media}>
+            <div className={styles.media}>
+              {trainer.photo ? (
                 <Image
                   src={trainer.photo}
                   alt={fullName}
                   fill
-                  sizes="104px"
+                  sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 420px"
                   className={styles.image}
                 />
-              </div>
-            ) : null}
+              ) : (
+                <div className={styles.placeholder} aria-hidden="true">
+                  <UserRound size={44} />
+                  <span>{getInitials(trainer)}</span>
+                </div>
+              )}
+            </div>
 
             <div className={styles.body}>
-              <div className={styles.identity}>
+              <header className={styles.identity}>
                 <p className={styles.eyebrow}>Entraineur</p>
                 <h3 className={styles.name}>{fullName}</h3>
-              </div>
+              </header>
 
               {trainer.description ? (
                 <p className={styles.description}>{trainer.description}</p>
               ) : null}
 
               {trainer.specialties?.length ? (
-                <ul className={styles.tags}>
-                  {trainer.specialties.map((specialty) => (
-                    <li key={specialty}>
-                      <Badge>{specialty}</Badge>
-                    </li>
-                  ))}
-                </ul>
+                <section
+                  className={`${styles.detailGroup} ${styles.specialtiesGroup}`}
+                  aria-labelledby={`${trainer.id}-specialties`}
+                >
+                  <p id={`${trainer.id}-specialties`} className={styles.detailTitle}>
+                    <Award aria-hidden="true" size={18} />
+                    Specialites
+                  </p>
+                  <ul className={styles.tags}>
+                    {trainer.specialties.map((specialty) => (
+                      <li key={specialty}>
+                        <Badge>{specialty}</Badge>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
               ) : null}
 
               {trainerSchedules.length > 0 ? (
-                <div className={styles.scheduleRow}>
-                  <p className={styles.scheduleTitle}>
+                <section
+                  className={`${styles.detailGroup} ${styles.slotsGroup}`}
+                  aria-labelledby={`${trainer.id}-schedules`}
+                >
+                  <p id={`${trainer.id}-schedules`} className={styles.detailTitle}>
                     <Clock3 aria-hidden="true" size={18} />
-                    Horaires associes
+                    Creneaux accompagnes
                   </p>
                   <ul className={styles.scheduleList}>
                     {trainerSchedules.map((schedule) => (
                       <li key={schedule.id} className={styles.scheduleItem}>
-                        {capitalize(schedule.day)} {formatHour(schedule.startTime)} -{" "}
-                        {formatHour(schedule.endTime)}
+                        <span className={styles.scheduleDay}>
+                          {capitalize(schedule.day)}
+                        </span>
+                        <span className={styles.scheduleMeta}>
+                          {schedule.groupLabel ? (
+                            <span className={styles.scheduleGroup}>
+                              {schedule.groupLabel}
+                            </span>
+                          ) : null}
+                          <span>
+                            {formatHour(schedule.startTime)} - {formatHour(schedule.endTime)}
+                          </span>
+                        </span>
                       </li>
                     ))}
                   </ul>
-                </div>
+                </section>
               ) : null}
             </div>
           </article>

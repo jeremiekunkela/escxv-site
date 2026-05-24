@@ -1,22 +1,6 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 16px;
-}
-
-.singleGrid {
-  grid-template-columns: 1fr;
-}
-
-.singleGrid .card {
-  display: grid;
-  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1fr);
-}
-
-.singleGrid .media {
-  min-height: clamp(260px, 28vw, 380px);
-  height: 100%;
-  aspect-ratio: auto;
+  gap: 18px;
 }
 
 .empty {
@@ -30,6 +14,9 @@
 }
 
 .card {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  min-height: 320px;
   overflow: hidden;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -39,6 +26,10 @@
     transform var(--transition-standard),
     box-shadow var(--transition-standard),
     border-color var(--transition-standard);
+}
+
+.withoutMedia {
+  grid-template-columns: 1fr;
 }
 
 .card:hover {
@@ -53,8 +44,11 @@
 
 .media {
   position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 10;
+  min-height: 100%;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(69, 81, 230, 0.12), rgba(20, 184, 166, 0.14)),
+    var(--color-surface-muted);
 }
 
 .image {
@@ -63,7 +57,9 @@
 }
 
 .body {
-  padding: 22px;
+  display: grid;
+  align-content: center;
+  padding: 28px 32px;
 }
 
 .city {
@@ -110,15 +106,16 @@
 
 .mapLink {
   display: inline-flex;
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
 .mapEmbed {
   position: relative;
   overflow: hidden;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  margin-top: 22px;
+  max-height: 150px;
+  aspect-ratio: 16 / 5;
+  margin-top: 18px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-surface);
@@ -132,18 +129,22 @@
 }
 
 @media (max-width: 640px) {
-  .grid,
-  .singleGrid {
+  .card {
     grid-template-columns: 1fr;
-  }
-
-  .singleGrid .card {
-    grid-template-columns: 1fr;
-  }
-
-  .singleGrid .media {
     min-height: 0;
-    height: auto;
+  }
+
+  .media {
+    min-height: 0;
     aspect-ratio: 16 / 10;
+  }
+
+  .body {
+    padding: 22px;
+  }
+
+  .mapEmbed {
+    max-height: none;
+    aspect-ratio: 16 / 9;
   }
 }
