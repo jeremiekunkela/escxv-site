@@ -78,6 +78,14 @@ export type ActivityContact = {
   phone: string | null;
 };
 
+export type ActivitySocialNetwork = "facebook" | "instagram" | "x";
+
+export type ActivitySocialLink = {
+  network: ActivitySocialNetwork;
+  handle: string;
+  url?: string;
+};
+
 export type ActivityTrainer = {
   id: string;
   firstName: string;
@@ -108,5 +116,6 @@ export type Activity = {
   schedules: ActivitySchedule[];
   prices: ActivityPrice[];
   contacts: ActivityContact[];
+  socialLinks?: ActivitySocialLink[];
   trainers?: ActivityTrainer[];
 };

@@ -55,6 +55,11 @@
   align-items: start;
 }
 
+.contactChannels {
+  display: grid;
+  gap: 16px;
+}
+
 @media (max-width: 880px) {
   .splitHeader,
   .contactGrid {

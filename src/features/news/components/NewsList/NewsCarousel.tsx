@@ -46,10 +46,14 @@ export function NewsCarousel({
       return;
     }
 
-    slide.scrollIntoView({
+    const carouselBounds = carousel.getBoundingClientRect();
+    const slideBounds = slide.getBoundingClientRect();
+    const targetScrollLeft =
+      carousel.scrollLeft + slideBounds.left - carouselBounds.left;
+
+    carousel.scrollTo({
+      left: targetScrollLeft,
       behavior: prefersReducedMotion() ? "auto" : "smooth",
-      block: "nearest",
-      inline: "start",
     });
     setActiveSlide(slideIndex);
   }, []);

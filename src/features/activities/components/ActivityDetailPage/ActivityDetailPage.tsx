@@ -9,6 +9,7 @@ import { ActivityLocationCards } from "@/features/activities/components/Activity
 import { ActivityPriceBlocks } from "@/features/activities/components/ActivityPriceBlocks/ActivityPriceBlocks";
 import { ActivityProgramCards } from "@/features/activities/components/ActivityProgramCards/ActivityProgramCards";
 import { ActivityScheduleCards } from "@/features/activities/components/ActivityScheduleCards/ActivityScheduleCards";
+import { ActivitySocialLinks } from "@/features/activities/components/ActivitySocialLinks/ActivitySocialLinks";
 import { ActivityTrainerCards } from "@/features/activities/components/ActivityTrainerCards/ActivityTrainerCards";
 import { NewsList } from "@/features/news/components/NewsList/NewsList";
 import type { ReactNode } from "react";
@@ -82,6 +83,9 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
   const hasPrices = activity.prices.length > 0;
   const hasLocations = activity.locations.length > 0;
   const hasContacts = activity.contacts.length > 0;
+  const socialLinks = activity.socialLinks ?? [];
+  const hasSocialLinks = socialLinks.length > 0;
+  const hasContactChannels = hasContacts || hasSocialLinks;
   const trainers = activity.trainers ?? [];
   const hasTrainers = trainers.length > 0;
   const schedulesSubtitle = getContentOrFallback(
@@ -240,11 +244,14 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
           headerClassName={styles.contactIntro}
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.contactEyebrow}
           title={ACTIVITY_DETAIL_PAGE_COPY.contactTitle}
-          subtitle={hasContacts ? contactText : undefined}
+          subtitle={hasContactChannels ? contactText : undefined}
         >
-          {hasContacts ? (
+          {hasContactChannels ? (
             <div className={styles.contactGrid}>
-              <ActivityContactBlocks contacts={activity.contacts} />
+              <div className={styles.contactChannels}>
+                {hasContacts ? <ActivityContactBlocks contacts={activity.contacts} /> : null}
+                {hasSocialLinks ? <ActivitySocialLinks socialLinks={socialLinks} /> : null}
+              </div>
               <ActivityContactForm content={content} />
             </div>
           ) : (
