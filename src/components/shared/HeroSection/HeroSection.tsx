@@ -40,9 +40,15 @@ export function HeroSection({
           <h1 className={styles.title}>{title}</h1>
           <p className={styles.description}>{description}</p>
           <div className={styles.actions}>
-            <Button href={primaryCta.href}>{primaryCta.label}</Button>
+            <Button href={primaryCta.href} className={styles.primaryAction}>
+              {primaryCta.label}
+            </Button>
             {secondaryCta ? (
-              <Button href={secondaryCta.href} variant="secondary">
+              <Button
+                href={secondaryCta.href}
+                variant="secondary"
+                className={styles.secondaryAction}
+              >
                 {secondaryCta.label}
               </Button>
             ) : null}

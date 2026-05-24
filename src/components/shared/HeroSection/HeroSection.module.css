@@ -70,6 +70,34 @@
   margin-top: 28px;
 }
 
+.actions .primaryAction {
+  border-color: var(--color-brand);
+  background: linear-gradient(135deg, var(--color-brand), var(--color-brand-bright));
+  color: var(--color-text-inverse);
+  box-shadow: 0 12px 34px rgba(69, 81, 230, 0.38);
+}
+
+.actions .primaryAction:hover {
+  border-color: var(--color-brand-strong);
+  background: linear-gradient(135deg, var(--color-brand-strong), var(--color-brand));
+  color: var(--color-text-inverse);
+  box-shadow: 0 16px 42px rgba(69, 81, 230, 0.46);
+}
+
+.actions .secondaryAction {
+  border-color: rgba(255, 255, 255, 0.92);
+  background: var(--color-text-inverse);
+  color: #081524;
+  box-shadow: 0 10px 30px rgba(8, 21, 36, 0.24);
+}
+
+.actions .secondaryAction:hover {
+  border-color: #081524;
+  background: #081524;
+  color: var(--color-text-inverse);
+  box-shadow: 0 14px 38px rgba(8, 21, 36, 0.34);
+}
+
 .badges {
   display: flex;
   flex-wrap: wrap;

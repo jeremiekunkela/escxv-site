@@ -16,8 +16,11 @@ export function ActivityLocationCards({ locations }: ActivityLocationCardsProps)
     );
   }
 
+  const gridClassName =
+    locations.length === 1 ? `${styles.grid} ${styles.singleGrid}` : styles.grid;
+
   return (
-    <div className={styles.grid}>
+    <div className={gridClassName}>
       {locations.map((location) => (
         <article key={location.id} className={styles.card}>
           {location.image ? (

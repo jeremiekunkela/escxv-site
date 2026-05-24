@@ -35,7 +35,7 @@ export function ActivityTrainerCards({ trainers, schedules }: ActivityTrainerCar
                   src={trainer.photo}
                   alt={fullName}
                   fill
-                  sizes="(min-width: 900px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  sizes="104px"
                   className={styles.image}
                 />
               </div>

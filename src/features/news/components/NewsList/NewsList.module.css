@@ -38,8 +38,9 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 370px));
   gap: 22px;
+  justify-content: start;
 }
 
 .carouselShell {
@@ -114,6 +115,16 @@
   scrollbar-width: none;
 }
 
+.carouselSingle .card {
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1fr);
+}
+
+.carouselSingle .media,
+.carouselSingle .placeholder {
+  min-height: clamp(240px, 24vw, 340px);
+  aspect-ratio: auto;
+}
+
 .carouselSingle::-webkit-scrollbar {
   display: none;
 }
@@ -180,7 +191,7 @@
 .media,
 .placeholder {
   position: relative;
-  min-height: 220px;
+  aspect-ratio: 16 / 10;
 }
 
 .image {
@@ -319,6 +330,20 @@
 
   .carousel {
     grid-auto-columns: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carouselSingle .card {
+    grid-template-columns: 1fr;
+  }
+
+  .carouselSingle .media,
+  .carouselSingle .placeholder {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
   }
 
   .carouselToolbar {

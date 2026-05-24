@@ -142,7 +142,7 @@
       "cadet",
       "athletisme"
     ],
-    "groupLabel": "Minime a cadet (2008 a 2011)"
+    "groupLabel": "Minime"
   },
   {
     "id": "athle-adultes-mardi-la-plaine-1800",
@@ -174,7 +174,7 @@
       "cadet",
       "athletisme"
     ],
-    "groupLabel": "Minime a cadet (2008 a 2011)"
+    "groupLabel": "Minime"
   },
   {
     "id": "athle-adultes-jeudi-la-plaine-1830",
@@ -580,8 +580,8 @@
     "title": "Football",
     "shortName": "Foot",
     "icon": "⚽",
-    "shortDescription": "Groupes enfants, jeunes et adultes, entre ecole de foot, loisir et competition.",
-    "description": "La section football propose des creneaux distincts pour l'ecole de foot, les jeunes et les adultes, avec une lecture plus claire des lieux et des tarifs.",
+    "shortDescription": "Ecole de foot, jeunes et adultes, avec horaires effectifs, competition et inscription par mail.",
+    "description": "La section football centralise les horaires effectifs, les lieux de pratique, les tarifs et les inscriptions pour l'ecole de foot, les jeunes et les adultes.",
     "category": [
       "collectif"
     ],
@@ -597,7 +597,7 @@
       "competition"
     ],
     "image": "https://images.unsplash.com/photo-1517747614396-d21a78b850e8?auto=format&fit=crop&w=1600&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "mailto:football@esc15.fr",
     "content": {
       "heroSubtitle": "Une pratique de proximite pour jouer, apprendre et s'engager en equipe a tout age.",
       "heroBadges": [
@@ -605,7 +605,14 @@
         "Jeunes",
         "Adultes",
         "Competition"
-      ]
+      ],
+      "introText": "Les informations ci-dessous regroupent les horaires effectifs, les lieux de pratique, les tarifs et les modalites d'inscription.",
+      "schedulesSubtitle": "Horaires effectifs, en tenue de sport sur le terrain.",
+      "schedulesNoticeText": "Inscription validee si paiement. Contact: football@esc15.fr.",
+      "pricesSubtitle": "Cotisation saison du 1/9/2025 au 30/6/2026.",
+      "locationsSubtitle": "Les seances communiquees ici sont regroupees autour du Centre sportif de La Plaine.",
+      "contactText": "Inscription validee si paiement. Ecrivez a football@esc15.fr pour toute question ou demande d'inscription.",
+      "contactFormText": "Les demandes d'inscription sont confirmees apres reception du paiement."
     },
     "programs": [
       {
@@ -639,38 +646,443 @@
         ]
       }
     ],
-    "locations": [],
-    "schedules": [],
+    "locations": [
+      {
+        "id": "la-plaine",
+        "name": "Centre sportif de La Plaine",
+        "address": "9 rue du General Guillaumat",
+        "city": "Paris",
+        "postalCode": "75015",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Centre+sportif+de+La+Plaine+Paris+75015",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.5874898712914!2d2.2909721765913282!3d48.827931671328024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67148258f5ebf%3A0x10de109f3d2c443f!2sCentre%20Sportif%20La%20Plaine!5e0!3m2!1sfr!2sfr!4v1779035821251!5m2!1sfr!2sfr",
+        "image": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1200&q=80",
+        "description": "Lieu principal de pratique de la section football dans le 15e arrondissement.",
+        "tags": [
+          "Terrain en synthétique",
+          "Vestiaires",
+          "Eclairage"
+        ]
+      }
+    ],
+    "schedules": [
+      {
+        "id": "football-u6-u9-mercredi-1800",
+        "locationId": "la-plaine",
+        "day": "mercredi",
+        "startTime": "18:00",
+        "endTime": "19:30",
+        "publics": [
+          "enfants"
+        ],
+        "tags": [
+          "ecole de foot",
+          "initiation"
+        ],
+        "groupLabel": "U6 a U9 (2017 a 2020, F/G)",
+        "notes": "En tenue de sport sur le terrain."
+      },
+      {
+        "id": "football-u6-u9-vendredi-1730",
+        "locationId": "la-plaine",
+        "day": "vendredi",
+        "startTime": "17:30",
+        "endTime": "19:00",
+        "publics": [
+          "enfants"
+        ],
+        "tags": [
+          "ecole de foot",
+          "initiation"
+        ],
+        "groupLabel": "U6 a U9 (2017 a 2020, F/G)",
+        "notes": "En tenue de sport sur le terrain."
+      },
+      {
+        "id": "football-u10-u13-mardi-1800",
+        "locationId": "la-plaine",
+        "day": "mardi",
+        "startTime": "18:00",
+        "endTime": "19:30",
+        "publics": [
+          "enfants"
+        ],
+        "tags": [
+          "jeunes",
+          "technique",
+          "collectif"
+        ],
+        "groupLabel": "U10 a U13 (2013 a 2016)",
+        "notes": "Horaires effectifs communiques par la section."
+      },
+      {
+        "id": "football-u10-u13-jeudi-1800",
+        "locationId": "la-plaine",
+        "day": "jeudi",
+        "startTime": "18:00",
+        "endTime": "19:45",
+        "publics": [
+          "enfants"
+        ],
+        "tags": [
+          "jeunes",
+          "technique",
+          "collectif"
+        ],
+        "groupLabel": "U10 a U13 (2013 a 2016)",
+        "notes": "Horaires effectifs communiques par la section."
+      },
+      {
+        "id": "football-u14-u16-mercredi-1800",
+        "locationId": "la-plaine",
+        "day": "mercredi",
+        "startTime": "18:00",
+        "endTime": "19:30",
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "jeunes",
+          "technique",
+          "collectif"
+        ],
+        "groupLabel": "U14 a U16 (2010 a 2012, G)",
+        "notes": "En tenue de sport sur le terrain."
+      },
+      {
+        "id": "football-u14-u16-vendredi-1730",
+        "locationId": "la-plaine",
+        "day": "vendredi",
+        "startTime": "17:30",
+        "endTime": "19:00",
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "jeunes",
+          "technique",
+          "collectif"
+        ],
+        "groupLabel": "U14 a U16 (2010 a 2012, G)",
+        "notes": "En tenue de sport sur le terrain."
+      },
+      {
+        "id": "football-u17-u18-mardi-1900",
+        "locationId": "la-plaine",
+        "day": "mardi",
+        "startTime": "19:00",
+        "endTime": "20:30",
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "jeunes",
+          "technique",
+          "collectif"
+        ],
+        "groupLabel": "U17 a U18 (2008 a 2009)"
+      },
+      {
+        "id": "football-u17-u18-vendredi",
+        "locationId": "la-plaine",
+        "day": "vendredi",
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "jeunes",
+          "technique",
+          "collectif"
+        ],
+        "groupLabel": "U17 a U18 (2008 a 2009)",
+        "notes": "Horaire a confirmer."
+      },
+      {
+        "id": "football-u19-u20-mardi-1930",
+        "locationId": "la-plaine",
+        "day": "mardi",
+        "startTime": "19:30",
+        "endTime": "21:00",
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "jeunes",
+          "technique",
+          "collectif"
+        ],
+        "groupLabel": "U19 a U20 (2006 a 2007)"
+      },
+      {
+        "id": "football-u19-u20-jeudi-1900",
+        "locationId": "la-plaine",
+        "day": "jeudi",
+        "startTime": "19:00",
+        "endTime": "20:30",
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "jeunes",
+          "technique",
+          "collectif"
+        ],
+        "groupLabel": "U19 a U20 (2006 a 2007)"
+      },
+      {
+        "id": "football-u19-u20-vendredi",
+        "locationId": "la-plaine",
+        "day": "vendredi",
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "jeunes",
+          "technique",
+          "collectif"
+        ],
+        "groupLabel": "U19 a U20 (2006 a 2007)",
+        "notes": "Horaire a confirmer."
+      },
+      {
+        "id": "football-senior-fsgt-entrainement",
+        "locationId": "la-plaine",
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "adultes",
+          "entrainement",
+          "fsgt"
+        ],
+        "groupLabel": "Seniors FSGT (avant 01/01/2007)",
+        "notes": "Horaire a confirmer."
+      },
+      {
+        "id": "football-senior-fff-mardi-2030",
+        "locationId": "la-plaine",
+        "day": "mardi",
+        "startTime": "20:30",
+        "endTime": "22:15",
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "adultes",
+          "entrainement",
+          "fff"
+        ],
+        "groupLabel": "Seniors FFF"
+      },
+      {
+        "id": "football-senior-fff-jeudi",
+        "locationId": "la-plaine",
+        "day": "jeudi",
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "adultes",
+          "entrainement",
+          "fff"
+        ],
+        "groupLabel": "Seniors FFF",
+        "notes": "Horaire a confirmer."
+      },
+      {
+        "id": "football-senior-cdm-jeudi-1930",
+        "locationId": "la-plaine",
+        "day": "jeudi",
+        "startTime": "19:30",
+        "endTime": "21:00",
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "adultes",
+          "entrainement",
+          "cdm"
+        ],
+        "groupLabel": "Seniors CDM"
+      },
+      {
+        "id": "football-loisir-jeudi-1900",
+        "locationId": "la-plaine",
+        "day": "jeudi",
+        "startTime": "19:00",
+        "endTime": "20:30",
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "loisir",
+          "adultes",
+          "entrainement"
+        ],
+        "groupLabel": "Loisir"
+      },
+      {
+        "id": "football-u6-u9-samedi-0900",
+        "locationId": "la-plaine",
+        "day": "samedi",
+        "startTime": "09:00",
+        "endTime": "11:00",
+        "publics": [
+          "enfants"
+        ],
+        "tags": [
+          "competition",
+          "plateau",
+          "matchs"
+        ],
+        "groupLabel": "U6 a U9 (2017 a 2020, F/G)",
+        "notes": "Plateaux, matchs amicaux et ateliers."
+      },
+      {
+        "id": "football-u10-u12-samedi-1000",
+        "locationId": "la-plaine",
+        "day": "samedi",
+        "publics": [
+          "enfants"
+        ],
+        "tags": [
+          "competition",
+          "matchs"
+        ],
+        "groupLabel": "U10 a U12 (2014 a 2016)",
+        "notes": "10h ou 11h selon calendrier FFF."
+      },
+      {
+        "id": "football-u13-u14-samedi-1500",
+        "locationId": "la-plaine",
+        "day": "samedi",
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "competition",
+          "matchs"
+        ],
+        "groupLabel": "U13 a U14 (2012 a 2013, G)",
+        "notes": "15h ou 17h selon calendrier FFF."
+      },
+      {
+        "id": "football-u15-u16-dimanche-1300",
+        "locationId": "la-plaine",
+        "day": "dimanche",
+        "startTime": "13:00",
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "competition",
+          "matchs"
+        ],
+        "groupLabel": "U15 a U16 (2010 a 2011)",
+        "notes": "Horaire de fin a confirmer."
+      },
+      {
+        "id": "football-u17-u18-competition",
+        "locationId": "la-plaine",
+        "publics": [
+          "adolescents"
+        ],
+        "tags": [
+          "competition",
+          "matchs"
+        ],
+        "groupLabel": "U17 a U18 (2008 a 2009)",
+        "notes": "Selon calendrier. Horaire a confirmer."
+      },
+      {
+        "id": "football-senior-fsgt-vendredi-2030",
+        "locationId": "la-plaine",
+        "day": "vendredi",
+        "startTime": "20:30",
+        "endTime": "22:00",
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "competition",
+          "matchs",
+          "fsgt",
+          "adultes"
+        ],
+        "groupLabel": "Seniors FSGT (avant 1/1/2007)"
+      },
+      {
+        "id": "football-senior-cdm-dimanche-1100",
+        "locationId": "la-plaine",
+        "day": "dimanche",
+        "startTime": "11:00",
+        "endTime": "13:00",
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "competition",
+          "matchs",
+          "cdm",
+          "adultes"
+        ],
+        "groupLabel": "Seniors CDM"
+      },
+      {
+        "id": "football-senior-fff-dimanche-1500",
+        "locationId": "la-plaine",
+        "day": "dimanche",
+        "startTime": "15:00",
+        "endTime": "17:00",
+        "publics": [
+          "adultes"
+        ],
+        "tags": [
+          "competition",
+          "matchs",
+          "fff",
+          "adultes"
+        ],
+        "groupLabel": "Seniors FFF"
+      }
+    ],
     "prices": [
       {
-        "id": "football-2025-2026-enfants",
-        "season": "2025/2026",
-        "label": "Football enfants",
+        "id": "football-2025-2026-jeune",
+        "season": "1/9/2025 -> 30/6/2026",
+        "label": "Jeune",
         "clubFee": 75,
-        "activityFee": 165,
-        "total": 240,
+        "activityFee": 225,
+        "total": 300,
         "extraFees": []
       },
       {
-        "id": "football-2025-2026-jeunes",
-        "season": "2025/2026",
-        "label": "Football jeunes",
+        "id": "football-2025-2026-adulte",
+        "season": "1/9/2025 -> 30/6/2026",
+        "label": "Adulte",
         "clubFee": 75,
-        "activityFee": 175,
-        "total": 250,
+        "activityFee": 225,
+        "total": 300,
         "extraFees": []
       },
       {
-        "id": "football-2025-2026-adultes",
-        "season": "2025/2026",
-        "label": "Football adultes",
+        "id": "football-2025-2026-adultes-fsgt",
+        "season": "1/9/2025 -> 30/6/2026",
+        "label": "Adulte FSGT",
         "clubFee": 75,
-        "activityFee": 155,
-        "total": 230,
+        "activityFee": 135,
+        "total": 210,
         "extraFees": []
       }
     ],
-    "contacts": []
+    "contacts": [
+      {
+        "id": "contact-football",
+        "name": "Section Football ESC XV",
+        "role": "Contact section",
+        "email": "football@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "gymnastique-entretien",

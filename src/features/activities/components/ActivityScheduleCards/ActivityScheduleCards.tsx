@@ -16,9 +16,12 @@ const PUBLIC_ORDER: ActivityPublic[] = ["enfants", "adolescents", "adultes"];
 
 type ScheduleGroup = {
   key: string;
-  publics: ActivityPublic[];
+  label: string;
   schedules: ActivitySchedule[];
 };
+
+const DEFAULT_GROUP_LABEL = "Groupe de pratique a confirmer";
+const DEFAULT_SCHEDULE_LABEL = "Horaire a confirmer";
 
 function sortPublics(publics: ActivityPublic[]) {
   return [...publics].sort(
@@ -26,22 +29,48 @@ function sortPublics(publics: ActivityPublic[]) {
   );
 }
 
-function getPublicGroupKey(publics: ActivityPublic[]) {
-  return sortPublics(publics).join("|");
+function getUniquePublics(schedules: ActivitySchedule[]) {
+  return sortPublics(Array.from(new Set(schedules.flatMap((schedule) => schedule.publics))));
 }
 
 function formatHour(value: string) {
   return value.replace(":", "h");
 }
 
-function groupSchedulesByPublic(schedules: ActivitySchedule[]) {
+function getScheduleGroupLabel(schedule: ActivitySchedule) {
+  return schedule.groupLabel?.trim() || DEFAULT_GROUP_LABEL;
+}
+
+function formatScheduleLabel(schedule: ActivitySchedule) {
+  const day = typeof schedule.day === "string" ? schedule.day.trim() : "";
+  const startTime = typeof schedule.startTime === "string" ? schedule.startTime.trim() : "";
+  const endTime = typeof schedule.endTime === "string" ? schedule.endTime.trim() : "";
+  const dayLabel = day ? capitalize(day) : DEFAULT_SCHEDULE_LABEL;
+
+  if (startTime && endTime) {
+    return `${dayLabel} : ${formatHour(startTime)} - ${formatHour(endTime)}`;
+  }
+
+  const fallback = schedule.notes?.trim() || DEFAULT_SCHEDULE_LABEL;
+  return day ? `${dayLabel} : ${fallback}` : fallback;
+}
+
+function shouldDisplayScheduleNotes(schedule: ActivitySchedule) {
+  const startTime = typeof schedule.startTime === "string" ? schedule.startTime.trim() : "";
+  const endTime = typeof schedule.endTime === "string" ? schedule.endTime.trim() : "";
+
+  return Boolean(schedule.notes?.trim() && startTime && endTime);
+}
+
+function groupSchedulesByPracticeGroup(schedules: ActivitySchedule[]) {
   return Array.from(
     schedules
       .reduce((groups, schedule) => {
-        const key = getPublicGroupKey(schedule.publics);
+        const label = getScheduleGroupLabel(schedule);
+        const key = label;
         const group = groups.get(key) ?? {
           key,
-          publics: sortPublics(schedule.publics),
+          label,
           schedules: [],
         };
 
@@ -71,30 +100,27 @@ export function ActivityScheduleCards({ schedules, locations }: ActivitySchedule
   }
 
   const locationsById = new Map(locations.map((location) => [location.id, location]));
-  const groupedSchedules = groupSchedulesByPublic(schedules);
+  const groupedSchedules = groupSchedulesByPracticeGroup(schedules);
 
   return (
     <div className={styles.list}>
       {groupedSchedules.map((group) => {
-        const groupLabels = Array.from(
-          new Set(
-            group.schedules.flatMap((schedule) =>
-              schedule.groupLabel?.trim() ? [schedule.groupLabel.trim()] : [],
-            ),
-          ),
-        );
-
+        const publics = getUniquePublics(group.schedules);
         const schedulesByLocation = groupSchedulesByLocation(group.schedules);
 
         return (
           <article key={group.key} className={styles.card}>
             <div className={styles.header}>
-              <p className={styles.publics}>Groupe</p>
-              <h3 className={styles.title}>
-                {group.publics.map((item) => formatPublicLabel(item)).join(", ")}
-              </h3>
-              {groupLabels.length > 0 ? (
-                <p className={styles.notes}>{groupLabels.join(" • ")}</p>
+              <p className={styles.eyebrow}>Groupe de pratique</p>
+              <h3 className={styles.title}>{group.label}</h3>
+              {publics.length > 0 ? (
+                <div className={styles.badges} aria-label="Publics">
+                  {publics.map((item) => (
+                    <span key={item} className={styles.badge}>
+                      {formatPublicLabel(item)}
+                    </span>
+                  ))}
+                </div>
               ) : null}
             </div>
 
@@ -127,11 +153,8 @@ export function ActivityScheduleCards({ schedules, locations }: ActivitySchedule
                       <ul className={styles.slotList}>
                         {locationSchedules.map((schedule) => (
                           <li key={schedule.id} className={styles.slot}>
-                            <p className={styles.slotLabel}>
-                              {capitalize(schedule.day)} : {formatHour(schedule.startTime)} -{" "}
-                              {formatHour(schedule.endTime)}
-                            </p>
-                            {schedule.notes ? (
+                            <p className={styles.slotLabel}>{formatScheduleLabel(schedule)}</p>
+                            {shouldDisplayScheduleNotes(schedule) ? (
                               <p className={styles.slotNotes}>{schedule.notes}</p>
                             ) : null}
                           </li>
