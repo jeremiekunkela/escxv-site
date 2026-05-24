@@ -8,7 +8,7 @@ type SectionTitleProps = {
 
 export function SectionTitle({ eyebrow, title, subtitle }: SectionTitleProps) {
   return (
-    <div className={styles.block}>
+    <div className={styles.block} data-reveal>
       {eyebrow ? <p className={styles.eyebrow}>{eyebrow}</p> : null}
       <h2 className={styles.title}>{title}</h2>
       {subtitle ? <p className={styles.subtitle}>{subtitle}</p> : null}

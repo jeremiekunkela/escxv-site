@@ -13,7 +13,7 @@ export function ActivityContactForm({ content }: ActivityContactFormProps) {
       : "Formulaire statique en attente d'activation fonctionnelle.";
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-reveal="zoom">
       <p className={styles.eyebrow}>Formulaire</p>
       <h3 className={styles.title}>Envoyer un message</h3>
       <p className={styles.text}>{contactFormText}</p>

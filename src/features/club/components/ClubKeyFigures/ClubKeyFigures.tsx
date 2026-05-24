@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container/Container";
+import type { CSSProperties } from "react";
 import type { KeyFigure } from "@/types/content";
 import styles from "./ClubKeyFigures.module.css";
 
@@ -14,8 +15,13 @@ export function ClubKeyFigures({ figures }: ClubKeyFiguresProps) {
           Chiffres cles
         </h2>
         <dl className={styles.grid}>
-          {figures.map((figure) => (
-            <div key={figure.label} className={styles.card}>
+          {figures.map((figure, index) => (
+            <div
+              key={figure.label}
+              className={styles.card}
+              data-reveal="zoom"
+              style={{ "--reveal-delay": `${index * 80}ms` } as CSSProperties}
+            >
               <dt className={styles.label}>{figure.label}</dt>
               <dd className={styles.value}>{figure.value}</dd>
               <p className={styles.description}>{figure.description}</p>

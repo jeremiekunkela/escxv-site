@@ -13,6 +13,7 @@ type ButtonProps = {
   target?: "_blank" | "_self";
   rel?: string;
   icon?: "arrowLeft" | "arrowRight" | "none";
+  dataActivityRegistrationSource?: string;
 };
 
 const iconByName = {
@@ -44,6 +45,7 @@ export function Button({
   target,
   rel,
   icon = "arrowRight",
+  dataActivityRegistrationSource,
 }: ButtonProps) {
   const classNames = cn(
     styles.button,
@@ -56,7 +58,13 @@ export function Button({
 
   if (href) {
     return (
-      <Link href={href} className={classNames} target={target} rel={rel}>
+      <Link
+        href={href}
+        className={classNames}
+        target={target}
+        rel={rel}
+        data-activity-registration-source={dataActivityRegistrationSource}
+      >
         {icon === "arrowLeft" ? iconElement : null}
         <span className={styles.label}>{children}</span>
         {icon !== "arrowLeft" ? iconElement : null}
@@ -65,7 +73,11 @@ export function Button({
   }
 
   return (
-    <button type={type} className={classNames}>
+    <button
+      type={type}
+      className={classNames}
+      data-activity-registration-source={dataActivityRegistrationSource}
+    >
       {icon === "arrowLeft" ? iconElement : null}
       <span className={styles.label}>{children}</span>
       {icon !== "arrowLeft" ? iconElement : null}

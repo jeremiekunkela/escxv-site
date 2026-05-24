@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { Badge } from "@/components/ui/Badge/Badge";
 import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
@@ -25,6 +25,7 @@ type NewsListProps = {
 
 type NewsPreviewCardProps = {
   newsItem: NewsItem;
+  index: number;
 };
 
 const dateFormatter = new Intl.DateTimeFormat("fr-FR", {
@@ -41,9 +42,14 @@ function getNewsScopeLabel(newsItem: NewsItem) {
   return newsItem.activitySlug ? "Section" : "Club";
 }
 
-function NewsPreviewCard({ newsItem }: NewsPreviewCardProps) {
+function NewsPreviewCard({ newsItem, index }: NewsPreviewCardProps) {
   return (
-    <article className={styles.card} data-news-preview-card>
+    <article
+      className={styles.card}
+      data-news-preview-card
+      data-reveal="zoom"
+      style={{ "--reveal-delay": `${Math.min(index, 4) * 70}ms` } as CSSProperties}
+    >
       {newsItem.coverImage ? (
         <div className={styles.media}>
           <Image
@@ -111,8 +117,8 @@ export function NewsList({
     return null;
   }
 
-  const newsCards = news.map((newsItem) => (
-    <NewsPreviewCard key={newsItem.id} newsItem={newsItem} />
+  const newsCards = news.map((newsItem, index) => (
+    <NewsPreviewCard key={newsItem.id} newsItem={newsItem} index={index} />
   ));
 
   return (

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { Badge } from "@/components/ui/Badge/Badge";
 import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
@@ -58,6 +58,7 @@ function NewsArticleHeadingBlock({
     <header
       key={`${newsItem.slug}-heading-${index}`}
       className={styles.articleHeading}
+      data-reveal
     >
       <h2 className={styles.sectionTitle}>{block.title}</h2>
       {block.subtitle ? (
@@ -78,6 +79,7 @@ function NewsArticleImageBlock({
     <figure
       key={`${newsItem.slug}-image-${index}`}
       className={isWide ? `${styles.figure} ${styles.figureWide}` : styles.figure}
+      data-reveal="zoom"
     >
       <div className={styles.figureMedia}>
         <Image
@@ -101,7 +103,7 @@ function NewsArticleTextBlock({
   index,
 }: NewsArticleBlockRenderProps<Extract<NewsArticleBlock, { type: "text" }>>) {
   return (
-    <div key={`${newsItem.slug}-text-${index}`} className={styles.sectionBody}>
+    <div key={`${newsItem.slug}-text-${index}`} className={styles.sectionBody} data-reveal>
       {block.paragraphs.map((paragraph, paragraphIndex) => (
         <p key={`${newsItem.slug}-${index}-${paragraphIndex}`}>{paragraph}</p>
       ))}
@@ -167,7 +169,11 @@ export function NewsArticlePage({
               Retour aux actualites
             </Button>
 
-            <div className={styles.heroMeta}>
+            <div
+              className={styles.heroMeta}
+              data-reveal
+              style={{ "--reveal-delay": "80ms" } as CSSProperties}
+            >
               <time dateTime={newsItem.publishedAt}>
                 {formatNewsDate(newsItem.publishedAt)}
               </time>
@@ -180,11 +186,29 @@ export function NewsArticlePage({
               ) : null}
             </div>
 
-            <h1 className={styles.title}>{newsItem.title}</h1>
+            <h1
+              className={styles.title}
+              data-reveal
+              style={{ "--reveal-delay": "150ms" } as CSSProperties}
+            >
+              {newsItem.title}
+            </h1>
             {newsItem.subtitle ? (
-              <p className={styles.subtitle}>{newsItem.subtitle}</p>
+              <p
+                className={styles.subtitle}
+                data-reveal
+                style={{ "--reveal-delay": "220ms" } as CSSProperties}
+              >
+                {newsItem.subtitle}
+              </p>
             ) : null}
-            <p className={styles.excerpt}>{newsItem.excerpt}</p>
+            <p
+              className={styles.excerpt}
+              data-reveal
+              style={{ "--reveal-delay": "290ms" } as CSSProperties}
+            >
+              {newsItem.excerpt}
+            </p>
           </div>
         </Container>
       </section>
@@ -205,7 +229,7 @@ export function NewsArticlePage({
               </article>
 
               <aside className={styles.sidebar}>
-                <div className={styles.sidebarCard}>
+                <div className={styles.sidebarCard} data-reveal="zoom">
                   <p className={styles.sidebarEyebrow}>A retenir</p>
                   {newsItem.summaryPoints && newsItem.summaryPoints.length > 0 ? (
                     <ul className={styles.summaryList}>
@@ -218,7 +242,11 @@ export function NewsArticlePage({
                   )}
                 </div>
 
-                <div className={styles.sidebarCard}>
+                <div
+                  className={styles.sidebarCard}
+                  data-reveal="zoom"
+                  style={{ "--reveal-delay": "90ms" } as CSSProperties}
+                >
                   <p className={styles.sidebarEyebrow}>Navigation</p>
                   <div className={styles.sidebarActions}>
                     <Button href={routes.news} variant="secondary">

@@ -1,10 +1,12 @@
 import { Clock, MapPin } from "lucide-react";
+import type { CSSProperties } from "react";
 import { capitalize, formatPublicLabel } from "@/lib/utils";
 import type {
   ActivityLocation,
   ActivityPublic,
   ActivitySchedule,
 } from "@/features/activities/types/activity";
+import { getActivityLocationAnchorHref } from "@/features/activities/lib/activityRoutes";
 import styles from "./ActivityScheduleCards.module.css";
 
 type ActivityScheduleCardsProps = {
@@ -104,12 +106,17 @@ export function ActivityScheduleCards({ schedules, locations }: ActivitySchedule
 
   return (
     <div className={styles.list}>
-      {groupedSchedules.map((group) => {
+      {groupedSchedules.map((group, index) => {
         const publics = getUniquePublics(group.schedules);
         const schedulesByLocation = groupSchedulesByLocation(group.schedules);
 
         return (
-          <article key={group.key} className={styles.card}>
+          <article
+            key={group.key}
+            className={styles.card}
+            data-reveal="zoom"
+            style={{ "--reveal-delay": `${index * 70}ms` } as CSSProperties}
+          >
             <div className={styles.header}>
               <p className={styles.eyebrow}>Groupe de pratique</p>
               <h3 className={styles.title}>{group.label}</h3>
@@ -138,16 +145,26 @@ export function ActivityScheduleCards({ schedules, locations }: ActivitySchedule
                     <section key={locationId} className={styles.schedule}>
                       <div className={styles.scheduleHeader}>
                         <MapPin aria-hidden="true" className={styles.icon} size={18} />
-                        <div>
+                        <div className={styles.locationSummary}>
                           <h5 className={styles.venueTitle}>
                             {location?.name ?? "Lieu a confirmer"}
                           </h5>
                           <p className={styles.address}>
                             {location
                               ? `${location.address}, ${location.postalCode} ${location.city}`
-                              : ""}
+                            : ""}
                           </p>
                         </div>
+                        {location ? (
+                          <a
+                            className={styles.locationButton}
+                            href={getActivityLocationAnchorHref(location.id)}
+                            aria-label={`Voir le lieu de pratique ${location.name}`}
+                          >
+                            <MapPin aria-hidden="true" size={15} />
+                            <span>Voir le lieu</span>
+                          </a>
+                        ) : null}
                       </div>
 
                       <ul className={styles.slotList}>

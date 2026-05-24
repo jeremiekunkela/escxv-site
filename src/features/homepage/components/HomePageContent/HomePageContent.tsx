@@ -37,13 +37,6 @@ export function HomePageContent({
       <main>
         <ClubKeyFigures figures={club.keyFigures} />
 
-        <ActivityExplorer
-          activities={activities}
-          eyebrow={homepage.activitiesSection.eyebrow}
-          title={homepage.activitiesSection.title}
-          subtitle={homepage.activitiesSection.subtitle}
-        />
-
         <NewsList
           news={news}
           title="Actualités du club"
@@ -52,6 +45,13 @@ export function HomePageContent({
           surface="soft"
           presentation="carousel"
           carouselLayout="single"
+        />
+
+        <ActivityExplorer
+          activities={activities}
+          eyebrow={homepage.activitiesSection.eyebrow}
+          title={homepage.activitiesSection.title}
+          subtitle={homepage.activitiesSection.subtitle}
         />
       </main>
     </>

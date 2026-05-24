@@ -1,4 +1,5 @@
 import { formatEuro } from "@/lib/utils";
+import type { CSSProperties } from "react";
 import type { ActivityPrice } from "@/features/activities/types/activity";
 import styles from "./ActivityPriceBlocks.module.css";
 
@@ -13,8 +14,13 @@ export function ActivityPriceBlocks({ prices }: ActivityPriceBlocksProps) {
 
   return (
     <div className={styles.grid}>
-      {prices.map((price) => (
-        <article key={price.id} className={styles.card}>
+      {prices.map((price, index) => (
+        <article
+          key={price.id}
+          className={styles.card}
+          data-reveal="zoom"
+          style={{ "--reveal-delay": `${index * 70}ms` } as CSSProperties}
+        >
           <p className={styles.label}>{price.label}</p>
           <p className={styles.total}>{formatEuro(price.total)}</p>
           <p className={styles.season}>{price.season}</p>

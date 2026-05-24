@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Search } from "lucide-react";
+import type { CSSProperties } from "react";
 import { Badge } from "@/components/ui/Badge/Badge";
 import { Container } from "@/components/ui/Container/Container";
 import { categoryLabels } from "@/features/activities/lib/activityLabels";
@@ -25,11 +26,16 @@ type ActivityExplorerProps = {
 
 type ActivityExplorerCardProps = {
   activity: Activity;
+  index: number;
 };
 
-function ActivityExplorerCard({ activity }: ActivityExplorerCardProps) {
+function ActivityExplorerCard({ activity, index }: ActivityExplorerCardProps) {
   return (
-    <article className={styles.card}>
+    <article
+      className={styles.card}
+      data-reveal="zoom"
+      style={{ "--reveal-delay": `${Math.min(index, 5) * 60}ms` } as CSSProperties}
+    >
       <div className={styles.media}>
         <Image
           src={activity.image}
@@ -83,7 +89,7 @@ export function ActivityExplorer({
   return (
     <section id="activities" className={styles.section}>
       <Container>
-        <div className={styles.header}>
+        <div className={styles.header} data-reveal>
           <div>
             <p className={styles.eyebrow}>{eyebrow ?? "Activites"}</p>
             <h2 className={styles.title}>{title}</h2>
@@ -91,7 +97,11 @@ export function ActivityExplorer({
           <p className={styles.intro}>{subtitle}</p>
         </div>
 
-        <div className={styles.controls}>
+        <div
+          className={styles.controls}
+          data-reveal
+          style={{ "--reveal-delay": "120ms" } as CSSProperties}
+        >
           <div className={styles.controlsGrid}>
             <label className={styles.searchBar}>
               <span className="sr-only">Rechercher une activite</span>
@@ -128,7 +138,11 @@ export function ActivityExplorer({
           </div>
         </div>
 
-        <div className={styles.countRow}>
+        <div
+          className={styles.countRow}
+          data-reveal="fade"
+          style={{ "--reveal-delay": "180ms" } as CSSProperties}
+        >
           <p className={styles.count}>
             {filteredActivities.length} activite
             {filteredActivities.length > 1 ? "s" : ""} affichee
@@ -139,8 +153,12 @@ export function ActivityExplorer({
 
         {filteredActivities.length > 0 ? (
           <div className={styles.grid}>
-            {filteredActivities.map((activity) => (
-              <ActivityExplorerCard key={activity.slug} activity={activity} />
+            {filteredActivities.map((activity, index) => (
+              <ActivityExplorerCard
+                key={activity.slug}
+                activity={activity}
+                index={index}
+              />
             ))}
           </div>
         ) : (

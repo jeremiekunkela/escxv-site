@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { ScrollReveal } from "@/components/shared/ScrollReveal/ScrollReveal";
 import { getClubInfo } from "@/features/club/data-access/club";
 import "@/styles/globals.css";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${inter.className} ${inter.variable}`}>
+        <ScrollReveal />
         <SiteHeader />
         {children}
         <SiteFooter />

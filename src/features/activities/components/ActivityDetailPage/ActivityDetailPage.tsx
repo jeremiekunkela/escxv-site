@@ -2,6 +2,7 @@ import { Container } from "@/components/ui/Container/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
 import { InfoBlock } from "@/components/shared/InfoBlock/InfoBlock";
 import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
+import { ActivityFloatingRegistrationButton } from "@/features/activities/components/ActivityDetailPage/ActivityFloatingRegistrationButton";
 import { ActivityContactBlocks } from "@/features/activities/components/ActivityContactBlocks/ActivityContactBlocks";
 import { ActivityContactForm } from "@/features/activities/components/ActivityContactForm/ActivityContactForm";
 import { ActivityLocationCards } from "@/features/activities/components/ActivityLocationCards/ActivityLocationCards";
@@ -116,9 +117,10 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
     "Consultez ici les tarifs communiques pour la saison en cours.",
   );
   const heroSubtitle = getContentOrFallback(content.heroSubtitle, activity.shortDescription);
-  const primaryCta = activity.registrationUrl
+  const registrationCta = activity.registrationUrl
     ? { label: "S'inscrire", href: activity.registrationUrl }
-    : { label: "Contacter la section", href: "#contact" };
+    : null;
+  const primaryCta = registrationCta ?? { label: "Contacter la section", href: "#contact" };
   const secondaryCta = hasSchedules
     ? { label: "Voir les horaires", href: "#horaires" }
     : { label: "Voir la presentation", href: "#programmes" };
@@ -133,9 +135,17 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
         primaryCta={primaryCta}
         secondaryCta={secondaryCta}
         badges={content.heroBadges}
+        enableRegistrationHandoff={Boolean(registrationCta)}
       />
 
-      <main>
+      {registrationCta ? (
+        <ActivityFloatingRegistrationButton
+          href={registrationCta.href}
+          label={registrationCta.label}
+        />
+      ) : null}
+
+      <main className={registrationCta ? styles.mainWithFloatingRegistration : undefined}>
         <ActivityDetailPageSection
           id="programmes"
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.introEyebrow}

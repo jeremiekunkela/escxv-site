@@ -8,7 +8,7 @@ type InfoBlockProps = {
 
 export function InfoBlock({ title, children }: InfoBlockProps) {
   return (
-    <aside className={styles.block}>
+    <aside className={styles.block} data-reveal="zoom">
       <div className={styles.inner}>
         <AlertTriangle aria-hidden="true" className={styles.icon} size={20} />
         <div>

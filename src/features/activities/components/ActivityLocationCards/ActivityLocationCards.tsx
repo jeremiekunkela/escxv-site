@@ -2,7 +2,9 @@ import Image from "next/image";
 import { MapPin } from "lucide-react";
 import { Badge } from "@/components/ui/Badge/Badge";
 import { Button } from "@/components/ui/Button/Button";
+import type { CSSProperties } from "react";
 import type { ActivityLocation } from "@/features/activities/types/activity";
+import { getActivityLocationAnchorId } from "@/features/activities/lib/activityRoutes";
 import styles from "./ActivityLocationCards.module.css";
 
 type ActivityLocationCardsProps = {
@@ -21,8 +23,14 @@ export function ActivityLocationCards({ locations }: ActivityLocationCardsProps)
 
   return (
     <div className={gridClassName}>
-      {locations.map((location) => (
-        <article key={location.id} className={styles.card}>
+      {locations.map((location, index) => (
+        <article
+          id={getActivityLocationAnchorId(location.id)}
+          key={location.id}
+          className={styles.card}
+          data-reveal="zoom"
+          style={{ "--reveal-delay": `${index * 70}ms` } as CSSProperties}
+        >
           {location.image ? (
             <div className={styles.media}>
               <Image

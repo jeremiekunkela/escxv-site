@@ -1,4 +1,5 @@
 import { Mail, Phone } from "lucide-react";
+import type { CSSProperties } from "react";
 import type { ActivityContact } from "@/features/activities/types/activity";
 import styles from "./ActivityContactBlocks.module.css";
 
@@ -21,8 +22,13 @@ export function ActivityContactBlocks({ contacts }: ActivityContactBlocksProps) 
 
   return (
     <div className={styles.grid}>
-      {contacts.map((contact) => (
-        <article key={contact.id} className={styles.card}>
+      {contacts.map((contact, index) => (
+        <article
+          key={contact.id}
+          className={styles.card}
+          data-reveal="zoom"
+          style={{ "--reveal-delay": `${index * 70}ms` } as CSSProperties}
+        >
           <p className={styles.role}>{contact.role}</p>
           <h3 className={styles.name}>{contact.name}</h3>
           <div className={styles.links}>
