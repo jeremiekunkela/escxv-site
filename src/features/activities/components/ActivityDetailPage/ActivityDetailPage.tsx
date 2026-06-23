@@ -10,7 +10,7 @@ import { ActivityPriceBlocks } from "@/features/activities/components/ActivityPr
 import { ActivityProgramCards } from "@/features/activities/components/ActivityProgramCards/ActivityProgramCards";
 import { ActivityScheduleCards } from "@/features/activities/components/ActivityScheduleCards/ActivityScheduleCards";
 import { ActivitySocialLinks } from "@/features/activities/components/ActivitySocialLinks/ActivitySocialLinks";
-import { ActivityTrainerCards } from "@/features/activities/components/ActivityTrainerCards/ActivityTrainerCards";
+// `ActivityTrainerCards` removed — trainers section retired
 import { NewsList } from "@/features/news/components/NewsList/NewsList";
 import type { ReactNode } from "react";
 import type { Activity } from "@/features/activities/types/activity";
@@ -86,8 +86,6 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
   const socialLinks = activity.socialLinks ?? [];
   const hasSocialLinks = socialLinks.length > 0;
   const hasContactChannels = hasContacts || hasSocialLinks;
-  const trainers = activity.trainers ?? [];
-  const hasTrainers = trainers.length > 0;
   const schedulesSubtitle = getContentOrFallback(
     content.schedulesSubtitle,
     "Retrouvez ici les creneaux actuellement communiques par la section.",
@@ -95,10 +93,6 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
   const schedulesNoticeText = getContentOrFallback(
     content.schedulesNoticeText,
     "Les horaires seront communiques par la section des qu'ils seront confirmes.",
-  );
-  const trainersSubtitle = getContentOrFallback(
-    content.trainersSubtitle,
-    "Rencontrez les entraineurs et reperes pratiques associes a leurs creneaux.",
   );
   const locationsSubtitle = getContentOrFallback(
     content.locationsSubtitle,
@@ -185,19 +179,7 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
           )}
         </ActivityDetailPageSection>
 
-        {hasTrainers ? (
-          <ActivityDetailPageSection
-            id="entraineurs"
-            eyebrow={ACTIVITY_DETAIL_PAGE_COPY.trainersEyebrow}
-            title={ACTIVITY_DETAIL_PAGE_COPY.trainersTitle}
-            subtitle={trainersSubtitle}
-          >
-            <ActivityTrainerCards
-              trainers={trainers}
-              schedules={activity.schedules}
-            />
-          </ActivityDetailPageSection>
-        ) : null}
+        {/* Trainers section retired */}
 
         <NewsList
           news={news}

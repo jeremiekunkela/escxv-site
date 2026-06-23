@@ -23,7 +23,6 @@ export type ActivityContent = {
   introText?: string;
   schedulesSubtitle?: string;
   schedulesNoticeText?: string;
-  trainersSubtitle?: string;
   pricesSubtitle?: string;
   locationsSubtitle?: string;
   contactText?: string;
@@ -86,17 +85,6 @@ export type ActivitySocialLink = {
   url?: string;
 };
 
-export type ActivityTrainer = {
-  id: string;
-  firstName: string;
-  lastName: string;
-  photo?: string | null;
-  description?: string;
-  specialties?: string[];
-  scheduleIds?: string[];
-  locationId?: string;
-};
-
 export type Activity = {
   id: string;
   slug: string;
@@ -117,5 +105,5 @@ export type Activity = {
   prices: ActivityPrice[];
   contacts: ActivityContact[];
   socialLinks?: ActivitySocialLink[];
-  trainers?: ActivityTrainer[];
+  // trainers removed
 };
