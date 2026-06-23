@@ -1,20 +1,20 @@
+import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
+import { InfoBlock } from "@/components/shared/InfoBlock/InfoBlock";
 import { Container } from "@/components/ui/Container/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
-import { InfoBlock } from "@/components/shared/InfoBlock/InfoBlock";
-import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
-import { ActivityFloatingRegistrationButton } from "@/features/activities/components/ActivityDetailPage/ActivityFloatingRegistrationButton";
 import { ActivityContactBlocks } from "@/features/activities/components/ActivityContactBlocks/ActivityContactBlocks";
 import { ActivityContactForm } from "@/features/activities/components/ActivityContactForm/ActivityContactForm";
+import { ActivityFloatingRegistrationButton } from "@/features/activities/components/ActivityDetailPage/ActivityFloatingRegistrationButton";
 import { ActivityLocationCards } from "@/features/activities/components/ActivityLocationCards/ActivityLocationCards";
 import { ActivityPriceBlocks } from "@/features/activities/components/ActivityPriceBlocks/ActivityPriceBlocks";
 import { ActivityProgramCards } from "@/features/activities/components/ActivityProgramCards/ActivityProgramCards";
 import { ActivityScheduleCards } from "@/features/activities/components/ActivityScheduleCards/ActivityScheduleCards";
 import { ActivitySocialLinks } from "@/features/activities/components/ActivitySocialLinks/ActivitySocialLinks";
 // `ActivityTrainerCards` removed — trainers section retired
-import { NewsList } from "@/features/news/components/NewsList/NewsList";
-import type { ReactNode } from "react";
 import type { Activity } from "@/features/activities/types/activity";
+import { NewsList } from "@/features/news/components/NewsList/NewsList";
 import type { NewsItem } from "@/features/news/types/news";
+import type { ReactNode } from "react";
 import styles from "./ActivityDetailPage.module.css";
 
 type ActivityDetailPageProps = {

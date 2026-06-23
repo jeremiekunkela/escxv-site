@@ -1,10 +1,10 @@
 import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
 import { ActivityExplorer } from "@/features/activities/components/ActivityExplorer/ActivityExplorer";
-import { ClubKeyFigures } from "@/features/club/components/ClubKeyFigures/ClubKeyFigures";
-import { NewsList } from "@/features/news/components/NewsList/NewsList";
 import type { Activity } from "@/features/activities/types/activity";
+import { ClubKeyFigures } from "@/features/club/components/ClubKeyFigures/ClubKeyFigures";
 import type { ClubInfo } from "@/features/club/types/club";
 import type { HomepageContent as HomepageContentType } from "@/features/homepage/types/homepage";
+import { NewsList } from "@/features/news/components/NewsList/NewsList";
 import type { NewsItem } from "@/features/news/types/news";
 
 type HomePageContentProps = {
