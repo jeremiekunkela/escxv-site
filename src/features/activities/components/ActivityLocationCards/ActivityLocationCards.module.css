@@ -115,38 +115,6 @@
   letter-spacing: 0.04em;
 }
 
-.equipmentList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.equipment {
-  display: inline-flex;
-  align-items: center;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
-  background: var(--color-surface);
-  padding: 6px 12px;
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-}
-
-.equipmentStrong {
-  border-color: rgba(69, 81, 230, 0.35);
-  background: var(--color-surface-raised);
-  color: var(--color-brand);
-  font-weight: var(--font-weight-semibold);
-  box-shadow: 0 4px 20px rgba(69, 81, 230, 0.15);
-}
-
-.equipmentInfo {
-  opacity: 0.7;
-}
-
 .mapLink {
   display: inline-flex;
   margin-top: 18px;

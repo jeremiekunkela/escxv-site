@@ -2,6 +2,7 @@ import Image from "next/image";
 import { MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button/Button";
 import type { CSSProperties } from "react";
+import { EquipmentChips } from "@/features/activities/components/EquipmentChips/EquipmentChips";
 import type {
   ActivityLocation,
   LocationEquipment,
@@ -19,38 +20,6 @@ function isRelevantEquipment(
   activitySlug: string,
 ) {
   return Boolean(equipment.relatedActivitySlugs?.includes(activitySlug));
-}
-
-function EquipmentList({
-  equipments,
-  emphasized = false,
-}: {
-  equipments: LocationEquipment[];
-  emphasized?: boolean;
-}) {
-  return (
-    <ul className={styles.equipmentList}>
-      {equipments.map((equipment) => (
-        <li
-          key={equipment.label}
-          className={
-            emphasized
-              ? `${styles.equipment} ${styles.equipmentStrong}`
-              : styles.equipment
-          }
-          title={equipment.note ?? undefined}
-        >
-          {equipment.label}
-          {equipment.note ? (
-            <span className={styles.equipmentInfo} aria-hidden="true">
-              {" "}
-              ⓘ
-            </span>
-          ) : null}
-        </li>
-      ))}
-    </ul>
-  );
 }
 
 export function ActivityLocationCards({
@@ -118,7 +87,7 @@ export function ActivityLocationCards({
                       <p className={styles.equipmentEyebrow}>
                         Équipement pour cette section
                       </p>
-                      <EquipmentList
+                      <EquipmentChips
                         equipments={relevantEquipments}
                         emphasized
                       />
@@ -131,7 +100,7 @@ export function ActivityLocationCards({
                           ? "Autres équipements du lieu"
                           : "Équipement du lieu"}
                       </p>
-                      <EquipmentList equipments={otherEquipments} />
+                      <EquipmentChips equipments={otherEquipments} />
                     </div>
                   ) : null}
                 </div>
