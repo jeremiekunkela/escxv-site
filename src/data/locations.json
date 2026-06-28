@@ -5,6 +5,7 @@
     "address": "13 rue du General Guillaumat",
     "city": "Paris",
     "postalCode": "75015",
+    "type": "centre-sportif",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Centre+sportif+de+La+Plaine+Paris+75015",
     "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.5874898712914!2d2.2909721765913282!3d48.827931671328024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67148258f5ebf%3A0x10de109f3d2c443f!2sCentre%20Sportif%20La%20Plaine!5e0!3m2!1sfr!2sfr!4v1779035821251!5m2!1sfr!2sfr",
     "image": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1200&q=80",
@@ -26,7 +27,9 @@
         "label": "Salle d'arts martiaux",
         "relatedActivitySlugs": ["judo", "aikibudo"]
       },
-      { "label": "Salle de boxe" },
+      {
+        "label": "Salle de boxe"
+      },
       {
         "label": "Terrain de volley-ball",
         "relatedActivitySlugs": ["volley-ball"]
@@ -43,9 +46,15 @@
         "label": "Piscine",
         "relatedActivitySlugs": ["natation"]
       },
-      { "label": "Vestiaires" },
-      { "label": "Gradins" },
-      { "label": "Éclairage" }
+      {
+        "label": "Vestiaires"
+      },
+      {
+        "label": "Gradins"
+      },
+      {
+        "label": "Éclairage"
+      }
     ]
   },
   {
@@ -54,6 +63,7 @@
     "address": "62 rue Cambronne",
     "city": "Paris",
     "postalCode": "75015",
+    "type": "centre-sportif",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Complexe+sportif+Sablonniere+Paris+75015",
     "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.743135041512!2d2.299360576592251!3d48.84403807133016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6703c5a97ca25%3A0x1a397aa06ea0b07a!2sComplexe%20sportif%20Sablonni%C3%A8re!5e0!3m2!1sfr!2sfr!4v1779035883120!5m2!1sfr!2sfr",
     "image": null,
@@ -79,7 +89,9 @@
     "address": "107 rue de la Croix-Nivert",
     "city": "Paris",
     "postalCode": "75015",
+    "type": "gymnase",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gymnase%20Croix-Nivert%20107%20rue%20de%20la%20Croix-Nivert%2075015%20Paris",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Gymnase%20Croix-Nivert%20107%20rue%20de%20la%20Croix-Nivert%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
     "description": "Gymnase du 15e arrondissement accueillant l'escalade et le volley-ball."
   },
@@ -89,7 +101,9 @@
     "address": "16 rue de l'Ingenieur Robert Keller",
     "city": "Paris",
     "postalCode": "75015",
+    "type": "salle",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Salle%20Keller%2016%20rue%20de%20l'Ingenieur%20Robert%20Keller%2075015%20Paris",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Salle%20Keller%2016%20rue%20de%20l'Ingenieur%20Robert%20Keller%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
     "description": "Salle du 15e arrondissement utilisee par la section badminton."
   },
@@ -99,7 +113,9 @@
     "address": "9 rue Jean Rey",
     "city": "Paris",
     "postalCode": "75015",
+    "type": "piscine",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Piscine%20Emile%20Anthoine%209%20rue%20Jean%20Rey%2075015%20Paris",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Piscine%20Emile%20Anthoine%209%20rue%20Jean%20Rey%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
     "description": "Piscine municipale du 15e arrondissement, pres de la tour Eiffel."
   },
@@ -109,7 +125,9 @@
     "address": "2 rue Louis Armand",
     "city": "Paris",
     "postalCode": "75015",
+    "type": "centre-sportif",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Centre%20sportif%20Suzanne%20Lenglen%202%20rue%20Louis%20Armand%2075015%20Paris",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Centre%20sportif%20Suzanne%20Lenglen%202%20rue%20Louis%20Armand%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
     "description": "Grand centre sportif du 15e, courts de tennis couverts et exterieurs."
   },
@@ -119,7 +137,9 @@
     "address": "24 rue Paul Barruel",
     "city": "Paris",
     "postalCode": "75015",
+    "type": "gymnase",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gymnase%20Paul%20Barruel%2024%20rue%20Paul%20Barruel%2075015%20Paris",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Gymnase%20Paul%20Barruel%2024%20rue%20Paul%20Barruel%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
     "description": "Equipement sportif du 15e arrondissement, courts de tennis."
   },
@@ -129,7 +149,9 @@
     "address": "11 rue de la Montagne d'Aulas",
     "city": "Paris",
     "postalCode": "75015",
+    "type": "gymnase",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gymnase%20des%20Cevennes%2011%20rue%20de%20la%20Montagne%20d'Aulas%2075015%20Paris",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Gymnase%20des%20Cevennes%2011%20rue%20de%20la%20Montagne%20d'Aulas%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
     "description": "Gymnase du 15e arrondissement accueillant la section danse."
   },
@@ -139,7 +161,9 @@
     "address": "8 rue Saint-Lambert",
     "city": "Paris",
     "postalCode": "75015",
+    "type": "gymnase",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gymnase%20Saint-Lambert%208%20rue%20Saint-Lambert%2075015%20Paris",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Gymnase%20Saint-Lambert%208%20rue%20Saint-Lambert%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
     "description": "Gymnase du 15e arrondissement utilise par la section capoeira."
   },
@@ -149,7 +173,9 @@
     "address": "1 rue Lacretelle",
     "city": "Paris",
     "postalCode": "75015",
+    "type": "gymnase",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gymnase%20Lacretelle%201%20rue%20Lacretelle%2075015%20Paris",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Gymnase%20Lacretelle%201%20rue%20Lacretelle%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
     "description": "Equipement du 15e arrondissement, pres de la porte de Versailles, pour le sport du mercredi."
   },
@@ -159,7 +185,9 @@
     "address": "Porte de Brancion",
     "city": "Paris",
     "postalCode": "75015",
+    "type": "exterieur",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Terrain%20de%20Brancion%20Porte%20de%20Brancion%2075015%20Paris",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Terrain%20de%20Brancion%20Porte%20de%20Brancion%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
     "description": "Espace exterieur du 15e arrondissement utilise pour le beach-volley."
   },
@@ -169,7 +197,9 @@
     "address": "Route de la Pyramide, Bois de Vincennes",
     "city": "Paris",
     "postalCode": "75012",
+    "type": "stade",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Stade%20Pershing%20Route%20de%20la%20Pyramide%2C%20Bois%20de%20Vincennes%2075012%20Paris",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Stade%20Pershing%20Route%20de%20la%20Pyramide%2C%20Bois%20de%20Vincennes%2075012%20Paris&z=16&hl=fr&output=embed",
     "image": null,
     "description": "Stade du Bois de Vincennes (12e) accueillant la section baseball."
   }

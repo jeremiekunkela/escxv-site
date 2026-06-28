@@ -37,3 +37,35 @@ export function getActivitySlugs() {
 export function getLocations() {
   return locations as ActivityLocation[];
 }
+
+export type InstallationSport = Pick<
+  Activity,
+  "slug" | "title" | "shortName" | "icon"
+>;
+
+export type Installation = ActivityLocation & {
+  sports: InstallationSport[];
+};
+
+/**
+ * Index inverse lieu -> sports : pour chaque installation du registre,
+ * la liste des activites qui s'y pratiquent (calcule depuis les locationIds).
+ */
+export function getInstallations(): Installation[] {
+  return (locations as ActivityLocation[]).map((location) => ({
+    ...location,
+    sports: allActivities
+      .filter((activity) =>
+        activity.locations.some(
+          (activityLocation) => activityLocation.id === location.id,
+        ),
+      )
+      .map((activity) => ({
+        slug: activity.slug,
+        title: activity.title,
+        shortName: activity.shortName,
+        icon: activity.icon,
+      }))
+      .sort((left, right) => left.title.localeCompare(right.title)),
+  }));
+}

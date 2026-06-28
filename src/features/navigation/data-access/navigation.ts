@@ -10,6 +10,7 @@ import type {
 
 const mainLinks: NavigationLink[] = [
   { label: "Accueil", href: routes.home },
+  { label: "Installations", href: routes.installations },
   { label: "Actualités", href: routes.news },
 ];
 

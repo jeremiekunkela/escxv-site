@@ -47,12 +47,16 @@ export type LocationEquipment = {
   note?: string;
 };
 
+export type LocationType =
+  "centre-sportif" | "gymnase" | "stade" | "piscine" | "salle" | "exterieur";
+
 export type ActivityLocation = {
   id: string;
   name: string;
   address: string;
   city: string;
   postalCode: string;
+  type: LocationType;
   mapUrl: string;
   mapEmbedUrl?: string;
   image?: string | null;
