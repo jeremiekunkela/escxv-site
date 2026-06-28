@@ -7,33 +7,79 @@
     "icon": "🥋",
     "shortDescription": "Art martial de maitrise, de precision et de discipline dans un cadre progressif.",
     "description": "Une pratique martiale axee sur la technique, la posture et le controle, avec une progression adaptee aux adolescents et aux adultes.",
-    "category": [
-      "arts-martiaux"
-    ],
-    "publics": [
-      "adolescents",
-      "adultes"
-    ],
-    "tags": [
-      "technique",
-      "coordination",
-      "discipline"
-    ],
+    "category": ["arts-martiaux"],
+    "publics": ["adolescents", "adultes"],
+    "tags": ["technique", "coordination", "discipline"],
     "image": "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Arts martiaux",
-        "Adolescents",
-        "Adultes"
-      ]
+      "heroSubtitle": "Art martial complet, a mains nues et avec armes, les lundis et mercredis a La Plaine.",
+      "heroBadges": ["Arts martiaux", "Adolescents", "Adultes"],
+      "introText": "L'aikibudo developpe la technique, la posture et le controle dans une progression adaptee aux adolescents et aux adultes.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Pratique martiale",
+        "audience": "Adolescents et adultes",
+        "description": "Travail des techniques a mains nues et avec armes, centre sur la posture, le placement et le controle.",
+        "tags": ["Technique", "Armes", "Controle"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "aiki-tous",
+        "label": "Tous niveaux",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 1
+      }
+    ],
+    "locationIds": ["la-plaine"],
+    "schedules": [
+      {
+        "id": "aiki-lundi",
+        "practiceGroupId": "aiki-tous",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "lundi",
+        "startTime": "19:30",
+        "endTime": "21:30",
+        "tags": []
+      },
+      {
+        "id": "aiki-mercredi",
+        "practiceGroupId": "aiki-tous",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "mercredi",
+        "startTime": "19:30",
+        "endTime": "21:30",
+        "tags": []
+      }
+    ],
+    "prices": [
+      {
+        "id": "aikibudo-2025-2026",
+        "season": "2025/2026",
+        "label": "Aikibudo",
+        "clubFee": 75,
+        "activityFee": 210,
+        "total": 285,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-aikibudo",
+        "name": "Section Aikibudo ESC XV",
+        "role": "Contact section",
+        "email": "aikibudo@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "athletisme",
@@ -43,28 +89,14 @@
     "icon": "🏃",
     "shortDescription": "Sprint, demi-fond et école d'athletisme pour enfants",
     "description": "La section athletisme de l'ESC XV accueille les pratiquants du loisir a la competition, avec un travail centre sur la piste, la vitesse et la progression technique.",
-    "category": [
-      "athle-running"
-    ],
-    "publics": [
-      "enfants",
-      "adolescents",
-      "adultes"
-    ],
-    "tags": [
-      "sprint",
-      "demi-fond",
-      "competition"
-    ],
+    "category": ["athle-running"],
+    "publics": ["enfants", "adolescents", "adultes"],
+    "tags": ["sprint", "demi-fond", "competition"],
     "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
       "heroSubtitle": "Sprint, demi-fond, sauts et travail technique pour enfants, jeunes et adultes.",
-      "heroBadges": [
-        "Ecole d'athletisme",
-        "Sprint",
-        "Demi-fond"
-      ],
+      "heroBadges": ["Ecole d'athletisme", "Sprint", "Demi-fond"],
       "introText": "La section athletisme de l'ESC XV propose une progression lisible entre decouverte, travail technique, pratique reguliere et objectifs de competition sur piste.",
       "schedulesNoticeText": "Les creneaux affiches servent de base de travail pour la saison 2025/2026 et doivent encore etre confirmes par la section."
     },
@@ -73,172 +105,118 @@
         "title": "Ecole d'athletisme",
         "audience": "Enfants",
         "description": "Decouverte de la course, des sauts et des lancers avec une progression technique accessible et un cadre collectif.",
-        "tags": [
-          "Initiation",
-          "Coordination",
-          "Loisir"
-        ]
+        "tags": ["Initiation", "Coordination", "Loisir"]
       },
       {
         "title": "Sprint et demi-fond",
         "audience": "Adolescents et adultes",
         "description": "Travail de vitesse, de foullee, de placement et d'endurance specifique pour progresser de facon structuree.",
-        "tags": [
-          "Progression",
-          "Technique",
-          "Competition"
-        ]
+        "tags": ["Progression", "Technique", "Competition"]
       }
     ],
-    "locations": [
+    "practiceGroups": [
       {
-        "id": "la-plaine",
-        "name": "Centre sportif de La Plaine",
-        "address": "9 rue du General Guillaumat",
-        "city": "Paris",
-        "postalCode": "75015",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Centre+sportif+de+La+Plaine+Paris+75015",
-        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.5874898712914!2d2.2909721765913282!3d48.827931671328024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67148258f5ebf%3A0x10de109f3d2c443f!2sCentre%20Sportif%20La%20Plaine!5e0!3m2!1sfr!2sfr!4v1779035821251!5m2!1sfr!2sfr",
-        "image": "https://images.unsplash.com/photo-1651164999214-ab345f4c6c2d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "description": "Site de proximite adapte aux seances piste, aux gammes et au travail technique en semaine.",
-        "tags": [
-          "Piste 372m",
-          "Saut en longueur",
-          "Vestiaires",
-          "Gradins"
-        ]
+        "id": "ath-eveil-benjamin",
+        "label": "Éveil à benjamin",
+        "public": "enfants",
+        "birthYearMin": 2011,
+        "birthYearMax": 2018,
+        "gender": "mixte",
+        "sortOrder": 1
       },
       {
-        "id": "sablonniere",
-        "name": "Complexe sportif Sablonniere",
-        "address": "62 rue Cambronne",
-        "city": "Paris",
-        "postalCode": "75015",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Complexe+sportif+Sablonniere+Paris+75015",
-        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.743135041512!2d2.299360576592251!3d48.84403807133016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6703c5a97ca25%3A0x1a397aa06ea0b07a!2sComplexe%20sportif%20Sablonni%C3%A8re!5e0!3m2!1sfr!2sfr!4v1779035883120!5m2!1sfr!2sfr",
-        "image": "",
-        "description": "Lieu utile pour les seances jeunes du week-end et certains regroupements techniques.",
-        "tags": [
-          "Piste 192m",
-          "Saut en longueur",
-          "Lancer du poids"
-        ]
+        "id": "ath-minime-cadet",
+        "label": "Minime à cadet",
+        "public": "adolescents",
+        "birthYearMin": 2008,
+        "birthYearMax": 2011,
+        "gender": "mixte",
+        "sortOrder": 2
+      },
+      {
+        "id": "ath-adultes",
+        "label": "Adultes",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 3
       }
     ],
-"schedules": [
-  {
-    "id": "athle-jeunes-mardi-la-plaine-1800",
-    "locationId": "la-plaine",
-    "day": "mardi",
-    "startTime": "18:00",
-    "endTime": "19:30",
-    "publics": [
-      "adolescents"
+    "locationIds": ["la-plaine", "sablonniere"],
+    "schedules": [
+      {
+        "id": "athle-jeunes-mardi-la-plaine-1800",
+        "practiceGroupId": "ath-minime-cadet",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "mardi",
+        "startTime": "18:00",
+        "endTime": "19:30",
+        "tags": ["jeunes", "minime", "cadet", "athletisme"]
+      },
+      {
+        "id": "athle-adultes-mardi-la-plaine-1800",
+        "practiceGroupId": "ath-adultes",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "mardi",
+        "startTime": "18:00",
+        "endTime": "19:30",
+        "tags": ["sprint", "demi-fond"],
+        "notes": "Seance sprint et demi-fond adultes tous niveaux."
+      },
+      {
+        "id": "athle-jeunes-jeudi-la-plaine-1830",
+        "practiceGroupId": "ath-minime-cadet",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "18:30",
+        "endTime": "20:00",
+        "tags": ["jeunes", "minime", "cadet", "athletisme"]
+      },
+      {
+        "id": "athle-adultes-jeudi-la-plaine-1830",
+        "practiceGroupId": "ath-adultes",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "18:30",
+        "endTime": "20:00",
+        "tags": ["sprint", "demi-fond", "competition"],
+        "notes": "Seance technique et endurance specifique."
+      },
+      {
+        "id": "athle-jeunes-samedi-sablonniere-0900",
+        "practiceGroupId": "ath-minime-cadet",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "09:00",
+        "endTime": "10:30",
+        "tags": ["jeunes", "minime", "cadet"]
+      },
+      {
+        "id": "athle-adultes-samedi-sablonniere-0900",
+        "practiceGroupId": "ath-adultes",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "09:00",
+        "endTime": "10:30",
+        "tags": ["sprint", "demi-fond"],
+        "notes": "Seance sprint et demi-fond adultes."
+      },
+      {
+        "id": "athle-eveil-samedi-sablonniere-1030",
+        "practiceGroupId": "ath-eveil-benjamin",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "10:30",
+        "endTime": "12:00",
+        "tags": ["eveil", "benjamin", "jeunes"]
+      }
     ],
-    "tags": [
-      "jeunes",
-      "minime",
-      "cadet",
-      "athletisme"
-    ],
-    "groupLabel": "Minime"
-  },
-  {
-    "id": "athle-adultes-mardi-la-plaine-1800",
-    "locationId": "la-plaine",
-    "day": "mardi",
-    "startTime": "18:00",
-    "endTime": "19:30",
-    "publics": [
-      "adultes"
-    ],
-    "tags": [
-      "sprint",
-      "demi-fond"
-    ],
-    "notes": "Seance sprint et demi-fond adultes tous niveaux."
-  },
-  {
-    "id": "athle-jeunes-jeudi-la-plaine-1830",
-    "locationId": "la-plaine",
-    "day": "jeudi",
-    "startTime": "18:30",
-    "endTime": "20:00",
-    "publics": [
-      "adolescents"
-    ],
-    "tags": [
-      "jeunes",
-      "minime",
-      "cadet",
-      "athletisme"
-    ],
-    "groupLabel": "Minime"
-  },
-  {
-    "id": "athle-adultes-jeudi-la-plaine-1830",
-    "locationId": "la-plaine",
-    "day": "jeudi",
-    "startTime": "18:30",
-    "endTime": "20:00",
-    "publics": [
-      "adultes"
-    ],
-    "tags": [
-      "sprint",
-      "demi-fond",
-      "competition"
-    ],
-    "notes": "Seance technique et endurance specifique."
-  },
-  {
-    "id": "athle-jeunes-samedi-sablonniere-0900",
-    "locationId": "sablonniere",
-    "day": "samedi",
-    "startTime": "09:00",
-    "endTime": "10:30",
-    "publics": [
-      "adolescents"
-    ],
-    "tags": [
-      "jeunes",
-      "minime",
-      "cadet"
-    ],
-    "groupLabel": "Minime a cadet (2008 a 2011)"
-  },
-  {
-    "id": "athle-adultes-samedi-sablonniere-0900",
-    "locationId": "sablonniere",
-    "day": "samedi",
-    "startTime": "09:00",
-    "endTime": "10:30",
-    "publics": [
-      "adultes"
-    ],
-    "tags": [
-      "sprint",
-      "demi-fond"
-    ],
-    "notes": "Seance sprint et demi-fond adultes."
-  },
-  {
-    "id": "athle-eveil-samedi-sablonniere-1030",
-    "locationId": "sablonniere",
-    "day": "samedi",
-    "startTime": "10:30",
-    "endTime": "12:00",
-    "publics": [
-      "enfants"
-    ],
-    "tags": [
-      "eveil",
-      "benjamin",
-      "jeunes"
-    ],
-    "groupLabel": "Eveil a benjamin (2011 a 2018)"
-  }
-],
     "prices": [
       {
         "id": "athletisme-2025-2026-jeunes",
@@ -288,33 +266,128 @@
     "icon": "🏸",
     "shortDescription": "Une pratique dynamique pour jouer en simple, double ou loisir.",
     "description": "Le badminton melange vitesse, coordination et lecture du jeu, avec une pratique accessible en loisir comme en progression technique.",
-    "category": [
-      "raquette"
-    ],
-    "publics": [
-      "adolescents",
-      "adultes"
-    ],
-    "tags": [
-      "raquette",
-      "indoor",
-      "cardio"
-    ],
+    "category": ["raquette"],
+    "publics": ["adolescents", "adultes"],
+    "tags": ["raquette", "indoor", "cardio"],
     "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Raquette",
-        "Adolescents",
-        "Adultes"
-      ]
+      "heroSubtitle": "Loisir ou competition, en simple et en double, a la salle Keller.",
+      "heroBadges": ["Raquette", "Adolescents", "Adultes"],
+      "introText": "Le badminton melange vitesse, coordination et lecture du jeu, en loisir comme en progression technique encadree.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Groupe loisir",
+        "audience": "Adultes",
+        "description": "Pratique libre en simple ou en double, pour jouer regulierement dans une ambiance conviviale.",
+        "tags": ["Loisir", "Simple", "Double"]
+      },
+      {
+        "title": "Groupe competition",
+        "audience": "Adultes",
+        "description": "Entrainement encadre par un moniteur pour progresser techniquement et aborder la competition.",
+        "tags": ["Competition", "Moniteur", "Progression"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "bad-loisir",
+        "label": "Loisir",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 1
+      },
+      {
+        "id": "bad-competition",
+        "label": "Competition",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 2
+      }
+    ],
+    "locationIds": ["keller"],
+    "schedules": [
+      {
+        "id": "bad-loisir-lundi-1830",
+        "practiceGroupId": "bad-loisir",
+        "locationId": "keller",
+        "type": "training",
+        "day": "lundi",
+        "startTime": "18:30",
+        "endTime": "20:30",
+        "tags": []
+      },
+      {
+        "id": "bad-loisir-lundi-2030",
+        "practiceGroupId": "bad-loisir",
+        "locationId": "keller",
+        "type": "training",
+        "day": "lundi",
+        "startTime": "20:30",
+        "endTime": "22:30",
+        "tags": []
+      },
+      {
+        "id": "bad-loisir-mercredi",
+        "practiceGroupId": "bad-loisir",
+        "locationId": "keller",
+        "type": "training",
+        "day": "mercredi",
+        "startTime": "21:00",
+        "endTime": "22:30",
+        "tags": []
+      },
+      {
+        "id": "bad-comp-mardi",
+        "practiceGroupId": "bad-competition",
+        "locationId": "keller",
+        "type": "training",
+        "day": "mardi",
+        "startTime": "20:30",
+        "endTime": "22:30",
+        "tags": [],
+        "notes": "Seance avec moniteur."
+      },
+      {
+        "id": "bad-comp-vendredi",
+        "practiceGroupId": "bad-competition",
+        "locationId": "keller",
+        "type": "training",
+        "day": "vendredi",
+        "startTime": "19:00",
+        "endTime": "22:30",
+        "tags": []
+      }
+    ],
+    "prices": [
+      {
+        "id": "badminton-2025-2026",
+        "season": "2025/2026",
+        "label": "Badminton",
+        "clubFee": 75,
+        "activityFee": 145,
+        "total": 220,
+        "extraFees": [
+          {
+            "label": "Licence FFB optionnelle",
+            "amount": 50
+          }
+        ]
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-badminton",
+        "name": "Section Badminton ESC XV",
+        "role": "Contact section",
+        "email": "badminton@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "baseball",
@@ -324,34 +397,70 @@
     "icon": "⚾",
     "shortDescription": "Sport collectif de precision, coordination et esprit d'equipe.",
     "description": "Le baseball propose un cadre collectif, technique et strategique pour progresser en equipe.",
-    "category": [
-      "collectif"
-    ],
-    "publics": [
-      "enfants",
-      "adolescents",
-      "adultes"
-    ],
-    "tags": [
-      "collectif",
-      "plein air",
-      "coordination"
-    ],
+    "category": ["collectif"],
+    "publics": ["enfants", "adolescents", "adultes"],
+    "tags": ["collectif", "plein air", "coordination"],
     "image": "https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Collectif",
-        "Enfants",
-        "Adultes"
-      ]
+      "heroSubtitle": "Pratique du baseball le jeudi soir au stade Pershing (Bois de Vincennes).",
+      "heroBadges": ["Collectif", "Enfants", "Adultes"],
+      "introText": "Le baseball propose un cadre collectif, technique et strategique. Merci de prendre contact avec la section avant de venir.",
+      "schedulesNoticeText": "Creneau du jeudi soir au stade Pershing. Prenez contact avec la section avant votre premiere venue.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Entrainement baseball",
+        "audience": "Tous publics",
+        "description": "Decouverte et pratique du baseball : lancer, frappe, course et jeu collectif sur le terrain.",
+        "tags": ["Collectif", "Technique", "Plein air"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "base-tous",
+        "label": "Tous niveaux",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 1
+      }
+    ],
+    "locationIds": ["pershing"],
+    "schedules": [
+      {
+        "id": "base-jeudi",
+        "practiceGroupId": "base-tous",
+        "locationId": "pershing",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "19:00",
+        "endTime": "22:00",
+        "tags": [],
+        "notes": "Prendre contact avant de venir."
+      }
+    ],
+    "prices": [
+      {
+        "id": "baseball-2025-2026",
+        "season": "2025/2026",
+        "label": "Baseball",
+        "clubFee": 75,
+        "activityFee": 125,
+        "total": 200,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-baseball",
+        "name": "Section Baseball ESC XV",
+        "role": "Contact section",
+        "email": "baseball@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "capoeira",
@@ -361,35 +470,195 @@
     "icon": "🥁",
     "shortDescription": "Mouvement, rythme et expression corporelle entre art martial et danse.",
     "description": "La capoeira relie mouvement, musicalite et coordination dans une pratique collective et expressive.",
-    "category": [
-      "arts-martiaux",
-      "danse"
-    ],
-    "publics": [
-      "enfants",
-      "adolescents",
-      "adultes"
-    ],
-    "tags": [
-      "mobilite",
-      "rythme",
-      "culture"
-    ],
+    "category": ["arts-martiaux", "danse"],
+    "publics": ["enfants", "adolescents", "adultes"],
+    "tags": ["mobilite", "rythme", "culture"],
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Mobilite",
-        "Culture",
-        "Collectif"
-      ]
+      "heroSubtitle": "Art martial bresilien melant mouvement, musicalite et coordination, des 5 ans.",
+      "heroBadges": ["Mobilite", "Culture", "Collectif"],
+      "introText": "La capoeira relie mouvement, rythme et coordination dans une pratique collective et expressive, pour les enfants comme pour les adultes.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Capoeira enfants et jeunes",
+        "audience": "De 5 a 17 ans",
+        "description": "Apprentissage des mouvements de base, du rythme et de la roda dans un cadre ludique et progressif.",
+        "tags": ["Mouvement", "Rythme", "Jeunes"]
+      },
+      {
+        "title": "Capoeira adultes",
+        "audience": "Adultes",
+        "description": "Travail technique, musicalite et jeu, pour developper mobilite et coordination.",
+        "tags": ["Technique", "Musique", "Mobilite"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "capo-5-7",
+        "label": "5 a 7 ans",
+        "public": "enfants",
+        "gender": "mixte",
+        "sortOrder": 1
+      },
+      {
+        "id": "capo-8-11",
+        "label": "8 a 11 ans",
+        "public": "enfants",
+        "gender": "mixte",
+        "sortOrder": 2
+      },
+      {
+        "id": "capo-12-17",
+        "label": "12 a 17 ans",
+        "public": "adolescents",
+        "gender": "mixte",
+        "sortOrder": 3
+      },
+      {
+        "id": "capo-adultes",
+        "label": "Adultes",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 4
+      }
+    ],
+    "locationIds": ["saint-lambert", "sablonniere"],
+    "schedules": [
+      {
+        "id": "capo-5-7-mardi",
+        "practiceGroupId": "capo-5-7",
+        "locationId": "saint-lambert",
+        "type": "training",
+        "day": "mardi",
+        "startTime": "17:00",
+        "endTime": "18:00",
+        "tags": []
+      },
+      {
+        "id": "capo-5-7-samedi",
+        "practiceGroupId": "capo-5-7",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "15:00",
+        "endTime": "16:30",
+        "tags": []
+      },
+      {
+        "id": "capo-8-11-jeudi",
+        "practiceGroupId": "capo-8-11",
+        "locationId": "saint-lambert",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "18:30",
+        "endTime": "19:30",
+        "tags": []
+      },
+      {
+        "id": "capo-8-11-samedi",
+        "practiceGroupId": "capo-8-11",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "15:00",
+        "endTime": "16:30",
+        "tags": []
+      },
+      {
+        "id": "capo-12-17-mardi",
+        "practiceGroupId": "capo-12-17",
+        "locationId": "saint-lambert",
+        "type": "training",
+        "day": "mardi",
+        "startTime": "19:00",
+        "endTime": "21:00",
+        "tags": []
+      },
+      {
+        "id": "capo-12-17-jeudi",
+        "practiceGroupId": "capo-12-17",
+        "locationId": "saint-lambert",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "19:30",
+        "endTime": "20:30",
+        "tags": []
+      },
+      {
+        "id": "capo-12-17-samedi",
+        "practiceGroupId": "capo-12-17",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "16:30",
+        "endTime": "18:00",
+        "tags": []
+      },
+      {
+        "id": "capo-adultes-mardi",
+        "practiceGroupId": "capo-adultes",
+        "locationId": "saint-lambert",
+        "type": "training",
+        "day": "mardi",
+        "startTime": "19:00",
+        "endTime": "21:00",
+        "tags": []
+      },
+      {
+        "id": "capo-adultes-jeudi",
+        "practiceGroupId": "capo-adultes",
+        "locationId": "saint-lambert",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "19:30",
+        "endTime": "20:30",
+        "tags": []
+      },
+      {
+        "id": "capo-adultes-samedi",
+        "practiceGroupId": "capo-adultes",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "16:30",
+        "endTime": "18:00",
+        "tags": []
+      }
+    ],
+    "prices": [
+      {
+        "id": "capoeira-2025-2026-jeunes",
+        "season": "2025/2026",
+        "label": "Jeunes",
+        "clubFee": 75,
+        "activityFee": 185,
+        "total": 260,
+        "extraFees": []
+      },
+      {
+        "id": "capoeira-2025-2026-adultes",
+        "season": "2025/2026",
+        "label": "Adultes",
+        "clubFee": 75,
+        "activityFee": 225,
+        "total": 300,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-capoeira",
+        "name": "Section Capoeira ESC XV",
+        "role": "Contact section",
+        "email": "capoeira@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "course-a-pied-trail",
@@ -399,63 +668,82 @@
     "icon": "🏃",
     "shortDescription": "Running, endurance et preparation trail pour adultes.",
     "description": "Une activite autonome pour courir regulierement, preparer un objectif et progresser en groupe sur route et sentiers.",
-    "category": [
-      "athle-running"
-    ],
-    "publics": [
-      "adultes"
-    ],
-    "tags": [
-      "running",
-      "trail",
-      "endurance",
-      "sorties"
-    ],
+    "category": ["athle-running"],
+    "publics": ["adultes"],
+    "tags": ["running", "trail", "endurance", "sorties"],
     "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une pratique adulte pour courir regulierement, preparer un objectif et progresser en groupe sur route et sentiers.",
-      "heroBadges": [
-        "Running",
-        "Trail",
-        "Adultes",
-        "Sorties"
-      ]
+      "heroSubtitle": "Pratique adulte pour courir regulierement, preparer un objectif et progresser en groupe sur route et sentiers.",
+      "heroBadges": ["Running", "Trail", "Adultes", "Sorties"],
+      "introText": "Une activite autonome pour courir regulierement, preparer un objectif et progresser en groupe, des debutants aux confirmes. Des sorties hors stade sont organisees le dimanche selon les disponibilites.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Footing et endurance",
         "audience": "Adultes",
         "description": "Courir regulierement, travailler le fond et construire une base aerobie durable.",
-        "tags": [
-          "Endurance",
-          "Regularite",
-          "Running"
-        ]
+        "tags": ["Endurance", "Regularite", "Running"]
       },
       {
         "title": "Preparation trail",
         "audience": "Adultes",
         "description": "Sorties plus longues avec denivele, gestion de rythme et adaptation aux objectifs de trail.",
-        "tags": [
-          "Trail",
-          "Sorties longues",
-          "Denivele"
-        ]
+        "tags": ["Trail", "Sorties longues", "Denivele"]
       },
       {
         "title": "Seances fractionnees",
         "audience": "Adultes",
         "description": "Travail de rythme et d'allure pour progresser sans perdre la logique collective du groupe.",
-        "tags": [
-          "Vitesse",
-          "Allure",
-          "Groupe"
-        ]
+        "tags": ["Vitesse", "Allure", "Groupe"]
       }
     ],
-    "locations": [],
-    "schedules": [],
+    "practiceGroups": [
+      {
+        "id": "cap-adultes",
+        "label": "Adultes",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 1
+      }
+    ],
+    "locationIds": ["la-plaine", "sablonniere"],
+    "schedules": [
+      {
+        "id": "cap-mardi",
+        "practiceGroupId": "cap-adultes",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "mardi",
+        "startTime": "19:30",
+        "endTime": "21:00",
+        "tags": []
+      },
+      {
+        "id": "cap-jeudi",
+        "practiceGroupId": "cap-adultes",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "20:00",
+        "endTime": "21:30",
+        "tags": []
+      },
+      {
+        "id": "cap-samedi",
+        "practiceGroupId": "cap-adultes",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "10:30",
+        "endTime": "12:00",
+        "tags": [],
+        "notes": "Footing et renforcement musculaire."
+      }
+    ],
     "prices": [
       {
         "id": "captrail-2025-2026",
@@ -464,10 +752,23 @@
         "clubFee": 75,
         "activityFee": 145,
         "total": 220,
-        "extraFees": []
+        "extraFees": [
+          {
+            "label": "Licence FFA optionnelle",
+            "amount": 50
+          }
+        ]
       }
     ],
-    "contacts": []
+    "contacts": [
+      {
+        "id": "contact-cap",
+        "name": "Section Course a pied / Trail ESC XV",
+        "role": "Contact section",
+        "email": "cap@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "danse-moderne",
@@ -477,34 +778,95 @@
     "icon": "💃",
     "shortDescription": "Expression, rythme et energie dans une pratique artistique collective.",
     "description": "Une activite corporelle axee sur le rythme, l'expression et la progression de groupe.",
-    "category": [
-      "danse"
-    ],
-    "publics": [
-      "enfants",
-      "adolescents",
-      "adultes"
-    ],
-    "tags": [
-      "rythme",
-      "expression",
-      "collectif"
-    ],
+    "category": ["danse"],
+    "publics": ["enfants", "adolescents", "adultes"],
+    "tags": ["rythme", "expression", "collectif"],
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Danse",
-        "Expression",
-        "Rythme"
-      ]
+      "heroSubtitle": "Danse pour adultes et jeunes adultes, au gymnase des Cevennes ou a Cambronne.",
+      "heroBadges": ["Danse", "Expression", "Rythme"],
+      "introText": "Une activite corporelle axee sur le rythme, l'expression et la progression de groupe, proposee sur deux creneaux et deux lieux.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Danse moderne",
+        "audience": "Adultes et jeunes adultes",
+        "description": "Echauffement progressif, travail du mouvement et enchainements choregraphiques sur des styles varies.",
+        "tags": ["Expression", "Rythme", "Choregraphie"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "danse-cevennes",
+        "label": "Cours Cevennes",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 1
+      },
+      {
+        "id": "danse-cambronne",
+        "label": "Cours Cambronne",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 2
+      }
+    ],
+    "locationIds": ["cevennes", "sablonniere"],
+    "schedules": [
+      {
+        "id": "danse-cevennes-mercredi",
+        "practiceGroupId": "danse-cevennes",
+        "locationId": "cevennes",
+        "type": "training",
+        "day": "mercredi",
+        "startTime": "19:30",
+        "endTime": "21:00",
+        "tags": []
+      },
+      {
+        "id": "danse-cambronne-vendredi",
+        "practiceGroupId": "danse-cambronne",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "vendredi",
+        "startTime": "18:00",
+        "endTime": "20:00",
+        "tags": []
+      }
+    ],
+    "prices": [
+      {
+        "id": "danse-2025-2026-cevennes",
+        "season": "2025/2026",
+        "label": "Danse - Cevennes",
+        "clubFee": 75,
+        "activityFee": 145,
+        "total": 220,
+        "extraFees": []
+      },
+      {
+        "id": "danse-2025-2026-cambronne",
+        "season": "2025/2026",
+        "label": "Danse - Cambronne",
+        "clubFee": 75,
+        "activityFee": 175,
+        "total": 250,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-danse",
+        "name": "Section Danse ESC XV",
+        "role": "Contact section",
+        "email": "danse@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "escalade",
@@ -514,34 +876,153 @@
     "icon": "🧗",
     "shortDescription": "Grimper, gagner en confiance et developper force, equilibre et lecture.",
     "description": "Une pratique de grimpe progressive pour gagner en confiance, en technique et en autonomie.",
-    "category": [
-      "escalade"
-    ],
-    "publics": [
-      "enfants",
-      "adolescents",
-      "adultes"
-    ],
-    "tags": [
-      "force",
-      "equilibre",
-      "confiance"
-    ],
+    "category": ["escalade"],
+    "publics": ["enfants", "adolescents", "adultes"],
+    "tags": ["force", "equilibre", "confiance"],
     "image": "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Escalade",
-        "Confiance",
-        "Technique"
-      ]
+      "heroSubtitle": "Grimpe adultes et ateliers parent-enfant a La Plaine et a Croix-Nivert.",
+      "heroBadges": ["Escalade", "Confiance", "Technique"],
+      "introText": "Une pratique de grimpe progressive pour gagner en confiance, en technique et en autonomie, avec un groupe adultes et des ateliers parent-enfant (APE).",
+      "schedulesNoticeText": "D'autres creneaux (mardi, jeudi, dimanche) peuvent exister selon la saison et sont a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Grimpe adultes",
+        "audience": "Adultes",
+        "description": "Pratique encadree pour progresser en technique, en force et en lecture de voie, du debutant au confirme.",
+        "tags": ["Adultes", "Technique", "Autonomie"]
+      },
+      {
+        "title": "Atelier Parent-Enfant (APE)",
+        "audience": "Parents et enfants",
+        "description": "Un creneau partage parent-enfant pour decouvrir l'escalade ensemble en toute securite.",
+        "tags": ["Famille", "Decouverte", "Securite"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "esc-adultes",
+        "label": "Adultes",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 1
+      },
+      {
+        "id": "esc-ape",
+        "label": "Atelier Parent-Enfant (APE)",
+        "public": "enfants",
+        "gender": "mixte",
+        "sortOrder": 2
+      },
+      {
+        "id": "esc-ape-plus",
+        "label": "APE Plus",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 3
+      }
+    ],
+    "locationIds": ["la-plaine", "croix-nivert"],
+    "schedules": [
+      {
+        "id": "esc-adultes-lundi",
+        "practiceGroupId": "esc-adultes",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "lundi",
+        "startTime": "20:00",
+        "endTime": "22:30",
+        "tags": []
+      },
+      {
+        "id": "esc-adultes-vendredi",
+        "practiceGroupId": "esc-adultes",
+        "locationId": "croix-nivert",
+        "type": "training",
+        "day": "vendredi",
+        "startTime": "19:30",
+        "endTime": "22:30",
+        "tags": []
+      },
+      {
+        "id": "esc-adultes-samedi",
+        "practiceGroupId": "esc-adultes",
+        "locationId": "croix-nivert",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "18:00",
+        "endTime": "22:00",
+        "tags": []
+      },
+      {
+        "id": "esc-ape-samedi",
+        "practiceGroupId": "esc-ape",
+        "locationId": "croix-nivert",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "14:00",
+        "endTime": "17:00",
+        "tags": []
+      },
+      {
+        "id": "esc-ape-plus-jeudi",
+        "practiceGroupId": "esc-ape-plus",
+        "locationId": "croix-nivert",
+        "type": "training",
+        "day": "jeudi",
+        "tags": [],
+        "notes": "Acces APE Plus le jeudi soir, horaire a confirmer."
+      }
+    ],
+    "prices": [
+      {
+        "id": "escalade-2025-2026-adultes",
+        "season": "2025/2026",
+        "label": "Adultes",
+        "clubFee": 75,
+        "activityFee": 75,
+        "total": 150,
+        "extraFees": []
+      },
+      {
+        "id": "escalade-2025-2026-ape",
+        "season": "2025/2026",
+        "label": "Atelier Parent-Enfant (APE)",
+        "clubFee": 75,
+        "activityFee": 25,
+        "total": 100,
+        "extraFees": []
+      },
+      {
+        "id": "escalade-2025-2026-ape-plus",
+        "season": "2025/2026",
+        "label": "APE Plus",
+        "clubFee": 75,
+        "activityFee": 115,
+        "total": 190,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-escalade",
+        "name": "Section Escalade ESC XV",
+        "role": "Contact adultes",
+        "email": "escalade@esc15.fr",
+        "phone": null
+      },
+      {
+        "id": "contact-escalade-ape",
+        "name": "Escalade - Atelier Parent-Enfant",
+        "role": "Contact APE",
+        "email": "escalade-ape@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "football",
@@ -551,30 +1032,14 @@
     "icon": "⚽",
     "shortDescription": "Ecole de foot, jeunes et adultes, avec horaires effectifs, competition et inscription par mail.",
     "description": "La section football centralise les horaires effectifs, les lieux de pratique, les tarifs et les inscriptions pour l'ecole de foot, les jeunes et les adultes.",
-    "category": [
-      "collectif"
-    ],
-    "publics": [
-      "enfants",
-      "adolescents",
-      "adultes"
-    ],
-    "tags": [
-      "collectif",
-      "matchs",
-      "loisir",
-      "competition"
-    ],
+    "category": ["collectif"],
+    "publics": ["enfants", "adolescents", "adultes"],
+    "tags": ["collectif", "matchs", "loisir", "competition"],
     "image": "https://images.unsplash.com/photo-1517747614396-d21a78b850e8?auto=format&fit=crop&w=1600&q=80",
     "registrationUrl": "mailto:football@esc15.fr",
     "content": {
       "heroSubtitle": "Une pratique de proximite pour jouer, apprendre et s'engager en equipe a tout age.",
-      "heroBadges": [
-        "Ecole de foot",
-        "Jeunes",
-        "Adultes",
-        "Competition"
-      ],
+      "heroBadges": ["Ecole de foot", "Jeunes", "Adultes", "Competition"],
       "introText": "Les informations ci-dessous regroupent les horaires effectifs, les lieux de pratique, les tarifs et les modalites d'inscription.",
       "schedulesSubtitle": "Horaires effectifs, en tenue de sport sur le terrain.",
       "schedulesNoticeText": "Inscription validee si paiement. Contact: football@esc15.fr.",
@@ -588,430 +1053,341 @@
         "title": "Ecole de foot",
         "audience": "Enfants",
         "description": "Decouverte du jeu, motricite, coordination et apprentissage des fondamentaux dans un cadre securisant.",
-        "tags": [
-          "Enfants",
-          "Apprentissage",
-          "Collectif"
-        ]
+        "tags": ["Enfants", "Apprentissage", "Collectif"]
       },
       {
         "title": "Parcours jeunes",
         "audience": "Adolescents",
         "description": "Seances structurees pour progresser techniquement, comprendre le jeu et s'inscrire dans une dynamique d'equipe.",
-        "tags": [
-          "Jeunes",
-          "Technique",
-          "Matchs"
-        ]
+        "tags": ["Jeunes", "Technique", "Matchs"]
       },
       {
         "title": "Loisir et competition",
         "audience": "Adultes",
         "description": "Des groupes adultes pour pratiquer regulierement, garder du rythme ou rejoindre une logique plus competitive.",
-        "tags": [
-          "Adultes",
-          "Loisir",
-          "Competition"
-        ]
+        "tags": ["Adultes", "Loisir", "Competition"]
       }
     ],
-    "locations": [
+    "practiceGroups": [
       {
-        "id": "la-plaine",
-        "name": "Centre sportif de La Plaine",
-        "address": "9 rue du General Guillaumat",
-        "city": "Paris",
-        "postalCode": "75015",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Centre+sportif+de+La+Plaine+Paris+75015",
-        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.5874898712914!2d2.2909721765913282!3d48.827931671328024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67148258f5ebf%3A0x10de109f3d2c443f!2sCentre%20Sportif%20La%20Plaine!5e0!3m2!1sfr!2sfr!4v1779035821251!5m2!1sfr!2sfr",
-        "image": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1200&q=80",
-        "description": "Lieu principal de pratique de la section football dans le 15e arrondissement.",
-        "tags": [
-          "Terrain en synthétique",
-          "Vestiaires",
-          "Eclairage"
-        ]
+        "id": "fg-u6-u9",
+        "label": "U6 à U9",
+        "code": "U6-U9",
+        "public": "enfants",
+        "birthYearMin": 2017,
+        "birthYearMax": 2020,
+        "gender": "mixte",
+        "sortOrder": 1
+      },
+      {
+        "id": "fg-u10-u13",
+        "label": "U10 à U13",
+        "code": "U10-U13",
+        "public": "enfants",
+        "birthYearMin": 2013,
+        "birthYearMax": 2016,
+        "gender": "mixte",
+        "sortOrder": 2
+      },
+      {
+        "id": "fg-u14-u16",
+        "label": "U14 à U16",
+        "code": "U14-U16",
+        "public": "adolescents",
+        "birthYearMin": 2010,
+        "birthYearMax": 2012,
+        "gender": "masculin",
+        "sortOrder": 3
+      },
+      {
+        "id": "fg-u17-u18",
+        "label": "U17 à U18",
+        "code": "U17-U18",
+        "public": "adolescents",
+        "birthYearMin": 2008,
+        "birthYearMax": 2009,
+        "gender": "mixte",
+        "sortOrder": 4
+      },
+      {
+        "id": "fg-u19-u20",
+        "label": "U19 à U20",
+        "code": "U19-U20",
+        "public": "adolescents",
+        "birthYearMin": 2006,
+        "birthYearMax": 2007,
+        "gender": "mixte",
+        "sortOrder": 5
+      },
+      {
+        "id": "fg-seniors-fff",
+        "label": "Seniors FFF",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 6
+      },
+      {
+        "id": "fg-seniors-cdm",
+        "label": "Seniors CDM",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 7
+      },
+      {
+        "id": "fg-seniors-fsgt",
+        "label": "Seniors FSGT",
+        "public": "adultes",
+        "birthYearMax": 2006,
+        "gender": "mixte",
+        "sortOrder": 8
+      },
+      {
+        "id": "fg-loisir",
+        "label": "Loisir",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 9
       }
     ],
+    "locationIds": ["la-plaine"],
     "schedules": [
       {
         "id": "football-u6-u9-mercredi-1800",
+        "practiceGroupId": "fg-u6-u9",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "mercredi",
         "startTime": "18:00",
         "endTime": "19:30",
-        "publics": [
-          "enfants"
-        ],
-        "tags": [
-          "ecole de foot",
-          "initiation"
-        ],
-        "groupLabel": "U6 a U9 (2017 a 2020, F/G)",
+        "tags": ["ecole de foot", "initiation"],
         "notes": "En tenue de sport sur le terrain."
       },
       {
         "id": "football-u6-u9-vendredi-1730",
+        "practiceGroupId": "fg-u6-u9",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "vendredi",
         "startTime": "17:30",
         "endTime": "19:00",
-        "publics": [
-          "enfants"
-        ],
-        "tags": [
-          "ecole de foot",
-          "initiation"
-        ],
-        "groupLabel": "U6 a U9 (2017 a 2020, F/G)",
+        "tags": ["ecole de foot", "initiation"],
         "notes": "En tenue de sport sur le terrain."
       },
       {
         "id": "football-u10-u13-mardi-1800",
+        "practiceGroupId": "fg-u10-u13",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "mardi",
         "startTime": "18:00",
         "endTime": "19:30",
-        "publics": [
-          "enfants"
-        ],
-        "tags": [
-          "jeunes",
-          "technique",
-          "collectif"
-        ],
-        "groupLabel": "U10 a U13 (2013 a 2016)",
+        "tags": ["jeunes", "technique", "collectif"],
         "notes": "Horaires effectifs communiques par la section."
       },
       {
         "id": "football-u10-u13-jeudi-1800",
+        "practiceGroupId": "fg-u10-u13",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "jeudi",
         "startTime": "18:00",
         "endTime": "19:45",
-        "publics": [
-          "enfants"
-        ],
-        "tags": [
-          "jeunes",
-          "technique",
-          "collectif"
-        ],
-        "groupLabel": "U10 a U13 (2013 a 2016)",
+        "tags": ["jeunes", "technique", "collectif"],
         "notes": "Horaires effectifs communiques par la section."
       },
       {
         "id": "football-u14-u16-mercredi-1800",
+        "practiceGroupId": "fg-u14-u16",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "mercredi",
         "startTime": "18:00",
         "endTime": "19:30",
-        "publics": [
-          "adolescents"
-        ],
-        "tags": [
-          "jeunes",
-          "technique",
-          "collectif"
-        ],
-        "groupLabel": "U14 a U16 (2010 a 2012, G)",
+        "tags": ["jeunes", "technique", "collectif"],
         "notes": "En tenue de sport sur le terrain."
       },
       {
         "id": "football-u14-u16-vendredi-1730",
+        "practiceGroupId": "fg-u14-u16",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "vendredi",
         "startTime": "17:30",
         "endTime": "19:00",
-        "publics": [
-          "adolescents"
-        ],
-        "tags": [
-          "jeunes",
-          "technique",
-          "collectif"
-        ],
-        "groupLabel": "U14 a U16 (2010 a 2012, G)",
+        "tags": ["jeunes", "technique", "collectif"],
         "notes": "En tenue de sport sur le terrain."
       },
       {
         "id": "football-u17-u18-mardi-1900",
+        "practiceGroupId": "fg-u17-u18",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "mardi",
         "startTime": "19:00",
         "endTime": "20:30",
-        "publics": [
-          "adolescents"
-        ],
-        "tags": [
-          "jeunes",
-          "technique",
-          "collectif"
-        ],
-        "groupLabel": "U17 a U18 (2008 a 2009)"
+        "tags": ["jeunes", "technique", "collectif"]
       },
       {
         "id": "football-u17-u18-vendredi",
+        "practiceGroupId": "fg-u17-u18",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "vendredi",
-        "publics": [
-          "adolescents"
-        ],
-        "tags": [
-          "jeunes",
-          "technique",
-          "collectif"
-        ],
-        "groupLabel": "U17 a U18 (2008 a 2009)",
+        "tags": ["jeunes", "technique", "collectif"],
         "notes": "Horaire a confirmer."
       },
       {
         "id": "football-u19-u20-mardi-1930",
+        "practiceGroupId": "fg-u19-u20",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "mardi",
         "startTime": "19:30",
         "endTime": "21:00",
-        "publics": [
-          "adolescents"
-        ],
-        "tags": [
-          "jeunes",
-          "technique",
-          "collectif"
-        ],
-        "groupLabel": "U19 a U20 (2006 a 2007)"
+        "tags": ["jeunes", "technique", "collectif"]
       },
       {
         "id": "football-u19-u20-jeudi-1900",
+        "practiceGroupId": "fg-u19-u20",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "jeudi",
         "startTime": "19:00",
         "endTime": "20:30",
-        "publics": [
-          "adolescents"
-        ],
-        "tags": [
-          "jeunes",
-          "technique",
-          "collectif"
-        ],
-        "groupLabel": "U19 a U20 (2006 a 2007)"
+        "tags": ["jeunes", "technique", "collectif"]
       },
       {
         "id": "football-u19-u20-vendredi",
+        "practiceGroupId": "fg-u19-u20",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "vendredi",
-        "publics": [
-          "adolescents"
-        ],
-        "tags": [
-          "jeunes",
-          "technique",
-          "collectif"
-        ],
-        "groupLabel": "U19 a U20 (2006 a 2007)",
+        "tags": ["jeunes", "technique", "collectif"],
         "notes": "Horaire a confirmer."
       },
       {
         "id": "football-senior-fsgt-entrainement",
+        "practiceGroupId": "fg-seniors-fsgt",
         "locationId": "la-plaine",
-        "publics": [
-          "adultes"
-        ],
-        "tags": [
-          "adultes",
-          "entrainement",
-          "fsgt"
-        ],
-        "groupLabel": "Seniors FSGT (avant 01/01/2007)",
+        "type": "training",
+        "tags": ["adultes", "entrainement", "fsgt"],
         "notes": "Horaire a confirmer."
       },
       {
         "id": "football-senior-fff-mardi-2030",
+        "practiceGroupId": "fg-seniors-fff",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "mardi",
         "startTime": "20:30",
         "endTime": "22:15",
-        "publics": [
-          "adultes"
-        ],
-        "tags": [
-          "adultes",
-          "entrainement",
-          "fff"
-        ],
-        "groupLabel": "Seniors FFF"
+        "tags": ["adultes", "entrainement", "fff"]
       },
       {
         "id": "football-senior-fff-jeudi",
+        "practiceGroupId": "fg-seniors-fff",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "jeudi",
-        "publics": [
-          "adultes"
-        ],
-        "tags": [
-          "adultes",
-          "entrainement",
-          "fff"
-        ],
-        "groupLabel": "Seniors FFF",
+        "tags": ["adultes", "entrainement", "fff"],
         "notes": "Horaire a confirmer."
       },
       {
         "id": "football-senior-cdm-jeudi-1930",
+        "practiceGroupId": "fg-seniors-cdm",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "jeudi",
         "startTime": "19:30",
         "endTime": "21:00",
-        "publics": [
-          "adultes"
-        ],
-        "tags": [
-          "adultes",
-          "entrainement",
-          "cdm"
-        ],
-        "groupLabel": "Seniors CDM"
+        "tags": ["adultes", "entrainement", "cdm"]
       },
       {
         "id": "football-loisir-jeudi-1900",
+        "practiceGroupId": "fg-loisir",
         "locationId": "la-plaine",
+        "type": "training",
         "day": "jeudi",
         "startTime": "19:00",
         "endTime": "20:30",
-        "publics": [
-          "adultes"
-        ],
-        "tags": [
-          "loisir",
-          "adultes",
-          "entrainement"
-        ],
-        "groupLabel": "Loisir"
+        "tags": ["loisir", "adultes", "entrainement"]
       },
       {
         "id": "football-u6-u9-samedi-0900",
+        "practiceGroupId": "fg-u6-u9",
         "locationId": "la-plaine",
+        "type": "match",
         "day": "samedi",
         "startTime": "09:00",
         "endTime": "11:00",
-        "publics": [
-          "enfants"
-        ],
-        "tags": [
-          "competition",
-          "plateau",
-          "matchs"
-        ],
-        "groupLabel": "U6 a U9 (2017 a 2020, F/G)",
+        "tags": ["competition", "plateau", "matchs"],
         "notes": "Plateaux, matchs amicaux et ateliers."
       },
       {
         "id": "football-u10-u12-samedi-1000",
+        "practiceGroupId": "fg-u10-u13",
         "locationId": "la-plaine",
+        "type": "match",
         "day": "samedi",
-        "publics": [
-          "enfants"
-        ],
-        "tags": [
-          "competition",
-          "matchs"
-        ],
-        "groupLabel": "U10 a U12 (2014 a 2016)",
+        "tags": ["competition", "matchs"],
         "notes": "10h ou 11h selon calendrier FFF."
       },
       {
         "id": "football-u13-u14-samedi-1500",
+        "practiceGroupId": "fg-u14-u16",
         "locationId": "la-plaine",
+        "type": "match",
         "day": "samedi",
-        "publics": [
-          "adolescents"
-        ],
-        "tags": [
-          "competition",
-          "matchs"
-        ],
-        "groupLabel": "U13 a U14 (2012 a 2013, G)",
+        "tags": ["competition", "matchs"],
         "notes": "15h ou 17h selon calendrier FFF."
       },
       {
         "id": "football-u15-u16-dimanche-1300",
+        "practiceGroupId": "fg-u14-u16",
         "locationId": "la-plaine",
+        "type": "match",
         "day": "dimanche",
         "startTime": "13:00",
-        "publics": [
-          "adolescents"
-        ],
-        "tags": [
-          "competition",
-          "matchs"
-        ],
-        "groupLabel": "U15 a U16 (2010 a 2011)",
+        "tags": ["competition", "matchs"],
         "notes": "Horaire de fin a confirmer."
       },
       {
         "id": "football-u17-u18-competition",
+        "practiceGroupId": "fg-u17-u18",
         "locationId": "la-plaine",
-        "publics": [
-          "adolescents"
-        ],
-        "tags": [
-          "competition",
-          "matchs"
-        ],
-        "groupLabel": "U17 a U18 (2008 a 2009)",
+        "type": "match",
+        "tags": ["competition", "matchs"],
         "notes": "Selon calendrier. Horaire a confirmer."
       },
       {
         "id": "football-senior-fsgt-vendredi-2030",
+        "practiceGroupId": "fg-seniors-fsgt",
         "locationId": "la-plaine",
+        "type": "match",
         "day": "vendredi",
         "startTime": "20:30",
         "endTime": "22:00",
-        "publics": [
-          "adultes"
-        ],
-        "tags": [
-          "competition",
-          "matchs",
-          "fsgt",
-          "adultes"
-        ],
-        "groupLabel": "Seniors FSGT (avant 1/1/2007)"
+        "tags": ["competition", "matchs", "fsgt", "adultes"]
       },
       {
         "id": "football-senior-cdm-dimanche-1100",
+        "practiceGroupId": "fg-seniors-cdm",
         "locationId": "la-plaine",
+        "type": "match",
         "day": "dimanche",
         "startTime": "11:00",
         "endTime": "13:00",
-        "publics": [
-          "adultes"
-        ],
-        "tags": [
-          "competition",
-          "matchs",
-          "cdm",
-          "adultes"
-        ],
-        "groupLabel": "Seniors CDM"
+        "tags": ["competition", "matchs", "cdm", "adultes"]
       },
       {
         "id": "football-senior-fff-dimanche-1500",
+        "practiceGroupId": "fg-seniors-fff",
         "locationId": "la-plaine",
+        "type": "match",
         "day": "dimanche",
         "startTime": "15:00",
         "endTime": "17:00",
-        "publics": [
-          "adultes"
-        ],
-        "tags": [
-          "competition",
-          "matchs",
-          "fff",
-          "adultes"
-        ],
-        "groupLabel": "Seniors FFF"
+        "tags": ["competition", "matchs", "fff", "adultes"]
       }
     ],
     "prices": [
@@ -1061,32 +1437,69 @@
     "icon": "🤸",
     "shortDescription": "Bouger regulierement, entretenir mobilite, tonicite et equilibre.",
     "description": "Une pratique d'entretien physique pour garder du mouvement et une forme reguliere.",
-    "category": [
-      "forme"
-    ],
-    "publics": [
-      "adultes"
-    ],
-    "tags": [
-      "mobilite",
-      "tonicite",
-      "equilibre"
-    ],
+    "category": ["forme"],
+    "publics": ["adultes"],
+    "tags": ["mobilite", "tonicite", "equilibre"],
     "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Forme",
-        "Mobilite",
-        "Adultes"
-      ]
+      "heroSubtitle": "Seance d'entretien physique sur l'heure du midi, le jeudi a La Plaine.",
+      "heroBadges": ["Forme", "Mobilite", "Adultes"],
+      "introText": "Une pratique d'entretien physique pour garder du mouvement et une forme reguliere, sur la pause du midi.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Gymnastique d'entretien",
+        "audience": "Adultes",
+        "description": "Mobilite, tonicite, renforcement doux et equilibre dans une seance accessible a tous.",
+        "tags": ["Mobilite", "Tonicite", "Midi"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "gym-adultes",
+        "label": "Adultes",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 1
+      }
+    ],
+    "locationIds": ["la-plaine"],
+    "schedules": [
+      {
+        "id": "gym-jeudi",
+        "practiceGroupId": "gym-adultes",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "12:15",
+        "endTime": "13:15",
+        "tags": []
+      }
+    ],
+    "prices": [
+      {
+        "id": "gym-entretien-2025-2026",
+        "season": "2025/2026",
+        "label": "Gymnastique d'entretien",
+        "clubFee": 75,
+        "activityFee": 125,
+        "total": 200,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-gym-entretien",
+        "name": "Section Gymnastique d'entretien ESC XV",
+        "role": "Contact section",
+        "email": "gym-entretien@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "judo",
@@ -1096,34 +1509,137 @@
     "icon": "🥋",
     "shortDescription": "Discipline, respect, technique et progression par ceintures.",
     "description": "Le judo combine apprentissage technique, progression individuelle et cadre collectif structurant.",
-    "category": [
-      "arts-martiaux"
-    ],
-    "publics": [
-      "enfants",
-      "adolescents",
-      "adultes"
-    ],
-    "tags": [
-      "respect",
-      "technique",
-      "progression"
-    ],
+    "category": ["arts-martiaux"],
+    "publics": ["enfants", "adolescents", "adultes"],
+    "tags": ["respect", "technique", "progression"],
     "image": "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Judo",
-        "Technique",
-        "Respect"
-      ]
+      "heroSubtitle": "Judo enfants de 5 a 13 ans, a La Plaine et a Cambronne.",
+      "heroBadges": ["Judo", "Technique", "Respect"],
+      "introText": "Le judo combine apprentissage technique, progression par ceintures et cadre collectif structurant. La section participe a des competitions FSGT et FFJDA.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Judo 5-8 ans",
+        "audience": "Enfants",
+        "description": "Decouverte du judo, motricite, chutes et premiers automatismes dans un cadre securisant.",
+        "tags": ["Initiation", "Motricite", "Respect"]
+      },
+      {
+        "title": "Judo 8-13 ans",
+        "audience": "Enfants",
+        "description": "Apprentissage technique, progression par ceintures et initiation a la competition.",
+        "tags": ["Technique", "Ceintures", "Competition"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "judo-5-8",
+        "label": "5 a 8 ans",
+        "public": "enfants",
+        "gender": "mixte",
+        "sortOrder": 1
+      },
+      {
+        "id": "judo-8-13",
+        "label": "8 a 13 ans",
+        "public": "enfants",
+        "gender": "mixte",
+        "sortOrder": 2
+      }
+    ],
+    "locationIds": ["la-plaine", "sablonniere"],
+    "schedules": [
+      {
+        "id": "judo-5-8-lundi",
+        "practiceGroupId": "judo-5-8",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "lundi",
+        "startTime": "17:30",
+        "endTime": "18:30",
+        "tags": []
+      },
+      {
+        "id": "judo-5-8-mercredi",
+        "practiceGroupId": "judo-5-8",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "mercredi",
+        "startTime": "13:00",
+        "endTime": "14:00",
+        "tags": []
+      },
+      {
+        "id": "judo-5-8-samedi",
+        "practiceGroupId": "judo-5-8",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "13:00",
+        "endTime": "14:00",
+        "tags": []
+      },
+      {
+        "id": "judo-8-13-lundi",
+        "practiceGroupId": "judo-8-13",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "lundi",
+        "startTime": "18:30",
+        "endTime": "19:30",
+        "tags": []
+      },
+      {
+        "id": "judo-8-13-mercredi",
+        "practiceGroupId": "judo-8-13",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "mercredi",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "tags": []
+      },
+      {
+        "id": "judo-8-13-samedi",
+        "practiceGroupId": "judo-8-13",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "tags": []
+      }
+    ],
+    "prices": [
+      {
+        "id": "judo-2025-2026",
+        "season": "2025/2026",
+        "label": "Judo",
+        "clubFee": 75,
+        "activityFee": 175,
+        "total": 250,
+        "extraFees": [
+          {
+            "label": "Licence FFJDA optionnelle",
+            "amount": 50
+          }
+        ]
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-judo",
+        "name": "Section Judo ESC XV",
+        "role": "Contact section",
+        "email": "judo@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "natation",
@@ -1133,34 +1649,70 @@
     "icon": "🏊",
     "shortDescription": "Apprentissage, perfectionnement et endurance selon niveau.",
     "description": "Une activite aquatique progressive pour apprendre, se perfectionner et nager regulierement.",
-    "category": [
-      "eau"
-    ],
-    "publics": [
-      "enfants",
-      "adolescents",
-      "adultes"
-    ],
-    "tags": [
-      "eau",
-      "technique",
-      "endurance"
-    ],
+    "category": ["eau"],
+    "publics": ["enfants", "adolescents", "adultes"],
+    "tags": ["eau", "technique", "endurance"],
     "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Natation",
-        "Technique",
-        "Endurance"
-      ]
+      "heroSubtitle": "Initiation et perfectionnement des 6 ans, le vendredi a la piscine Emile Anthoine.",
+      "heroBadges": ["Natation", "Technique", "Endurance"],
+      "introText": "Une activite aquatique progressive organisee en quatre groupes de niveaux, de l'initiation au perfectionnement technique. Prevoir trois photos d'identite pour l'inscription.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Apprentissage et perfectionnement",
+        "audience": "Enfants et jeunes des 6 ans",
+        "description": "Quatre groupes de niveaux, de l'initiation a l'aisance aquatique, au perfectionnement technique et a l'endurance.",
+        "tags": ["Initiation", "Technique", "Niveaux"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "nat-niveaux",
+        "label": "Initiation a perfectionnement (des 6 ans)",
+        "public": "enfants",
+        "gender": "mixte",
+        "sortOrder": 1
+      }
+    ],
+    "locationIds": ["emile-anthoine"],
+    "schedules": [
+      {
+        "id": "nat-vendredi",
+        "practiceGroupId": "nat-niveaux",
+        "locationId": "emile-anthoine",
+        "type": "training",
+        "day": "vendredi",
+        "startTime": "19:15",
+        "endTime": "20:15",
+        "tags": [],
+        "notes": "Presence requise des 19h."
+      }
+    ],
+    "prices": [
+      {
+        "id": "natation-2025-2026",
+        "season": "2025/2026",
+        "label": "Natation",
+        "clubFee": 75,
+        "activityFee": 155,
+        "total": 230,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-natation",
+        "name": "Section Natation ESC XV",
+        "role": "Contact section",
+        "email": "natation@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "pilates",
@@ -1170,32 +1722,69 @@
     "icon": "◌",
     "shortDescription": "Renforcement profond, posture et controle du mouvement.",
     "description": "Une pratique de forme axee sur le gainage, la posture et la qualite du mouvement.",
-    "category": [
-      "forme"
-    ],
-    "publics": [
-      "adultes"
-    ],
-    "tags": [
-      "posture",
-      "gainage",
-      "mobilite"
-    ],
+    "category": ["forme"],
+    "publics": ["adultes"],
+    "tags": ["posture", "gainage", "mobilite"],
     "image": "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Pilates",
-        "Gainage",
-        "Adultes"
-      ]
+      "heroSubtitle": "Renforcement profond, posture et controle du mouvement, le jeudi a Cambronne.",
+      "heroBadges": ["Pilates", "Gainage", "Adultes"],
+      "introText": "Une pratique de forme axee sur le gainage, la posture et la qualite du mouvement, accessible a tous les niveaux.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Pilates",
+        "audience": "Adultes",
+        "description": "Renforcement profond, gainage, posture et controle du mouvement.",
+        "tags": ["Gainage", "Posture", "Controle"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "pilates-adultes",
+        "label": "Adultes",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 1
+      }
+    ],
+    "locationIds": ["sablonniere"],
+    "schedules": [
+      {
+        "id": "pilates-jeudi",
+        "practiceGroupId": "pilates-adultes",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "20:30",
+        "endTime": "22:00",
+        "tags": []
+      }
+    ],
+    "prices": [
+      {
+        "id": "pilates-2025-2026",
+        "season": "2025/2026",
+        "label": "Pilates",
+        "clubFee": 75,
+        "activityFee": 135,
+        "total": 210,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-pilates",
+        "name": "Section Pilates ESC XV",
+        "role": "Contact section",
+        "email": "pilates@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "renforcement-musculaire",
@@ -1205,32 +1794,69 @@
     "icon": "💪",
     "shortDescription": "Seances toniques pour developper force, gainage et condition physique.",
     "description": "Une pratique forme et condition physique pour entretenir la tonicite et la regularite.",
-    "category": [
-      "forme"
-    ],
-    "publics": [
-      "adultes"
-    ],
-    "tags": [
-      "force",
-      "gainage",
-      "condition physique"
-    ],
+    "category": ["forme"],
+    "publics": ["adultes"],
+    "tags": ["force", "gainage", "condition physique"],
     "image": "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Renfo",
-        "Force",
-        "Adultes"
-      ]
+      "heroSubtitle": "Seances toniques de renforcement, le vendredi a Cambronne.",
+      "heroBadges": ["Renfo", "Force", "Adultes"],
+      "introText": "Une pratique forme et condition physique pour entretenir la tonicite, la force et la regularite.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Renforcement musculaire",
+        "audience": "Adultes",
+        "description": "Seances toniques de renforcement global : force, gainage et condition physique.",
+        "tags": ["Force", "Gainage", "Tonicite"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "renfo-adultes",
+        "label": "Adultes",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 1
+      }
+    ],
+    "locationIds": ["sablonniere"],
+    "schedules": [
+      {
+        "id": "renfo-vendredi",
+        "practiceGroupId": "renfo-adultes",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "vendredi",
+        "startTime": "18:30",
+        "endTime": "20:00",
+        "tags": []
+      }
+    ],
+    "prices": [
+      {
+        "id": "renfo-2025-2026",
+        "season": "2025/2026",
+        "label": "Renforcement musculaire",
+        "clubFee": 75,
+        "activityFee": 125,
+        "total": 200,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-renf-muscu",
+        "name": "Section Renforcement musculaire ESC XV",
+        "role": "Contact section",
+        "email": "renf-muscu@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "sport-mercredi",
@@ -1240,33 +1866,70 @@
     "icon": "👦",
     "shortDescription": "Creneau multisports pour enfants, pense pour decouvrir et bouger.",
     "description": "Une offre multisports enfants pour varier les pratiques et garder une approche ludique en milieu de semaine.",
-    "category": [
-      "forme",
-      "collectif"
-    ],
-    "publics": [
-      "enfants"
-    ],
-    "tags": [
-      "multisports",
-      "enfants",
-      "decouverte"
-    ],
+    "category": ["forme", "collectif"],
+    "publics": ["enfants"],
+    "tags": ["multisports", "enfants", "decouverte"],
     "image": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Enfants",
-        "Multisports",
-        "Mercredi"
-      ]
+      "heroSubtitle": "Initiation multisports pour enfants des 5 ans, le mercredi apres-midi.",
+      "heroBadges": ["Enfants", "Multisports", "Mercredi"],
+      "introText": "Une offre multisports encadree par des etudiants en STAPS, avec changement de discipline chaque trimestre. L'activite suit le calendrier scolaire.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Initiation multisports",
+        "audience": "Enfants des 5 ans",
+        "description": "Athletisme, badminton, basket, football, gymnastique, judo... une decouverte variee, encadree par des etudiants en STAPS.",
+        "tags": ["Multisports", "Decouverte", "Encadre"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "merc-enfants",
+        "label": "Enfants des 5 ans",
+        "public": "enfants",
+        "gender": "mixte",
+        "sortOrder": 1
+      }
+    ],
+    "locationIds": ["lacretelle"],
+    "schedules": [
+      {
+        "id": "merc-mercredi",
+        "practiceGroupId": "merc-enfants",
+        "locationId": "lacretelle",
+        "type": "training",
+        "day": "mercredi",
+        "startTime": "13:30",
+        "endTime": "15:30",
+        "tags": [],
+        "notes": "Suit le calendrier scolaire."
+      }
+    ],
+    "prices": [
+      {
+        "id": "sport-mercredi-2025-2026",
+        "season": "2025/2026",
+        "label": "Sport mercredi",
+        "clubFee": 75,
+        "activityFee": 205,
+        "total": 280,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-sport-mercredi",
+        "name": "Section Sport mercredi ESC XV",
+        "role": "Contact section",
+        "email": "sport-mercredi@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "stretching",
@@ -1276,32 +1939,79 @@
     "icon": "⌁",
     "shortDescription": "Souplesse, mobilite et recuperation dans une pratique accessible.",
     "description": "Une activite douce pour entretenir la mobilite et recuperer sans charge excessive.",
-    "category": [
-      "forme"
-    ],
-    "publics": [
-      "adultes"
-    ],
-    "tags": [
-      "souplesse",
-      "mobilite",
-      "recuperation"
-    ],
+    "category": ["forme"],
+    "publics": ["adultes"],
+    "tags": ["souplesse", "mobilite", "recuperation"],
     "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Souplesse",
-        "Mobilite",
-        "Adultes"
-      ]
+      "heroSubtitle": "Souplesse, mobilite et recuperation, le lundi soir a Cambronne.",
+      "heroBadges": ["Souplesse", "Mobilite", "Adultes"],
+      "introText": "Une activite douce pour entretenir la mobilite et recuperer sans charge excessive, sur deux creneaux le lundi soir.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Stretching",
+        "audience": "Adultes",
+        "description": "Travail de souplesse, de mobilite et de recuperation dans une pratique douce.",
+        "tags": ["Souplesse", "Mobilite", "Recuperation"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "stretch-adultes",
+        "label": "Adultes",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 1
+      }
+    ],
+    "locationIds": ["sablonniere"],
+    "schedules": [
+      {
+        "id": "stretch-lundi-2000",
+        "practiceGroupId": "stretch-adultes",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "lundi",
+        "startTime": "20:00",
+        "endTime": "21:00",
+        "tags": []
+      },
+      {
+        "id": "stretch-lundi-2100",
+        "practiceGroupId": "stretch-adultes",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "lundi",
+        "startTime": "21:00",
+        "endTime": "22:30",
+        "tags": []
+      }
+    ],
+    "prices": [
+      {
+        "id": "stretching-2025-2026",
+        "season": "2025/2026",
+        "label": "Stretching",
+        "clubFee": 75,
+        "activityFee": 135,
+        "total": 210,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-stretching",
+        "name": "Section Stretching ESC XV",
+        "role": "Contact section",
+        "email": "stretching@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "tennis",
@@ -1311,34 +2021,200 @@
     "icon": "🎾",
     "shortDescription": "Cours et pratique selon niveau, creneau et objectif.",
     "description": "Une activite raquette qui melange apprentissage technique, regularite et jeu.",
-    "category": [
-      "raquette"
-    ],
-    "publics": [
-      "enfants",
-      "adolescents",
-      "adultes"
-    ],
-    "tags": [
-      "raquette",
-      "technique",
-      "match"
-    ],
+    "category": ["raquette"],
+    "publics": ["enfants", "adolescents", "adultes"],
+    "tags": ["raquette", "technique", "match"],
     "image": "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Raquette",
-        "Technique",
-        "Match"
-      ]
+      "heroSubtitle": "Ecole de tennis et tennis competition, de 5 ans aux adultes.",
+      "heroBadges": ["Raquette", "Technique", "Match"],
+      "introText": "Une activite raquette qui melange apprentissage technique, regularite et jeu, avec une ecole de tennis par tranches d'age et un groupe competition.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Tennis Ecole",
+        "audience": "Enfants, jeunes et adultes",
+        "description": "Cours collectifs par niveau et par age, en 1h ou 1h30, pour apprendre et progresser.",
+        "tags": ["Ecole", "Cours", "Progression"]
+      },
+      {
+        "title": "Tennis Competition",
+        "audience": "Adultes",
+        "description": "Pratique competitive en FSGT pour jouer en equipe et en tournoi.",
+        "tags": ["Competition", "FSGT", "Match"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "tennis-5-7",
+        "label": "5 a 7 ans",
+        "public": "enfants",
+        "gender": "mixte",
+        "sortOrder": 1
+      },
+      {
+        "id": "tennis-8-12",
+        "label": "8 a 12 ans",
+        "public": "enfants",
+        "gender": "mixte",
+        "sortOrder": 2
+      },
+      {
+        "id": "tennis-12-16",
+        "label": "12 a 16 ans",
+        "public": "adolescents",
+        "gender": "mixte",
+        "sortOrder": 3
+      },
+      {
+        "id": "tennis-adultes",
+        "label": "Adultes",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 4
+      }
+    ],
+    "locationIds": ["suzanne-lenglen", "la-plaine", "paul-barruel"],
+    "schedules": [
+      {
+        "id": "tennis-8-12-mercredi",
+        "practiceGroupId": "tennis-8-12",
+        "locationId": "suzanne-lenglen",
+        "type": "training",
+        "day": "mercredi",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "tags": [],
+        "notes": "Court 12, couvert."
+      },
+      {
+        "id": "tennis-12-16-jeudi",
+        "practiceGroupId": "tennis-12-16",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "15:00",
+        "endTime": "16:00",
+        "tags": []
+      },
+      {
+        "id": "tennis-adultes-jeudi",
+        "practiceGroupId": "tennis-adultes",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "18:00",
+        "endTime": "21:00",
+        "tags": [],
+        "notes": "Courts 4-5, non couverts."
+      },
+      {
+        "id": "tennis-adultes-samedi",
+        "practiceGroupId": "tennis-adultes",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "08:30",
+        "endTime": "10:00",
+        "tags": [],
+        "notes": "Court 5."
+      },
+      {
+        "id": "tennis-5-7-samedi",
+        "practiceGroupId": "tennis-5-7",
+        "locationId": "paul-barruel",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "tags": [],
+        "notes": "Court 4."
+      },
+      {
+        "id": "tennis-8-12-samedi",
+        "practiceGroupId": "tennis-8-12",
+        "locationId": "paul-barruel",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "tags": []
+      },
+      {
+        "id": "tennis-12-16-samedi-15",
+        "practiceGroupId": "tennis-12-16",
+        "locationId": "paul-barruel",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "15:00",
+        "endTime": "16:00",
+        "tags": []
+      },
+      {
+        "id": "tennis-12-16-samedi-16",
+        "practiceGroupId": "tennis-12-16",
+        "locationId": "paul-barruel",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "16:00",
+        "endTime": "17:00",
+        "tags": []
+      }
+    ],
+    "prices": [
+      {
+        "id": "tennis-2025-2026-ecole-1h",
+        "season": "2025/2026",
+        "label": "Tennis Ecole - cours 1h",
+        "clubFee": 75,
+        "activityFee": 235,
+        "total": 310,
+        "extraFees": []
+      },
+      {
+        "id": "tennis-2025-2026-ecole-1h30",
+        "season": "2025/2026",
+        "label": "Tennis Ecole - cours 1h30",
+        "clubFee": 75,
+        "activityFee": 305,
+        "total": 380,
+        "extraFees": []
+      },
+      {
+        "id": "tennis-2025-2026-competition",
+        "season": "2025/2026",
+        "label": "Tennis Competition (FSGT)",
+        "clubFee": 75,
+        "activityFee": 125,
+        "total": 200,
+        "extraFees": [
+          {
+            "label": "Licence FFT optionnelle",
+            "amount": 50
+          }
+        ]
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-tennis",
+        "name": "Section Tennis ESC XV",
+        "role": "Contact ecole",
+        "email": "tennis@esc15.fr",
+        "phone": null
+      },
+      {
+        "id": "contact-tennis-competition",
+        "name": "Tennis Competition",
+        "role": "Contact competition",
+        "email": "tennis-competition@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "tennis-table",
@@ -1348,33 +2224,177 @@
     "icon": "🏓",
     "shortDescription": "Reflexes, precision et jeu rapide dans une activite accessible.",
     "description": "Une activite de salle technique et vive, adaptee aux jeunes comme aux adultes.",
-    "category": [
-      "raquette"
-    ],
-    "publics": [
-      "adolescents",
-      "adultes"
-    ],
-    "tags": [
-      "raquette",
-      "precision",
-      "salle"
-    ],
+    "category": ["raquette"],
+    "publics": ["adolescents", "adultes"],
+    "tags": ["raquette", "precision", "salle"],
     "image": "https://images.unsplash.com/photo-1611251135345-18c56206b863?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Raquette",
-        "Precision",
-        "Salle"
-      ]
+      "heroSubtitle": "Tennis de table pour jeunes et adultes, a La Plaine et a Cambronne.",
+      "heroBadges": ["Raquette", "Precision", "Salle"],
+      "introText": "Une activite de salle technique et vive, adaptee aux jeunes comme aux adultes, en entrainement comme en loisir. Les adultes sont limites a deux seances par semaine.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Jeunes",
+        "audience": "Enfants et moins de 18 ans",
+        "description": "Du panier de balles pour les plus jeunes aux entrainements encadres pour les moins de 18 ans.",
+        "tags": ["Initiation", "Entrainement", "Jeunes"]
+      },
+      {
+        "title": "Adultes",
+        "audience": "Adultes",
+        "description": "Entrainement et creneaux loisir pour jouer regulierement, dans la limite de deux seances par semaine.",
+        "tags": ["Entrainement", "Loisir", "Adultes"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "tt-6-8",
+        "label": "6 a 8 ans",
+        "public": "enfants",
+        "gender": "mixte",
+        "sortOrder": 1
+      },
+      {
+        "id": "tt-jeunes",
+        "label": "Moins de 18 ans",
+        "public": "adolescents",
+        "gender": "mixte",
+        "sortOrder": 2
+      },
+      {
+        "id": "tt-adultes-entrainement",
+        "label": "Adultes - entrainement",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 3
+      },
+      {
+        "id": "tt-adultes-loisir",
+        "label": "Adultes - loisir",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 4
+      }
+    ],
+    "locationIds": ["la-plaine", "sablonniere"],
+    "schedules": [
+      {
+        "id": "tt-6-8-dimanche",
+        "practiceGroupId": "tt-6-8",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "dimanche",
+        "startTime": "13:00",
+        "endTime": "14:00",
+        "tags": [],
+        "notes": "Panier de balles."
+      },
+      {
+        "id": "tt-jeunes-samedi-14",
+        "practiceGroupId": "tt-jeunes",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "tags": []
+      },
+      {
+        "id": "tt-jeunes-samedi-16",
+        "practiceGroupId": "tt-jeunes",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "16:00",
+        "endTime": "18:00",
+        "tags": []
+      },
+      {
+        "id": "tt-jeunes-dimanche",
+        "practiceGroupId": "tt-jeunes",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "dimanche",
+        "startTime": "11:00",
+        "endTime": "13:00",
+        "tags": []
+      },
+      {
+        "id": "tt-adultes-entrainement-lundi",
+        "practiceGroupId": "tt-adultes-entrainement",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "lundi",
+        "startTime": "18:00",
+        "endTime": "22:30",
+        "tags": []
+      },
+      {
+        "id": "tt-adultes-loisir-mercredi-1830",
+        "practiceGroupId": "tt-adultes-loisir",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "mercredi",
+        "startTime": "18:30",
+        "endTime": "20:15",
+        "tags": []
+      },
+      {
+        "id": "tt-adultes-loisir-mercredi-2015",
+        "practiceGroupId": "tt-adultes-loisir",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "mercredi",
+        "startTime": "20:15",
+        "endTime": "22:30",
+        "tags": []
+      },
+      {
+        "id": "tt-adultes-loisir-jeudi-1800",
+        "practiceGroupId": "tt-adultes-loisir",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "18:00",
+        "endTime": "20:15",
+        "tags": []
+      },
+      {
+        "id": "tt-adultes-loisir-jeudi-2015",
+        "practiceGroupId": "tt-adultes-loisir",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "20:15",
+        "endTime": "22:30",
+        "tags": []
+      }
+    ],
+    "prices": [
+      {
+        "id": "tennis-table-2025-2026",
+        "season": "2025/2026",
+        "label": "Tennis de table",
+        "clubFee": 75,
+        "activityFee": 95,
+        "total": 170,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-tennis-de-table",
+        "name": "Section Tennis de table ESC XV",
+        "role": "Contact section",
+        "email": "tennis-de-table@esc15.fr",
+        "phone": null
+      }
+    ]
   },
   {
     "id": "volley-ball",
@@ -1384,33 +2404,187 @@
     "icon": "🏐",
     "shortDescription": "Jeu collectif, coordination et pratique conviviale en salle.",
     "description": "Une pratique collective orientee coordination, jeu et regularite de groupe.",
-    "category": [
-      "collectif"
-    ],
-    "publics": [
-      "adolescents",
-      "adultes"
-    ],
-    "tags": [
-      "equipe",
-      "salle",
-      "loisir"
-    ],
+    "category": ["collectif"],
+    "publics": ["adolescents", "adultes"],
+    "tags": ["equipe", "salle", "loisir"],
     "image": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Collectif",
-        "Salle",
-        "Adolescents"
-      ]
+      "heroSubtitle": "Ecole, plaisir, competition et beach-volley, en salle et en exterieur.",
+      "heroBadges": ["Collectif", "Salle", "Adolescents"],
+      "introText": "Une pratique collective orientee coordination, jeu et regularite de groupe, du perfectionnement a la competition FSGT et au beach-volley. Le turn-over est faible : peu de places sont disponibles.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Ecole & perfectionnement",
+        "audience": "Jeunes et joueurs en progression",
+        "description": "Apprentissage des fondamentaux et perfectionnement technique du volley-ball.",
+        "tags": ["Ecole", "Technique", "Progression"]
+      },
+      {
+        "title": "Plaisir",
+        "audience": "Adultes",
+        "description": "Pratique recreative pour d'anciens joueurs et des seniors, hors competition.",
+        "tags": ["Loisir", "Convivialite", "Adultes"]
+      },
+      {
+        "title": "Competition & beach-volley",
+        "audience": "Adultes",
+        "description": "Competition FSGT en salle (niveau regional minimum) et beach-volley le dimanche.",
+        "tags": ["Competition", "FSGT", "Beach"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "volley-ecole",
+        "label": "Ecole & perfectionnement",
+        "public": "adolescents",
+        "gender": "mixte",
+        "sortOrder": 1
+      },
+      {
+        "id": "volley-plaisir",
+        "label": "Plaisir",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 2
+      },
+      {
+        "id": "volley-competition",
+        "label": "Competition",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 3
+      },
+      {
+        "id": "volley-beach",
+        "label": "Beach-volley",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 4
+      }
+    ],
+    "locationIds": ["croix-nivert", "la-plaine", "brancion"],
+    "schedules": [
+      {
+        "id": "volley-ecole-samedi-13",
+        "practiceGroupId": "volley-ecole",
+        "locationId": "croix-nivert",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "13:00",
+        "endTime": "14:00",
+        "tags": []
+      },
+      {
+        "id": "volley-ecole-samedi-14",
+        "practiceGroupId": "volley-ecole",
+        "locationId": "croix-nivert",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "14:00",
+        "endTime": "18:30",
+        "tags": []
+      },
+      {
+        "id": "volley-ecole-samedi-1830",
+        "practiceGroupId": "volley-ecole",
+        "locationId": "croix-nivert",
+        "type": "training",
+        "day": "samedi",
+        "startTime": "18:30",
+        "endTime": "20:00",
+        "tags": []
+      },
+      {
+        "id": "volley-plaisir-jeudi",
+        "practiceGroupId": "volley-plaisir",
+        "locationId": "a-confirmer",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "19:30",
+        "endTime": "22:30",
+        "tags": [],
+        "notes": "Lieu a confirmer aupres de la section."
+      },
+      {
+        "id": "volley-competition-mercredi",
+        "practiceGroupId": "volley-competition",
+        "locationId": "la-plaine",
+        "type": "training",
+        "day": "mercredi",
+        "startTime": "19:30",
+        "endTime": "22:30",
+        "tags": []
+      },
+      {
+        "id": "volley-beach-dimanche",
+        "practiceGroupId": "volley-beach",
+        "locationId": "brancion",
+        "type": "training",
+        "day": "dimanche",
+        "startTime": "09:00",
+        "endTime": "14:00",
+        "tags": []
+      }
+    ],
+    "prices": [
+      {
+        "id": "volley-2025-2026-ecole",
+        "season": "2025/2026",
+        "label": "Ecole",
+        "clubFee": 75,
+        "activityFee": 70,
+        "total": 145,
+        "extraFees": []
+      },
+      {
+        "id": "volley-2025-2026-plaisir",
+        "season": "2025/2026",
+        "label": "Plaisir",
+        "clubFee": 75,
+        "activityFee": 105,
+        "total": 180,
+        "extraFees": []
+      },
+      {
+        "id": "volley-2025-2026-competition",
+        "season": "2025/2026",
+        "label": "Competition",
+        "clubFee": 75,
+        "activityFee": 105,
+        "total": 180,
+        "extraFees": []
+      },
+      {
+        "id": "volley-2025-2026-beach",
+        "season": "2025/2026",
+        "label": "Beach-volley",
+        "clubFee": 75,
+        "activityFee": 105,
+        "total": 180,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-volley-ecole",
+        "name": "Volley Ecole",
+        "role": "Contact ecole",
+        "email": "volley-ecole@esc15.fr",
+        "phone": null
+      },
+      {
+        "id": "contact-volley",
+        "name": "Volley plaisir, competition & beach",
+        "role": "Contact section",
+        "email": "volley@esc15.fr",
+        "phone": "06 80 11 20 62"
+      }
+    ]
   },
   {
     "id": "yoga",
@@ -1420,31 +2594,80 @@
     "icon": "🧘",
     "shortDescription": "Respiration, mobilite et equilibre pour une pratique reguliere.",
     "description": "Une pratique douce pour gagner en mobilite, respiration et stabilite au quotidien.",
-    "category": [
-      "forme"
-    ],
-    "publics": [
-      "adultes"
-    ],
-    "tags": [
-      "respiration",
-      "mobilite",
-      "bien-etre"
-    ],
+    "category": ["forme"],
+    "publics": ["adultes"],
+    "tags": ["respiration", "mobilite", "bien-etre"],
     "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": null,
+    "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Yoga",
-        "Respiration",
-        "Adultes"
-      ]
+      "heroSubtitle": "Hatha-yoga ouvert a tous, le mardi soir a Cambronne.",
+      "heroBadges": ["Yoga", "Respiration", "Adultes"],
+      "introText": "Une pratique douce pour gagner en mobilite, respiration et stabilite. Les cours sont ouverts a tous, debutants ou pratiquants confirmes, et suivent le calendrier scolaire.",
+      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
+      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
     },
-    "programs": [],
-    "locations": [],
-    "schedules": [],
-    "prices": [],
-    "contacts": []
+    "programs": [
+      {
+        "title": "Hatha-Yoga",
+        "audience": "Adultes, tous niveaux",
+        "description": "Relaxation, respiration, echauffement progressif et postures dynamiques ou douces, a son rythme.",
+        "tags": ["Respiration", "Postures", "Relaxation"]
+      }
+    ],
+    "practiceGroups": [
+      {
+        "id": "yoga-tous",
+        "label": "Tous niveaux",
+        "public": "adultes",
+        "gender": "mixte",
+        "sortOrder": 1
+      }
+    ],
+    "locationIds": ["sablonniere"],
+    "schedules": [
+      {
+        "id": "yoga-mardi-1800",
+        "practiceGroupId": "yoga-tous",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "mardi",
+        "startTime": "18:00",
+        "endTime": "20:00",
+        "tags": [],
+        "notes": "Salle de danse."
+      },
+      {
+        "id": "yoga-mardi-2015",
+        "practiceGroupId": "yoga-tous",
+        "locationId": "sablonniere",
+        "type": "training",
+        "day": "mardi",
+        "startTime": "20:15",
+        "endTime": "21:45",
+        "tags": [],
+        "notes": "Dojo."
+      }
+    ],
+    "prices": [
+      {
+        "id": "yoga-2025-2026",
+        "season": "2025/2026",
+        "label": "Hatha-Yoga",
+        "clubFee": 75,
+        "activityFee": 205,
+        "total": 280,
+        "extraFees": []
+      }
+    ],
+    "contacts": [
+      {
+        "id": "contact-yoga",
+        "name": "Section Yoga ESC XV",
+        "role": "Contact section",
+        "email": "yoga@esc15.fr",
+        "phone": null
+      }
+    ]
   }
 ]

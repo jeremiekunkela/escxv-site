@@ -10,6 +10,13 @@ export type ActivityCategory =
 
 export type ActivityPublic = "enfants" | "adolescents" | "adultes";
 
+export type Gender = "mixte" | "feminin" | "masculin";
+
+export type DayOfWeek =
+  "lundi" | "mardi" | "mercredi" | "jeudi" | "vendredi" | "samedi" | "dimanche";
+
+export type ScheduleType = "training" | "match";
+
 export type Program = {
   title: string;
   audience: string;
@@ -29,6 +36,17 @@ export type ActivityContent = {
   contactFormText?: string;
 };
 
+/**
+ * Equipement d'un lieu de pratique (registre partage club-wide).
+ * `relatedActivitySlugs` permet de mettre en avant, sur une page d'activite,
+ * l'equipement pertinent pour ce sport (un equipement sans slug reste neutre).
+ */
+export type LocationEquipment = {
+  label: string;
+  relatedActivitySlugs?: string[];
+  note?: string;
+};
+
 export type ActivityLocation = {
   id: string;
   name: string;
@@ -39,18 +57,34 @@ export type ActivityLocation = {
   mapEmbedUrl?: string;
   image?: string | null;
   description?: string;
-  tags?: string[];
+  equipments?: LocationEquipment[];
+};
+
+/**
+ * Groupe de pratique structuré (catégorie d'âge / niveau).
+ * Remplace l'ancien `groupLabel` en texte libre : tri fiable, pas de doublon,
+ * et flexible quel que soit le sport (codes U-, niveaux, ceintures...).
+ */
+export type PracticeGroup = {
+  id: string;
+  label: string;
+  code?: string;
+  public: ActivityPublic;
+  birthYearMin?: number;
+  birthYearMax?: number;
+  gender: Gender;
+  sortOrder: number;
 };
 
 export type ActivitySchedule = {
   id: string;
+  practiceGroupId: string;
   locationId: string;
-  day: string;
-  startTime: string;
-  endTime: string;
-  publics: ActivityPublic[];
+  type: ScheduleType;
+  day?: DayOfWeek;
+  startTime?: string;
+  endTime?: string;
   tags: string[];
-  groupLabel?: string;
   notes?: string;
 };
 
@@ -100,10 +134,19 @@ export type Activity = {
   registrationUrl: string | null;
   content: ActivityContent;
   programs: Program[];
+  practiceGroups: PracticeGroup[];
   locations: ActivityLocation[];
   schedules: ActivitySchedule[];
   prices: ActivityPrice[];
   contacts: ActivityContact[];
   socialLinks?: ActivitySocialLink[];
-  // trainers removed
+};
+
+/**
+ * Forme de stockage d'une activité (telle qu'elle est dans activities.json
+ * et telle que Directus la renverra plus tard) : les lieux ne sont pas
+ * embarqués mais référencés par id. La data-access hydrate `locations`.
+ */
+export type ActivityRecord = Omit<Activity, "locations"> & {
+  locationIds: string[];
 };

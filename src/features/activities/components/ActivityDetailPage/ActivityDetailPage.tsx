@@ -76,7 +76,10 @@ function ActivityDetailPageSection({
   );
 }
 
-export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPageProps) {
+export function ActivityDetailPage({
+  activity,
+  news = [],
+}: ActivityDetailPageProps) {
   const { content } = activity;
   const hasPrograms = activity.programs.length > 0;
   const hasSchedules = activity.schedules.length > 0;
@@ -114,11 +117,17 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
     content.pricesSubtitle,
     "Consultez ici les tarifs communiques pour la saison en cours.",
   );
-  const heroSubtitle = getContentOrFallback(content.heroSubtitle, activity.shortDescription);
+  const heroSubtitle = getContentOrFallback(
+    content.heroSubtitle,
+    activity.shortDescription,
+  );
   const registrationCta = activity.registrationUrl
     ? { label: "S'inscrire", href: activity.registrationUrl }
     : null;
-  const primaryCta = registrationCta ?? { label: "Contacter la section", href: "#contact" };
+  const primaryCta = registrationCta ?? {
+    label: "Contacter la section",
+    href: "#contact",
+  };
   const secondaryCta = hasSchedules
     ? { label: "Voir les horaires", href: "#horaires" }
     : { label: "Voir la presentation", href: "#programmes" };
@@ -143,7 +152,11 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
         />
       ) : null}
 
-      <main className={registrationCta ? styles.mainWithFloatingRegistration : undefined}>
+      <main
+        className={
+          registrationCta ? styles.mainWithFloatingRegistration : undefined
+        }
+      >
         <ActivityDetailPageSection
           id="programmes"
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.introEyebrow}
@@ -154,8 +167,8 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
             <ActivityProgramCards programs={activity.programs} />
           ) : (
             <InfoBlock title="Contenu en preparation">
-              Le detail des programmes sera ajoute ici quand la section aura valide sa
-              presentation.
+              Le detail des programmes sera ajoute ici quand la section aura
+              valide sa presentation.
             </InfoBlock>
           )}
         </ActivityDetailPageSection>
@@ -170,6 +183,7 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
           {hasSchedules ? (
             <ActivityScheduleCards
               schedules={activity.schedules}
+              practiceGroups={activity.practiceGroups}
               locations={activity.locations}
             />
           ) : (
@@ -201,7 +215,8 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
             <ActivityPriceBlocks prices={activity.prices} />
           ) : (
             <InfoBlock title="Tarifs en attente">
-              Les tarifs seront ajoutes ici des que la section aura confirme sa grille.
+              Les tarifs seront ajoutes ici des que la section aura confirme sa
+              grille.
             </InfoBlock>
           )}
         </ActivityDetailPageSection>
@@ -213,10 +228,14 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
           subtitle={hasLocations ? locationsSubtitle : undefined}
         >
           {hasLocations ? (
-            <ActivityLocationCards locations={activity.locations} />
+            <ActivityLocationCards
+              locations={activity.locations}
+              activitySlug={activity.slug}
+            />
           ) : (
             <InfoBlock title="Lieux en attente">
-              Les lieux de pratique seront centralises ici quand ils auront ete confirmes.
+              Les lieux de pratique seront centralises ici quand ils auront ete
+              confirmes.
             </InfoBlock>
           )}
         </ActivityDetailPageSection>
@@ -231,15 +250,17 @@ export function ActivityDetailPage({ activity, news = [] }: ActivityDetailPagePr
           {hasContactChannels ? (
             <div className={styles.contactGrid}>
               <div className={styles.contactChannels}>
-                {hasContacts ? <ActivityContactBlocks contacts={activity.contacts} /> : null}
-                {hasSocialLinks ? <ActivitySocialLinks socialLinks={socialLinks} /> : null}
+                {hasContacts ? (
+                  <ActivityContactBlocks contacts={activity.contacts} />
+                ) : null}
+                {hasSocialLinks ? (
+                  <ActivitySocialLinks socialLinks={socialLinks} />
+                ) : null}
               </div>
               <ActivityContactForm content={content} />
             </div>
           ) : (
-            <InfoBlock title="Contact en attente">
-              {emptyContactText}
-            </InfoBlock>
+            <InfoBlock title="Contact en attente">{emptyContactText}</InfoBlock>
           )}
         </ActivityDetailPageSection>
       </main>
