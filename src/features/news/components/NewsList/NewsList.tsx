@@ -62,7 +62,7 @@ function NewsPreviewCard({ newsItem, index }: NewsPreviewCardProps) {
         </div>
       ) : (
         <div className={styles.placeholder}>
-          <span>ESC XV</span>
+          <span>ESCXV</span>
         </div>
       )}
 

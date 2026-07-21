@@ -74,7 +74,7 @@
     "contacts": [
       {
         "id": "contact-aikibudo",
-        "name": "Section Aikibudo ESC XV",
+        "name": "Section Aikibudo ESCXV",
         "role": "Contact section",
         "email": "aikibudo@esc15.fr",
         "phone": null
@@ -88,7 +88,7 @@
     "shortName": "Athle",
     "icon": "🏃",
     "shortDescription": "Sprint, demi-fond et école d'athletisme pour enfants",
-    "description": "La section athletisme de l'ESC XV accueille les pratiquants du loisir a la competition, avec un travail centre sur la piste, la vitesse et la progression technique.",
+    "description": "La section athletisme de l'ESCXV accueille les pratiquants du loisir a la competition, avec un travail centre sur la piste, la vitesse et la progression technique.",
     "category": ["athle-running"],
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["sprint", "demi-fond", "competition"],
@@ -97,7 +97,7 @@
     "content": {
       "heroSubtitle": "Sprint, demi-fond, sauts et travail technique pour enfants, jeunes et adultes.",
       "heroBadges": ["Ecole d'athletisme", "Sprint", "Demi-fond"],
-      "introText": "La section athletisme de l'ESC XV propose une progression lisible entre decouverte, travail technique, pratique reguliere et objectifs de competition sur piste.",
+      "introText": "La section athletisme de l'ESCXV propose une progression lisible entre decouverte, travail technique, pratique reguliere et objectifs de competition sur piste.",
       "schedulesNoticeText": "Les creneaux affiches servent de base de travail pour la saison 2025/2026 et doivent encore etre confirmes par la section."
     },
     "programs": [
@@ -382,7 +382,7 @@
     "contacts": [
       {
         "id": "contact-badminton",
-        "name": "Section Badminton ESC XV",
+        "name": "Section Badminton ESCXV",
         "role": "Contact section",
         "email": "badminton@esc15.fr",
         "phone": null
@@ -455,7 +455,7 @@
     "contacts": [
       {
         "id": "contact-baseball",
-        "name": "Section Baseball ESC XV",
+        "name": "Section Baseball ESCXV",
         "role": "Contact section",
         "email": "baseball@esc15.fr",
         "phone": null
@@ -653,7 +653,7 @@
     "contacts": [
       {
         "id": "contact-capoeira",
-        "name": "Section Capoeira ESC XV",
+        "name": "Section Capoeira ESCXV",
         "role": "Contact section",
         "email": "capoeira@esc15.fr",
         "phone": null
@@ -763,7 +763,7 @@
     "contacts": [
       {
         "id": "contact-cap",
-        "name": "Section Course a pied / Trail ESC XV",
+        "name": "Section Course a pied / Trail ESCXV",
         "role": "Contact section",
         "email": "cap@esc15.fr",
         "phone": null
@@ -861,7 +861,7 @@
     "contacts": [
       {
         "id": "contact-danse",
-        "name": "Section Danse ESC XV",
+        "name": "Section Danse ESCXV",
         "role": "Contact section",
         "email": "danse@esc15.fr",
         "phone": null
@@ -1010,7 +1010,7 @@
     "contacts": [
       {
         "id": "contact-escalade",
-        "name": "Section Escalade ESC XV",
+        "name": "Section Escalade ESCXV",
         "role": "Contact adultes",
         "email": "escalade@esc15.fr",
         "phone": null
@@ -1422,7 +1422,7 @@
     "contacts": [
       {
         "id": "contact-football",
-        "name": "Section Football ESC XV",
+        "name": "Section Football ESCXV",
         "role": "Contact section",
         "email": "football@esc15.fr",
         "phone": null
@@ -1494,7 +1494,7 @@
     "contacts": [
       {
         "id": "contact-gym-entretien",
-        "name": "Section Gymnastique d'entretien ESC XV",
+        "name": "Section Gymnastique d'entretien ESCXV",
         "role": "Contact section",
         "email": "gym-entretien@esc15.fr",
         "phone": null
@@ -1634,7 +1634,7 @@
     "contacts": [
       {
         "id": "contact-judo",
-        "name": "Section Judo ESC XV",
+        "name": "Section Judo ESCXV",
         "role": "Contact section",
         "email": "judo@esc15.fr",
         "phone": null
@@ -1707,7 +1707,7 @@
     "contacts": [
       {
         "id": "contact-natation",
-        "name": "Section Natation ESC XV",
+        "name": "Section Natation ESCXV",
         "role": "Contact section",
         "email": "natation@esc15.fr",
         "phone": null
@@ -1779,7 +1779,7 @@
     "contacts": [
       {
         "id": "contact-pilates",
-        "name": "Section Pilates ESC XV",
+        "name": "Section Pilates ESCXV",
         "role": "Contact section",
         "email": "pilates@esc15.fr",
         "phone": null
@@ -1851,7 +1851,7 @@
     "contacts": [
       {
         "id": "contact-renf-muscu",
-        "name": "Section Renforcement musculaire ESC XV",
+        "name": "Section Renforcement musculaire ESCXV",
         "role": "Contact section",
         "email": "renf-muscu@esc15.fr",
         "phone": null
@@ -1924,7 +1924,7 @@
     "contacts": [
       {
         "id": "contact-sport-mercredi",
-        "name": "Section Sport mercredi ESC XV",
+        "name": "Section Sport mercredi ESCXV",
         "role": "Contact section",
         "email": "sport-mercredi@esc15.fr",
         "phone": null
@@ -2006,7 +2006,7 @@
     "contacts": [
       {
         "id": "contact-stretching",
-        "name": "Section Stretching ESC XV",
+        "name": "Section Stretching ESCXV",
         "role": "Contact section",
         "email": "stretching@esc15.fr",
         "phone": null
@@ -2202,7 +2202,7 @@
     "contacts": [
       {
         "id": "contact-tennis",
-        "name": "Section Tennis ESC XV",
+        "name": "Section Tennis ESCXV",
         "role": "Contact ecole",
         "email": "tennis@esc15.fr",
         "phone": null
@@ -2389,7 +2389,7 @@
     "contacts": [
       {
         "id": "contact-tennis-de-table",
-        "name": "Section Tennis de table ESC XV",
+        "name": "Section Tennis de table ESCXV",
         "role": "Contact section",
         "email": "tennis-de-table@esc15.fr",
         "phone": null
@@ -2663,7 +2663,7 @@
     "contacts": [
       {
         "id": "contact-yoga",
-        "name": "Section Yoga ESC XV",
+        "name": "Section Yoga ESCXV",
         "role": "Contact section",
         "email": "yoga@esc15.fr",
         "phone": null
