@@ -11,7 +11,7 @@
     "publics": ["adolescents", "adultes"],
     "tags": ["technique", "coordination", "discipline"],
     "image": "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a0874da3a190850763db5b7&step=1",
     "content": {
       "heroSubtitle": "Art martial complet, a mains nues et avec armes, les lundis et mercredis a La Plaine.",
       "heroBadges": ["Arts martiaux", "Adolescents", "Adultes"],
@@ -401,7 +401,7 @@
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["collectif", "plein air", "coordination"],
     "image": "https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a08756b56b3c10850f32a39&step=1",
     "content": {
       "heroSubtitle": "Pratique du baseball le jeudi soir au stade Pershing (Bois de Vincennes).",
       "heroBadges": ["Collectif", "Enfants", "Adultes"],
@@ -1513,7 +1513,7 @@
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["respect", "technique", "progression"],
     "image": "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a087d92a2195db261c2462f&step=1",
     "content": {
       "heroSubtitle": "Judo enfants de 5 a 13 ans, a La Plaine et a Cambronne.",
       "heroBadges": ["Judo", "Technique", "Respect"],
@@ -1653,7 +1653,7 @@
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["eau", "technique", "endurance"],
     "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a087f144a10348b5bc848b6&step=1",
     "content": {
       "heroSubtitle": "Initiation et perfectionnement des 6 ans, le vendredi a la piscine Emile Anthoine.",
       "heroBadges": ["Natation", "Technique", "Endurance"],
@@ -1726,7 +1726,7 @@
     "publics": ["adultes"],
     "tags": ["posture", "gainage", "mobilite"],
     "image": "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a087fd43a52e5d3b5d0eef5&step=1",
     "content": {
       "heroSubtitle": "Renforcement profond, posture et controle du mouvement, le jeudi a Cambronne.",
       "heroBadges": ["Pilates", "Gainage", "Adultes"],
@@ -1870,7 +1870,7 @@
     "publics": ["enfants"],
     "tags": ["multisports", "enfants", "decouverte"],
     "image": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a069e69c835fb47c0d46cf7&step=1",
     "content": {
       "heroSubtitle": "Initiation multisports pour enfants des 5 ans, le mercredi apres-midi.",
       "heroBadges": ["Enfants", "Multisports", "Mercredi"],
