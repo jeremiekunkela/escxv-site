@@ -47,7 +47,7 @@
   min-height: 100%;
   overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(69, 81, 230, 0.12), rgba(20, 184, 166, 0.14)),
+    linear-gradient(135deg, rgba(var(--color-brand-rgb), 0.12), rgba(20, 184, 166, 0.14)),
     var(--color-surface-muted);
 }
 

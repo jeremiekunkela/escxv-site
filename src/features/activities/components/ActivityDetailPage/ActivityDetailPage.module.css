@@ -16,7 +16,7 @@
 }
 
 .floatingRegistrationButton {
-  box-shadow: 0 16px 44px rgba(69, 81, 230, 0.36);
+  box-shadow: 0 16px 44px rgba(var(--color-brand-rgb), 0.36);
   white-space: nowrap;
 }
 
@@ -27,8 +27,8 @@
 .gridSurface {
   background-color: #f8fafc;
   background-image:
-    linear-gradient(rgba(69, 81, 230, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(69, 81, 230, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(var(--color-brand-rgb), 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--color-brand-rgb), 0.04) 1px, transparent 1px);
   background-size: 36px 36px;
 }
 

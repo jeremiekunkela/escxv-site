@@ -30,7 +30,7 @@
 
 .searchBar:focus-within {
   border-color: var(--color-brand);
-  box-shadow: 0 0 0 4px rgba(69, 81, 230, 0.1);
+  box-shadow: 0 0 0 4px rgba(var(--color-brand-rgb), 0.1);
 }
 
 .searchIcon {
@@ -86,7 +86,7 @@
     var(--color-brand-bright)
   );
   color: var(--color-text-inverse);
-  box-shadow: 0 8px 25px rgba(69, 81, 230, 0.25);
+  box-shadow: 0 8px 25px rgba(var(--color-brand-rgb), 0.25);
 }
 
 .list {
@@ -124,7 +124,7 @@
   min-height: 260px;
   overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(69, 81, 230, 0.12), rgba(20, 184, 166, 0.14)),
+    linear-gradient(135deg, rgba(var(--color-brand-rgb), 0.12), rgba(20, 184, 166, 0.14)),
     var(--color-surface-muted);
 }
 

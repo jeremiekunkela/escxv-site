@@ -6,7 +6,7 @@
   overflow: hidden;
   color: var(--color-text-inverse);
   background:
-    radial-gradient(circle at top right, rgba(69, 81, 230, 0.22), transparent 34%),
+    radial-gradient(circle at top right, rgba(var(--color-brand-rgb), 0.22), transparent 34%),
     linear-gradient(135deg, #081524 0%, #16263d 48%, #22375a 100%);
 }
 

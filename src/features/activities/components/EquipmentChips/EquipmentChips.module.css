@@ -19,11 +19,11 @@
 }
 
 .chipStrong {
-  border-color: rgba(69, 81, 230, 0.35);
+  border-color: rgba(var(--color-brand-rgb), 0.35);
   background: var(--color-surface-raised);
   color: var(--color-brand);
   font-weight: var(--font-weight-semibold);
-  box-shadow: 0 4px 20px rgba(69, 81, 230, 0.15);
+  box-shadow: 0 4px 20px rgba(var(--color-brand-rgb), 0.15);
 }
 
 .info {
