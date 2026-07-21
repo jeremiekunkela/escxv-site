@@ -8,8 +8,11 @@ import { Container } from "@/components/ui/Container/Container";
 import { EquipmentChips } from "@/features/activities/components/EquipmentChips/EquipmentChips";
 import { locationTypeLabels } from "@/features/activities/lib/activityLabels";
 import { getActivityLocationAnchorId } from "@/features/activities/lib/activityRoutes";
-import type { Installation } from "@/features/activities/data-access/activities";
-import type { LocationType } from "@/features/activities/types/activity";
+import type {
+  Installation,
+  InstallationSport,
+} from "@/features/activities/data-access/activities";
+import type { LocationEquipment } from "@/features/activities/types/activity";
 import { getActivityRoute } from "@/lib/constants/routes";
 import styles from "./InstallationsExplorer.module.css";
 
@@ -17,22 +20,21 @@ type InstallationsExplorerProps = {
   installations: Installation[];
 };
 
-type TypeFilter = LocationType | "all";
+type SportFilter = InstallationSport["slug"] | "all";
 
-const TYPE_ORDER: LocationType[] = [
-  "centre-sportif",
-  "gymnase",
-  "stade",
-  "piscine",
-  "salle",
-  "exterieur",
-];
-
+/**
+ * La recherche couvre aussi l'equipement, la description et le type : un lieu
+ * polyvalent (une piscine dans un centre sportif) doit remonter sur "piscine".
+ */
 function matchesQuery(installation: Installation, query: string) {
   const haystack = [
     installation.name,
     installation.address,
     installation.city,
+    installation.postalCode,
+    locationTypeLabels[installation.type],
+    installation.description ?? "",
+    ...(installation.equipments ?? []).map((equipment) => equipment.label),
     ...installation.sports.map((sport) => sport.title),
   ]
     .join(" ")
@@ -41,17 +43,46 @@ function matchesQuery(installation: Installation, query: string) {
   return haystack.includes(query);
 }
 
+/**
+ * Registre des sports proposes au filtre : uniquement ceux rattaches a au moins
+ * une installation, dedoublonnes et tries par titre.
+ */
+function collectSports(installations: Installation[]): InstallationSport[] {
+  const bySlug = new Map(
+    installations.flatMap((installation) =>
+      installation.sports.map((sport) => [sport.slug, sport] as const),
+    ),
+  );
+
+  return [...bySlug.values()].toSorted((left, right) =>
+    left.title.localeCompare(right.title),
+  );
+}
+
+/**
+ * Quand un sport est filtre, son equipement dedie passe en tete de la carte.
+ */
+function orderEquipments(
+  equipments: LocationEquipment[],
+  activeSport: SportFilter,
+) {
+  return activeSport === "all"
+    ? equipments
+    : equipments.toSorted(
+        (left, right) =>
+          Number(right.relatedActivitySlugs?.includes(activeSport) ?? false) -
+          Number(left.relatedActivitySlugs?.includes(activeSport) ?? false),
+      );
+}
+
 export function InstallationsExplorer({
   installations,
 }: InstallationsExplorerProps) {
   const [query, setQuery] = useState("");
-  const [activeType, setActiveType] = useState<TypeFilter>("all");
+  const [activeSport, setActiveSport] = useState<SportFilter>("all");
 
-  const availableTypes = useMemo(
-    () =>
-      TYPE_ORDER.filter((type) =>
-        installations.some((installation) => installation.type === type),
-      ),
+  const availableSports = useMemo(
+    () => collectSports(installations),
     [installations],
   );
 
@@ -59,7 +90,8 @@ export function InstallationsExplorer({
 
   const filtered = installations.filter(
     (installation) =>
-      (activeType === "all" || installation.type === activeType) &&
+      (activeSport === "all" ||
+        installation.sports.some((sport) => sport.slug === activeSport)) &&
       (normalizedQuery.length === 0 ||
         matchesQuery(installation, normalizedQuery)),
   );
@@ -83,48 +115,57 @@ export function InstallationsExplorer({
             />
           </label>
 
-          <div
-            className={styles.filters}
-            aria-label="Filtrer par type d'installation"
-          >
-            <button
-              type="button"
-              aria-pressed={activeType === "all"}
-              onClick={() => setActiveType("all")}
-              className={
-                activeType === "all"
-                  ? `${styles.filterButton} ${styles.filterButtonActive}`
-                  : styles.filterButton
-              }
-            >
-              Tous
-            </button>
-            {availableTypes.map((type) => {
-              const isActive = activeType === type;
+          <div className={styles.filterGroup}>
+            <p className={styles.filterLabel} id="sport-filter-label">
+              Filtrer par sport
+            </p>
+            <div className={styles.filters} aria-labelledby="sport-filter-label">
+              <button
+                type="button"
+                aria-pressed={activeSport === "all"}
+                onClick={() => setActiveSport("all")}
+                className={
+                  activeSport === "all"
+                    ? `${styles.filterButton} ${styles.filterButtonActive}`
+                    : styles.filterButton
+                }
+              >
+                Tous les sports
+              </button>
+              {availableSports.map((sport) => {
+                const isActive = activeSport === sport.slug;
 
-              return (
-                <button
-                  key={type}
-                  type="button"
-                  aria-pressed={isActive}
-                  onClick={() => setActiveType(type)}
-                  className={
-                    isActive
-                      ? `${styles.filterButton} ${styles.filterButtonActive}`
-                      : styles.filterButton
-                  }
-                >
-                  {locationTypeLabels[type]}
-                </button>
-              );
-            })}
+                return (
+                  <button
+                    key={sport.slug}
+                    type="button"
+                    aria-pressed={isActive}
+                    onClick={() => setActiveSport(sport.slug)}
+                    className={
+                      isActive
+                        ? `${styles.filterButton} ${styles.filterButtonActive}`
+                        : styles.filterButton
+                    }
+                  >
+                    {sport.title}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
+
+        <p className={styles.resultCount} role="status">
+          {filtered.length} installation{filtered.length > 1 ? "s" : ""}
+        </p>
 
         {filtered.length > 0 ? (
           <div className={styles.list}>
             {filtered.map((installation) => {
-              const equipments = installation.equipments ?? [];
+              const equipments = orderEquipments(
+                installation.equipments ?? [],
+                activeSport,
+              );
 
               return (
                 <article
@@ -185,7 +226,11 @@ export function InstallationsExplorer({
                             <li key={sport.slug}>
                               <Link
                                 href={getActivityRoute(sport.slug)}
-                                className={styles.sport}
+                                className={
+                                  sport.slug === activeSport
+                                    ? `${styles.sport} ${styles.sportActive}`
+                                    : styles.sport
+                                }
                               >
                                 {sport.title}
                               </Link>
@@ -224,7 +269,19 @@ export function InstallationsExplorer({
           </div>
         ) : (
           <div className={styles.noResult}>
-            Aucune installation ne correspond à cette recherche.
+            <p className={styles.noResultText}>
+              Aucune installation ne correspond à cette recherche.
+            </p>
+            <button
+              type="button"
+              className={styles.resetButton}
+              onClick={() => {
+                setQuery("");
+                setActiveSport("all");
+              }}
+            >
+              Réinitialiser les filtres
+            </button>
           </div>
         )}
       </Container>
