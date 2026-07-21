@@ -1,14 +1,14 @@
 .button {
-  min-height: 54px;
+  min-height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-xs);
+  gap: var(--space-2xs);
   border: 1px solid transparent;
   border-radius: var(--radius-pill);
-  padding: 0 28px;
+  padding: 0 18px;
   font-family: var(--font-family-base);
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   transition:
     background var(--transition-standard),
@@ -19,7 +19,7 @@
 }
 
 .button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .button:active {
@@ -29,7 +29,7 @@
 .button:focus-visible {
   outline: none;
   box-shadow:
-    0 0 0 4px rgba(69, 81, 230, 0.16),
+    0 0 0 4px rgba(var(--color-brand-rgb), 0.16),
     var(--shadow-brand);
 }
 
@@ -58,21 +58,21 @@
 
 .primary:hover {
   background: linear-gradient(135deg, var(--color-brand-strong), var(--color-brand));
-  box-shadow: 0 12px 35px rgba(69, 81, 230, 0.4);
+  box-shadow: 0 12px 35px rgba(var(--color-brand-rgb), 0.4);
 }
 
 .secondary {
   border-color: var(--color-brand);
   background: var(--color-surface-raised);
   color: var(--color-brand);
-  box-shadow: 0 4px 15px rgba(69, 81, 230, 0.1);
+  box-shadow: 0 4px 15px rgba(var(--color-brand-rgb), 0.1);
 }
 
 .secondary:hover {
   border-color: var(--color-brand);
   background: var(--color-brand);
   color: var(--color-text-inverse);
-  box-shadow: 0 12px 35px rgba(69, 81, 230, 0.3);
+  box-shadow: 0 12px 35px rgba(var(--color-brand-rgb), 0.3);
 }
 
 .ghost {
@@ -86,14 +86,13 @@
   border-color: var(--color-border-strong);
   background: var(--color-brand-soft);
   color: var(--color-brand);
-  box-shadow: 0 8px 25px rgba(69, 81, 230, 0.12);
+  box-shadow: 0 8px 25px rgba(var(--color-brand-rgb), 0.12);
 }
 
 @media (max-width: 640px) {
   .button {
     width: 100%;
-    min-height: 52px;
-    padding: 0 22px;
-    font-size: var(--font-size-sm);
+    min-height: 44px;
+    padding: 0 16px;
   }
 }
