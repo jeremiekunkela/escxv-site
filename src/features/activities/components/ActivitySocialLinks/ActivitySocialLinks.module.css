@@ -27,37 +27,36 @@
   margin-top: 18px;
 }
 
+/* Lignes de texte simples : ni cadre ni aplat, seule la pastille porte la couleur. */
 .link {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   gap: 12px;
   align-items: center;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background: var(--color-surface-muted);
-  padding: 12px 14px;
-  transition:
-    transform var(--transition-standard),
-    border-color var(--transition-standard),
-    background var(--transition-standard),
-    color var(--transition-standard);
+  padding: 4px 0;
+  transition: color var(--transition-standard);
 }
 
 .link:hover {
-  transform: translateX(4px);
-  border-color: var(--color-border-strong);
-  background: var(--color-brand-soft);
   color: var(--color-brand);
 }
 
 .icon {
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: var(--radius-sm);
   background: var(--color-brand-soft);
   color: var(--color-brand);
+  transition:
+    background var(--transition-standard),
+    color var(--transition-standard);
+}
+
+.link:hover .icon {
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
 }
 
 .icon svg {

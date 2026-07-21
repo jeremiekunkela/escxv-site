@@ -57,32 +57,33 @@
   font-weight: var(--font-weight-semibold);
 }
 
+/* Lignes de texte simples : ni cadre ni aplat, le contact se lit d'un trait. */
 .link,
 .phone {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: fit-content;
   margin: 0;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background: var(--color-surface-muted);
-  padding: 12px 14px;
-  transition:
-    border-color var(--transition-standard),
-    background var(--transition-standard),
-    color var(--transition-standard);
+  padding: 2px 0;
+  transition: color var(--transition-standard);
 }
 
 .link svg,
 .phone svg {
+  flex: none;
+  color: var(--color-brand);
+  opacity: 0.7;
+}
+
+.link:hover,
+.phone:hover {
   color: var(--color-brand);
 }
 
-.link:hover {
-  transform: translateX(4px);
-  border-color: var(--color-border-strong);
-  background: var(--color-brand-soft);
-  color: var(--color-brand);
+.link:hover svg,
+.phone:hover svg {
+  opacity: 1;
 }
 
 .phone {
