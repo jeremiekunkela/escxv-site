@@ -232,13 +232,9 @@
   padding: 0 var(--space-md);
   color: var(--color-brand);
   cursor: pointer;
+  font-family: inherit;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
-  list-style: none;
-}
-
-.mobileTrigger::-webkit-details-marker {
-  display: none;
 }
 
 .mobilePanel {
@@ -269,6 +265,17 @@
 .mobileLink:hover {
   background: var(--color-brand-soft);
   color: var(--color-brand);
+}
+
+.mobileSubmenuTrigger {
+  width: 100%;
+  justify-content: space-between;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  text-align: left;
 }
 
 .mobileSubmenu {

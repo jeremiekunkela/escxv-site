@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown, Menu } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import type { FocusEvent, KeyboardEvent } from "react";
 import { ActivityPictogram } from "@/features/activities/components/ActivityPictogram/ActivityPictogram";
@@ -27,8 +28,15 @@ function ActivityLinkIcon({ item }: { item: NavigationLink }) {
 
 export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
   const [openDropdown, setOpenDropdown] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileActivitiesOpen, setMobileActivitiesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
   const dropdownId = "activities-dropdown";
+  const mobileMenuId = "mobile-menu";
+  const mobileActivitiesId = "mobile-activities";
+  const pathname = usePathname();
+  const [lastPathname, setLastPathname] = useState(pathname);
 
   useEffect(() => {
     if (!openDropdown) return;
@@ -42,6 +50,43 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, [openDropdown]);
+
+  /**
+   * Le header est persistant d'une page a l'autre : sans ca, le menu mobile
+   * reste ouvert apres une navigation (retour navigateur, lien deja actif...).
+   * Ajustement pendant le rendu plutot qu'un effet, comme recommande par React.
+   */
+  if (pathname !== lastPathname) {
+    setLastPathname(pathname);
+    setMobileOpen(false);
+    setMobileActivitiesOpen(false);
+  }
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    function handleClick(event: MouseEvent) {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node)
+      ) {
+        setMobileOpen(false);
+      }
+    }
+
+    function handleKeyDown(event: globalThis.KeyboardEvent) {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClick);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [mobileOpen]);
 
   function closeDropdownWhenFocusLeaves(event: FocusEvent<HTMLDivElement>) {
     const nextFocusedElement = event.relatedTarget;
@@ -145,34 +190,73 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
           ) : null}
         </div>
 
-        <details className={styles.mobileMenu}>
-          <summary className={styles.mobileTrigger}>
-            <Menu aria-hidden="true" size={18} />
+        <div className={styles.mobileMenu} ref={mobileMenuRef}>
+          <button
+            type="button"
+            className={styles.mobileTrigger}
+            aria-expanded={mobileOpen}
+            aria-controls={mobileMenuId}
+            onClick={() => setMobileOpen((value) => !value)}
+          >
+            {mobileOpen ? (
+              <X aria-hidden="true" size={18} />
+            ) : (
+              <Menu aria-hidden="true" size={18} />
+            )}
             Menu
-          </summary>
-          <div className={styles.mobilePanel}>
-            {navigation.mainLinks.map((item) => (
-              <Link key={item.href} href={item.href} className={styles.mobileLink}>
-                {item.label}
-              </Link>
-            ))}
-            {navigation.activityLinks.length > 0 ? (
-              <details>
-                <summary className={styles.mobileLink} tabIndex={0}>
-                  Activites
-                </summary>
-                <div className={styles.mobileSubmenu}>
-                  {navigation.activityLinks.map((item) => (
-                    <Link key={item.href} href={item.href} className={styles.mobileLink}>
-                      <ActivityLinkIcon item={item} />
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              </details>
-            ) : null}
-          </div>
-        </details>
+          </button>
+          {mobileOpen ? (
+            <div id={mobileMenuId} className={styles.mobilePanel}>
+              {navigation.mainLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={styles.mobileLink}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              {navigation.activityLinks.length > 0 ? (
+                <>
+                  <button
+                    type="button"
+                    className={`${styles.mobileLink} ${styles.mobileSubmenuTrigger}`}
+                    aria-expanded={mobileActivitiesOpen}
+                    aria-controls={mobileActivitiesId}
+                    onClick={() => setMobileActivitiesOpen((value) => !value)}
+                  >
+                    Activites
+                    <ChevronDown
+                      aria-hidden="true"
+                      className={
+                        mobileActivitiesOpen
+                          ? styles.dropdownIconOpen
+                          : styles.dropdownIcon
+                      }
+                      size={16}
+                    />
+                  </button>
+                  {mobileActivitiesOpen ? (
+                    <div id={mobileActivitiesId} className={styles.mobileSubmenu}>
+                      {navigation.activityLinks.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={styles.mobileLink}
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          <ActivityLinkIcon item={item} />
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  ) : null}
+                </>
+              ) : null}
+            </div>
+          ) : null}
+        </div>
       </nav>
     </header>
   );
