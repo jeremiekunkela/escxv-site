@@ -35,14 +35,19 @@ export function ActivityPriceBlocks({ prices }: ActivityPriceBlocksProps) {
             </div>
           </dl>
           {price.extraFees.length > 0 ? (
-            <ul className={styles.extraFees}>
-              {price.extraFees.map((extraFee) => (
-                <li key={extraFee.label} className={styles.extraFee}>
-                  <span>{extraFee.label}</span>
-                  <span className={styles.amount}>{formatEuro(extraFee.amount)}</span>
-                </li>
-              ))}
-            </ul>
+            <>
+              <p className={styles.extraFeesTitle}>En supplement</p>
+              <ul className={styles.extraFees}>
+                {price.extraFees.map((extraFee) => (
+                  <li key={extraFee.label} className={styles.extraFee}>
+                    <span>{extraFee.label}</span>
+                    <span className={styles.amount}>
+                      {formatEuro(extraFee.amount)}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </>
           ) : null}
         </article>
       ))}

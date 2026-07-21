@@ -82,13 +82,27 @@
   font-weight: var(--font-weight-semibold);
 }
 
+/*
+ * Les frais optionnels se distinguent par un intitule et un filet, pas par un
+ * aplat colore : ils restent visuellement de la meme famille que les lignes
+ * du tarif de base.
+ */
+.extraFeesTitle {
+  margin: 18px 0 var(--space-xs);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .extraFees {
   display: grid;
   gap: var(--space-xs);
-  margin: 18px 0 0;
-  padding: var(--space-sm);
-  border-radius: var(--radius-md);
-  background: var(--color-brand-soft);
+  margin: 0;
+  padding: 0;
   color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
   list-style: none;
