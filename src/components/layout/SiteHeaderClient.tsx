@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChevronDown, Menu } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import type { FocusEvent, KeyboardEvent } from "react";
+import { ActivityPictogram } from "@/features/activities/components/ActivityPictogram/ActivityPictogram";
 import type {
   NavigationContent,
   NavigationLink,
@@ -17,9 +18,10 @@ type SiteHeaderClientProps = {
 
 function ActivityLinkIcon({ item }: { item: NavigationLink }) {
   return (
-    <span className={styles.activityPictogram} aria-hidden="true">
-      {item.iconName ?? "sports"}
-    </span>
+    <ActivityPictogram
+      iconName={item.iconName ?? "sports"}
+      className={styles.activityPictogram}
+    />
   );
 }
 

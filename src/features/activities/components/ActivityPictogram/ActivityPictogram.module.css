@@ -1,0 +1,33 @@
+.pictogram {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--color-brand-soft);
+  color: var(--color-brand);
+  font-family: "Material Symbols Rounded";
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+  transition:
+    background var(--transition-standard),
+    color var(--transition-standard),
+    transform var(--transition-standard);
+}
+
+.md {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  font-size: 24px;
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
+}

@@ -1,22 +1,9 @@
-export type NavigationIconName =
-  | "directions_run"
-  | "fitness_center"
-  | "hiking"
-  | "music_note"
-  | "pool"
-  | "self_improvement"
-  | "sports"
-  | "sports_baseball"
-  | "sports_gymnastics"
-  | "sports_martial_arts"
-  | "sports_soccer"
-  | "sports_tennis"
-  | "sports_volleyball";
+import type { ActivityIconName } from "@/features/activities/lib/activityIcons";
 
 export type NavigationLink = {
   label: string;
   href: string;
-  iconName?: NavigationIconName;
+  iconName?: ActivityIconName;
 };
 
 export type NavigationContent = {
@@ -33,8 +20,12 @@ export type FooterContent = {
   mainLinks: NavigationLink[];
   club: {
     shortName: string;
+    address: string;
+    postalCode: string;
     city: string;
     arrondissement: string;
+    phone: string;
+    email: string | null;
     description: string;
   };
 };
