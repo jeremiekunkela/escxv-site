@@ -5,8 +5,8 @@
 .soft {
   background-color: #f8fafc;
   background-image:
-    linear-gradient(rgba(69, 81, 230, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(69, 81, 230, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(var(--color-brand-rgb), 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--color-brand-rgb), 0.04) 1px, transparent 1px);
   background-size: 36px 36px;
 }
 
@@ -38,9 +38,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 370px));
+  grid-template-columns: 1fr;
   gap: 22px;
-  justify-content: start;
 }
 
 .carouselShell {
@@ -64,7 +63,7 @@
   background: var(--color-surface-raised);
   color: var(--color-brand);
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(69, 81, 230, 0.1);
+  box-shadow: 0 4px 15px rgba(var(--color-brand-rgb), 0.1);
   transition:
     background var(--transition-standard),
     color var(--transition-standard),
@@ -78,14 +77,14 @@
   border-color: var(--color-brand);
   background: var(--color-brand);
   color: var(--color-text-inverse);
-  box-shadow: 0 12px 35px rgba(69, 81, 230, 0.22);
+  box-shadow: 0 12px 35px rgba(var(--color-brand-rgb), 0.22);
 }
 
 .navButton:focus-visible {
   outline: none;
   box-shadow:
-    0 0 0 4px rgba(69, 81, 230, 0.16),
-    0 12px 35px rgba(69, 81, 230, 0.22);
+    0 0 0 4px rgba(var(--color-brand-rgb), 0.16),
+    0 12px 35px rgba(var(--color-brand-rgb), 0.22);
 }
 
 .carousel {
@@ -115,12 +114,16 @@
   scrollbar-width: none;
 }
 
-.carouselSingle .card {
+/* Photo sur le cote : meme presentation que la carte unique de l'accueil. */
+.carouselSingle .card,
+.grid .card {
   grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1fr);
 }
 
 .carouselSingle .media,
-.carouselSingle .placeholder {
+.carouselSingle .placeholder,
+.grid .media,
+.grid .placeholder {
   min-height: clamp(240px, 24vw, 340px);
   aspect-ratio: auto;
 }
@@ -161,7 +164,7 @@
 
 .dot:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 4px rgba(69, 81, 230, 0.16);
+  box-shadow: 0 0 0 4px rgba(var(--color-brand-rgb), 0.16);
 }
 
 .card {
@@ -203,7 +206,7 @@
   display: grid;
   place-items: center;
   background:
-    radial-gradient(circle at 24% 24%, rgba(99, 102, 241, 0.28), transparent 32%),
+    radial-gradient(circle at 24% 24%, rgba(var(--color-brand-bright-rgb), 0.28), transparent 32%),
     linear-gradient(135deg, var(--color-surface-strong), #1e293b);
   color: var(--color-text-inverse);
   font-size: var(--font-size-xl);
@@ -313,16 +316,15 @@
     grid-auto-columns: 100%;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .carouselSingle .card {
+  .carouselSingle .card,
+  .grid .card {
     grid-template-columns: 1fr;
   }
 
   .carouselSingle .media,
-  .carouselSingle .placeholder {
+  .carouselSingle .placeholder,
+  .grid .media,
+  .grid .placeholder {
     min-height: 0;
     aspect-ratio: 16 / 10;
   }
