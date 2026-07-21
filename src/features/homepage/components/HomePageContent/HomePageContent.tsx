@@ -1,5 +1,5 @@
 import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
-import { ActivityExplorer } from "@/features/activities/components/ActivityExplorer/ActivityExplorer";
+import { ActivityDirectorySection } from "@/features/activities/components/ActivityDirectorySection/ActivityDirectorySection";
 import type { Activity } from "@/features/activities/types/activity";
 import { ClubKeyFigures } from "@/features/club/components/ClubKeyFigures/ClubKeyFigures";
 import type { ClubInfo } from "@/features/club/types/club";
@@ -37,7 +37,7 @@ export function HomePageContent({
       <main>
         <ClubKeyFigures figures={club.keyFigures} />
 
-        <ActivityExplorer
+        <ActivityDirectorySection
           activities={activities}
           eyebrow={homepage.activitiesSection.eyebrow}
           title={homepage.activitiesSection.title}
