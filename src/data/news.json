@@ -1,410 +1,61 @@
 [
   {
-    "id": "athletisme-stage-ete-2026",
-    "title": "Athletisme : un stage d'ete en juillet sur les sites de La Plaine et Sablonniere",
-    "slug": "athletisme-stage-ete-2026",
-    "subtitle": "Un format progressif pense pour garder le rythme pendant l'ete et preparer sereinement la reprise.",
-    "excerpt": "La section Athletisme ouvre un stage d'ete en juillet avec des seances en semaine a La Plaine et un regroupement le samedi a Sablonniere.",
-    "content": "La section Athletisme proposera un stage d'ete pour les enfants, jeunes et ados pendant la premiere quinzaine de juillet avec un rythme adapte aux groupes et un encadrement par niveau.",
-    "coverImage": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1400&q=80",
-    "coverImageAlt": "Un groupe d'athletes s'echauffe sur une piste en plein air.",
-    "publishedAt": "2026-05-22T10:30:00.000Z",
-    "status": "published",
-    "type": "activity",
-    "isPinned": true,
-    "activitySlug": "athletisme",
-    "seoDescription": "Decouvrez le programme detaille du stage d'ete 2026 de la section Athletisme de l'ESC XV.",
-    "readingTime": "4 min",
-    "summaryPoints": [
-      "Stage du 6 au 18 juillet 2026",
-      "Seances a La Plaine et Sablonniere",
-      "Preinscription par mail ou telephone"
-    ],
-    "blocks": [
-      {
-        "type": "heading",
-        "title": "Un stage pour continuer sans casser la dynamique",
-        "subtitle": "L'objectif est de garder des reperes techniques tout en laissant de la place au plaisir de pratiquer."
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Le stage d'ete a ete construit comme une transition entre la fin de saison et la reprise. L'objectif n'est pas de charger les jeunes athletes, mais de conserver des reperes techniques et du plaisir dans la pratique.",
-          "Les groupes seront organises par tranche d'age et par habitude de pratique afin que chacun puisse retrouver un cadre lisible, avec des contenus adaptes sur la course, la coordination, les gammes et quelques ateliers de renforcement."
-        ]
-      },
-      {
-        "type": "image",
-        "src": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80",
-        "alt": "Des jeunes sportifs effectuent des exercices sur une piste d'athletisme.",
-        "caption": "Les seances alterneront travail technique, ateliers de coordination et temps de course.",
-        "size": "wide"
-      },
-      {
-        "type": "heading",
-        "title": "Organisation des seances"
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Les rendez-vous de semaine auront lieu les mardis de 18h00 a 19h30 et les jeudis de 18h30 a 20h00 au Centre sportif de La Plaine. Le samedi, un regroupement de 10h30 a 12h00 est prevu au complexe sportif Sablonniere pour les ateliers communs.",
-          "Chaque seance commencera par un accueil collectif et un echauffement guide. Les blocs techniques seront ensuite adaptes selon les groupes avec un retour au calme et un temps d'echange avec les familles en fin de matinee le samedi."
-        ]
-      },
-      {
-        "type": "image",
-        "src": "https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=1200&q=80",
-        "alt": "Des coureurs s'entrainent en ligne sur une piste rouge.",
-        "caption": "Les ateliers de vitesse seront adaptes aux differents niveaux.",
-        "size": "inline"
-      },
-      {
-        "type": "heading",
-        "title": "Informations pratiques pour les familles"
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Les familles interessees peuvent demander un renseignement ou signaler une preinscription par mail a escxv.athletisme@gmail.com ou par telephone au 01 45 75 23 36.",
-          "Une tenue legere, une gourde et une paire de chaussures adaptee a la course sont recommandees. En cas de forte chaleur, l'encadrement ajustera la charge de travail et les temps de recuperation."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "athletisme-stage-ete-2026",
-    "title": "Athletisme : un stage d'ete en juillet sur les sites de La Plaine et Sablonniere",
-    "slug": "athletisme-stage-ete-2026",
-    "subtitle": "Un format progressif pense pour garder le rythme pendant l'ete et preparer sereinement la reprise.",
-    "excerpt": "La section Athletisme ouvre un stage d'ete en juillet avec des seances en semaine a La Plaine et un regroupement le samedi a Sablonniere.",
-    "content": "La section Athletisme proposera un stage d'ete pour les enfants, jeunes et ados pendant la premiere quinzaine de juillet avec un rythme adapte aux groupes et un encadrement par niveau.",
-    "coverImage": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1400&q=80",
-    "coverImageAlt": "Un groupe d'athletes s'echauffe sur une piste en plein air.",
-    "publishedAt": "2026-05-22T10:30:00.000Z",
-    "status": "published",
-    "type": "activity",
-    "isPinned": true,
-    "activitySlug": "athletisme",
-    "seoDescription": "Decouvrez le programme detaille du stage d'ete 2026 de la section Athletisme de l'ESC XV.",
-    "readingTime": "4 min",
-    "summaryPoints": [
-      "Stage du 6 au 18 juillet 2026",
-      "Seances a La Plaine et Sablonniere",
-      "Preinscription par mail ou telephone"
-    ],
-    "blocks": [
-      {
-        "type": "heading",
-        "title": "Un stage pour continuer sans casser la dynamique",
-        "subtitle": "L'objectif est de garder des reperes techniques tout en laissant de la place au plaisir de pratiquer."
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Le stage d'ete a ete construit comme une transition entre la fin de saison et la reprise. L'objectif n'est pas de charger les jeunes athletes, mais de conserver des reperes techniques et du plaisir dans la pratique.",
-          "Les groupes seront organises par tranche d'age et par habitude de pratique afin que chacun puisse retrouver un cadre lisible, avec des contenus adaptes sur la course, la coordination, les gammes et quelques ateliers de renforcement."
-        ]
-      },
-      {
-        "type": "image",
-        "src": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80",
-        "alt": "Des jeunes sportifs effectuent des exercices sur une piste d'athletisme.",
-        "caption": "Les seances alterneront travail technique, ateliers de coordination et temps de course.",
-        "size": "wide"
-      },
-      {
-        "type": "heading",
-        "title": "Organisation des seances"
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Les rendez-vous de semaine auront lieu les mardis de 18h00 a 19h30 et les jeudis de 18h30 a 20h00 au Centre sportif de La Plaine. Le samedi, un regroupement de 10h30 a 12h00 est prevu au complexe sportif Sablonniere pour les ateliers communs.",
-          "Chaque seance commencera par un accueil collectif et un echauffement guide. Les blocs techniques seront ensuite adaptes selon les groupes avec un retour au calme et un temps d'echange avec les familles en fin de matinee le samedi."
-        ]
-      },
-      {
-        "type": "image",
-        "src": "https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=1200&q=80",
-        "alt": "Des coureurs s'entrainent en ligne sur une piste rouge.",
-        "caption": "Les ateliers de vitesse seront adaptes aux differents niveaux.",
-        "size": "inline"
-      },
-      {
-        "type": "heading",
-        "title": "Informations pratiques pour les familles"
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Les familles interessees peuvent demander un renseignement ou signaler une preinscription par mail a escxv.athletisme@gmail.com ou par telephone au 01 45 75 23 36.",
-          "Une tenue legere, une gourde et une paire de chaussures adaptee a la course sont recommandees. En cas de forte chaleur, l'encadrement ajustera la charge de travail et les temps de recuperation."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "athletisme-stage-ete-2026",
-    "title": "Athletisme : un stage d'ete en juillet sur les sites de La Plaine et Sablonniere",
-    "slug": "athletisme-stage-ete-2026",
-    "subtitle": "Un format progressif pense pour garder le rythme pendant l'ete et preparer sereinement la reprise.",
-    "excerpt": "La section Athletisme ouvre un stage d'ete en juillet avec des seances en semaine a La Plaine et un regroupement le samedi a Sablonniere.",
-    "content": "La section Athletisme proposera un stage d'ete pour les enfants, jeunes et ados pendant la premiere quinzaine de juillet avec un rythme adapte aux groupes et un encadrement par niveau.",
-    "coverImage": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1400&q=80",
-    "coverImageAlt": "Un groupe d'athletes s'echauffe sur une piste en plein air.",
-    "publishedAt": "2026-05-22T10:30:00.000Z",
-    "status": "published",
-    "type": "activity",
-    "isPinned": true,
-    "activitySlug": "athletisme",
-    "seoDescription": "Decouvrez le programme detaille du stage d'ete 2026 de la section Athletisme de l'ESC XV.",
-    "readingTime": "4 min",
-    "summaryPoints": [
-      "Stage du 6 au 18 juillet 2026",
-      "Seances a La Plaine et Sablonniere",
-      "Preinscription par mail ou telephone"
-    ],
-    "blocks": [
-      {
-        "type": "heading",
-        "title": "Un stage pour continuer sans casser la dynamique",
-        "subtitle": "L'objectif est de garder des reperes techniques tout en laissant de la place au plaisir de pratiquer."
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Le stage d'ete a ete construit comme une transition entre la fin de saison et la reprise. L'objectif n'est pas de charger les jeunes athletes, mais de conserver des reperes techniques et du plaisir dans la pratique.",
-          "Les groupes seront organises par tranche d'age et par habitude de pratique afin que chacun puisse retrouver un cadre lisible, avec des contenus adaptes sur la course, la coordination, les gammes et quelques ateliers de renforcement."
-        ]
-      },
-      {
-        "type": "image",
-        "src": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80",
-        "alt": "Des jeunes sportifs effectuent des exercices sur une piste d'athletisme.",
-        "caption": "Les seances alterneront travail technique, ateliers de coordination et temps de course.",
-        "size": "wide"
-      },
-      {
-        "type": "heading",
-        "title": "Organisation des seances"
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Les rendez-vous de semaine auront lieu les mardis de 18h00 a 19h30 et les jeudis de 18h30 a 20h00 au Centre sportif de La Plaine. Le samedi, un regroupement de 10h30 a 12h00 est prevu au complexe sportif Sablonniere pour les ateliers communs.",
-          "Chaque seance commencera par un accueil collectif et un echauffement guide. Les blocs techniques seront ensuite adaptes selon les groupes avec un retour au calme et un temps d'echange avec les familles en fin de matinee le samedi."
-        ]
-      },
-      {
-        "type": "image",
-        "src": "https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=1200&q=80",
-        "alt": "Des coureurs s'entrainent en ligne sur une piste rouge.",
-        "caption": "Les ateliers de vitesse seront adaptes aux differents niveaux.",
-        "size": "inline"
-      },
-      {
-        "type": "heading",
-        "title": "Informations pratiques pour les familles"
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Les familles interessees peuvent demander un renseignement ou signaler une preinscription par mail a escxv.athletisme@gmail.com ou par telephone au 01 45 75 23 36.",
-          "Une tenue legere, une gourde et une paire de chaussures adaptee a la course sont recommandees. En cas de forte chaleur, l'encadrement ajustera la charge de travail et les temps de recuperation."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "athletisme-stage-ete-2026",
-    "title": "Athletisme : un stage d'ete en juillet sur les sites de La Plaine et Sablonniere",
-    "slug": "athletisme-stage-ete-2026",
-    "subtitle": "Un format progressif pense pour garder le rythme pendant l'ete et preparer sereinement la reprise.",
-    "excerpt": "La section Athletisme ouvre un stage d'ete en juillet avec des seances en semaine a La Plaine et un regroupement le samedi a Sablonniere.",
-    "content": "La section Athletisme proposera un stage d'ete pour les enfants, jeunes et ados pendant la premiere quinzaine de juillet avec un rythme adapte aux groupes et un encadrement par niveau.",
-    "coverImage": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1400&q=80",
-    "coverImageAlt": "Un groupe d'athletes s'echauffe sur une piste en plein air.",
-    "publishedAt": "2026-05-22T10:30:00.000Z",
-    "status": "published",
-    "type": "activity",
-    "isPinned": true,
-    "activitySlug": "athletisme",
-    "seoDescription": "Decouvrez le programme detaille du stage d'ete 2026 de la section Athletisme de l'ESC XV.",
-    "readingTime": "4 min",
-    "summaryPoints": [
-      "Stage du 6 au 18 juillet 2026",
-      "Seances a La Plaine et Sablonniere",
-      "Preinscription par mail ou telephone"
-    ],
-    "blocks": [
-      {
-        "type": "heading",
-        "title": "Un stage pour continuer sans casser la dynamique",
-        "subtitle": "L'objectif est de garder des reperes techniques tout en laissant de la place au plaisir de pratiquer."
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Le stage d'ete a ete construit comme une transition entre la fin de saison et la reprise. L'objectif n'est pas de charger les jeunes athletes, mais de conserver des reperes techniques et du plaisir dans la pratique.",
-          "Les groupes seront organises par tranche d'age et par habitude de pratique afin que chacun puisse retrouver un cadre lisible, avec des contenus adaptes sur la course, la coordination, les gammes et quelques ateliers de renforcement."
-        ]
-      },
-      {
-        "type": "image",
-        "src": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80",
-        "alt": "Des jeunes sportifs effectuent des exercices sur une piste d'athletisme.",
-        "caption": "Les seances alterneront travail technique, ateliers de coordination et temps de course.",
-        "size": "wide"
-      },
-      {
-        "type": "heading",
-        "title": "Organisation des seances"
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Les rendez-vous de semaine auront lieu les mardis de 18h00 a 19h30 et les jeudis de 18h30 a 20h00 au Centre sportif de La Plaine. Le samedi, un regroupement de 10h30 a 12h00 est prevu au complexe sportif Sablonniere pour les ateliers communs.",
-          "Chaque seance commencera par un accueil collectif et un echauffement guide. Les blocs techniques seront ensuite adaptes selon les groupes avec un retour au calme et un temps d'echange avec les familles en fin de matinee le samedi."
-        ]
-      },
-      {
-        "type": "image",
-        "src": "https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=1200&q=80",
-        "alt": "Des coureurs s'entrainent en ligne sur une piste rouge.",
-        "caption": "Les ateliers de vitesse seront adaptes aux differents niveaux.",
-        "size": "inline"
-      },
-      {
-        "type": "heading",
-        "title": "Informations pratiques pour les familles"
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Les familles interessees peuvent demander un renseignement ou signaler une preinscription par mail a escxv.athletisme@gmail.com ou par telephone au 01 45 75 23 36.",
-          "Une tenue legere, une gourde et une paire de chaussures adaptee a la course sont recommandees. En cas de forte chaleur, l'encadrement ajustera la charge de travail et les temps de recuperation."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "club-rentree-2026",
-    "title": "Rentree sportive 2026 : les inscriptions se preparent",
-    "slug": "rentree-sportive-2026-inscriptions",
-    "subtitle": "Le club consolide les informations utiles pour permettre aux familles de se projeter plus facilement.",
-    "excerpt": "Le club prepare l'ouverture progressive des inscriptions et la mise a jour des informations pratiques pour la prochaine saison.",
-    "content": "Les sections de l'ESC XV mettent a jour leurs horaires, lieux de pratique et contacts pour faciliter la preparation de la prochaine saison sportive.",
-    "coverImage": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1400&q=80",
-    "coverImageAlt": "Des sportifs et des supporters se rassemblent au bord d'un terrain.",
-    "publishedAt": "2026-05-15T09:00:00.000Z",
+    "id": "club-nouveau-site-2026",
+    "title": "L'ESCXV lance son nouveau site : plus clair, plus complet, plus pratique",
+    "slug": "nouveau-site-esc-xv-2026",
+    "subtitle": "Un site repense autour des sections, des lieux de pratique et des informations vraiment utiles aux familles.",
+    "excerpt": "Le club met en ligne un nouveau site pour retrouver plus facilement les sections, les horaires, les lieux de pratique et les actualites.",
+    "content": "L'ESCXV met en ligne un nouveau site pour rendre l'information plus simple a trouver : sections, horaires, lieux de pratique, equipements et contacts sont desormais regroupes au meme endroit.",
+    "coverImage": "https://images.unsplash.com/photo-1573867639040-6dd25fa5f597?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "coverImageAlt": "Une equipe travaille ensemble autour d'un ordinateur portable.",
+    "publishedAt": "2026-07-03T09:00:00.000Z",
     "status": "published",
     "type": "club",
-    "isPinned": false,
+    "isPinned": true,
     "activitySlug": null,
-    "seoDescription": "Point d'etape sur la preparation de la rentree sportive 2026 de l'ESC XV.",
-    "readingTime": "3 min",
-    "summaryPoints": [
-      "Fiches sections en mise a jour",
-      "Horaires verifies avant l'ete",
-      "Inscriptions ouvertes par vagues"
-    ],
-    "blocks": [
-      {
-        "type": "heading",
-        "title": "Ce qui change sur le site",
-        "subtitle": "Le club veut publier moins de contenu generique et davantage d'informations vraiment utiles."
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Le club a lance une remise a plat des informations diffusees en ligne pour rendre les pages plus utiles a l'approche de la rentree. L'objectif est simple : presenter moins de contenu generique et davantage d'informations pratiques verifiees.",
-          "Au fil des prochaines semaines, les pages de section seront completees avec des horaires, des lieux, des contacts et des actualites mieux structures. Les informations seront publiees au rythme de validation des responsables de section."
-        ]
-      },
-      {
-        "type": "heading",
-        "title": "Un calendrier d'inscription plus lisible"
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Plutot qu'une ouverture uniforme pour toutes les disciplines, le club prepare une mise en ligne par vagues afin d'eviter les informations contradictoires et de laisser a chaque section le temps de confirmer son organisation.",
-          "Des annonces complementaires seront publiees ici pour signaler l'ouverture effective des inscriptions, les priorites eventuelles et les liens utiles."
-        ]
-      },
-      {
-        "type": "image",
-        "src": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1200&q=80",
-        "alt": "Une equipe reunit des documents et un ordinateur sur une table.",
-        "caption": "La preparation de la rentree se fait avec les responsables de chaque section.",
-        "size": "wide"
-      },
-      {
-        "type": "heading",
-        "title": "Ce que les familles peuvent faire des maintenant"
-      },
-      {
-        "type": "text",
-        "paragraphs": [
-          "Il est deja possible de consulter les pages des sections pour identifier les disciplines susceptibles de convenir, verifier les principaux lieux de pratique et preparer les questions a adresser aux responsables.",
-          "Si une information manque encore, cela signifie generalement qu'elle est en cours de validation. Le club prefere publier une information un peu plus tard, mais fiable."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "club-benevoles-rentree-2026",
-    "title": "Le club recherche des benevoles pour accompagner la rentree",
-    "slug": "benevoles-rentree-2026",
-    "subtitle": "Accueil, orientation, logistique : quelques coups de main suffisent a rendre la rentree plus fluide.",
-    "excerpt": "L'ESC XV prepare une organisation plus lisible pour les familles et recherche des benevoles disponibles ponctuellement en septembre.",
-    "content": "L'ESC XV recherche des benevoles pour aider les sections a accueillir les familles, orienter les nouveaux adherents et fluidifier les premiers rendez-vous de septembre.",
-    "coverImage": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80",
-    "coverImageAlt": "Des personnes se saluent autour d'une table pendant une reunion associative.",
-    "publishedAt": "2026-05-10T14:00:00.000Z",
-    "status": "published",
-    "type": "club",
-    "isPinned": false,
-    "activitySlug": null,
-    "seoDescription": "Appel aux benevoles pour accompagner la rentree sportive 2026 de l'ESC XV.",
+    "seoDescription": "Decouvrez le nouveau site de l'ESCXV : sections, lieux de pratique, horaires et actualites au meme endroit.",
     "readingTime": "2 min",
     "summaryPoints": [
-      "Besoin ponctuel en septembre",
-      "Missions courtes et concretes",
-      "Contact via le club"
+      "Toutes les sections reunies au meme endroit",
+      "Lieux de pratique et equipements detailles",
+      "Informations pratiques mises a jour"
     ],
     "blocks": [
       {
         "type": "heading",
-        "title": "Des missions simples pour faciliter l'accueil"
+        "title": "Un site pense pour aller a l'essentiel",
+        "subtitle": "Moins de contenu generique, davantage d'informations pratiques et fiables."
       },
       {
         "type": "text",
         "paragraphs": [
-          "La periode de rentree concentre beaucoup de questions en peu de temps : horaires, lieux, groupes, inscriptions et essais. Quelques benevoles supplementaires permettront de mieux orienter les familles et d'eviter les files d'attente inutiles.",
-          "Les missions seront courtes et ciblees : accueil sur un creneau, aide a l'orientation, verification d'une liste ou relais d'information entre le club et une section."
+          "Le club met en ligne un nouveau site pour faciliter le quotidien des adherents et des familles. L'objectif est simple : permettre a chacun de trouver rapidement la bonne information, sans avoir a chercher longtemps.",
+          "Les sections, les horaires, les lieux de pratique, les equipements disponibles et les contacts sont desormais regroupes et presentes de maniere coherente d'une page a l'autre."
         ]
       },
       {
-        "type": "image",
-        "src": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80",
-        "alt": "Des benevoles discutent autour d'un ordinateur portable.",
-        "caption": "L'appui des benevoles aide les sections a rester disponibles pour les familles.",
-        "size": "inline"
+        "type": "heading",
+        "title": "Ce que vous pouvez faire des maintenant"
+      },
+      {
+        "type": "text",
+        "paragraphs": [
+          "Explorez les sections pour decouvrir les disciplines proposees et trouver celle qui vous correspond : chaque activite detaille ses creneaux, ses groupes, ses tarifs et son contact.",
+          "Reperez ou vous entrainer du cote des installations : adresse, equipements et sports pratiques sur chaque site, avec un filtre par sport pour aller droit au but.",
+          "Suivez la vie du club dans les actualites : annonces et informations pratiques y sont publiees au fil de l'eau, les plus recentes en premier."
+        ]
+      },
+      {
+        "type": "heading",
+        "title": "Un site qui va continuer d'evoluer"
+      },
+      {
+        "type": "text",
+        "paragraphs": [
+          "Ce nouveau site est une premiere etape. Les contenus seront enrichis au fil des semaines avec de nouvelles actualites, des informations complementaires par section et des mises a jour au rythme des responsables.",
+          "N'hesitez pas a revenir regulierement : les informations pratiques et les actualites du club seront publiees ici en priorite."
+        ]
       }
     ]
-  },
-  {
-    "id": "club-brouillon-exemple",
-    "title": "Exemple de brouillon non publie",
-    "slug": "exemple-brouillon-non-publie",
-    "excerpt": "Cette entree sert a verifier que les brouillons ne remontent pas cote site.",
-    "content": "Cette actualite ne doit pas etre visible tant que son statut reste en draft.",
-    "coverImage": null,
-    "publishedAt": "2026-05-20T08:00:00.000Z",
-    "status": "draft",
-    "type": "club",
-    "isPinned": false,
-    "activitySlug": null
   }
 ]
