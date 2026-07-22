@@ -23,11 +23,8 @@ export const metadata: Metadata = {
   description: club.description,
   metadataBase: new URL("https://escxv.fr"),
   icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/escxv-logo.png", type: "image/png" },
-    ],
-    shortcut: "/favicon.svg",
+    icon: [{ url: "/escxv-logo.png", type: "image/png" }],
+    shortcut: "/escxv-logo.png",
     apple: "/escxv-logo.png",
   },
 };
