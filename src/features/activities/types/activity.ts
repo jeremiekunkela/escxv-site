@@ -100,6 +100,7 @@ export type ActivityPrice = {
   id: string;
   season: string;
   label: string;
+  ageRange?: string;
   clubFee: number;
   activityFee: number;
   total: number;

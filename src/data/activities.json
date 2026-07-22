@@ -1509,12 +1509,12 @@
     "shortDescription": "Discipline, respect, technique et progression par ceintures.",
     "description": "Le judo combine apprentissage technique, progression individuelle et cadre collectif structurant.",
     "category": ["arts-martiaux"],
-    "publics": ["enfants", "adolescents", "adultes"],
+    "publics": ["enfants", "adolescents"],
     "tags": ["respect", "technique", "progression"],
     "image": "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a087d92a2195db261c2462f&step=1",
     "content": {
-      "heroSubtitle": "Judo enfants de 5 a 13 ans, a La Plaine et a Cambronne.",
+      "heroSubtitle": "Judo jeunes de 4 à 17 ans, à La Plaine et à Cambronne.",
       "introText": "Le judo combine apprentissage technique, progression par ceintures et cadre collectif structurant. La section participe a des compétitions FSGT et FFJDA.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
       "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
@@ -1522,14 +1522,14 @@
     },
     "programs": [
       {
-        "title": "Judo 5-8 ans",
+        "title": "Judo jeunes - initiation",
         "audience": "Enfants",
-        "description": "Decouverte du judo, motricite, chutes et premiers automatismes dans un cadre securisant.",
+        "description": "Découverte du judo, motricité, chutes et premiers automatismes dans un cadre sécurisant.",
         "tags": ["Initiation", "Motricite", "Respect"]
       },
       {
-        "title": "Judo 8-13 ans",
-        "audience": "Enfants",
+        "title": "Judo jeunes - progression",
+        "audience": "Jeunes",
         "description": "Apprentissage technique, progression par ceintures et initiation à la compétition.",
         "tags": ["Technique", "Ceintures", "Competition"]
       }
@@ -1537,15 +1537,15 @@
     "practiceGroups": [
       {
         "id": "judo-5-8",
-        "label": "5 a 8 ans",
+        "label": "Groupe initiation",
         "public": "enfants",
         "gender": "mixte",
         "sortOrder": 1
       },
       {
         "id": "judo-8-13",
-        "label": "8 a 13 ans",
-        "public": "enfants",
+        "label": "Groupe progression",
+        "public": "adolescents",
         "gender": "mixte",
         "sortOrder": 2
       }
@@ -1617,7 +1617,8 @@
       {
         "id": "judo-2025-2026",
         "season": "2025/2026",
-        "label": "Judo",
+        "label": "Judo - Adhésion Jeunes",
+        "ageRange": "4-17 ans",
         "clubFee": 75,
         "activityFee": 175,
         "total": 250,

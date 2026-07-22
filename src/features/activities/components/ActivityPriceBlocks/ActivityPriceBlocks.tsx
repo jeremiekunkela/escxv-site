@@ -33,6 +33,12 @@ export function ActivityPriceBlocks({ prices }: ActivityPriceBlocksProps) {
               <dt>Participation activité</dt>
               <dd className={styles.amount}>{formatEuro(price.activityFee)}</dd>
             </div>
+            {price.ageRange ? (
+              <div className={styles.row}>
+                <dt>Âge</dt>
+                <dd className={styles.amount}>{price.ageRange}</dd>
+              </div>
+            ) : null}
           </dl>
           {price.extraFees.length > 0 ? (
             <>
