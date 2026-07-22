@@ -887,7 +887,7 @@
       "heroSubtitle": "Grimpe adultes et ateliers parent-enfant a La Plaine et a Croix-Nivert.",
       "introText": "Une pratique de grimpe progressive pour gagner en confiance, en technique et en autonomie, avec un groupe adultes et des ateliers parent-enfant (APE).",
       "schedulesNoticeText": "D'autres créneaux (mardi, jeudi, dimanche) peuvent exister selon la saison et sont à confirmer auprès de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "pricesSubtitle": "Cotisation pour la saison 2026/2027 : cotisation club unique de 75 EUR + participation à l'activité.",
       "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
@@ -981,30 +981,21 @@
     ],
     "prices": [
       {
-        "id": "escalade-2025-2026-adultes",
-        "season": "2025/2026",
-        "label": "Adultes",
+        "id": "escalade-2026-2027-adultes",
+        "season": "2026/2027",
+        "label": "Escalade - Adhésion Adultes",
         "clubFee": 75,
-        "activityFee": 75,
-        "total": 150,
+        "activityFee": 55,
+        "total": 130,
         "extraFees": []
       },
       {
-        "id": "escalade-2025-2026-ape",
-        "season": "2025/2026",
-        "label": "Atelier Parent-Enfant (APE)",
+        "id": "escalade-2026-2027-ape",
+        "season": "2026/2027",
+        "label": "Escalade - Adhésion Atelier Parents/Enfants (APE)",
         "clubFee": 75,
-        "activityFee": 25,
-        "total": 100,
-        "extraFees": []
-      },
-      {
-        "id": "escalade-2025-2026-ape-plus",
-        "season": "2025/2026",
-        "label": "APE Plus",
-        "clubFee": 75,
-        "activityFee": 115,
-        "total": 190,
+        "activityFee": 15,
+        "total": 90,
         "extraFees": []
       }
     ],
