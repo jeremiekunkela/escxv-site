@@ -95,21 +95,9 @@ export function ActivityDetailPage({
   const socialLinks = activity.socialLinks ?? [];
   const hasSocialLinks = socialLinks.length > 0;
   const hasContactChannels = hasContacts || hasSocialLinks;
-  const schedulesSubtitle = getContentOrFallback(
-    content.schedulesSubtitle,
-    "Retrouvez ici les créneaux actuellement communiqués par la section.",
-  );
   const schedulesNoticeText = getContentOrFallback(
     content.schedulesNoticeText,
     "Les horaires seront communiqués par la section dès qu'ils seront confirmés.",
-  );
-  const locationsSubtitle = getContentOrFallback(
-    content.locationsSubtitle,
-    "Retrouvez ici les principaux lieux de pratique de la section.",
-  );
-  const contactText = getContentOrFallback(
-    content.contactText,
-    "Utilisez ces coordonnées pour toute question sur l'inscription, l'essai ou le bon groupe.",
   );
   const emptyContactText = getContentOrFallback(
     content.contactText,
@@ -118,10 +106,6 @@ export function ActivityDetailPage({
   const introText = getContentOrFallback(
     content.introText,
     "Le détail des groupes et du fonctionnement sera ajouté quand cette section sera prête.",
-  );
-  const pricesSubtitle = getContentOrFallback(
-    content.pricesSubtitle,
-    "Consultez ici les tarifs communiqués pour la saison en cours.",
   );
   const heroSubtitle = getContentOrFallback(
     content.heroSubtitle,
@@ -190,7 +174,6 @@ export function ActivityDetailPage({
           className={`${styles.section} ${styles.gridSurface}`}
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.schedulesEyebrow}
           title={ACTIVITY_DETAIL_PAGE_COPY.schedulesTitle}
-          subtitle={hasSchedules ? schedulesSubtitle : undefined}
         >
           {hasSchedules ? (
             <ActivityScheduleCards
@@ -211,7 +194,6 @@ export function ActivityDetailPage({
           news={news}
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.newsEyebrow}
           title={ACTIVITY_DETAIL_PAGE_COPY.newsTitle}
-          subtitle={`Des aperçus rapides pour la section ${activity.title}, avec un accès vers chaque actualité complète.`}
           surface="soft"
           presentation="carousel"
           carouselLayout="single"
@@ -221,7 +203,6 @@ export function ActivityDetailPage({
           id="pratique"
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.pricesEyebrow}
           title={ACTIVITY_DETAIL_PAGE_COPY.pricesTitle}
-          subtitle={hasPrices ? pricesSubtitle : undefined}
         >
           {hasPrices ? (
             <ActivityPriceBlocks prices={activity.prices} />
@@ -237,7 +218,6 @@ export function ActivityDetailPage({
           className={`${styles.section} ${styles.surface}`}
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.locationsEyebrow}
           title={ACTIVITY_DETAIL_PAGE_COPY.locationsTitle}
-          subtitle={hasLocations ? locationsSubtitle : undefined}
         >
           {hasLocations ? (
             <ActivityLocationCards
@@ -257,7 +237,6 @@ export function ActivityDetailPage({
           headerClassName={styles.contactIntro}
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.contactEyebrow}
           title={ACTIVITY_DETAIL_PAGE_COPY.contactTitle}
-          subtitle={hasContactChannels ? contactText : undefined}
         >
           {hasContactChannels ? (
             <div className={styles.contactGrid}>

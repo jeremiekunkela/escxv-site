@@ -27,10 +27,7 @@ export type Program = {
 export type ActivityContent = {
   heroSubtitle?: string;
   introText?: string;
-  schedulesSubtitle?: string;
   schedulesNoticeText?: string;
-  pricesSubtitle?: string;
-  locationsSubtitle?: string;
   contactText?: string;
   contactFormText?: string;
 };
