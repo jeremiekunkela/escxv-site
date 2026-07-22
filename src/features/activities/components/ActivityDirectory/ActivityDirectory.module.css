@@ -1,3 +1,46 @@
+.directory {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.filterButton {
+  min-height: 42px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-raised);
+  color: var(--color-text-secondary);
+  padding: 0 var(--space-md);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  transition:
+    border-color var(--transition-standard),
+    background var(--transition-standard),
+    color var(--transition-standard),
+    box-shadow var(--transition-standard),
+    transform var(--transition-standard);
+}
+
+.filterButton:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-strong);
+  color: var(--color-brand);
+}
+
+.filterButtonActive {
+  border-color: var(--color-brand);
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
+  box-shadow: 0 8px 24px rgba(var(--color-brand-rgb), 0.22);
+}
+
 .tiles {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
