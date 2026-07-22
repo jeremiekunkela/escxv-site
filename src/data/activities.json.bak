@@ -23,11 +23,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Arts martiaux",
-        "Adolescents",
-        "Adultes"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -68,12 +63,6 @@
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
       "heroSubtitle": "Sprint, demi-fond, sauts et travail technique pour enfants, jeunes et adultes.",
-      "heroBadges": [
-        "Jeunes",
-        "Piste",
-        "Sprint",
-        "Demi-fond"
-      ],
       "introText": "La section athletisme de l'ESC XV propose une progression lisible entre decouverte, travail technique, pratique reguliere et objectifs de competition sur piste.",
       "schedulesSubtitle": "Chaque seance correspond a un vrai creneau et a un lieu identifie.",
       "schedulesNoticeText": "Les creneaux affiches servent de base de travail pour la saison 2025/2026 et doivent encore etre confirmes par la section.",
@@ -247,11 +236,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Raquette",
-        "Adolescents",
-        "Adultes"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -291,11 +275,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Collectif",
-        "Enfants",
-        "Adultes"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -336,11 +315,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Mobilite",
-        "Culture",
-        "Collectif"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -379,12 +353,6 @@
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
       "heroSubtitle": "Une pratique adulte pour courir regulierement, preparer un objectif et progresser en groupe sur route et sentiers.",
-      "heroBadges": [
-        "Running",
-        "Trail",
-        "Adultes",
-        "Sorties"
-      ],
       "introText": "La section course a pied / trail de l'ESC XV s'adresse aux adultes qui veulent courir en groupe, travailler l'endurance et preparer des objectifs de saison.",
       "schedulesSubtitle": "Des creneaux dedies aux sorties et a la preparation d'objectif.",
       "schedulesNoticeText": "Les creneaux affiches sont une base de travail saison 2025/2026 et doivent encore etre confirmes par la section.",
@@ -553,11 +521,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Danse",
-        "Expression",
-        "Rythme"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -597,11 +560,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Escalade",
-        "Confiance",
-        "Technique"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -642,12 +600,6 @@
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
       "heroSubtitle": "Une pratique de proximite pour jouer, apprendre et s'engager en equipe a tout age.",
-      "heroBadges": [
-        "Ecole de foot",
-        "Jeunes",
-        "Adultes",
-        "Competition"
-      ],
       "introText": "La page centralise les informations utiles pour comprendre rapidement a quel creneau s'adresser selon l'age, le niveau et l'objectif de pratique.",
       "schedulesSubtitle": "Chaque seance est rattachee a un lieu unique pour eviter les ambiguities de lecture.",
       "schedulesNoticeText": "Les horaires affiches servent de maquette de contenu et restent a confirmer avec la section avant publication officielle.",
@@ -816,11 +768,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Forme",
-        "Mobilite",
-        "Adultes"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -860,11 +807,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Judo",
-        "Technique",
-        "Respect"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -904,11 +846,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Natation",
-        "Technique",
-        "Endurance"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -946,11 +883,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Pilates",
-        "Gainage",
-        "Adultes"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -988,11 +920,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Renfo",
-        "Force",
-        "Adultes"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -1031,11 +958,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Enfants",
-        "Multisports",
-        "Mercredi"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -1073,11 +995,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Souplesse",
-        "Mobilite",
-        "Adultes"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -1117,11 +1034,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Raquette",
-        "Technique",
-        "Match"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -1160,11 +1072,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Raquette",
-        "Precision",
-        "Salle"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -1203,11 +1110,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Collectif",
-        "Salle",
-        "Adolescents"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",
@@ -1245,11 +1147,6 @@
     "registrationUrl": null,
     "content": {
       "heroSubtitle": "Une page detaillee sera ajoutee quand la section sera ouverte a la publication.",
-      "heroBadges": [
-        "Yoga",
-        "Respiration",
-        "Adultes"
-      ],
       "introText": "Les contenus editoriaux de cette activite seront centralises ici.",
       "schedulesSubtitle": "Les creneaux seront publies ici.",
       "schedulesNoticeText": "Les informations de planning ne sont pas encore diffusees.",

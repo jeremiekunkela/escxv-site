@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import type { NewsItem } from "@/features/news/types/news";
 
-export type NewsScopeFilter = "all" | "club" | "activity" | "pinned";
 export type NewsSortOrder = "recent" | "oldest";
 
 export type NewsOption<T extends string> = {
@@ -11,29 +10,11 @@ export type NewsOption<T extends string> = {
   label: string;
 };
 
-type NewsScopePredicate = (newsItem: NewsItem) => boolean;
-
-const scopePredicates: Record<NewsScopeFilter, NewsScopePredicate> = {
-  all: () => true,
-  club: (newsItem) => newsItem.activitySlug === null,
-  activity: (newsItem) => newsItem.activitySlug !== null,
-  pinned: (newsItem) => newsItem.isPinned,
-};
-
 function normalizeSearch(value: string) {
   return value
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
-}
-
-function getScopeOptions() {
-  return [
-    { value: "all", label: "Toutes" },
-    { value: "club", label: "Club" },
-    { value: "activity", label: "Sections" },
-    { value: "pinned", label: "À la une" },
-  ] satisfies NewsOption<NewsScopeFilter>[];
 }
 
 function getSectionOptions(
@@ -89,12 +70,10 @@ export function useNewsFilters(
   activityLabelsBySlug: Record<string, string>,
 ) {
   const [query, setQuery] = useState("");
-  const [scopeFilter, setScopeFilter] = useState<NewsScopeFilter>("all");
   const [activityFilter, setActivityFilter] = useState("all");
   const [yearFilter, setYearFilter] = useState("all");
   const [sortOrder, setSortOrder] = useState<NewsSortOrder>("recent");
 
-  const scopeOptions = useMemo(() => getScopeOptions(), []);
   const activityOptions = useMemo(
     () => getSectionOptions(news, activityLabelsBySlug),
     [activityLabelsBySlug, news],
@@ -103,7 +82,6 @@ export function useNewsFilters(
 
   const filteredNews = useMemo(() => {
     const normalizedQuery = normalizeSearch(query);
-    const matchesScope = scopePredicates[scopeFilter];
 
     return news
       .filter((newsItem) => {
@@ -132,8 +110,7 @@ export function useNewsFilters(
         );
 
         return (
-          matchesScope(newsItem)
-          && matchesActivity
+          matchesActivity
           && matchesYear
           && searchableText.includes(normalizedQuery)
         );
@@ -149,7 +126,6 @@ export function useNewsFilters(
     activityLabelsBySlug,
     news,
     query,
-    scopeFilter,
     sortOrder,
     yearFilter,
   ]);
@@ -159,11 +135,8 @@ export function useNewsFilters(
     activityOptions,
     filteredNews,
     query,
-    scopeFilter,
-    scopeOptions,
     setActivityFilter,
     setQuery,
-    setScopeFilter,
     setSortOrder,
     setYearFilter,
     sortOrder,
@@ -171,7 +144,6 @@ export function useNewsFilters(
     yearFilter,
     hasActiveFilters:
       query.length > 0
-      || scopeFilter !== "all"
       || activityFilter !== "all"
       || yearFilter !== "all"
       || sortOrder !== "recent",

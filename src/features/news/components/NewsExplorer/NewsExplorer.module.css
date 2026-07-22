@@ -47,44 +47,6 @@
   font-size: var(--font-size-sm);
 }
 
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  margin-top: var(--space-md);
-}
-
-.filterButton {
-  min-height: 44px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
-  background: var(--color-surface);
-  color: var(--color-text-secondary);
-  padding: 0 var(--space-md);
-  cursor: pointer;
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  transition:
-    border-color var(--transition-standard),
-    background var(--transition-standard),
-    color var(--transition-standard),
-    box-shadow var(--transition-standard),
-    transform var(--transition-standard);
-}
-
-.filterButton:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-border-strong);
-  color: var(--color-brand);
-}
-
-.filterButtonActive {
-  border-color: var(--color-brand);
-  background: linear-gradient(135deg, var(--color-brand), var(--color-brand-bright));
-  color: var(--color-text-inverse);
-  box-shadow: 0 8px 25px rgba(var(--color-brand-rgb), 0.25);
-}
-
 .selectGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

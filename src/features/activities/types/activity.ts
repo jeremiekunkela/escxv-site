@@ -26,7 +26,6 @@ export type Program = {
 
 export type ActivityContent = {
   heroSubtitle?: string;
-  heroBadges: string[];
   introText?: string;
   schedulesSubtitle?: string;
   schedulesNoticeText?: string;
@@ -38,7 +37,7 @@ export type ActivityContent = {
 
 /**
  * Equipement d'un lieu de pratique (registre partage club-wide).
- * `relatedActivitySlugs` permet de mettre en avant, sur une page d'activite,
+ * `relatedActivitySlugs` permet de mettre en avant, sur une page d'activité,
  * l'equipement pertinent pour ce sport (un equipement sans slug reste neutre).
  */
 export type LocationEquipment = {

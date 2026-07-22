@@ -5,8 +5,8 @@
     "title": "Aikibudo",
     "shortName": "Aikibudo",
     "icon": "🥋",
-    "shortDescription": "Art martial de maitrise, de precision et de discipline dans un cadre progressif.",
-    "description": "Une pratique martiale axee sur la technique, la posture et le controle, avec une progression adaptee aux adolescents et aux adultes.",
+    "shortDescription": "Art martial de maitrise, de précision et de discipline dans un cadre progressif.",
+    "description": "Une pratique martiale axée sur la technique, la posture et le controle, avec une progression adaptée aux adolescents et aux adultes.",
     "category": ["arts-martiaux"],
     "publics": ["adolescents", "adultes"],
     "tags": ["technique", "coordination", "discipline"],
@@ -14,11 +14,10 @@
     "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a0874da3a190850763db5b7&step=1",
     "content": {
       "heroSubtitle": "Art martial complet, a mains nues et avec armes, les lundis et mercredis a La Plaine.",
-      "heroBadges": ["Arts martiaux", "Adolescents", "Adultes"],
-      "introText": "L'aikibudo developpe la technique, la posture et le controle dans une progression adaptee aux adolescents et aux adultes.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "introText": "L'aikibudo developpe la technique, la posture et le controle dans une progression adaptée aux adolescents et aux adultes.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -88,23 +87,22 @@
     "shortName": "Athle",
     "icon": "🏃",
     "shortDescription": "Sprint, demi-fond et école d'athletisme pour enfants",
-    "description": "La section athletisme de l'ESCXV accueille les pratiquants du loisir a la competition, avec un travail centre sur la piste, la vitesse et la progression technique.",
+    "description": "La section athletisme de l'ESCXV accueille les pratiquants du loisir a la compétition, avec un travail centre sur la piste, la vitesse et la progression technique.",
     "category": ["athle-running"],
     "publics": ["enfants", "adolescents", "adultes"],
-    "tags": ["sprint", "demi-fond", "competition"],
+    "tags": ["sprint", "demi-fond", "compétition"],
     "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
       "heroSubtitle": "Sprint, demi-fond, sauts et travail technique pour enfants, jeunes et adultes.",
-      "heroBadges": ["Ecole d'athletisme", "Sprint", "Demi-fond"],
-      "introText": "La section athletisme de l'ESCXV propose une progression lisible entre decouverte, travail technique, pratique reguliere et objectifs de competition sur piste.",
-      "schedulesNoticeText": "Les creneaux affiches servent de base de travail pour la saison 2025/2026 et doivent encore etre confirmes par la section."
+      "introText": "La section athletisme de l'ESCXV propose une progression lisible entre decouverte, travail technique, pratique reguliere et objectifs de compétition sur piste.",
+      "schedulesNoticeText": "Les créneaux affichés servent de base de travail pour la saison 2025/2026 et doivent encore etre confirmés par la section."
     },
     "programs": [
       {
         "title": "Ecole d'athletisme",
         "audience": "Enfants",
-        "description": "Decouverte de la course, des sauts et des lancers avec une progression technique accessible et un cadre collectif.",
+        "description": "Decouverte de la course, des sauts et des lancers avec une progression technique accèssible et un cadre collectif.",
         "tags": ["Initiation", "Coordination", "Loisir"]
       },
       {
@@ -182,7 +180,7 @@
         "day": "jeudi",
         "startTime": "18:30",
         "endTime": "20:00",
-        "tags": ["sprint", "demi-fond", "competition"],
+        "tags": ["sprint", "demi-fond", "compétition"],
         "notes": "Seance technique et endurance specifique."
       },
       {
@@ -265,31 +263,30 @@
     "shortName": "Bad",
     "icon": "🏸",
     "shortDescription": "Une pratique dynamique pour jouer en simple, double ou loisir.",
-    "description": "Le badminton melange vitesse, coordination et lecture du jeu, avec une pratique accessible en loisir comme en progression technique.",
+    "description": "Le badminton mélange vitesse, coordination et lecture du jeu, avec une pratique accèssible en loisir comme en progression technique.",
     "category": ["raquette"],
     "publics": ["adolescents", "adultes"],
     "tags": ["raquette", "indoor", "cardio"],
     "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Loisir ou competition, en simple et en double, a la salle Keller.",
-      "heroBadges": ["Raquette", "Adolescents", "Adultes"],
-      "introText": "Le badminton melange vitesse, coordination et lecture du jeu, en loisir comme en progression technique encadree.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "heroSubtitle": "Loisir ou compétition, en simple et en double, a la salle Keller.",
+      "introText": "Le badminton mélange vitesse, coordination et lecture du jeu, en loisir comme en progression technique encadrée.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Groupe loisir",
         "audience": "Adultes",
-        "description": "Pratique libre en simple ou en double, pour jouer regulierement dans une ambiance conviviale.",
+        "description": "Pratique libre en simple ou en double, pour jouer régulièrement dans une ambiance conviviale.",
         "tags": ["Loisir", "Simple", "Double"]
       },
       {
-        "title": "Groupe competition",
+        "title": "Groupe compétition",
         "audience": "Adultes",
-        "description": "Entrainement encadre par un moniteur pour progresser techniquement et aborder la competition.",
+        "description": "Entrainement encadre par un moniteur pour progresser techniquement et aborder la compétition.",
         "tags": ["Competition", "Moniteur", "Progression"]
       }
     ],
@@ -302,7 +299,7 @@
         "sortOrder": 1
       },
       {
-        "id": "bad-competition",
+        "id": "bad-compétition",
         "label": "Competition",
         "public": "adultes",
         "gender": "mixte",
@@ -343,7 +340,7 @@
       },
       {
         "id": "bad-comp-mardi",
-        "practiceGroupId": "bad-competition",
+        "practiceGroupId": "bad-compétition",
         "locationId": "keller",
         "type": "training",
         "day": "mardi",
@@ -354,7 +351,7 @@
       },
       {
         "id": "bad-comp-vendredi",
-        "practiceGroupId": "bad-competition",
+        "practiceGroupId": "bad-compétition",
         "locationId": "keller",
         "type": "training",
         "day": "vendredi",
@@ -395,7 +392,7 @@
     "title": "Baseball",
     "shortName": "Baseball",
     "icon": "⚾",
-    "shortDescription": "Sport collectif de precision, coordination et esprit d'equipe.",
+    "shortDescription": "Sport collectif de précision, coordination et esprit d'equipe.",
     "description": "Le baseball propose un cadre collectif, technique et strategique pour progresser en equipe.",
     "category": ["collectif"],
     "publics": ["enfants", "adolescents", "adultes"],
@@ -404,11 +401,10 @@
     "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a08756b56b3c10850f32a39&step=1",
     "content": {
       "heroSubtitle": "Pratique du baseball le jeudi soir au stade Pershing (Bois de Vincennes).",
-      "heroBadges": ["Collectif", "Enfants", "Adultes"],
       "introText": "Le baseball propose un cadre collectif, technique et strategique. Merci de prendre contact avec la section avant de venir.",
       "schedulesNoticeText": "Creneau du jeudi soir au stade Pershing. Prenez contact avec la section avant votre premiere venue.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -472,16 +468,15 @@
     "description": "La capoeira relie mouvement, musicalite et coordination dans une pratique collective et expressive.",
     "category": ["arts-martiaux", "danse"],
     "publics": ["enfants", "adolescents", "adultes"],
-    "tags": ["mobilite", "rythme", "culture"],
+    "tags": ["mobilité", "rythme", "culture"],
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
       "heroSubtitle": "Art martial bresilien melant mouvement, musicalite et coordination, des 5 ans.",
-      "heroBadges": ["Mobilite", "Culture", "Collectif"],
       "introText": "La capoeira relie mouvement, rythme et coordination dans une pratique collective et expressive, pour les enfants comme pour les adultes.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -493,7 +488,7 @@
       {
         "title": "Capoeira adultes",
         "audience": "Adultes",
-        "description": "Travail technique, musicalite et jeu, pour developper mobilite et coordination.",
+        "description": "Travail technique, musicalite et jeu, pour developper mobilité et coordination.",
         "tags": ["Technique", "Musique", "Mobilite"]
       }
     ],
@@ -667,25 +662,24 @@
     "shortName": "CAP Trail",
     "icon": "🏃",
     "shortDescription": "Running, endurance et preparation trail pour adultes.",
-    "description": "Une activite autonome pour courir regulierement, preparer un objectif et progresser en groupe sur route et sentiers.",
+    "description": "Une activité autonome pour courir régulièrement, préparer un objectif et progresser en groupe sur route et sentiers.",
     "category": ["athle-running"],
     "publics": ["adultes"],
     "tags": ["running", "trail", "endurance", "sorties"],
     "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Pratique adulte pour courir regulierement, preparer un objectif et progresser en groupe sur route et sentiers.",
-      "heroBadges": ["Running", "Trail", "Adultes", "Sorties"],
-      "introText": "Une activite autonome pour courir regulierement, preparer un objectif et progresser en groupe, des debutants aux confirmes. Des sorties hors stade sont organisees le dimanche selon les disponibilites.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "heroSubtitle": "Pratique adulte pour courir régulièrement, préparer un objectif et progresser en groupe sur route et sentiers.",
+      "introText": "Une activité autonome pour courir régulièrement, préparer un objectif et progresser en groupe, des débutants aux confirmés. Des sorties hors stade sont organisées le dimanche selon les disponibilités.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Footing et endurance",
         "audience": "Adultes",
-        "description": "Courir regulierement, travailler le fond et construire une base aerobie durable.",
+        "description": "Courir régulièrement, travailler le fond et construire une base aerobie durable.",
         "tags": ["Endurance", "Regularite", "Running"]
       },
       {
@@ -777,7 +771,7 @@
     "shortName": "Danse",
     "icon": "💃",
     "shortDescription": "Expression, rythme et energie dans une pratique artistique collective.",
-    "description": "Une activite corporelle axee sur le rythme, l'expression et la progression de groupe.",
+    "description": "Une activité corporelle axée sur le rythme, l'expression et la progression de groupe.",
     "category": ["danse"],
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["rythme", "expression", "collectif"],
@@ -785,11 +779,10 @@
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
       "heroSubtitle": "Danse pour adultes et jeunes adultes, au gymnase des Cevennes ou a Cambronne.",
-      "heroBadges": ["Danse", "Expression", "Rythme"],
-      "introText": "Une activite corporelle axee sur le rythme, l'expression et la progression de groupe, proposee sur deux creneaux et deux lieux.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "introText": "Une activité corporelle axée sur le rythme, l'expression et la progression de groupe, proposee sur deux créneaux et deux lieux.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -883,17 +876,16 @@
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
       "heroSubtitle": "Grimpe adultes et ateliers parent-enfant a La Plaine et a Croix-Nivert.",
-      "heroBadges": ["Escalade", "Confiance", "Technique"],
       "introText": "Une pratique de grimpe progressive pour gagner en confiance, en technique et en autonomie, avec un groupe adultes et des ateliers parent-enfant (APE).",
-      "schedulesNoticeText": "D'autres creneaux (mardi, jeudi, dimanche) peuvent exister selon la saison et sont a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "schedulesNoticeText": "D'autres créneaux (mardi, jeudi, dimanche) peuvent exister selon la saison et sont à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Grimpe adultes",
         "audience": "Adultes",
-        "description": "Pratique encadree pour progresser en technique, en force et en lecture de voie, du debutant au confirme.",
+        "description": "Pratique encadrée pour progresser en technique, en force et en lecture de voie, du debutant au confirme.",
         "tags": ["Adultes", "Technique", "Autonomie"]
       },
       {
@@ -975,7 +967,7 @@
         "type": "training",
         "day": "jeudi",
         "tags": [],
-        "notes": "Acces APE Plus le jeudi soir, horaire a confirmer."
+        "notes": "Accès APE Plus le jeudi soir, horaire à confirmer."
       }
     ],
     "prices": [
@@ -1030,23 +1022,22 @@
     "title": "Football",
     "shortName": "Foot",
     "icon": "⚽",
-    "shortDescription": "Ecole de foot, jeunes et adultes, avec horaires effectifs, competition et inscription par mail.",
-    "description": "La section football centralise les horaires effectifs, les lieux de pratique, les tarifs et les inscriptions pour l'ecole de foot, les jeunes et les adultes.",
+    "shortDescription": "Ecole de foot, jeunes et adultes, avec horaires effectifs, compétition et inscription par mail.",
+    "description": "La section football centralise les horaires effectifs, les lieux de pratique, les tarifs et les inscriptions pour l'école de foot, les jeunes et les adultes.",
     "category": ["collectif"],
     "publics": ["enfants", "adolescents", "adultes"],
-    "tags": ["collectif", "matchs", "loisir", "competition"],
+    "tags": ["collectif", "matchs", "loisir", "compétition"],
     "image": "https://images.unsplash.com/photo-1517747614396-d21a78b850e8?auto=format&fit=crop&w=1600&q=80",
     "registrationUrl": "mailto:football@esc15.fr",
     "content": {
       "heroSubtitle": "Une pratique de proximite pour jouer, apprendre et s'engager en equipe a tout age.",
-      "heroBadges": ["Ecole de foot", "Jeunes", "Adultes", "Competition"],
-      "introText": "Les informations ci-dessous regroupent les horaires effectifs, les lieux de pratique, les tarifs et les modalites d'inscription.",
+      "introText": "Les informations ci-dessous regroupent les horaires effectifs, les lieux de pratique, les tarifs et les modalités d'inscription.",
       "schedulesSubtitle": "Horaires effectifs, en tenue de sport sur le terrain.",
-      "schedulesNoticeText": "Inscription validee si paiement. Contact: football@esc15.fr.",
+      "schedulesNoticeText": "Inscription validée si paiement. Contact: football@esc15.fr.",
       "pricesSubtitle": "Cotisation saison du 1/9/2025 au 30/6/2026.",
-      "locationsSubtitle": "Les seances communiquees ici sont regroupees autour du Centre sportif de La Plaine.",
-      "contactText": "Inscription validee si paiement. Ecrivez a football@esc15.fr pour toute question ou demande d'inscription.",
-      "contactFormText": "Les demandes d'inscription sont confirmees apres reception du paiement."
+      "locationsSubtitle": "Les séances communiquées ici sont regroupees autour du Centre sportif de La Plaine.",
+      "contactText": "Inscription validée si paiement. Écrivez a football@esc15.fr pour toute question ou demande d'inscription.",
+      "contactFormText": "Les demandes d'inscription sont confirmees apres réception du paiement."
     },
     "programs": [
       {
@@ -1062,9 +1053,9 @@
         "tags": ["Jeunes", "Technique", "Matchs"]
       },
       {
-        "title": "Loisir et competition",
+        "title": "Loisir et compétition",
         "audience": "Adultes",
-        "description": "Des groupes adultes pour pratiquer regulierement, garder du rythme ou rejoindre une logique plus competitive.",
+        "description": "Des groupes adultes pour pratiquer régulièrement, garder du rythme ou rejoindre une logique plus competitive.",
         "tags": ["Adultes", "Loisir", "Competition"]
       }
     ],
@@ -1159,7 +1150,7 @@
         "day": "mercredi",
         "startTime": "18:00",
         "endTime": "19:30",
-        "tags": ["ecole de foot", "initiation"],
+        "tags": ["école de foot", "initiation"],
         "notes": "En tenue de sport sur le terrain."
       },
       {
@@ -1170,7 +1161,7 @@
         "day": "vendredi",
         "startTime": "17:30",
         "endTime": "19:00",
-        "tags": ["ecole de foot", "initiation"],
+        "tags": ["école de foot", "initiation"],
         "notes": "En tenue de sport sur le terrain."
       },
       {
@@ -1182,7 +1173,7 @@
         "startTime": "18:00",
         "endTime": "19:30",
         "tags": ["jeunes", "technique", "collectif"],
-        "notes": "Horaires effectifs communiques par la section."
+        "notes": "Horaires effectifs communiqués par la section."
       },
       {
         "id": "football-u10-u13-jeudi-1800",
@@ -1193,7 +1184,7 @@
         "startTime": "18:00",
         "endTime": "19:45",
         "tags": ["jeunes", "technique", "collectif"],
-        "notes": "Horaires effectifs communiques par la section."
+        "notes": "Horaires effectifs communiqués par la section."
       },
       {
         "id": "football-u14-u16-mercredi-1800",
@@ -1234,7 +1225,7 @@
         "type": "training",
         "day": "vendredi",
         "tags": ["jeunes", "technique", "collectif"],
-        "notes": "Horaire a confirmer."
+        "notes": "Horaire à confirmer."
       },
       {
         "id": "football-u19-u20-mardi-1930",
@@ -1263,15 +1254,15 @@
         "type": "training",
         "day": "vendredi",
         "tags": ["jeunes", "technique", "collectif"],
-        "notes": "Horaire a confirmer."
+        "notes": "Horaire à confirmer."
       },
       {
-        "id": "football-senior-fsgt-entrainement",
+        "id": "football-senior-fsgt-entraînement",
         "practiceGroupId": "fg-seniors-fsgt",
         "locationId": "la-plaine",
         "type": "training",
-        "tags": ["adultes", "entrainement", "fsgt"],
-        "notes": "Horaire a confirmer."
+        "tags": ["adultes", "entraînement", "fsgt"],
+        "notes": "Horaire à confirmer."
       },
       {
         "id": "football-senior-fff-mardi-2030",
@@ -1281,7 +1272,7 @@
         "day": "mardi",
         "startTime": "20:30",
         "endTime": "22:15",
-        "tags": ["adultes", "entrainement", "fff"]
+        "tags": ["adultes", "entraînement", "fff"]
       },
       {
         "id": "football-senior-fff-jeudi",
@@ -1289,8 +1280,8 @@
         "locationId": "la-plaine",
         "type": "training",
         "day": "jeudi",
-        "tags": ["adultes", "entrainement", "fff"],
-        "notes": "Horaire a confirmer."
+        "tags": ["adultes", "entraînement", "fff"],
+        "notes": "Horaire à confirmer."
       },
       {
         "id": "football-senior-cdm-jeudi-1930",
@@ -1300,7 +1291,7 @@
         "day": "jeudi",
         "startTime": "19:30",
         "endTime": "21:00",
-        "tags": ["adultes", "entrainement", "cdm"]
+        "tags": ["adultes", "entraînement", "cdm"]
       },
       {
         "id": "football-loisir-jeudi-1900",
@@ -1310,7 +1301,7 @@
         "day": "jeudi",
         "startTime": "19:00",
         "endTime": "20:30",
-        "tags": ["loisir", "adultes", "entrainement"]
+        "tags": ["loisir", "adultes", "entraînement"]
       },
       {
         "id": "football-u6-u9-samedi-0900",
@@ -1320,7 +1311,7 @@
         "day": "samedi",
         "startTime": "09:00",
         "endTime": "11:00",
-        "tags": ["competition", "plateau", "matchs"],
+        "tags": ["compétition", "plateau", "matchs"],
         "notes": "Plateaux, matchs amicaux et ateliers."
       },
       {
@@ -1329,7 +1320,7 @@
         "locationId": "la-plaine",
         "type": "match",
         "day": "samedi",
-        "tags": ["competition", "matchs"],
+        "tags": ["compétition", "matchs"],
         "notes": "10h ou 11h selon calendrier FFF."
       },
       {
@@ -1338,7 +1329,7 @@
         "locationId": "la-plaine",
         "type": "match",
         "day": "samedi",
-        "tags": ["competition", "matchs"],
+        "tags": ["compétition", "matchs"],
         "notes": "15h ou 17h selon calendrier FFF."
       },
       {
@@ -1348,16 +1339,16 @@
         "type": "match",
         "day": "dimanche",
         "startTime": "13:00",
-        "tags": ["competition", "matchs"],
-        "notes": "Horaire de fin a confirmer."
+        "tags": ["compétition", "matchs"],
+        "notes": "Horaire de fin à confirmer."
       },
       {
-        "id": "football-u17-u18-competition",
+        "id": "football-u17-u18-compétition",
         "practiceGroupId": "fg-u17-u18",
         "locationId": "la-plaine",
         "type": "match",
-        "tags": ["competition", "matchs"],
-        "notes": "Selon calendrier. Horaire a confirmer."
+        "tags": ["compétition", "matchs"],
+        "notes": "Selon calendrier. Horaire à confirmer."
       },
       {
         "id": "football-senior-fsgt-vendredi-2030",
@@ -1367,7 +1358,7 @@
         "day": "vendredi",
         "startTime": "20:30",
         "endTime": "22:00",
-        "tags": ["competition", "matchs", "fsgt", "adultes"]
+        "tags": ["compétition", "matchs", "fsgt", "adultes"]
       },
       {
         "id": "football-senior-cdm-dimanche-1100",
@@ -1377,7 +1368,7 @@
         "day": "dimanche",
         "startTime": "11:00",
         "endTime": "13:00",
-        "tags": ["competition", "matchs", "cdm", "adultes"]
+        "tags": ["compétition", "matchs", "cdm", "adultes"]
       },
       {
         "id": "football-senior-fff-dimanche-1500",
@@ -1387,7 +1378,7 @@
         "day": "dimanche",
         "startTime": "15:00",
         "endTime": "17:00",
-        "tags": ["competition", "matchs", "fff", "adultes"]
+        "tags": ["compétition", "matchs", "fff", "adultes"]
       }
     ],
     "prices": [
@@ -1435,26 +1426,25 @@
     "title": "Gymnastique d'entretien",
     "shortName": "Gym entretien",
     "icon": "🤸",
-    "shortDescription": "Bouger regulierement, entretenir mobilite, tonicite et equilibre.",
+    "shortDescription": "Bouger régulièrement, entretenir mobilité, tonicite et equilibre.",
     "description": "Une pratique d'entretien physique pour garder du mouvement et une forme reguliere.",
     "category": ["forme"],
     "publics": ["adultes"],
-    "tags": ["mobilite", "tonicite", "equilibre"],
+    "tags": ["mobilité", "tonicite", "equilibre"],
     "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
       "heroSubtitle": "Seance d'entretien physique sur l'heure du midi, le jeudi a La Plaine.",
-      "heroBadges": ["Forme", "Mobilite", "Adultes"],
       "introText": "Une pratique d'entretien physique pour garder du mouvement et une forme reguliere, sur la pause du midi.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Gymnastique d'entretien",
         "audience": "Adultes",
-        "description": "Mobilite, tonicite, renforcement doux et equilibre dans une seance accessible a tous.",
+        "description": "Mobilite, tonicite, renforcement doux et equilibre dans une séance accèssible a tous.",
         "tags": ["Mobilite", "Tonicite", "Midi"]
       }
     ],
@@ -1516,11 +1506,10 @@
     "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a087d92a2195db261c2462f&step=1",
     "content": {
       "heroSubtitle": "Judo enfants de 5 a 13 ans, a La Plaine et a Cambronne.",
-      "heroBadges": ["Judo", "Technique", "Respect"],
-      "introText": "Le judo combine apprentissage technique, progression par ceintures et cadre collectif structurant. La section participe a des competitions FSGT et FFJDA.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "introText": "Le judo combine apprentissage technique, progression par ceintures et cadre collectif structurant. La section participe a des compétitions FSGT et FFJDA.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -1532,7 +1521,7 @@
       {
         "title": "Judo 8-13 ans",
         "audience": "Enfants",
-        "description": "Apprentissage technique, progression par ceintures et initiation a la competition.",
+        "description": "Apprentissage technique, progression par ceintures et initiation à la compétition.",
         "tags": ["Technique", "Ceintures", "Competition"]
       }
     ],
@@ -1648,7 +1637,7 @@
     "shortName": "Natation",
     "icon": "🏊",
     "shortDescription": "Apprentissage, perfectionnement et endurance selon niveau.",
-    "description": "Une activite aquatique progressive pour apprendre, se perfectionner et nager regulierement.",
+    "description": "Une activité aquatique progressive pour apprendre, se perfectionner et nager régulièrement.",
     "category": ["eau"],
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["eau", "technique", "endurance"],
@@ -1656,17 +1645,16 @@
     "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a087f144a10348b5bc848b6&step=1",
     "content": {
       "heroSubtitle": "Initiation et perfectionnement des 6 ans, le vendredi a la piscine Emile Anthoine.",
-      "heroBadges": ["Natation", "Technique", "Endurance"],
-      "introText": "Une activite aquatique progressive organisee en quatre groupes de niveaux, de l'initiation au perfectionnement technique. Prevoir trois photos d'identite pour l'inscription.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "introText": "Une activité aquatique progressive organisee en quatre groupes de niveaux, de l'initiation au perfectionnement technique. Prévoir trois photos d'identité pour l'inscription.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Apprentissage et perfectionnement",
         "audience": "Enfants et jeunes des 6 ans",
-        "description": "Quatre groupes de niveaux, de l'initiation a l'aisance aquatique, au perfectionnement technique et a l'endurance.",
+        "description": "Quatre groupes de niveaux, de l'initiation à l'aisance aquatique, au perfectionnement technique et à l'endurance.",
         "tags": ["Initiation", "Technique", "Niveaux"]
       }
     ],
@@ -1721,19 +1709,18 @@
     "shortName": "Pilates",
     "icon": "◌",
     "shortDescription": "Renforcement profond, posture et controle du mouvement.",
-    "description": "Une pratique de forme axee sur le gainage, la posture et la qualite du mouvement.",
+    "description": "Une pratique de forme axée sur le gainage, la posture et la qualite du mouvement.",
     "category": ["forme"],
     "publics": ["adultes"],
-    "tags": ["posture", "gainage", "mobilite"],
+    "tags": ["posture", "gainage", "mobilité"],
     "image": "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a087fd43a52e5d3b5d0eef5&step=1",
     "content": {
       "heroSubtitle": "Renforcement profond, posture et controle du mouvement, le jeudi a Cambronne.",
-      "heroBadges": ["Pilates", "Gainage", "Adultes"],
-      "introText": "Une pratique de forme axee sur le gainage, la posture et la qualite du mouvement, accessible a tous les niveaux.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "introText": "Une pratique de forme axée sur le gainage, la posture et la qualite du mouvement, accèssible a tous les niveaux.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -1793,7 +1780,7 @@
     "shortName": "Renfo",
     "icon": "💪",
     "shortDescription": "Seances toniques pour developper force, gainage et condition physique.",
-    "description": "Une pratique forme et condition physique pour entretenir la tonicite et la regularite.",
+    "description": "Une pratique forme et condition physique pour entretenir la tonicite et la régularité.",
     "category": ["forme"],
     "publics": ["adultes"],
     "tags": ["force", "gainage", "condition physique"],
@@ -1801,11 +1788,10 @@
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
       "heroSubtitle": "Seances toniques de renforcement, le vendredi a Cambronne.",
-      "heroBadges": ["Renfo", "Force", "Adultes"],
-      "introText": "Une pratique forme et condition physique pour entretenir la tonicite, la force et la regularite.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "introText": "Une pratique forme et condition physique pour entretenir la tonicite, la force et la régularité.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -1873,17 +1859,16 @@
     "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a069e69c835fb47c0d46cf7&step=1",
     "content": {
       "heroSubtitle": "Initiation multisports pour enfants des 5 ans, le mercredi apres-midi.",
-      "heroBadges": ["Enfants", "Multisports", "Mercredi"],
-      "introText": "Une offre multisports encadree par des etudiants en STAPS, avec changement de discipline chaque trimestre. L'activite suit le calendrier scolaire.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "introText": "Une offre multisports encadrée par des étudiants en STAPS, avec changement de discipline chaque trimestre. L'activité suit le calendrier scolaire.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Initiation multisports",
         "audience": "Enfants des 5 ans",
-        "description": "Athletisme, badminton, basket, football, gymnastique, judo... une decouverte variee, encadree par des etudiants en STAPS.",
+        "description": "Athletisme, badminton, basket, football, gymnastique, judo... une decouverte variee, encadrée par des étudiants en STAPS.",
         "tags": ["Multisports", "Decouverte", "Encadre"]
       }
     ],
@@ -1937,26 +1922,25 @@
     "title": "Stretching",
     "shortName": "Stretching",
     "icon": "⌁",
-    "shortDescription": "Souplesse, mobilite et recuperation dans une pratique accessible.",
-    "description": "Une activite douce pour entretenir la mobilite et recuperer sans charge excessive.",
+    "shortDescription": "Souplesse, mobilité et recuperation dans une pratique accèssible.",
+    "description": "Une activité douce pour entretenir la mobilité et récupérer sans charge excessive.",
     "category": ["forme"],
     "publics": ["adultes"],
-    "tags": ["souplesse", "mobilite", "recuperation"],
+    "tags": ["souplesse", "mobilité", "recuperation"],
     "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Souplesse, mobilite et recuperation, le lundi soir a Cambronne.",
-      "heroBadges": ["Souplesse", "Mobilite", "Adultes"],
-      "introText": "Une activite douce pour entretenir la mobilite et recuperer sans charge excessive, sur deux creneaux le lundi soir.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "heroSubtitle": "Souplesse, mobilité et recuperation, le lundi soir a Cambronne.",
+      "introText": "Une activité douce pour entretenir la mobilité et récupérer sans charge excessive, sur deux créneaux le lundi soir.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Stretching",
         "audience": "Adultes",
-        "description": "Travail de souplesse, de mobilite et de recuperation dans une pratique douce.",
+        "description": "Travail de souplesse, de mobilité et de recuperation dans une pratique douce.",
         "tags": ["Souplesse", "Mobilite", "Recuperation"]
       }
     ],
@@ -2020,19 +2004,18 @@
     "shortName": "Tennis",
     "icon": "🎾",
     "shortDescription": "Cours et pratique selon niveau, creneau et objectif.",
-    "description": "Une activite raquette qui melange apprentissage technique, regularite et jeu.",
+    "description": "Une activité raquette qui mélange apprentissage technique, régularité et jeu.",
     "category": ["raquette"],
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["raquette", "technique", "match"],
     "image": "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Ecole de tennis et tennis competition, de 5 ans aux adultes.",
-      "heroBadges": ["Raquette", "Technique", "Match"],
-      "introText": "Une activite raquette qui melange apprentissage technique, regularite et jeu, avec une ecole de tennis par tranches d'age et un groupe competition.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "heroSubtitle": "Ecole de tennis et tennis compétition, de 5 ans aux adultes.",
+      "introText": "Une activité raquette qui mélange apprentissage technique, régularité et jeu, avec une école de tennis par tranches d'age et un groupe compétition.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -2167,7 +2150,7 @@
     ],
     "prices": [
       {
-        "id": "tennis-2025-2026-ecole-1h",
+        "id": "tennis-2025-2026-école-1h",
         "season": "2025/2026",
         "label": "Tennis Ecole - cours 1h",
         "clubFee": 75,
@@ -2176,7 +2159,7 @@
         "extraFees": []
       },
       {
-        "id": "tennis-2025-2026-ecole-1h30",
+        "id": "tennis-2025-2026-école-1h30",
         "season": "2025/2026",
         "label": "Tennis Ecole - cours 1h30",
         "clubFee": 75,
@@ -2185,7 +2168,7 @@
         "extraFees": []
       },
       {
-        "id": "tennis-2025-2026-competition",
+        "id": "tennis-2025-2026-compétition",
         "season": "2025/2026",
         "label": "Tennis Competition (FSGT)",
         "clubFee": 75,
@@ -2203,15 +2186,15 @@
       {
         "id": "contact-tennis",
         "name": "Section Tennis ESCXV",
-        "role": "Contact ecole",
+        "role": "Contact école",
         "email": "tennis@esc15.fr",
         "phone": null
       },
       {
-        "id": "contact-tennis-competition",
+        "id": "contact-tennis-compétition",
         "name": "Tennis Competition",
-        "role": "Contact competition",
-        "email": "tennis-competition@esc15.fr",
+        "role": "Contact compétition",
+        "email": "tennis-compétition@esc15.fr",
         "phone": null
       }
     ]
@@ -2222,32 +2205,31 @@
     "title": "Tennis de table",
     "shortName": "Ping",
     "icon": "🏓",
-    "shortDescription": "Reflexes, precision et jeu rapide dans une activite accessible.",
-    "description": "Une activite de salle technique et vive, adaptee aux jeunes comme aux adultes.",
+    "shortDescription": "Réflexes, précision et jeu rapide dans une activité accèssible.",
+    "description": "Une activité de salle technique et vive, adaptée aux jeunes comme aux adultes.",
     "category": ["raquette"],
     "publics": ["adolescents", "adultes"],
-    "tags": ["raquette", "precision", "salle"],
+    "tags": ["raquette", "précision", "salle"],
     "image": "https://images.unsplash.com/photo-1611251135345-18c56206b863?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
       "heroSubtitle": "Tennis de table pour jeunes et adultes, a La Plaine et a Cambronne.",
-      "heroBadges": ["Raquette", "Precision", "Salle"],
-      "introText": "Une activite de salle technique et vive, adaptee aux jeunes comme aux adultes, en entrainement comme en loisir. Les adultes sont limites a deux seances par semaine.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "introText": "Une activité de salle technique et vive, adaptée aux jeunes comme aux adultes, en entraînement comme en loisir. Les adultes sont limités a deux séances par semaine.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Jeunes",
         "audience": "Enfants et moins de 18 ans",
-        "description": "Du panier de balles pour les plus jeunes aux entrainements encadres pour les moins de 18 ans.",
+        "description": "Du panier de balles pour les plus jeunes aux entraînements encadres pour les moins de 18 ans.",
         "tags": ["Initiation", "Entrainement", "Jeunes"]
       },
       {
         "title": "Adultes",
         "audience": "Adultes",
-        "description": "Entrainement et creneaux loisir pour jouer regulierement, dans la limite de deux seances par semaine.",
+        "description": "Entrainement et créneaux loisir pour jouer régulièrement, dans la limite de deux séances par semaine.",
         "tags": ["Entrainement", "Loisir", "Adultes"]
       }
     ],
@@ -2267,8 +2249,8 @@
         "sortOrder": 2
       },
       {
-        "id": "tt-adultes-entrainement",
-        "label": "Adultes - entrainement",
+        "id": "tt-adultes-entraînement",
+        "label": "Adultes - entraînement",
         "public": "adultes",
         "gender": "mixte",
         "sortOrder": 3
@@ -2325,8 +2307,8 @@
         "tags": []
       },
       {
-        "id": "tt-adultes-entrainement-lundi",
-        "practiceGroupId": "tt-adultes-entrainement",
+        "id": "tt-adultes-entraînement-lundi",
+        "practiceGroupId": "tt-adultes-entraînement",
         "locationId": "la-plaine",
         "type": "training",
         "day": "lundi",
@@ -2403,19 +2385,18 @@
     "shortName": "Volley",
     "icon": "🏐",
     "shortDescription": "Jeu collectif, coordination et pratique conviviale en salle.",
-    "description": "Une pratique collective orientee coordination, jeu et regularite de groupe.",
+    "description": "Une pratique collective orientee coordination, jeu et régularité de groupe.",
     "category": ["collectif"],
     "publics": ["adolescents", "adultes"],
     "tags": ["equipe", "salle", "loisir"],
     "image": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
-      "heroSubtitle": "Ecole, plaisir, competition et beach-volley, en salle et en exterieur.",
-      "heroBadges": ["Collectif", "Salle", "Adolescents"],
-      "introText": "Une pratique collective orientee coordination, jeu et regularite de groupe, du perfectionnement a la competition FSGT et au beach-volley. Le turn-over est faible : peu de places sont disponibles.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "heroSubtitle": "Ecole, plaisir, compétition et beach-volley, en salle et en exterieur.",
+      "introText": "Une pratique collective orientee coordination, jeu et régularité de groupe, du perfectionnement a la compétition FSGT et au beach-volley. Le turn-over est faible : peu de places sont disponibles.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -2427,7 +2408,7 @@
       {
         "title": "Plaisir",
         "audience": "Adultes",
-        "description": "Pratique recreative pour d'anciens joueurs et des seniors, hors competition.",
+        "description": "Pratique recreative pour d'anciens joueurs et des seniors, hors compétition.",
         "tags": ["Loisir", "Convivialite", "Adultes"]
       },
       {
@@ -2439,7 +2420,7 @@
     ],
     "practiceGroups": [
       {
-        "id": "volley-ecole",
+        "id": "volley-école",
         "label": "Ecole & perfectionnement",
         "public": "adolescents",
         "gender": "mixte",
@@ -2453,7 +2434,7 @@
         "sortOrder": 2
       },
       {
-        "id": "volley-competition",
+        "id": "volley-compétition",
         "label": "Competition",
         "public": "adultes",
         "gender": "mixte",
@@ -2470,8 +2451,8 @@
     "locationIds": ["croix-nivert", "la-plaine", "brancion"],
     "schedules": [
       {
-        "id": "volley-ecole-samedi-13",
-        "practiceGroupId": "volley-ecole",
+        "id": "volley-école-samedi-13",
+        "practiceGroupId": "volley-école",
         "locationId": "croix-nivert",
         "type": "training",
         "day": "samedi",
@@ -2480,8 +2461,8 @@
         "tags": []
       },
       {
-        "id": "volley-ecole-samedi-14",
-        "practiceGroupId": "volley-ecole",
+        "id": "volley-école-samedi-14",
+        "practiceGroupId": "volley-école",
         "locationId": "croix-nivert",
         "type": "training",
         "day": "samedi",
@@ -2490,8 +2471,8 @@
         "tags": []
       },
       {
-        "id": "volley-ecole-samedi-1830",
-        "practiceGroupId": "volley-ecole",
+        "id": "volley-école-samedi-1830",
+        "practiceGroupId": "volley-école",
         "locationId": "croix-nivert",
         "type": "training",
         "day": "samedi",
@@ -2508,11 +2489,11 @@
         "startTime": "19:30",
         "endTime": "22:30",
         "tags": [],
-        "notes": "Lieu a confirmer aupres de la section."
+        "notes": "Lieu à confirmer auprès de la section."
       },
       {
-        "id": "volley-competition-mercredi",
-        "practiceGroupId": "volley-competition",
+        "id": "volley-compétition-mercredi",
+        "practiceGroupId": "volley-compétition",
         "locationId": "la-plaine",
         "type": "training",
         "day": "mercredi",
@@ -2533,7 +2514,7 @@
     ],
     "prices": [
       {
-        "id": "volley-2025-2026-ecole",
+        "id": "volley-2025-2026-école",
         "season": "2025/2026",
         "label": "Ecole",
         "clubFee": 75,
@@ -2551,7 +2532,7 @@
         "extraFees": []
       },
       {
-        "id": "volley-2025-2026-competition",
+        "id": "volley-2025-2026-compétition",
         "season": "2025/2026",
         "label": "Competition",
         "clubFee": 75,
@@ -2571,15 +2552,15 @@
     ],
     "contacts": [
       {
-        "id": "contact-volley-ecole",
+        "id": "contact-volley-école",
         "name": "Volley Ecole",
-        "role": "Contact ecole",
-        "email": "volley-ecole@esc15.fr",
+        "role": "Contact école",
+        "email": "volley-école@esc15.fr",
         "phone": null
       },
       {
         "id": "contact-volley",
-        "name": "Volley plaisir, competition & beach",
+        "name": "Volley plaisir, compétition & beach",
         "role": "Contact section",
         "email": "volley@esc15.fr",
         "phone": "06 80 11 20 62"
@@ -2592,20 +2573,19 @@
     "title": "Yoga",
     "shortName": "Yoga",
     "icon": "🧘",
-    "shortDescription": "Respiration, mobilite et equilibre pour une pratique reguliere.",
-    "description": "Une pratique douce pour gagner en mobilite, respiration et stabilite au quotidien.",
+    "shortDescription": "Respiration, mobilité et equilibre pour une pratique reguliere.",
+    "description": "Une pratique douce pour gagner en mobilité, respiration et stabilite au quotidien.",
     "category": ["forme"],
     "publics": ["adultes"],
-    "tags": ["respiration", "mobilite", "bien-etre"],
+    "tags": ["respiration", "mobilité", "bien-etre"],
     "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/",
     "content": {
       "heroSubtitle": "Hatha-yoga ouvert a tous, le mardi soir a Cambronne.",
-      "heroBadges": ["Yoga", "Respiration", "Adultes"],
-      "introText": "Une pratique douce pour gagner en mobilite, respiration et stabilite. Les cours sont ouverts a tous, debutants ou pratiquants confirmes, et suivent le calendrier scolaire.",
-      "schedulesNoticeText": "Les creneaux affiches correspondent a la saison 2025/2026 et restent a confirmer aupres de la section.",
-      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation a l'activite.",
-      "contactText": "Ecrivez a la section pour toute question sur l'inscription, la seance d'essai ou le choix du groupe."
+      "introText": "Une pratique douce pour gagner en mobilité, respiration et stabilite. Les cours sont ouverts a tous, débutants ou pratiquants confirmés, et suivent le calendrier scolaire.",
+      "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
+      "pricesSubtitle": "Cotisation pour la saison 2025/2026 : cotisation club unique de 75 EUR + participation à l'activité.",
+      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {

@@ -25,11 +25,8 @@ export function NewsExplorer({
     filteredNews,
     hasActiveFilters,
     query,
-    scopeFilter,
-    scopeOptions,
     setActivityFilter,
     setQuery,
-    setScopeFilter,
     setSortOrder,
     setYearFilter,
     sortOrder,
@@ -56,28 +53,6 @@ export function NewsExplorer({
                 className={styles.searchInput}
               />
             </label>
-          </div>
-
-          <div className={styles.filters} aria-label="Filtres d'actualités">
-            {scopeOptions.map((filterOption) => {
-              const isActive = scopeFilter === filterOption.value;
-
-              return (
-                <button
-                  key={filterOption.value}
-                  type="button"
-                  aria-pressed={isActive}
-                  onClick={() => setScopeFilter(filterOption.value)}
-                  className={
-                    isActive
-                      ? `${styles.filterButton} ${styles.filterButtonActive}`
-                      : styles.filterButton
-                  }
-                >
-                  {filterOption.label}
-                </button>
-              );
-            })}
           </div>
 
           <div className={styles.selectGrid}>
@@ -128,7 +103,6 @@ export function NewsExplorer({
                 type="button"
                 onClick={() => {
                   setQuery("");
-                  setScopeFilter("all");
                   setActivityFilter("all");
                   setYearFilter("all");
                   setSortOrder("recent");

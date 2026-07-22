@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { CSSProperties, ReactNode } from "react";
-import { Badge } from "@/components/ui/Badge/Badge";
 import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
@@ -38,10 +37,6 @@ function formatNewsDate(value: string) {
   return dateFormatter.format(new Date(value));
 }
 
-function getNewsScopeLabel(newsItem: NewsItem) {
-  return newsItem.activitySlug ? "Section" : "Club";
-}
-
 function NewsPreviewCard({ newsItem, index }: NewsPreviewCardProps) {
   return (
     <article
@@ -71,10 +66,6 @@ function NewsPreviewCard({ newsItem, index }: NewsPreviewCardProps) {
           <time dateTime={newsItem.publishedAt}>
             {formatNewsDate(newsItem.publishedAt)}
           </time>
-          <Badge variant={newsItem.activitySlug ? "brand" : "neutral"}>
-            {getNewsScopeLabel(newsItem)}
-          </Badge>
-          {newsItem.isPinned ? <Badge variant="brand">À la une</Badge> : null}
           {newsItem.readingTime ? (
             <span className={styles.readingTime}>{newsItem.readingTime}</span>
           ) : null}

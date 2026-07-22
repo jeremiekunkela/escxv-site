@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { CSSProperties, ReactNode } from "react";
-import { Badge } from "@/components/ui/Badge/Badge";
 import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
 import { NewsList } from "@/features/news/components/NewsList/NewsList";
@@ -28,10 +27,6 @@ const dateFormatter = new Intl.DateTimeFormat("fr-FR", {
 
 function formatNewsDate(value: string) {
   return dateFormatter.format(new Date(value));
-}
-
-function getNewsScopeLabel(newsItem: NewsItem) {
-  return newsItem.activitySlug ? "Section" : "Club";
 }
 
 function getNewsArticleBlocks(newsItem: NewsItem): NewsArticleBlock[] {
@@ -177,10 +172,6 @@ export function NewsArticlePage({
               <time dateTime={newsItem.publishedAt}>
                 {formatNewsDate(newsItem.publishedAt)}
               </time>
-              <Badge variant={newsItem.activitySlug ? "brand" : "neutral"}>
-                {getNewsScopeLabel(newsItem)}
-              </Badge>
-              {newsItem.isPinned ? <Badge variant="brand">A la une</Badge> : null}
               {newsItem.readingTime ? (
                 <span className={styles.readingTime}>{newsItem.readingTime}</span>
               ) : null}
