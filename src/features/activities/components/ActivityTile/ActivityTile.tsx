@@ -11,8 +11,8 @@ type ActivityTileProps = {
 };
 
 /**
- * Entree du repertoire d'activites : une ligne scannable, sans photo ni
- * description. Le detail vit sur la page de l'activite.
+ * Entrée du repertoire d'activités : une ligne scannable, sans photo ni
+ * description. Le detail vit sur la page de l'activité.
  */
 export function ActivityTile({ activity }: ActivityTileProps) {
   return (

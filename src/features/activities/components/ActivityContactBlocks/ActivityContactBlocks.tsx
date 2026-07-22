@@ -15,7 +15,7 @@ export function ActivityContactBlocks({ contacts }: ActivityContactBlocksProps) 
   if (contacts.length === 0) {
     return (
       <div className={styles.empty}>
-        Les coordonnees de la section ne sont pas encore disponibles.
+        Les coordonnées de la section ne sont pas encore disponibles.
       </div>
     );
   }

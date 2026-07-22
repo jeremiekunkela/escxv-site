@@ -2,7 +2,7 @@
   position: relative;
   min-height: min(740px, 84vh);
   display: flex;
-  align-items: end;
+  align-items: center;
   overflow: hidden;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 25%, #f1f5f9 100%);
   color: var(--color-text-inverse);
@@ -27,7 +27,7 @@
 .inner {
   position: relative;
   z-index: 1;
-  padding: 150px 0 52px;
+  padding: 112px 0 84px;
 }
 
 .content {
@@ -99,28 +99,6 @@
   box-shadow: 0 14px 38px rgba(8, 21, 36, 0.34);
 }
 
-.badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  margin: 20px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.badge {
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.12);
-  padding: 4px 10px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
-  backdrop-filter: blur(12px);
-  animation: badgeFloatIn 520ms ease-out both;
-  animation-delay: var(--badge-delay, 0ms);
-}
-
 @keyframes heroImageSettle {
   from {
     opacity: 0.74;
@@ -133,26 +111,14 @@
   }
 }
 
-@keyframes badgeFloatIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 720px) {
   .hero {
     min-height: 620px;
   }
 
   .inner {
-    padding-top: 122px;
-    padding-bottom: 36px;
+    padding-top: 104px;
+    padding-bottom: 64px;
   }
 
   .eyebrow {
@@ -162,8 +128,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .image,
-  .badge {
+  .image {
     animation: none;
   }
 }

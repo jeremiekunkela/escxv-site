@@ -1,16 +1,18 @@
 {
   "hero": {
     "eyebrow": "Club omnisports de quartier depuis 1910",
-    "title": "Le sport a Paris 15, c'est l'ESCXV",
-    "subtitle": "Retrouvez les activites, les horaires et les contacts de l'ESCXV sans naviguer dans plusieurs sources.",
+    "title": "Le sport à Paris 15, c'est l'ESCXV",
     "imageUrl": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1800&q=80",
-    "badges": ["Paris 15", "Omnisports", "Saison 2025/2026"],
-    "primaryCtaLabel": "Trouver une activite",
-    "primaryCtaHref": "#activities"
+    "primaryCtaLabel": "Inscription",
+    "primaryCtaHref": "https://escxv.monclub.app/",
+    "primaryCtaTarget": "_blank",
+    "primaryCtaRel": "noopener noreferrer",
+    "secondaryCtaLabel": "Trouver une activité",
+    "secondaryCtaHref": "#activities"
   },
   "activitiesSection": {
-    "eyebrow": "Activites",
-    "title": "Nos activites",
-    "subtitle": "Decouvrez les sections sportives de l'ESCXV et accedez en priorite a celles qui sont deja ouvertes."
+    "eyebrow": "Activités",
+    "title": "Nos activités",
+    "subtitle": "Découvrez les sections sportives de l'ESCXV et accédez en priorité à celles qui sont déjà ouvertes."
   }
 }

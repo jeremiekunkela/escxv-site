@@ -49,7 +49,7 @@ export type Installation = ActivityLocation & {
 
 /**
  * Index inverse lieu -> sports : pour chaque installation du registre,
- * la liste des activites qui s'y pratiquent (calcule depuis les locationIds).
+ * la liste des activités qui s'y pratiquent (calculée depuis les locationIds).
  */
 export function getInstallations(): Installation[] {
   return (locations as ActivityLocation[]).map((location) => ({

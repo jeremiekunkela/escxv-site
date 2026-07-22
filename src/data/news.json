@@ -3,9 +3,9 @@
     "id": "club-nouveau-site-2026",
     "title": "L'ESCXV lance son nouveau site : plus clair, plus complet, plus pratique",
     "slug": "nouveau-site-esc-xv-2026",
-    "subtitle": "Un site repense autour des sections, des lieux de pratique et des informations vraiment utiles aux familles.",
-    "excerpt": "Le club met en ligne un nouveau site pour retrouver plus facilement les sections, les horaires, les lieux de pratique et les actualites.",
-    "content": "L'ESCXV met en ligne un nouveau site pour rendre l'information plus simple a trouver : sections, horaires, lieux de pratique, equipements et contacts sont desormais regroupes au meme endroit.",
+    "subtitle": "Un site repensé autour des sections, des lieux de pratique et des informations vraiment utiles aux familles.",
+    "excerpt": "Le club met en ligne un nouveau site pour retrouver plus facilement les sections, les horaires, les lieux de pratique et les actualités.",
+    "content": "L'ESCXV met en ligne un nouveau site pour rendre l'information plus simple à trouver : sections, horaires, lieux de pratique, équipements et contacts sont désormais regroupés au même endroit.",
     "coverImage": "https://images.unsplash.com/photo-1573867639040-6dd25fa5f597?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "coverImageAlt": "Une equipe travaille ensemble autour d'un ordinateur portable.",
     "publishedAt": "2026-07-03T09:00:00.000Z",
@@ -13,24 +13,24 @@
     "type": "club",
     "isPinned": true,
     "activitySlug": null,
-    "seoDescription": "Decouvrez le nouveau site de l'ESCXV : sections, lieux de pratique, horaires et actualites au meme endroit.",
+    "seoDescription": "Découvrez le nouveau site de l'ESCXV : sections, lieux de pratique, horaires et actualités au même endroit.",
     "readingTime": "2 min",
     "summaryPoints": [
-      "Toutes les sections reunies au meme endroit",
-      "Lieux de pratique et equipements detailles",
+      "Toutes les sections reunies au même endroit",
+      "Lieux de pratique et équipements détaillés",
       "Informations pratiques mises a jour"
     ],
     "blocks": [
       {
         "type": "heading",
-        "title": "Un site pense pour aller a l'essentiel",
+        "title": "Un site pensé pour aller à l'essentiel",
         "subtitle": "Moins de contenu generique, davantage d'informations pratiques et fiables."
       },
       {
         "type": "text",
         "paragraphs": [
           "Le club met en ligne un nouveau site pour faciliter le quotidien des adherents et des familles. L'objectif est simple : permettre a chacun de trouver rapidement la bonne information, sans avoir a chercher longtemps.",
-          "Les sections, les horaires, les lieux de pratique, les equipements disponibles et les contacts sont desormais regroupes et presentes de maniere coherente d'une page a l'autre."
+          "Les sections, les horaires, les lieux de pratique, les équipements disponibles et les contacts sont désormais regroupés et présentés de manière cohérente d'une page à l'autre."
         ]
       },
       {
@@ -40,20 +40,20 @@
       {
         "type": "text",
         "paragraphs": [
-          "Explorez les sections pour decouvrir les disciplines proposees et trouver celle qui vous correspond : chaque activite detaille ses creneaux, ses groupes, ses tarifs et son contact.",
-          "Reperez ou vous entrainer du cote des installations : adresse, equipements et sports pratiques sur chaque site, avec un filtre par sport pour aller droit au but.",
-          "Suivez la vie du club dans les actualites : annonces et informations pratiques y sont publiees au fil de l'eau, les plus recentes en premier."
+          "Explorez les sections pour découvrir les disciplines proposées et trouver celle qui vous correspond : chaque activité détaille ses créneaux, ses groupes, ses tarifs et son contact.",
+          "Repérez où vous entraîner du côté des installations : adresse, équipements et sports pratiqués sur chaque site, avec un filtre par sport pour aller droit au but.",
+          "Suivez la vie du club dans les actualités : annonces et informations pratiques y sont publiées au fil de l'eau, les plus récentes en premier."
         ]
       },
       {
         "type": "heading",
-        "title": "Un site qui va continuer d'evoluer"
+        "title": "Un site qui va continuer d'évoluer"
       },
       {
         "type": "text",
         "paragraphs": [
-          "Ce nouveau site est une premiere etape. Les contenus seront enrichis au fil des semaines avec de nouvelles actualites, des informations complementaires par section et des mises a jour au rythme des responsables.",
-          "N'hesitez pas a revenir regulierement : les informations pratiques et les actualites du club seront publiees ici en priorite."
+          "Ce nouveau site est une premiere etape. Les contenus seront enrichis au fil des semaines avec de nouvelles actualités, des informations complementaires par section et des mises a jour au rythme des responsables.",
+          "N.hésitez pas à revenir régulièrement : les informations pratiques et les actualités du club seront publiées ici en priorité."
         ]
       }
     ]

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import type { CSSProperties } from "react";
 import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
 import type { Cta } from "@/types/content";
@@ -8,11 +7,10 @@ import styles from "./HeroSection.module.css";
 type HeroSectionProps = {
   eyebrow: string;
   title: string;
-  description: string;
+  description?: string;
   imageUrl: string;
   primaryCta: Cta;
   secondaryCta?: Cta;
-  badges?: string[];
   enableRegistrationHandoff?: boolean;
 };
 
@@ -23,13 +21,13 @@ export function HeroSection({
   imageUrl,
   primaryCta,
   secondaryCta,
-  badges = [],
   enableRegistrationHandoff = false,
 }: HeroSectionProps) {
   return (
     <section
       className={styles.hero}
       data-activity-detail-hero={enableRegistrationHandoff ? true : undefined}
+      data-registration-handoff-hero={enableRegistrationHandoff ? true : undefined}
     >
       <Image
         src={imageUrl}
@@ -48,24 +46,25 @@ export function HeroSection({
           <h1
             className={styles.title}
             data-reveal
-            style={{ "--reveal-delay": "90ms" } as CSSProperties}
           >
             {title}
           </h1>
-          <p
-            className={styles.description}
-            data-reveal
-            style={{ "--reveal-delay": "160ms" } as CSSProperties}
-          >
-            {description}
-          </p>
+          {description ? (
+            <p
+              className={styles.description}
+              data-reveal
+            >
+              {description}
+            </p>
+          ) : null}
           <div
             className={styles.actions}
             data-reveal
-            style={{ "--reveal-delay": "230ms" } as CSSProperties}
           >
             <Button
               href={primaryCta.href}
+              target={primaryCta.target}
+              rel={primaryCta.rel}
               className={styles.primaryAction}
               dataActivityRegistrationSource={
                 enableRegistrationHandoff ? "primary" : undefined
@@ -76,6 +75,8 @@ export function HeroSection({
             {secondaryCta ? (
               <Button
                 href={secondaryCta.href}
+                target={secondaryCta.target}
+                rel={secondaryCta.rel}
                 variant="secondary"
                 className={styles.secondaryAction}
               >
@@ -83,21 +84,6 @@ export function HeroSection({
               </Button>
             ) : null}
           </div>
-          {badges.length > 0 ? (
-            <ul className={styles.badges} data-reveal="fade">
-              {badges.map((badge, index) => (
-                <li
-                  key={badge}
-                  className={styles.badge}
-                  style={
-                    { "--badge-delay": `${320 + index * 60}ms` } as CSSProperties
-                  }
-                >
-                  {badge}
-                </li>
-              ))}
-            </ul>
-          ) : null}
         </div>
       </Container>
     </section>

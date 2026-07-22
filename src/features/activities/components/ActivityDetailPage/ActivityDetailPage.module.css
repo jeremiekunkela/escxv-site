@@ -6,20 +6,6 @@
   padding-bottom: 96px;
 }
 
-.floatingRegistration {
-  position: fixed;
-  right: max(24px, env(safe-area-inset-right));
-  bottom: max(24px, env(safe-area-inset-bottom));
-  z-index: 40;
-  transform-origin: center;
-  will-change: transform, opacity;
-}
-
-.floatingRegistrationButton {
-  box-shadow: 0 16px 44px rgba(var(--color-brand-rgb), 0.36);
-  white-space: nowrap;
-}
-
 .surface {
   background: rgba(255, 255, 255, 0.76);
 }
@@ -72,14 +58,4 @@
     padding-bottom: 116px;
   }
 
-  .floatingRegistration {
-    right: 16px;
-    bottom: max(16px, env(safe-area-inset-bottom));
-    left: 16px;
-    width: auto;
-  }
-
-  .floatingRegistrationButton {
-    width: 100%;
-  }
 }

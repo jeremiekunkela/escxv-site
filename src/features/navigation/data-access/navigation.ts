@@ -9,8 +9,7 @@ import type {
 } from "@/features/navigation/types/navigation";
 
 const mainLinks: NavigationLink[] = [
-  { label: "Accueil", href: routes.home },
-  { label: "Installations", href: routes.installations },
+  { label: "Association", href: routes.association },
   { label: "Actualités", href: routes.news },
 ];
 

@@ -1,10 +1,10 @@
 import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
 import { InfoBlock } from "@/components/shared/InfoBlock/InfoBlock";
 import { Container } from "@/components/ui/Container/Container";
+import { FloatingRegistrationButton } from "@/components/shared/FloatingRegistrationButton/FloatingRegistrationButton";
 import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
 import { ActivityContactBlocks } from "@/features/activities/components/ActivityContactBlocks/ActivityContactBlocks";
 import { ActivityContactForm } from "@/features/activities/components/ActivityContactForm/ActivityContactForm";
-import { ActivityFloatingRegistrationButton } from "@/features/activities/components/ActivityDetailPage/ActivityFloatingRegistrationButton";
 import { ActivityLocationCards } from "@/features/activities/components/ActivityLocationCards/ActivityLocationCards";
 import { ActivityPriceBlocks } from "@/features/activities/components/ActivityPriceBlocks/ActivityPriceBlocks";
 import { ActivityProgramCards } from "@/features/activities/components/ActivityProgramCards/ActivityProgramCards";
@@ -34,13 +34,13 @@ type ActivityDetailPageSectionProps = {
 
 const ACTIVITY_DETAIL_PAGE_COPY = {
   heroEyebrow: "Section",
-  introEyebrow: "Presentation",
+  introEyebrow: "Présentation",
   introTitle: "La section",
   schedulesEyebrow: "Horaires",
-  schedulesTitle: "Creneaux",
-  schedulesNoticeTitle: "Horaires a confirmer",
-  trainersEyebrow: "Entraineurs",
-  trainersTitle: "L'equipe d'encadrement",
+  schedulesTitle: "Créneaux",
+  schedulesNoticeTitle: "Horaires à confirmer",
+  trainersEyebrow: "Entraîneurs",
+  trainersTitle: "L'équipe d'encadrement",
   pricesEyebrow: "Tarifs",
   pricesTitle: "Tarifs de la saison",
   locationsEyebrow: "Lieux",
@@ -50,6 +50,12 @@ const ACTIVITY_DETAIL_PAGE_COPY = {
   contactEyebrow: "Contact",
   contactTitle: "Contacter la section",
 } as const;
+
+const getRegistrationCtaTarget = (href: string): "_blank" | undefined =>
+  href.includes("monclub.app") ? "_blank" : undefined;
+
+const getRegistrationCtaRel = (href: string) =>
+  href.includes("monclub.app") ? "noopener noreferrer" : undefined;
 
 function getContentOrFallback(content: string | undefined, fallback: string) {
   return content && content.trim().length > 0 ? content : fallback;
@@ -91,11 +97,11 @@ export function ActivityDetailPage({
   const hasContactChannels = hasContacts || hasSocialLinks;
   const schedulesSubtitle = getContentOrFallback(
     content.schedulesSubtitle,
-    "Retrouvez ici les creneaux actuellement communiques par la section.",
+    "Retrouvez ici les créneaux actuellement communiqués par la section.",
   );
   const schedulesNoticeText = getContentOrFallback(
     content.schedulesNoticeText,
-    "Les horaires seront communiques par la section des qu'ils seront confirmes.",
+    "Les horaires seront communiqués par la section dès qu'ils seront confirmés.",
   );
   const locationsSubtitle = getContentOrFallback(
     content.locationsSubtitle,
@@ -103,26 +109,31 @@ export function ActivityDetailPage({
   );
   const contactText = getContentOrFallback(
     content.contactText,
-    "Utilisez ces coordonnees pour toute question sur l'inscription, l'essai ou le bon groupe.",
+    "Utilisez ces coordonnées pour toute question sur l'inscription, l'essai ou le bon groupe.",
   );
   const emptyContactText = getContentOrFallback(
     content.contactText,
-    "Le contact de section sera ajoute des que la page sera ouverte.",
+    "Le contact de section sera ajouté dès que la page sera ouverte.",
   );
   const introText = getContentOrFallback(
     content.introText,
-    "Le detail des groupes et du fonctionnement sera ajoute quand cette section sera prete.",
+    "Le détail des groupes et du fonctionnement sera ajouté quand cette section sera prête.",
   );
   const pricesSubtitle = getContentOrFallback(
     content.pricesSubtitle,
-    "Consultez ici les tarifs communiques pour la saison en cours.",
+    "Consultez ici les tarifs communiqués pour la saison en cours.",
   );
   const heroSubtitle = getContentOrFallback(
     content.heroSubtitle,
     activity.shortDescription,
   );
   const registrationCta = activity.registrationUrl
-    ? { label: "S'inscrire", href: activity.registrationUrl }
+    ? {
+        label: "Inscription",
+        href: activity.registrationUrl,
+        target: getRegistrationCtaTarget(activity.registrationUrl),
+        rel: getRegistrationCtaRel(activity.registrationUrl),
+      }
     : null;
   const primaryCta = registrationCta ?? {
     label: "Contacter la section",
@@ -130,7 +141,7 @@ export function ActivityDetailPage({
   };
   const secondaryCta = hasSchedules
     ? { label: "Voir les horaires", href: "#horaires" }
-    : { label: "Voir la presentation", href: "#programmes" };
+    : { label: "Voir la présentation", href: "#programmes" };
 
   return (
     <>
@@ -141,14 +152,15 @@ export function ActivityDetailPage({
         imageUrl={activity.image}
         primaryCta={primaryCta}
         secondaryCta={secondaryCta}
-        badges={content.heroBadges}
         enableRegistrationHandoff={Boolean(registrationCta)}
       />
 
       {registrationCta ? (
-        <ActivityFloatingRegistrationButton
+        <FloatingRegistrationButton
           href={registrationCta.href}
           label={registrationCta.label}
+          target={registrationCta.target}
+          rel={registrationCta.rel}
         />
       ) : null}
 
@@ -166,9 +178,9 @@ export function ActivityDetailPage({
           {hasPrograms ? (
             <ActivityProgramCards programs={activity.programs} />
           ) : (
-            <InfoBlock title="Contenu en preparation">
-              Le detail des programmes sera ajoute ici quand la section aura
-              valide sa presentation.
+            <InfoBlock title="Contenu en préparation">
+              Le détail des programmes sera ajouté ici quand la section aura
+              validé sa présentation.
             </InfoBlock>
           )}
         </ActivityDetailPageSection>
@@ -199,7 +211,7 @@ export function ActivityDetailPage({
           news={news}
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.newsEyebrow}
           title={ACTIVITY_DETAIL_PAGE_COPY.newsTitle}
-          subtitle={`Des apercus rapides pour la section ${activity.title}, avec un acces vers chaque actualite complete.`}
+          subtitle={`Des aperçus rapides pour la section ${activity.title}, avec un accès vers chaque actualité complète.`}
           surface="soft"
           presentation="carousel"
           carouselLayout="single"

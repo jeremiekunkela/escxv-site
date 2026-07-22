@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import type { ReactNode } from "react";
+import type { MouseEvent, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import styles from "./Button.module.css";
 
@@ -36,6 +38,22 @@ const iconByName = {
   none: null,
 } satisfies Record<NonNullable<ButtonProps["icon"]>, ReactNode>;
 
+function scrollToCurrentPageAnchor(
+  event: MouseEvent<HTMLAnchorElement>,
+  href: string,
+) {
+  const isHashLink = href.startsWith("#");
+  const target = isHashLink ? document.getElementById(href.slice(1)) : null;
+
+  if (!target) {
+    return;
+  }
+
+  event.preventDefault();
+  window.history.pushState(null, "", href);
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 export function Button({
   href,
   children,
@@ -64,6 +82,7 @@ export function Button({
         target={target}
         rel={rel}
         data-activity-registration-source={dataActivityRegistrationSource}
+        onClick={(event) => scrollToCurrentPageAnchor(event, href)}
       >
         {icon === "arrowLeft" ? iconElement : null}
         <span className={styles.label}>{children}</span>

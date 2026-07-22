@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
+import { FloatingRegistrationButton } from "@/components/shared/FloatingRegistrationButton/FloatingRegistrationButton";
 import { ActivityDirectorySection } from "@/features/activities/components/ActivityDirectorySection/ActivityDirectorySection";
 import type { Activity } from "@/features/activities/types/activity";
 import { ClubKeyFigures } from "@/features/club/components/ClubKeyFigures/ClubKeyFigures";
@@ -6,6 +7,7 @@ import type { ClubInfo } from "@/features/club/types/club";
 import type { HomepageContent as HomepageContentType } from "@/features/homepage/types/homepage";
 import { NewsList } from "@/features/news/components/NewsList/NewsList";
 import type { NewsItem } from "@/features/news/types/news";
+import styles from "./HomePageContent.module.css";
 
 type HomePageContentProps = {
   homepage: HomepageContentType;
@@ -20,6 +22,13 @@ export function HomePageContent({
   activities,
   news,
 }: HomePageContentProps) {
+  const registrationCta = {
+    label: homepage.hero.primaryCtaLabel,
+    href: homepage.hero.primaryCtaHref,
+    target: homepage.hero.primaryCtaTarget,
+    rel: homepage.hero.primaryCtaRel,
+  };
+
   return (
     <>
       <HeroSection
@@ -27,14 +36,26 @@ export function HomePageContent({
         title={homepage.hero.title}
         description={homepage.hero.subtitle}
         imageUrl={homepage.hero.imageUrl}
-        primaryCta={{
-          label: homepage.hero.primaryCtaLabel,
-          href: homepage.hero.primaryCtaHref,
-        }}
-        badges={homepage.hero.badges}
+        primaryCta={registrationCta}
+        secondaryCta={
+          homepage.hero.secondaryCtaLabel && homepage.hero.secondaryCtaHref
+            ? {
+                label: homepage.hero.secondaryCtaLabel,
+                href: homepage.hero.secondaryCtaHref,
+              }
+            : undefined
+        }
+        enableRegistrationHandoff
       />
 
-      <main>
+      <FloatingRegistrationButton
+        href={registrationCta.href}
+        label={registrationCta.label}
+        target={registrationCta.target}
+        rel={registrationCta.rel}
+      />
+
+      <main className={styles.mainWithFloatingRegistration}>
         <ClubKeyFigures figures={club.keyFigures} />
 
         <ActivityDirectorySection
@@ -47,7 +68,7 @@ export function HomePageContent({
         <NewsList
           news={news}
           title="Actualités du club"
-          subtitle="Des apercus rapides des dernieres annonces du club, avec un acces vers chaque page detaillee."
+          subtitle="Des aperçus rapides des dernières annonces du club, avec un accès vers chaque page détaillée."
           ctaLabel="Toutes les actualités"
           surface="soft"
           presentation="carousel"

@@ -1,7 +1,7 @@
 /**
- * Pictogrammes Material Symbols associes aux activites.
- * Partage par la navigation et le repertoire d'activites : une activite doit
- * porter la meme icone partout sur le site.
+ * Pictogrammes Material Symbols associés aux activités.
+ * Partage par la navigation et le repertoire d'activités : une activité doit
+ * porter la même icône partout sur le site.
  */
 export type ActivityIconName =
   | "directions_run"

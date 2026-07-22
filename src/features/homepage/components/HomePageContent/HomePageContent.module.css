@@ -1,0 +1,9 @@
+.mainWithFloatingRegistration {
+  padding-bottom: 96px;
+}
+
+@media (max-width: 640px) {
+  .mainWithFloatingRegistration {
+    padding-bottom: 116px;
+  }
+}

@@ -12,9 +12,9 @@ type ActivityDirectorySectionProps = {
 };
 
 /**
- * Section d'accueil : toutes les activites d'un seul coup d'oeil.
- * Pas de recherche ni de filtres, la liste tient entierement a l'ecran ;
- * chaque tuile mene directement a la page de l'activite.
+ * Section d'accueil : toutes les activités d'un seul coup d'oeil.
+ * Pas de recherche ni de filtres, la liste tient entièrement à l'écran ;
+ * chaque tuile mène directement à la page de l'activité.
  */
 export function ActivityDirectorySection({
   activities,
@@ -26,7 +26,7 @@ export function ActivityDirectorySection({
     <section id="activities" className={styles.section}>
       <Container>
         <SectionTitle
-          eyebrow={eyebrow ?? "Activites"}
+          eyebrow={eyebrow ?? "Activités"}
           title={title}
           subtitle={subtitle}
         />

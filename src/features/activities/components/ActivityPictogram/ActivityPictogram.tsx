@@ -9,7 +9,7 @@ type ActivityPictogramProps = {
   className?: string;
 };
 
-/** Pictogramme Material Symbols d'une activite, dans sa pastille. */
+/** Pictogramme Material Symbols d'une activité, dans sa pastille. */
 export function ActivityPictogram({
   iconName,
   size = "sm",

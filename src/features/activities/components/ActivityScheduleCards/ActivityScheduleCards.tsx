@@ -38,7 +38,7 @@ const GENDER_LABELS: Record<PracticeGroup["gender"], string | null> = {
   masculin: "Masculin",
 };
 
-const DEFAULT_SCHEDULE_LABEL = "Horaire a confirmer";
+const DEFAULT_SCHEDULE_LABEL = "Horaire à confirmer";
 
 function formatHour(value: string) {
   return value.replace(":", "h");
@@ -126,7 +126,7 @@ export function ActivityScheduleCards({
   locations,
 }: ActivityScheduleCardsProps) {
   if (schedules.length === 0) {
-    return <p className={styles.empty}>Aucun creneau n&apos;est encore renseigne.</p>;
+    return <p className={styles.empty}>Aucun créneau n&apos;est encore renseigné.</p>;
   }
 
   const locationsById = new Map(locations.map((location) => [location.id, location]));
@@ -187,7 +187,7 @@ export function ActivityScheduleCards({
                             <MapPin aria-hidden="true" className={styles.icon} size={18} />
                             <div className={styles.locationSummary}>
                               <h5 className={styles.venueTitle}>
-                                {location?.name ?? "Lieu a confirmer"}
+                                {location?.name ?? "Lieu à confirmer"}
                               </h5>
                               <p className={styles.address}>
                                 {location

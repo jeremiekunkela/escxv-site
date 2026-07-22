@@ -2,27 +2,31 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button/Button";
-import styles from "./ActivityDetailPage.module.css";
+import styles from "./FloatingRegistrationButton.module.css";
 
-type ActivityFloatingRegistrationButtonProps = {
+type FloatingRegistrationButtonProps = {
   href: string;
   label: string;
+  target?: "_blank" | "_self";
+  rel?: string;
 };
 
-const HERO_SELECTOR = "[data-activity-detail-hero]";
-const HERO_CTA_SELECTOR = "[data-activity-registration-source='primary']";
+const heroSelector = "[data-registration-handoff-hero]";
+const heroCtaSelector = "[data-activity-registration-source='primary']";
 
-export function ActivityFloatingRegistrationButton({
+export function FloatingRegistrationButton({
   href,
   label,
-}: ActivityFloatingRegistrationButtonProps) {
+  target,
+  rel,
+}: FloatingRegistrationButtonProps) {
   const shellRef = useRef<HTMLDivElement>(null);
   const sourceRectRef = useRef<DOMRect | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const hero = document.querySelector<HTMLElement>(HERO_SELECTOR);
-    const source = document.querySelector<HTMLElement>(HERO_CTA_SELECTOR);
+    const hero = document.querySelector<HTMLElement>(heroSelector);
+    const source = document.querySelector<HTMLElement>(heroCtaSelector);
 
     if (!hero || !source) {
       const frame = window.requestAnimationFrame(() => setIsVisible(true));
@@ -81,7 +85,10 @@ export function ActivityFloatingRegistrationButton({
     const sourceCenterY = sourceRect.top + sourceRect.height / 2;
     const targetCenterX = targetRect.left + targetRect.width / 2;
     const targetCenterY = targetRect.top + targetRect.height / 2;
-    const scale = Math.min(1.12, Math.max(0.88, sourceRect.width / targetRect.width));
+    const scale = Math.min(
+      1.12,
+      Math.max(0.88, sourceRect.width / targetRect.width),
+    );
 
     const animation = shell.animate(
       [
@@ -113,7 +120,12 @@ export function ActivityFloatingRegistrationButton({
 
   return (
     <div ref={shellRef} className={styles.floatingRegistration}>
-      <Button href={href} className={styles.floatingRegistrationButton}>
+      <Button
+        href={href}
+        target={target}
+        rel={rel}
+        className={styles.floatingRegistrationButton}
+      >
         {label}
       </Button>
     </div>

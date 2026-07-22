@@ -9,7 +9,7 @@ type ActivityPriceBlocksProps = {
 
 export function ActivityPriceBlocks({ prices }: ActivityPriceBlocksProps) {
   if (prices.length === 0) {
-    return <p className={styles.empty}>Aucun tarif n&apos;est encore renseigne.</p>;
+    return <p className={styles.empty}>Aucun tarif n&apos;est encore renseigné.</p>;
   }
 
   return (
@@ -26,17 +26,17 @@ export function ActivityPriceBlocks({ prices }: ActivityPriceBlocksProps) {
           <p className={styles.season}>{price.season}</p>
           <dl className={styles.details}>
             <div className={styles.row}>
-              <dt>Cotisation club</dt>
+              <dt>Cotisation club (règlement unique par saison)</dt>
               <dd className={styles.amount}>{formatEuro(price.clubFee)}</dd>
             </div>
             <div className={styles.row}>
-              <dt>Participation activite</dt>
+              <dt>Participation activité</dt>
               <dd className={styles.amount}>{formatEuro(price.activityFee)}</dd>
             </div>
           </dl>
           {price.extraFees.length > 0 ? (
             <>
-              <p className={styles.extraFeesTitle}>En supplement</p>
+              <p className={styles.extraFeesTitle}>En supplément</p>
               <ul className={styles.extraFees}>
                 {price.extraFees.map((extraFee) => (
                   <li key={extraFee.label} className={styles.extraFee}>

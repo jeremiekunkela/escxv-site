@@ -29,7 +29,7 @@ export function ActivityLocationCards({
   if (locations.length === 0) {
     return (
       <div className={styles.empty}>
-        Les lieux de pratique ne sont pas encore renseignes.
+        Les lieux de pratique ne sont pas encore renseignés.
       </div>
     );
   }

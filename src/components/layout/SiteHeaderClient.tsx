@@ -5,7 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import type { FocusEvent, KeyboardEvent } from "react";
+import type {
+  FocusEvent,
+  KeyboardEvent,
+  MouseEvent as ReactMouseEvent,
+} from "react";
 import { ActivityPictogram } from "@/features/activities/components/ActivityPictogram/ActivityPictogram";
 import type {
   NavigationContent,
@@ -52,8 +56,8 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
   }, [openDropdown]);
 
   /**
-   * Le header est persistant d'une page a l'autre : sans ca, le menu mobile
-   * reste ouvert apres une navigation (retour navigateur, lien deja actif...).
+   * Le header est persistant d'une page à l'autre : sans ça, le menu mobile
+   * reste ouvert après une navigation (retour navigateur, lien déjà actif...).
    * Ajustement pendant le rendu plutot qu'un effet, comme recommande par React.
    */
   if (pathname !== lastPathname) {
@@ -107,6 +111,26 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
     }
   }
 
+  function handleNavigationClick(
+    event: ReactMouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) {
+    setOpenDropdown(false);
+    setMobileOpen(false);
+    setMobileActivitiesOpen(false);
+
+    const url = new URL(href, window.location.href);
+    const target = url.hash ? document.getElementById(url.hash.slice(1)) : null;
+
+    if (url.pathname !== window.location.pathname || !target) {
+      return;
+    }
+
+    event.preventDefault();
+    window.history.pushState(null, "", `${url.pathname}${url.search}${url.hash}`);
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
   return (
     <header className={styles.header}>
       <nav aria-label="Navigation principale" className={styles.nav}>
@@ -115,24 +139,26 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
             <Image
               src="/escxv-logo.png"
               alt=""
-              width={36}
-              height={36}
+              width={132}
+              height={105}
               priority
               className={styles.logoImage}
             />
           </span>
           <span className={styles.brandText}>
             <span className={styles.brandName}>{navigation.club.shortName}</span>
-            <span className={styles.brandMeta}>
-              {navigation.club.city}{" "}
-              {navigation.club.arrondissement.replace(" arrondissement", "")}
-            </span>
+            <span className={styles.brandMeta}>Paris 1910</span>
           </span>
         </Link>
 
         <div className={styles.desktopLinks}>
           {navigation.mainLinks.map((item) => (
-            <Link key={item.href} href={item.href} className={styles.navLink}>
+            <Link
+              key={item.href}
+              href={item.href}
+              className={styles.navLink}
+              onClick={(event) => handleNavigationClick(event, item.href)}
+            >
               {item.label}
             </Link>
           ))}
@@ -155,7 +181,7 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
                   aria-expanded={openDropdown}
                   onClick={() => setOpenDropdown((value) => !value)}
                 >
-                  Activites
+                  Activités
                   <ChevronDown
                     aria-hidden="true"
                     className={openDropdown ? styles.dropdownIconOpen : styles.dropdownIcon}
@@ -167,9 +193,9 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
                     id={dropdownId}
                     className={styles.dropdownMenu}
                     role="menu"
-                    aria-label="Activites"
+                    aria-label="Activités"
                   >
-                    <div className={styles.dropdownHeader}>Toutes les activites</div>
+                    <div className={styles.dropdownHeader}>Toutes les activités</div>
                     {navigation.activityLinks.map((item) => (
                       <Link
                         key={item.href}
@@ -177,7 +203,7 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
                         className={styles.dropdownMenuItem}
                         role="menuitem"
                         tabIndex={0}
-                        onClick={() => setOpenDropdown(false)}
+                        onClick={(event) => handleNavigationClick(event, item.href)}
                       >
                         <ActivityLinkIcon item={item} />
                         <span>{item.label}</span>
@@ -212,7 +238,7 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
                   key={item.href}
                   href={item.href}
                   className={styles.mobileLink}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(event) => handleNavigationClick(event, item.href)}
                 >
                   {item.label}
                 </Link>
@@ -226,7 +252,7 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
                     aria-controls={mobileActivitiesId}
                     onClick={() => setMobileActivitiesOpen((value) => !value)}
                   >
-                    Activites
+                    Activités
                     <ChevronDown
                       aria-hidden="true"
                       className={
@@ -244,7 +270,7 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
                           key={item.href}
                           href={item.href}
                           className={styles.mobileLink}
-                          onClick={() => setMobileOpen(false)}
+                          onClick={(event) => handleNavigationClick(event, item.href)}
                         >
                           <ActivityLinkIcon item={item} />
                           {item.label}
