@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
 import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
@@ -46,7 +45,6 @@ export default function AssociationPage() {
               >
                 Ouvrir le guide
               </Button>
-              <ExternalLink aria-hidden="true" className={styles.externalIcon} />
             </article>
           </Container>
         </section>
