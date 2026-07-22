@@ -364,7 +364,16 @@
       {
         "id": "badminton-2025-2026",
         "season": "2025/2026",
-        "label": "Badminton",
+        "label": "Badminton - Adhésion Loisir",
+        "clubFee": 75,
+        "activityFee": 145,
+        "total": 220,
+        "extraFees": []
+      },
+      {
+        "id": "badminton-competition-2025-2026",
+        "season": "2025/2026",
+        "label": "Badminton - Adhésion Compétition (sans licence FFBad)",
         "clubFee": 75,
         "activityFee": 145,
         "total": 220,
@@ -374,15 +383,6 @@
             "amount": 50
           }
         ]
-      },
-      {
-        "id": "badminton-competition-2025-2026",
-        "season": "2025/2026",
-        "label": "Badminton - Adhésion Compétition (sans licence FFBad)",
-        "clubFee": 75,
-        "activityFee": 145,
-        "total": 220,
-        "extraFees": []
       }
     ],
     "contacts": [
