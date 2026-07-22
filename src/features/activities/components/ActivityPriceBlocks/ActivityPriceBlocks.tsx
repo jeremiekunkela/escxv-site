@@ -38,14 +38,23 @@ export function ActivityPriceBlocks({ prices }: ActivityPriceBlocksProps) {
             <>
               <p className={styles.extraFeesTitle}>En supplément</p>
               <ul className={styles.extraFees}>
-                {price.extraFees.map((extraFee) => (
-                  <li key={extraFee.label} className={styles.extraFee}>
-                    <span>{extraFee.label}</span>
-                    <span className={styles.amount}>
-                      {formatEuro(extraFee.amount)}
-                    </span>
-                  </li>
-                ))}
+                {price.extraFees.map((extraFee) => {
+                  const totalWithExtraFee = price.total + extraFee.amount;
+
+                  return (
+                    <li key={extraFee.label} className={styles.extraFee}>
+                      <span>{extraFee.label}</span>
+                      <span className={styles.extraFeeAmounts}>
+                        <span className={styles.amount}>
+                          {formatEuro(extraFee.amount)}
+                        </span>
+                        <span className={styles.extraFeeTotal}>
+                          Total {formatEuro(totalWithExtraFee)}
+                        </span>
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
             </>
           ) : null}

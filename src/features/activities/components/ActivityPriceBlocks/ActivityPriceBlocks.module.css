@@ -82,6 +82,20 @@
   font-weight: var(--font-weight-semibold);
 }
 
+.extraFeeAmounts {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.extraFeeTotal {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
 /*
  * Les frais optionnels se distinguent par un intitule et un filet, pas par un
  * aplat coloré : ils restent visuellement de la même famille que les lignes
@@ -111,5 +125,17 @@
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .extraFee {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .extraFeeAmounts {
+    justify-items: start;
+    text-align: left;
   }
 }
