@@ -22,7 +22,7 @@ export default function AssociationPage() {
         eyebrow="Association"
         title="L'ESCXV, association sportive depuis 1910"
         description="Retrouvez les lieux de pratique du club et les ressources de prévention."
-        imageUrl="https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=1800&q=80"
+        imageUrl="https://images.unsplash.com/photo-1517130038641-a774d04afb3c?auto=format&fit=crop&w=1800&q=80"
         primaryCta={{ label: "Voir les installations", href: "#installations" }}
         secondaryCta={{ label: "Guide VHSS", href: "#vhss" }}
       />
