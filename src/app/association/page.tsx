@@ -31,8 +31,6 @@ export default function AssociationPage() {
         title="L'ESCXV, association sportive depuis 1910"
         description="Découvrez le projet du club, son comité directeur, ses lieux de pratique et les ressources de prévention."
         imageUrl="https://images.unsplash.com/photo-1517130038641-a774d04afb3c?auto=format&fit=crop&w=1800&q=80"
-        primaryCta={{ label: "Découvrir le club", href: "#presentation" }}
-        secondaryCta={{ label: "Comité directeur", href: "#comite" }}
       />
 
       <main>

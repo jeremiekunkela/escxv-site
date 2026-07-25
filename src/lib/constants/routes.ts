@@ -1,7 +1,7 @@
 export const routes = {
   home: "/",
   association: "/association",
-  news: "/actualités",
+  news: "/actualites",
 } as const;
 
 export function getActivityRoute(slug: string) {
@@ -9,5 +9,5 @@ export function getActivityRoute(slug: string) {
 }
 
 export function getNewsRoute(slug: string) {
-  return `/actualités/${slug}`;
+  return `/actualites/${slug}`;
 }

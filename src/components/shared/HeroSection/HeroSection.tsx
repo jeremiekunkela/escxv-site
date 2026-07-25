@@ -9,7 +9,7 @@ type HeroSectionProps = {
   title: string;
   description?: string;
   imageUrl: string;
-  primaryCta: Cta;
+  primaryCta?: Cta;
   secondaryCta?: Cta;
   enableRegistrationHandoff?: boolean;
 };
@@ -57,33 +57,37 @@ export function HeroSection({
               {description}
             </p>
           ) : null}
-          <div
-            className={styles.actions}
-            data-reveal
-          >
-            <Button
-              href={primaryCta.href}
-              target={primaryCta.target}
-              rel={primaryCta.rel}
-              className={styles.primaryAction}
-              dataActivityRegistrationSource={
-                enableRegistrationHandoff ? "primary" : undefined
-              }
+          {primaryCta || secondaryCta ? (
+            <div
+              className={styles.actions}
+              data-reveal
             >
-              {primaryCta.label}
-            </Button>
-            {secondaryCta ? (
-              <Button
-                href={secondaryCta.href}
-                target={secondaryCta.target}
-                rel={secondaryCta.rel}
-                variant="secondary"
-                className={styles.secondaryAction}
-              >
-                {secondaryCta.label}
-              </Button>
-            ) : null}
-          </div>
+              {primaryCta ? (
+                <Button
+                  href={primaryCta.href}
+                  target={primaryCta.target}
+                  rel={primaryCta.rel}
+                  className={styles.primaryAction}
+                  dataActivityRegistrationSource={
+                    enableRegistrationHandoff ? "primary" : undefined
+                  }
+                >
+                  {primaryCta.label}
+                </Button>
+              ) : null}
+              {secondaryCta ? (
+                <Button
+                  href={secondaryCta.href}
+                  target={secondaryCta.target}
+                  rel={secondaryCta.rel}
+                  variant="secondary"
+                  className={styles.secondaryAction}
+                >
+                  {secondaryCta.label}
+                </Button>
+              ) : null}
+            </div>
+          ) : null}
         </div>
       </Container>
     </section>
