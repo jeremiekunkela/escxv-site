@@ -59,8 +59,8 @@
     ],
     "prices": [
       {
-        "id": "aikibudo-2025-2026",
-        "season": "2025/2026",
+        "id": "aikibudo-2026-2027",
+        "season": "2026/2027",
         "label": "Aikibudo",
         "clubFee": 75,
         "activityFee": 210,
@@ -214,9 +214,10 @@
     ],
     "prices": [
       {
-        "id": "athletisme-2025-2026-jeunes",
-        "season": "2025/2026",
+        "id": "athletisme-2026-2027-jeunes",
+        "season": "2026/2027",
         "label": "Athletisme jeunes",
+        "ageRange": "5-25 ans",
         "clubFee": 75,
         "activityFee": 155,
         "total": 230,
@@ -226,15 +227,6 @@
             "amount": 50
           }
         ]
-      },
-      {
-        "id": "athletisme-2025-2026-adultes",
-        "season": "2025/2026",
-        "label": "Sprint, demi-fond",
-        "clubFee": 75,
-        "activityFee": 155,
-        "total": 230,
-        "extraFees": []
       }
     ],
     "contacts": [
@@ -357,27 +349,31 @@
     ],
     "prices": [
       {
-        "id": "badminton-2025-2026",
-        "season": "2025/2026",
-        "label": "Badminton - Adhésion Loisir",
+        "id": "badminton-2026-2027-loisir",
+        "season": "2026/2027",
+        "label": "Badminton - Loisir",
+        "clubFee": 75,
+        "activityFee": 125,
+        "total": 200,
+        "extraFees": []
+      },
+      {
+        "id": "badminton-2026-2027-competition-sans-licence",
+        "season": "2026/2027",
+        "label": "Badminton - Compétition (sans licence FFBad)",
         "clubFee": 75,
         "activityFee": 145,
         "total": 220,
         "extraFees": []
       },
       {
-        "id": "badminton-competition-2025-2026",
-        "season": "2025/2026",
-        "label": "Badminton - Adhésion Compétition",
+        "id": "badminton-2026-2027-competition",
+        "season": "2026/2027",
+        "label": "Badminton - Compétition (avec licence FFBad)",
         "clubFee": 75,
-        "activityFee": 145,
-        "total": 220,
-        "extraFees": [
-          {
-            "label": "Licence FFBad optionnelle",
-            "amount": 50
-          }
-        ]
+        "activityFee": 195,
+        "total": 270,
+        "extraFees": []
       }
     ],
     "contacts": [
@@ -441,8 +437,8 @@
     ],
     "prices": [
       {
-        "id": "baseball-2025-2026",
-        "season": "2025/2026",
+        "id": "baseball-2026-2027",
+        "season": "2026/2027",
         "label": "Baseball",
         "clubFee": 75,
         "activityFee": 125,
@@ -627,8 +623,8 @@
     ],
     "prices": [
       {
-        "id": "capoeira-2025-2026-jeunes",
-        "season": "2025/2026",
+        "id": "capoeira-2026-2027-jeunes",
+        "season": "2026/2027",
         "label": "Jeunes",
         "clubFee": 75,
         "activityFee": 185,
@@ -636,8 +632,8 @@
         "extraFees": []
       },
       {
-        "id": "capoeira-2025-2026-adultes",
-        "season": "2025/2026",
+        "id": "capoeira-2026-2027-adultes",
+        "season": "2026/2027",
         "label": "Adultes",
         "clubFee": 75,
         "activityFee": 225,
@@ -738,8 +734,8 @@
     ],
     "prices": [
       {
-        "id": "captrail-2025-2026",
-        "season": "2025/2026",
+        "id": "captrail-2026-2027",
+        "season": "2026/2027",
         "label": "Course a pied et trail",
         "clubFee": 75,
         "activityFee": 145,
@@ -829,18 +825,18 @@
     ],
     "prices": [
       {
-        "id": "danse-2025-2026-cevennes",
-        "season": "2025/2026",
-        "label": "Danse - Cevennes",
+        "id": "danse-2026-2027-cevennes",
+        "season": "2026/2027",
+        "label": "Danse - Cévennes (mercredi 1h30)",
         "clubFee": 75,
         "activityFee": 145,
         "total": 220,
         "extraFees": []
       },
       {
-        "id": "danse-2025-2026-cambronne",
-        "season": "2025/2026",
-        "label": "Danse - Cambronne",
+        "id": "danse-2026-2027-sablonniere",
+        "season": "2026/2027",
+        "label": "Danse - Sablonnière (vendredi 2h)",
         "clubFee": 75,
         "activityFee": 175,
         "total": 250,
@@ -978,8 +974,8 @@
         "id": "escalade-2026-2027-ape",
         "season": "2026/2027",
         "label": "Escalade - Adhésion Atelier Parents/Enfants (APE)",
-        "clubFee": 75,
-        "activityFee": 15,
+        "clubFee": 65,
+        "activityFee": 25,
         "total": 90,
         "extraFees": []
       }
@@ -1364,30 +1360,49 @@
     ],
     "prices": [
       {
-        "id": "football-2025-2026-jeune",
-        "season": "1/9/2025 -> 30/6/2026",
-        "label": "Jeune",
+        "id": "football-2026-2027-jeunes",
+        "season": "2026/2027",
+        "label": "Jeunes (U6 à U20)",
+        "ageRange": "5-20 ans",
         "clubFee": 75,
         "activityFee": 225,
         "total": 300,
         "extraFees": []
       },
       {
-        "id": "football-2025-2026-adulte",
-        "season": "1/9/2025 -> 30/6/2026",
-        "label": "Adulte",
+        "id": "football-2026-2027-seniors-fff",
+        "season": "2026/2027",
+        "label": "Seniors FFF (D3/D4)",
         "clubFee": 75,
         "activityFee": 225,
         "total": 300,
         "extraFees": []
       },
       {
-        "id": "football-2025-2026-adultes-fsgt",
-        "season": "1/9/2025 -> 30/6/2026",
-        "label": "Adulte FSGT",
+        "id": "football-2026-2027-seniors-fsgt",
+        "season": "2026/2027",
+        "label": "Seniors FSGT",
         "clubFee": 75,
         "activityFee": 135,
         "total": 210,
+        "extraFees": []
+      },
+      {
+        "id": "football-2026-2027-seniors-cdm",
+        "season": "2026/2027",
+        "label": "Seniors CDM (dimanche matin)",
+        "clubFee": 75,
+        "activityFee": 125,
+        "total": 200,
+        "extraFees": []
+      },
+      {
+        "id": "football-2026-2027-seniors-loisir",
+        "season": "2026/2027",
+        "label": "Seniors Loisir (lundi soir)",
+        "clubFee": 75,
+        "activityFee": 85,
+        "total": 160,
         "extraFees": []
       }
     ],
@@ -1451,8 +1466,8 @@
     ],
     "prices": [
       {
-        "id": "gym-entretien-2025-2026",
-        "season": "2025/2026",
+        "id": "gym-entretien-2026-2027",
+        "season": "2026/2027",
         "label": "Gymnastique d'entretien",
         "clubFee": 75,
         "activityFee": 125,
@@ -1583,8 +1598,8 @@
     ],
     "prices": [
       {
-        "id": "judo-2025-2026",
-        "season": "2025/2026",
+        "id": "judo-2026-2027",
+        "season": "2026/2027",
         "label": "Judo - Adhésion Jeunes",
         "ageRange": "4-17 ans",
         "clubFee": 75,
@@ -1659,8 +1674,8 @@
     ],
     "prices": [
       {
-        "id": "natation-2025-2026",
-        "season": "2025/2026",
+        "id": "natation-2026-2027",
+        "season": "2026/2027",
         "label": "Natation",
         "clubFee": 75,
         "activityFee": 155,
@@ -1728,8 +1743,8 @@
     ],
     "prices": [
       {
-        "id": "pilates-2025-2026",
-        "season": "2025/2026",
+        "id": "pilates-2026-2027",
+        "season": "2026/2027",
         "label": "Pilates",
         "clubFee": 75,
         "activityFee": 135,
@@ -1797,8 +1812,8 @@
     ],
     "prices": [
       {
-        "id": "renfo-2025-2026",
-        "season": "2025/2026",
+        "id": "renfo-2026-2027",
+        "season": "2026/2027",
         "label": "Renforcement musculaire",
         "clubFee": 75,
         "activityFee": 125,
@@ -1867,8 +1882,8 @@
     ],
     "prices": [
       {
-        "id": "sport-mercredi-2025-2026",
-        "season": "2025/2026",
+        "id": "sport-mercredi-2026-2027",
+        "season": "2026/2027",
         "label": "Sport mercredi",
         "clubFee": 75,
         "activityFee": 205,
@@ -1946,8 +1961,8 @@
     ],
     "prices": [
       {
-        "id": "stretching-2025-2026",
-        "season": "2025/2026",
+        "id": "stretching-2026-2027",
+        "season": "2026/2027",
         "label": "Stretching",
         "clubFee": 75,
         "activityFee": 135,
@@ -2116,8 +2131,8 @@
     ],
     "prices": [
       {
-        "id": "tennis-2025-2026-école-1h",
-        "season": "2025/2026",
+        "id": "tennis-2026-2027-école-1h",
+        "season": "2026/2027",
         "label": "Tennis Ecole - cours 1h",
         "clubFee": 75,
         "activityFee": 235,
@@ -2125,8 +2140,8 @@
         "extraFees": []
       },
       {
-        "id": "tennis-2025-2026-école-1h30",
-        "season": "2025/2026",
+        "id": "tennis-2026-2027-école-1h30",
+        "season": "2026/2027",
         "label": "Tennis Ecole - cours 1h30",
         "clubFee": 75,
         "activityFee": 305,
@@ -2134,8 +2149,8 @@
         "extraFees": []
       },
       {
-        "id": "tennis-2025-2026-compétition",
-        "season": "2025/2026",
+        "id": "tennis-2026-2027-compétition",
+        "season": "2026/2027",
         "label": "Tennis Competition (FSGT)",
         "clubFee": 75,
         "activityFee": 125,
@@ -2323,8 +2338,8 @@
     ],
     "prices": [
       {
-        "id": "tennis-table-2025-2026",
-        "season": "2025/2026",
+        "id": "tennis-table-2026-2027",
+        "season": "2026/2027",
         "label": "Tennis de table",
         "clubFee": 75,
         "activityFee": 95,
@@ -2476,36 +2491,19 @@
     ],
     "prices": [
       {
-        "id": "volley-2025-2026-école",
-        "season": "2025/2026",
-        "label": "Ecole",
+        "id": "volley-2026-2027-ecole",
+        "season": "2026/2027",
+        "label": "Ecole / Perfectionnement",
+        "ageRange": "8-18 ans",
         "clubFee": 75,
         "activityFee": 70,
         "total": 145,
         "extraFees": []
       },
       {
-        "id": "volley-2025-2026-plaisir",
-        "season": "2025/2026",
-        "label": "Plaisir",
-        "clubFee": 75,
-        "activityFee": 105,
-        "total": 180,
-        "extraFees": []
-      },
-      {
-        "id": "volley-2025-2026-compétition",
-        "season": "2025/2026",
-        "label": "Competition",
-        "clubFee": 75,
-        "activityFee": 105,
-        "total": 180,
-        "extraFees": []
-      },
-      {
-        "id": "volley-2025-2026-beach",
-        "season": "2025/2026",
-        "label": "Beach-volley",
+        "id": "volley-2026-2027-adultes",
+        "season": "2026/2027",
+        "label": "Adultes (plaisir, compétition, beach)",
         "clubFee": 75,
         "activityFee": 105,
         "total": 180,
@@ -2591,8 +2589,8 @@
     ],
     "prices": [
       {
-        "id": "yoga-2025-2026",
-        "season": "2025/2026",
+        "id": "yoga-2026-2027",
+        "season": "2026/2027",
         "label": "Hatha-Yoga",
         "clubFee": 75,
         "activityFee": 205,
