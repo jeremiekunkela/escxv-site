@@ -6,7 +6,9 @@
     "primaryCtaLabel": "Inscription",
     "primaryCtaHref": "https://escxv.monclub.app/",
     "primaryCtaTarget": "_blank",
-    "primaryCtaRel": "noopener noreferrer"
+    "primaryCtaRel": "noopener noreferrer",
+    "secondaryCtaLabel": "Trouver une activité",
+    "secondaryCtaHref": "#activities"
   },
   "activitiesSection": {
     "eyebrow": "Activités",

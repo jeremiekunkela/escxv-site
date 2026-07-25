@@ -37,6 +37,14 @@ export function HomePageContent({
         description={homepage.hero.subtitle}
         imageUrl={homepage.hero.imageUrl}
         primaryCta={registrationCta}
+        secondaryCta={
+          homepage.hero.secondaryCtaLabel && homepage.hero.secondaryCtaHref
+            ? {
+                label: homepage.hero.secondaryCtaLabel,
+                href: homepage.hero.secondaryCtaHref,
+              }
+            : undefined
+        }
         enableRegistrationHandoff
       />
 

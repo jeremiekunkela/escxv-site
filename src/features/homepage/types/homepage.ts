@@ -8,6 +8,8 @@ export type HomepageContent = {
     primaryCtaHref: string;
     primaryCtaTarget?: "_blank" | "_self";
     primaryCtaRel?: string;
+    secondaryCtaLabel?: string;
+    secondaryCtaHref?: string;
   };
   activitiesSection: {
     eyebrow?: string;
