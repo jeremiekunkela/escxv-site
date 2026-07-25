@@ -11,7 +11,7 @@
     "publics": ["adolescents", "adultes"],
     "tags": ["technique", "coordination", "discipline"],
     "image": "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a0874da3a190850763db5b7&step=1",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a1655168680028df27d6",
     "content": {
       "heroSubtitle": "Art martial complet, a mains nues et avec armes, les lundis et mercredis a La Plaine.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -90,7 +90,7 @@
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["sprint", "demi-fond", "compétition"],
     "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app/61786c56e5f33700212f1b61",
     "content": {
       "heroSubtitle": "Sprint, demi-fond, sauts et travail technique pour enfants, jeunes et adultes.",
       "schedulesNoticeText": "Les créneaux affichés servent de base de travail pour la saison 2025/2026 et doivent encore etre confirmés par la section."
@@ -265,7 +265,7 @@
     "publics": ["adolescents", "adultes"],
     "tags": ["raquette", "indoor", "cardio"],
     "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app/61786ce31422050021e61a39",
     "content": {
       "heroSubtitle": "Loisir ou compétition, en simple et en double, a la salle Keller.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -402,7 +402,7 @@
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["collectif", "plein air", "coordination"],
     "image": "https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a08756b56b3c10850f32a39&step=1",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a1965168680028df28b1",
     "content": {
       "heroSubtitle": "Pratique du baseball le jeudi soir au stade Pershing (Bois de Vincennes).",
       "schedulesNoticeText": "Creneau du jeudi soir au stade Pershing. Prenez contact avec la section avant votre premiere venue.",
@@ -472,7 +472,7 @@
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["mobilité", "rythme", "culture"],
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a1a634e001002139563c",
     "content": {
       "heroSubtitle": "Art martial bresilien melant mouvement, musicalite et coordination, des 5 ans.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -667,7 +667,7 @@
     "publics": ["adultes"],
     "tags": ["running", "trail", "endurance", "sorties"],
     "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a1ce34e001002139579a",
     "content": {
       "heroSubtitle": "Pratique adulte pour courir régulièrement, préparer un objectif et progresser en groupe sur route et sentiers.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -774,7 +774,7 @@
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["rythme", "expression", "collectif"],
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a2076656c30028b813fd",
     "content": {
       "heroSubtitle": "Danse pour adultes et jeunes adultes, au gymnase des Cevennes ou a Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -869,7 +869,7 @@
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["force", "equilibre", "confiance"],
     "image": "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app/61786cfb1df3f700288f2f43",
     "content": {
       "heroSubtitle": "Grimpe adultes et ateliers parent-enfant a La Plaine et a Croix-Nivert.",
       "schedulesNoticeText": "D'autres créneaux (mardi, jeudi, dimanche) peuvent exister selon la saison et sont à confirmer auprès de la section.",
@@ -1013,7 +1013,7 @@
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["collectif", "matchs", "loisir", "compétition"],
     "image": "https://images.unsplash.com/photo-1517747614396-d21a78b850e8?auto=format&fit=crop&w=1600&q=80",
-    "registrationUrl": "mailto:football@esc15.fr",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a25a34e00100213958dd",
     "content": {
       "heroSubtitle": "Une pratique de proximite pour jouer, apprendre et s'engager en equipe a tout age.",
       "schedulesNoticeText": "Inscription validée si paiement. Contact: football@esc15.fr.",
@@ -1413,7 +1413,7 @@
     "publics": ["adultes"],
     "tags": ["mobilité", "tonicite", "equilibre"],
     "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a32c6656c30028b81870",
     "content": {
       "heroSubtitle": "Seance d'entretien physique sur l'heure du midi, le jeudi a La Plaine.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -1482,7 +1482,7 @@
     "publics": ["enfants", "adolescents"],
     "tags": ["respect", "technique", "progression"],
     "image": "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a087d92a2195db261c2462f&step=1",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a33e5168680028df2e8a",
     "content": {
       "heroSubtitle": "Judo jeunes de 4 à 17 ans, à La Plaine et à Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -1620,7 +1620,7 @@
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["eau", "technique", "endurance"],
     "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a087f144a10348b5bc848b6&step=1",
+    "registrationUrl": "https://escxv.monclub.app/app/61786d201df3f700288f2f44",
     "content": {
       "heroSubtitle": "Initiation et perfectionnement des 6 ans, le vendredi a la piscine Emile Anthoine.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -1690,7 +1690,7 @@
     "publics": ["adultes"],
     "tags": ["posture", "gainage", "mobilité"],
     "image": "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a087fd43a52e5d3b5d0eef5&step=1",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a35e5168680028df2ebb",
     "content": {
       "heroSubtitle": "Renforcement profond, posture et controle du mouvement, le jeudi a Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -1759,7 +1759,7 @@
     "publics": ["adultes"],
     "tags": ["force", "gainage", "condition physique"],
     "image": "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a1f834e001002139584b",
     "content": {
       "heroSubtitle": "Seances toniques de renforcement, le vendredi a Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -1828,7 +1828,7 @@
     "publics": ["enfants"],
     "tags": ["multisports", "enfants", "decouverte"],
     "image": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/app?selectedMembership=6a069e69c835fb47c0d46cf7&step=1",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a37e34e0010021395b9b",
     "content": {
       "heroSubtitle": "Initiation multisports pour enfants des 5 ans, le mercredi apres-midi.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -1898,7 +1898,7 @@
     "publics": ["adultes"],
     "tags": ["souplesse", "mobilité", "recuperation"],
     "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a398ee6b0b0021168741",
     "content": {
       "heroSubtitle": "Souplesse, mobilité et recuperation, le lundi soir a Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -1977,7 +1977,7 @@
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["raquette", "technique", "match"],
     "image": "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a3b3ee6b0b002116878e",
     "content": {
       "heroSubtitle": "Ecole de tennis et tennis compétition, de 5 ans aux adultes.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -2177,7 +2177,7 @@
     "publics": ["adolescents", "adultes"],
     "tags": ["raquette", "précision", "salle"],
     "image": "https://images.unsplash.com/photo-1611251135345-18c56206b863?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a3c8ee6b0b00211687bc",
     "content": {
       "heroSubtitle": "Tennis de table pour jeunes et adultes, a La Plaine et a Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -2354,7 +2354,7 @@
     "publics": ["adolescents", "adultes"],
     "tags": ["equipe", "salle", "loisir"],
     "image": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a3d76656c30028b819f6",
     "content": {
       "heroSubtitle": "Ecole, plaisir, compétition et beach-volley, en salle et en exterieur.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
@@ -2541,7 +2541,7 @@
     "publics": ["adultes"],
     "tags": ["respiration", "mobilité", "bien-etre"],
     "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/",
+    "registrationUrl": "https://escxv.monclub.app/app/6245a3e85168680028df2fa1",
     "content": {
       "heroSubtitle": "Hatha-yoga ouvert a tous, le mardi soir a Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2025/2026 et restent à confirmer auprès de la section.",
