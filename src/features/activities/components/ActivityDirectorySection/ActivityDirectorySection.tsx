@@ -8,7 +8,6 @@ type ActivityDirectorySectionProps = {
   activities: Activity[];
   eyebrow?: string;
   title: string;
-  subtitle: string;
 };
 
 /**
@@ -20,16 +19,11 @@ export function ActivityDirectorySection({
   activities,
   eyebrow,
   title,
-  subtitle,
 }: ActivityDirectorySectionProps) {
   return (
     <section id="activities" className={styles.section}>
       <Container>
-        <SectionTitle
-          eyebrow={eyebrow ?? "Activités"}
-          title={title}
-          subtitle={subtitle}
-        />
+        <SectionTitle eyebrow={eyebrow ?? "Activités"} title={title} />
 
         <div className={styles.directory}>
           <ActivityDirectory activities={activities} />

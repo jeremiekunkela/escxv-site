@@ -62,13 +62,11 @@ export function HomePageContent({
           activities={activities}
           eyebrow={homepage.activitiesSection.eyebrow}
           title={homepage.activitiesSection.title}
-          subtitle={homepage.activitiesSection.subtitle}
         />
 
         <NewsList
           news={news}
           title="Actualités du club"
-          subtitle="Des aperçus rapides des dernières annonces du club, avec un accès vers chaque page détaillée."
           ctaLabel="Toutes les actualités"
           surface="soft"
           presentation="carousel"

@@ -28,7 +28,6 @@ type ActivityDetailPageSectionProps = {
   headerClassName?: string;
   eyebrow: string;
   title: string;
-  subtitle?: string;
   children: ReactNode;
 };
 
@@ -67,14 +66,13 @@ function ActivityDetailPageSection({
   headerClassName = styles.header,
   eyebrow,
   title,
-  subtitle,
   children,
 }: ActivityDetailPageSectionProps) {
   return (
     <section id={id} className={className}>
       <Container>
         <div className={headerClassName}>
-          <SectionTitle eyebrow={eyebrow} title={title} subtitle={subtitle} />
+          <SectionTitle eyebrow={eyebrow} title={title} />
         </div>
         {children}
       </Container>
@@ -102,10 +100,6 @@ export function ActivityDetailPage({
   const emptyContactText = getContentOrFallback(
     content.contactText,
     "Le contact de section sera ajouté dès que la page sera ouverte.",
-  );
-  const introText = getContentOrFallback(
-    content.introText,
-    "Le détail des groupes et du fonctionnement sera ajouté quand cette section sera prête.",
   );
   const heroSubtitle = getContentOrFallback(
     content.heroSubtitle,
@@ -157,7 +151,6 @@ export function ActivityDetailPage({
           id="programmes"
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.introEyebrow}
           title={ACTIVITY_DETAIL_PAGE_COPY.introTitle}
-          subtitle={hasPrograms ? introText : undefined}
         >
           {hasPrograms ? (
             <ActivityProgramCards programs={activity.programs} />

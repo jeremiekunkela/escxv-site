@@ -12,7 +12,6 @@ type NewsListProps = {
   news: NewsItem[];
   eyebrow?: string;
   title: string;
-  subtitle?: string;
   ctaLabel?: string;
   surface?: "plain" | "soft";
   presentation?: "grid" | "carousel";
@@ -91,7 +90,6 @@ export function NewsList({
   news,
   eyebrow = "Actualités",
   title,
-  subtitle,
   ctaLabel,
   surface = "plain",
   presentation = "grid",
@@ -120,7 +118,7 @@ export function NewsList({
     >
       <Container>
         <div className={styles.header}>
-          <SectionTitle eyebrow={eyebrow} title={title} subtitle={subtitle} />
+          <SectionTitle eyebrow={eyebrow} title={title} />
           {ctaLabel ? (
             <Button href={routes.news} variant="secondary" className={styles.cta}>
               {ctaLabel}

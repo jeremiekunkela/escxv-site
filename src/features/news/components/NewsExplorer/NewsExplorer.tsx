@@ -10,14 +10,12 @@ type NewsExplorerProps = {
   news: NewsItem[];
   activityLabelsBySlug: Record<string, string>;
   title: string;
-  subtitle: string;
 };
 
 export function NewsExplorer({
   news,
   activityLabelsBySlug,
   title,
-  subtitle,
 }: NewsExplorerProps) {
   const {
     activityFilter,
@@ -38,7 +36,6 @@ export function NewsExplorer({
     <NewsList
       news={filteredNews}
       title={title}
-      subtitle={subtitle}
       surface="soft"
       controls={
         <div className={styles.controls}>

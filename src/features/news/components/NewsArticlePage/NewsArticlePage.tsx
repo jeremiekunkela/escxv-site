@@ -260,7 +260,6 @@ export function NewsArticlePage({
             news={relatedNews}
             eyebrow="A lire aussi"
             title="Autres actualites"
-            subtitle="Poursuivez la lecture avec d'autres nouvelles du club et des sections."
             surface="soft"
             presentation="carousel"
             carouselLayout="single"

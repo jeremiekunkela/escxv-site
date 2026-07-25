@@ -14,6 +14,5 @@ export type HomepageContent = {
   activitiesSection: {
     eyebrow?: string;
     title: string;
-    subtitle: string;
   };
 };

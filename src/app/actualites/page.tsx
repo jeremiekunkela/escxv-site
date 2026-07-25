@@ -29,7 +29,6 @@ export default function NewsPage() {
           news={news}
           activityLabelsBySlug={activityLabelsBySlug}
           title="Toutes les actualités"
-          subtitle="Chaque carte présente un aperçu. Ouvrez ensuite l'actualité pour lire la version complète."
         />
       </main>
     </>
