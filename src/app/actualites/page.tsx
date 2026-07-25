@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
 import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
 import { getActivities } from "@/features/activities/data-access/activities";
 import { NewsExplorer } from "@/features/news/components/NewsExplorer/NewsExplorer";
 import { getPublishedNews } from "@/features/news/data-access/news";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Actualités",
@@ -22,9 +22,9 @@ export default function NewsPage() {
         title="Les nouvelles du club et des sections"
         description="Retrouvez des aperçus rapides sur les informations publiées par l'ESCXV, puis ouvrez chaque actualité dans une page détaillée avec contenu complet, images et informations complémentaires."
         imageUrl="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1800&q=80"
-        primaryCta={{ label: "Voir les actualités", href: "#actualites" }}
+        primaryCta={{ label: "Voir les actualités", href: "#actualités" }}
       />
-      <main id="actualites">
+      <main id="actualités">
         <NewsExplorer
           news={news}
           activityLabelsBySlug={activityLabelsBySlug}

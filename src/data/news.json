@@ -7,7 +7,7 @@
     "excerpt": "Le club met en ligne un nouveau site pour retrouver plus facilement les sections, les horaires, les lieux de pratique et les actualités.",
     "content": "L'ESCXV met en ligne un nouveau site pour rendre l'information plus simple à trouver : sections, horaires, lieux de pratique, équipements et contacts sont désormais regroupés au même endroit.",
     "coverImage": "https://images.unsplash.com/photo-1573867639040-6dd25fa5f597?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "coverImageAlt": "Une equipe travaille ensemble autour d'un ordinateur portable.",
+    "coverImageAlt": "Une équipe travaille ensemble autour d'un ordinateur portable.",
     "publishedAt": "2026-07-03T09:00:00.000Z",
     "status": "published",
     "type": "club",
@@ -16,7 +16,7 @@
     "seoDescription": "Découvrez le nouveau site de l'ESCXV : sections, lieux de pratique, horaires et actualités au même endroit.",
     "readingTime": "2 min",
     "summaryPoints": [
-      "Toutes les sections reunies au même endroit",
+      "Toutes les sections réunies au même endroit",
       "Lieux de pratique et équipements détaillés",
       "Informations pratiques mises a jour"
     ],
@@ -24,12 +24,12 @@
       {
         "type": "heading",
         "title": "Un site pensé pour aller à l'essentiel",
-        "subtitle": "Moins de contenu generique, davantage d'informations pratiques et fiables."
+        "subtitle": "Moins de contenu générique, davantage d'informations pratiques et fiables."
       },
       {
         "type": "text",
         "paragraphs": [
-          "Le club met en ligne un nouveau site pour faciliter le quotidien des adherents et des familles. L'objectif est simple : permettre a chacun de trouver rapidement la bonne information, sans avoir a chercher longtemps.",
+          "Le club met en ligne un nouveau site pour faciliter le quotidien des adhérents et des familles. L'objectif est simple : permettre a chacun de trouver rapidement la bonne information, sans avoir a chercher longtemps.",
           "Les sections, les horaires, les lieux de pratique, les équipements disponibles et les contacts sont désormais regroupés et présentés de manière cohérente d'une page à l'autre."
         ]
       },
@@ -52,7 +52,7 @@
       {
         "type": "text",
         "paragraphs": [
-          "Ce nouveau site est une premiere etape. Les contenus seront enrichis au fil des semaines avec de nouvelles actualités, des informations complementaires par section et des mises a jour au rythme des responsables.",
+          "Ce nouveau site est une première étape. Les contenus seront enrichis au fil des semaines avec de nouvelles actualités, des informations complémentaires par section et des mises a jour au rythme des responsables.",
           "N.hésitez pas à revenir régulièrement : les informations pratiques et les actualités du club seront publiées ici en priorité."
         ]
       }

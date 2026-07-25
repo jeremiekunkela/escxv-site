@@ -5,8 +5,8 @@
     "title": "Aikibudo",
     "shortName": "Aikibudo",
     "icon": "🥋",
-    "shortDescription": "Art martial de maitrise, de précision et de discipline dans un cadre progressif.",
-    "description": "Une pratique martiale axée sur la technique, la posture et le controle, avec une progression adaptée aux adultes.",
+    "shortDescription": "Art martial de maîtrise, de précision et de discipline dans un cadre progressif.",
+    "description": "Une pratique martiale axée sur la technique, la posture et le contrôle, avec une progression adaptée aux adultes.",
     "category": ["arts-martiaux"],
     "publics": ["adultes"],
     "tags": ["technique", "coordination", "discipline"],
@@ -21,8 +21,8 @@
       {
         "title": "Pratique martiale",
         "audience": "Adultes",
-        "description": "Travail des techniques a mains nues et avec armes, centre sur la posture, le placement et le controle.",
-        "tags": ["Technique", "Armes", "Controle"]
+        "description": "Travail des techniques a mains nues et avec armes, centre sur la posture, le placement et le contrôle.",
+        "tags": ["Technique", "Armes", "Contrôle"]
       }
     ],
     "practiceGroups": [
@@ -81,11 +81,11 @@
   {
     "id": "athletisme",
     "slug": "athletisme",
-    "title": "Athletisme",
-    "shortName": "Athle",
+    "title": "Athlétisme",
+    "shortName": "Athlé",
     "icon": "🏃",
-    "shortDescription": "Sprint, demi-fond et école d'athletisme pour enfants",
-    "description": "La section athletisme de l'ESCXV accueille les pratiquants du loisir a la compétition, avec un travail centre sur la piste, la vitesse et la progression technique.",
+    "shortDescription": "Sprint, demi-fond et école d'athlétisme pour enfants",
+    "description": "La section athlétisme de l'ESCXV accueille les pratiquants du loisir a la compétition, avec un travail centre sur la piste, la vitesse et la progression technique.",
     "category": ["athle-running"],
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["sprint", "demi-fond", "compétition"],
@@ -93,20 +93,20 @@
     "registrationUrl": "https://escxv.monclub.app/app/61786c56e5f33700212f1b61",
     "content": {
       "heroSubtitle": "Sprint, demi-fond, sauts et travail technique pour enfants, jeunes et adultes.",
-      "schedulesNoticeText": "Les créneaux affichés servent de base de travail pour la saison 2026/2027 et doivent encore etre confirmés par la section."
+      "schedulesNoticeText": "Les créneaux affichés servent de base de travail pour la saison 2026/2027 et doivent encore être confirmés par la section."
     },
     "programs": [
       {
-        "title": "Ecole d'athletisme",
+        "title": "École d'athlétisme",
         "audience": "Enfants",
-        "description": "Decouverte de la course, des sauts et des lancers avec une progression technique accèssible et un cadre collectif.",
+        "description": "Découverte de la course, des sauts et des lancers avec une progression technique accèssible et un cadre collectif.",
         "tags": ["Initiation", "Coordination", "Loisir"]
       },
       {
         "title": "Sprint et demi-fond",
         "audience": "Adolescents et adultes",
-        "description": "Travail de vitesse, de foullee, de placement et d'endurance specifique pour progresser de facon structuree.",
-        "tags": ["Progression", "Technique", "Competition"]
+        "description": "Travail de vitesse, de foulée, de placement et d'endurance spécifique pour progresser de façon structurée.",
+        "tags": ["Progression", "Technique", "Compétition"]
       }
     ],
     "practiceGroups": [
@@ -146,7 +146,7 @@
         "day": "mardi",
         "startTime": "18:00",
         "endTime": "19:30",
-        "tags": ["jeunes", "minime", "cadet", "athletisme"]
+        "tags": ["jeunes", "minime", "cadet", "athlétisme"]
       },
       {
         "id": "athle-adultes-mardi-la-plaine-1800",
@@ -157,7 +157,7 @@
         "startTime": "18:00",
         "endTime": "19:30",
         "tags": ["sprint", "demi-fond"],
-        "notes": "Seance sprint et demi-fond adultes tous niveaux."
+        "notes": "Séance sprint et demi-fond adultes tous niveaux."
       },
       {
         "id": "athle-jeunes-jeudi-la-plaine-1830",
@@ -167,7 +167,7 @@
         "day": "jeudi",
         "startTime": "18:30",
         "endTime": "20:00",
-        "tags": ["jeunes", "minime", "cadet", "athletisme"]
+        "tags": ["jeunes", "minime", "cadet", "athlétisme"]
       },
       {
         "id": "athle-adultes-jeudi-la-plaine-1830",
@@ -178,7 +178,7 @@
         "startTime": "18:30",
         "endTime": "20:00",
         "tags": ["sprint", "demi-fond", "compétition"],
-        "notes": "Seance technique et endurance specifique."
+        "notes": "Séance technique et endurance spécifique."
       },
       {
         "id": "athle-jeunes-samedi-sablonniere-0900",
@@ -199,7 +199,7 @@
         "startTime": "09:00",
         "endTime": "10:30",
         "tags": ["sprint", "demi-fond"],
-        "notes": "Seance sprint et demi-fond adultes."
+        "notes": "Séance sprint et demi-fond adultes."
       },
       {
         "id": "athle-eveil-samedi-sablonniere-1030",
@@ -209,14 +209,14 @@
         "day": "samedi",
         "startTime": "10:30",
         "endTime": "12:00",
-        "tags": ["eveil", "benjamin", "jeunes"]
+        "tags": ["éveil", "benjamin", "jeunes"]
       }
     ],
     "prices": [
       {
         "id": "athletisme-2026-2027-jeunes",
         "season": "2026/2027",
-        "label": "Athletisme jeunes",
+        "label": "Athlétisme jeunes",
         "ageRange": "5-25 ans",
         "clubFee": 75,
         "activityFee": 155,
@@ -273,8 +273,8 @@
       {
         "title": "Groupe compétition",
         "audience": "Adultes",
-        "description": "Entrainement encadre par un moniteur pour progresser techniquement et aborder la compétition.",
-        "tags": ["Competition", "Moniteur", "Progression"]
+        "description": "Entraînement encadré par un moniteur pour progresser techniquement et aborder la compétition.",
+        "tags": ["Compétition", "Moniteur", "Progression"]
       }
     ],
     "practiceGroups": [
@@ -287,7 +287,7 @@
       },
       {
         "id": "bad-compétition",
-        "label": "Competition",
+        "label": "Compétition",
         "public": "adultes",
         "gender": "mixte",
         "sortOrder": 2
@@ -334,7 +334,7 @@
         "startTime": "20:30",
         "endTime": "22:30",
         "tags": [],
-        "notes": "Seance avec moniteur."
+        "notes": "Séance avec moniteur."
       },
       {
         "id": "bad-comp-vendredi",
@@ -392,8 +392,8 @@
     "title": "Baseball",
     "shortName": "Baseball",
     "icon": "⚾",
-    "shortDescription": "Sport collectif de précision, coordination et esprit d'equipe.",
-    "description": "Le baseball propose un cadre collectif, technique et strategique pour progresser en equipe.",
+    "shortDescription": "Sport collectif de précision, coordination et esprit d'équipe.",
+    "description": "Le baseball propose un cadre collectif, technique et stratégique pour progresser en équipe.",
     "category": ["collectif"],
     "publics": ["adultes"],
     "tags": ["collectif", "plein air", "coordination"],
@@ -401,14 +401,14 @@
     "registrationUrl": "https://escxv.monclub.app/app/6245a1965168680028df28b1",
     "content": {
       "heroSubtitle": "Pratique du baseball le jeudi soir au stade Pershing (Bois de Vincennes).",
-      "schedulesNoticeText": "Creneau du jeudi soir au stade Pershing. Prenez contact avec la section avant votre premiere venue.",
+      "schedulesNoticeText": "Créneau du jeudi soir au stade Pershing. Prenez contact avec la section avant votre première venue.",
       "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
-        "title": "Entrainement baseball",
+        "title": "Entraînement baseball",
         "audience": "Adultes",
-        "description": "Decouverte et pratique du baseball : lancer, frappe, course et jeu collectif sur le terrain.",
+        "description": "Découverte et pratique du baseball : lancer, frappe, course et jeu collectif sur le terrain.",
         "tags": ["Collectif", "Technique", "Plein air"]
       }
     ],
@@ -463,14 +463,14 @@
     "shortName": "Capoeira",
     "icon": "🥁",
     "shortDescription": "Mouvement, rythme et expression corporelle entre art martial et danse.",
-    "description": "La capoeira relie mouvement, musicalite et coordination dans une pratique collective et expressive.",
+    "description": "La capoeira relie mouvement, musicalité et coordination dans une pratique collective et expressive.",
     "category": ["arts-martiaux", "danse"],
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["mobilité", "rythme", "culture"],
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a1a634e001002139563c",
     "content": {
-      "heroSubtitle": "Art martial bresilien melant mouvement, musicalite et coordination, des 5 ans.",
+      "heroSubtitle": "Art martial brésilien mêlant mouvement, musicalité et coordination, des 5 ans.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
@@ -484,8 +484,8 @@
       {
         "title": "Capoeira adultes",
         "audience": "Adultes",
-        "description": "Travail technique, musicalite et jeu, pour developper mobilité et coordination.",
-        "tags": ["Technique", "Musique", "Mobilite"]
+        "description": "Travail technique, musicalité et jeu, pour développer mobilité et coordination.",
+        "tags": ["Technique", "Musique", "Mobilité"]
       }
     ],
     "practiceGroups": [
@@ -657,7 +657,7 @@
     "title": "Course a pied / Trail",
     "shortName": "CAP Trail",
     "icon": "🏃",
-    "shortDescription": "Running, endurance et preparation trail pour adultes.",
+    "shortDescription": "Running, endurance et préparation trail pour adultes.",
     "description": "Une activité autonome pour courir régulièrement, préparer un objectif et progresser en groupe sur route et sentiers.",
     "category": ["athle-running"],
     "publics": ["adolescents", "adultes"],
@@ -673,17 +673,17 @@
       {
         "title": "Footing et endurance",
         "audience": "Adultes",
-        "description": "Courir régulièrement, travailler le fond et construire une base aerobie durable.",
-        "tags": ["Endurance", "Regularite", "Running"]
+        "description": "Courir régulièrement, travailler le fond et construire une base aérobie durable.",
+        "tags": ["Endurance", "Régularité", "Running"]
       },
       {
-        "title": "Preparation trail",
+        "title": "Préparation trail",
         "audience": "Adultes",
-        "description": "Sorties plus longues avec denivele, gestion de rythme et adaptation aux objectifs de trail.",
-        "tags": ["Trail", "Sorties longues", "Denivele"]
+        "description": "Sorties plus longues avec dénivelé, gestion de rythme et adaptation aux objectifs de trail.",
+        "tags": ["Trail", "Sorties longues", "Dénivelé"]
       },
       {
-        "title": "Seances fractionnees",
+        "title": "Séances fractionnées",
         "audience": "Adultes",
         "description": "Travail de rythme et d'allure pour progresser sans perdre la logique collective du groupe.",
         "tags": ["Vitesse", "Allure", "Groupe"]
@@ -764,7 +764,7 @@
     "title": "Danse moderne",
     "shortName": "Danse",
     "icon": "💃",
-    "shortDescription": "Expression, rythme et energie dans une pratique artistique collective.",
+    "shortDescription": "Expression, rythme et énergie dans une pratique artistique collective.",
     "description": "Une activité corporelle axée sur le rythme, l'expression et la progression de groupe.",
     "category": ["danse"],
     "publics": ["adultes"],
@@ -772,7 +772,7 @@
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a2076656c30028b813fd",
     "content": {
-      "heroSubtitle": "Danse pour adultes et jeunes adultes, au gymnase des Cevennes ou a Cambronne.",
+      "heroSubtitle": "Danse pour adultes et jeunes adultes, au gymnase des Cévennes ou a Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
@@ -780,14 +780,14 @@
       {
         "title": "Danse moderne",
         "audience": "Adultes et jeunes adultes",
-        "description": "Echauffement progressif, travail du mouvement et enchainements choregraphiques sur des styles varies.",
+        "description": "Échauffement progressif, travail du mouvement et enchaînements chorégraphiques sur des styles variés.",
         "tags": ["Expression", "Rythme", "Choregraphie"]
       }
     ],
     "practiceGroups": [
       {
         "id": "danse-cevennes",
-        "label": "Cours Cevennes",
+        "label": "Cours Cévennes",
         "public": "adultes",
         "gender": "mixte",
         "sortOrder": 1
@@ -859,11 +859,11 @@
     "title": "Escalade",
     "shortName": "Escalade",
     "icon": "🧗",
-    "shortDescription": "Grimper, gagner en confiance et developper force, equilibre et lecture.",
+    "shortDescription": "Grimper, gagner en confiance et développer force, équilibre et lecture.",
     "description": "Une pratique de grimpe progressive pour gagner en confiance, en technique et en autonomie.",
     "category": ["escalade"],
     "publics": ["adultes"],
-    "tags": ["force", "equilibre", "confiance"],
+    "tags": ["force", "équilibre", "confiance"],
     "image": "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/61786cfb1df3f700288f2f43",
     "content": {
@@ -875,14 +875,14 @@
       {
         "title": "Grimpe adultes",
         "audience": "Adultes",
-        "description": "Pratique encadrée pour progresser en technique, en force et en lecture de voie, du debutant au confirme.",
+        "description": "Pratique encadrée pour progresser en technique, en force et en lecture de voie, du débutant au confirmé.",
         "tags": ["Adultes", "Technique", "Autonomie"]
       },
       {
         "title": "Atelier Parent-Enfant (APE)",
         "audience": "Parents et enfants",
-        "description": "Un creneau partage parent-enfant pour decouvrir l'escalade ensemble en toute securite.",
-        "tags": ["Famille", "Decouverte", "Securite"]
+        "description": "Un créneau partage parent-enfant pour découvrir l'escalade ensemble en toute sécurité.",
+        "tags": ["Famille", "Découverte", "Sécurité"]
       }
     ],
     "practiceGroups": [
@@ -1003,7 +1003,7 @@
     "title": "Football",
     "shortName": "Foot",
     "icon": "⚽",
-    "shortDescription": "Ecole de foot, jeunes et adultes, avec horaires effectifs, compétition et inscription par mail.",
+    "shortDescription": "École de foot, jeunes et adultes, avec horaires effectifs, compétition et inscription par mail.",
     "description": "La section football centralise les horaires effectifs, les lieux de pratique, les tarifs et les inscriptions pour l'école de foot, les jeunes et les adultes.",
     "category": ["collectif"],
     "publics": ["enfants", "adolescents", "adultes"],
@@ -1011,29 +1011,29 @@
     "image": "https://images.unsplash.com/photo-1517747614396-d21a78b850e8?auto=format&fit=crop&w=1600&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a25a34e00100213958dd",
     "content": {
-      "heroSubtitle": "Une pratique de proximite pour jouer, apprendre et s'engager en equipe a tout age.",
+      "heroSubtitle": "Une pratique de proximité pour jouer, apprendre et s'engager en équipe a tout âge.",
       "schedulesNoticeText": "Inscription validée si paiement. Contact: football@esc15.fr.",
       "contactText": "Inscription validée si paiement. Écrivez a football@esc15.fr pour toute question ou demande d'inscription.",
-      "contactFormText": "Les demandes d'inscription sont confirmees apres réception du paiement."
+      "contactFormText": "Les demandes d'inscription sont confirmées après réception du paiement."
     },
     "programs": [
       {
-        "title": "Ecole de foot",
+        "title": "École de foot",
         "audience": "Enfants",
-        "description": "Decouverte du jeu, motricite, coordination et apprentissage des fondamentaux dans un cadre securisant.",
+        "description": "Découverte du jeu, motricité, coordination et apprentissage des fondamentaux dans un cadre sécurisant.",
         "tags": ["Enfants", "Apprentissage", "Collectif"]
       },
       {
         "title": "Parcours jeunes",
         "audience": "Adolescents",
-        "description": "Seances structurees pour progresser techniquement, comprendre le jeu et s'inscrire dans une dynamique d'equipe.",
+        "description": "Séances structurées pour progresser techniquement, comprendre le jeu et s'inscrire dans une dynamique d'équipe.",
         "tags": ["Jeunes", "Technique", "Matchs"]
       },
       {
         "title": "Loisir et compétition",
         "audience": "Adultes",
-        "description": "Des groupes adultes pour pratiquer régulièrement, garder du rythme ou rejoindre une logique plus competitive.",
-        "tags": ["Adultes", "Loisir", "Competition"]
+        "description": "Des groupes adultes pour pratiquer régulièrement, garder du rythme ou rejoindre une logique plus compétitive.",
+        "tags": ["Adultes", "Loisir", "Compétition"]
       }
     ],
     "practiceGroups": [
@@ -1422,15 +1422,15 @@
     "title": "Gymnastique d'entretien",
     "shortName": "Gym entretien",
     "icon": "🤸",
-    "shortDescription": "Bouger régulièrement, entretenir mobilité, tonicite et equilibre.",
-    "description": "Une pratique d'entretien physique pour garder du mouvement et une forme reguliere.",
+    "shortDescription": "Bouger régulièrement, entretenir mobilité, tonicité et équilibre.",
+    "description": "Une pratique d'entretien physique pour garder du mouvement et une forme régulière.",
     "category": ["forme"],
     "publics": ["adultes"],
-    "tags": ["mobilité", "tonicite", "equilibre"],
+    "tags": ["mobilité", "tonicité", "équilibre"],
     "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a32c6656c30028b81870",
     "content": {
-      "heroSubtitle": "Seance d'entretien physique sur l'heure du midi, le jeudi a La Plaine.",
+      "heroSubtitle": "Séance d'entretien physique sur l'heure du midi, le jeudi a La Plaine.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
@@ -1438,8 +1438,8 @@
       {
         "title": "Gymnastique d'entretien",
         "audience": "Adultes",
-        "description": "Mobilite, tonicite, renforcement doux et equilibre dans une séance accèssible a tous.",
-        "tags": ["Mobilite", "Tonicite", "Midi"]
+        "description": "Mobilité, tonicité, renforcement doux et équilibre dans une séance accèssible a tous.",
+        "tags": ["Mobilité", "Tonicité", "Midi"]
       }
     ],
     "practiceGroups": [
@@ -1508,13 +1508,13 @@
         "title": "Judo jeunes - initiation",
         "audience": "Enfants",
         "description": "Découverte du judo, motricité, chutes et premiers automatismes dans un cadre sécurisant.",
-        "tags": ["Initiation", "Motricite", "Respect"]
+        "tags": ["Initiation", "Motricité", "Respect"]
       },
       {
         "title": "Judo jeunes - progression",
         "audience": "Jeunes",
         "description": "Apprentissage technique, progression par ceintures et initiation à la compétition.",
-        "tags": ["Technique", "Ceintures", "Competition"]
+        "tags": ["Technique", "Ceintures", "Compétition"]
       }
     ],
     "practiceGroups": [
@@ -1637,7 +1637,7 @@
     "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/61786d201df3f700288f2f44",
     "content": {
-      "heroSubtitle": "Initiation et perfectionnement des 6 ans, le vendredi a la piscine Emile Anthoine.",
+      "heroSubtitle": "Initiation et perfectionnement des 6 ans, le vendredi a la piscine Émile Anthoine.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
@@ -1669,7 +1669,7 @@
         "startTime": "19:15",
         "endTime": "20:15",
         "tags": [],
-        "notes": "Presence requise des 19h."
+        "notes": "Présence requise des 19h."
       }
     ],
     "prices": [
@@ -1699,15 +1699,15 @@
     "title": "Pilates",
     "shortName": "Pilates",
     "icon": "◌",
-    "shortDescription": "Renforcement profond, posture et controle du mouvement.",
-    "description": "Une pratique de forme axée sur le gainage, la posture et la qualite du mouvement.",
+    "shortDescription": "Renforcement profond, posture et contrôle du mouvement.",
+    "description": "Une pratique de forme axée sur le gainage, la posture et la qualité du mouvement.",
     "category": ["forme"],
     "publics": ["adultes"],
     "tags": ["posture", "gainage", "mobilité"],
     "image": "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a35e5168680028df2ebb",
     "content": {
-      "heroSubtitle": "Renforcement profond, posture et controle du mouvement, le jeudi a Cambronne.",
+      "heroSubtitle": "Renforcement profond, posture et contrôle du mouvement, le jeudi a Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
@@ -1715,8 +1715,8 @@
       {
         "title": "Pilates",
         "audience": "Adultes",
-        "description": "Renforcement profond, gainage, posture et controle du mouvement.",
-        "tags": ["Gainage", "Posture", "Controle"]
+        "description": "Renforcement profond, gainage, posture et contrôle du mouvement.",
+        "tags": ["Gainage", "Posture", "Contrôle"]
       }
     ],
     "practiceGroups": [
@@ -1768,15 +1768,15 @@
     "title": "Renforcement musculaire",
     "shortName": "Renfo",
     "icon": "💪",
-    "shortDescription": "Seances toniques pour developper force, gainage et condition physique.",
-    "description": "Une pratique forme et condition physique pour entretenir la tonicite et la régularité.",
+    "shortDescription": "Séances toniques pour développer force, gainage et condition physique.",
+    "description": "Une pratique forme et condition physique pour entretenir la tonicité et la régularité.",
     "category": ["forme"],
     "publics": ["adultes"],
     "tags": ["force", "gainage", "condition physique"],
     "image": "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a1f834e001002139584b",
     "content": {
-      "heroSubtitle": "Seances toniques de renforcement, le vendredi a Cambronne.",
+      "heroSubtitle": "Séances toniques de renforcement, le vendredi a Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
@@ -1784,8 +1784,8 @@
       {
         "title": "Renforcement musculaire",
         "audience": "Adultes",
-        "description": "Seances toniques de renforcement global : force, gainage et condition physique.",
-        "tags": ["Force", "Gainage", "Tonicite"]
+        "description": "Séances toniques de renforcement global : force, gainage et condition physique.",
+        "tags": ["Force", "Gainage", "Tonicité"]
       }
     ],
     "practiceGroups": [
@@ -1837,15 +1837,15 @@
     "title": "Sport mercredi",
     "shortName": "Mercredi",
     "icon": "👦",
-    "shortDescription": "Creneau multisports pour enfants, pense pour decouvrir et bouger.",
+    "shortDescription": "Créneau multisports pour enfants, pense pour découvrir et bouger.",
     "description": "Une offre multisports enfants pour varier les pratiques et garder une approche ludique en milieu de semaine.",
     "category": ["forme", "collectif"],
     "publics": ["enfants", "adolescents"],
-    "tags": ["multisports", "enfants", "decouverte"],
+    "tags": ["multisports", "enfants", "découverte"],
     "image": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a37e34e0010021395b9b",
     "content": {
-      "heroSubtitle": "Initiation multisports pour enfants des 5 ans, le mercredi apres-midi.",
+      "heroSubtitle": "Initiation multisports pour enfants des 5 ans, le mercredi après-midi.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
@@ -1853,8 +1853,8 @@
       {
         "title": "Initiation multisports",
         "audience": "De 5 a 15 ans",
-        "description": "Athletisme, badminton, basket, football, gymnastique, judo... une decouverte variee, encadrée par des étudiants en STAPS.",
-        "tags": ["Multisports", "Decouverte", "Encadre"]
+        "description": "Athlétisme, badminton, basket, football, gymnastique, judo... une découverte variée, encadrée par des étudiants en STAPS.",
+        "tags": ["Multisports", "Découverte", "Encadre"]
       }
     ],
     "practiceGroups": [
@@ -1907,15 +1907,15 @@
     "title": "Stretching",
     "shortName": "Stretching",
     "icon": "⌁",
-    "shortDescription": "Souplesse, mobilité et recuperation dans une pratique accèssible.",
+    "shortDescription": "Souplesse, mobilité et récupération dans une pratique accèssible.",
     "description": "Une activité douce pour entretenir la mobilité et récupérer sans charge excessive.",
     "category": ["forme"],
     "publics": ["adultes"],
-    "tags": ["souplesse", "mobilité", "recuperation"],
+    "tags": ["souplesse", "mobilité", "récupération"],
     "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a398ee6b0b0021168741",
     "content": {
-      "heroSubtitle": "Souplesse, mobilité et recuperation, le lundi soir a Cambronne.",
+      "heroSubtitle": "Souplesse, mobilité et récupération, le lundi soir a Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
@@ -1923,8 +1923,8 @@
       {
         "title": "Stretching",
         "audience": "Adultes",
-        "description": "Travail de souplesse, de mobilité et de recuperation dans une pratique douce.",
-        "tags": ["Souplesse", "Mobilite", "Recuperation"]
+        "description": "Travail de souplesse, de mobilité et de récupération dans une pratique douce.",
+        "tags": ["Souplesse", "Mobilité", "Récupération"]
       }
     ],
     "practiceGroups": [
@@ -1986,7 +1986,7 @@
     "title": "Tennis",
     "shortName": "Tennis",
     "icon": "🎾",
-    "shortDescription": "Cours et pratique selon niveau, creneau et objectif.",
+    "shortDescription": "Cours et pratique selon niveau, créneau et objectif.",
     "description": "Une activité raquette qui mélange apprentissage technique, régularité et jeu.",
     "category": ["raquette"],
     "publics": ["enfants", "adolescents", "adultes"],
@@ -1994,22 +1994,22 @@
     "image": "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a3b3ee6b0b002116878e",
     "content": {
-      "heroSubtitle": "Ecole de tennis et tennis compétition, de 5 ans aux adultes.",
+      "heroSubtitle": "École de tennis et tennis compétition, de 5 ans aux adultes.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
-        "title": "Tennis Ecole",
+        "title": "Tennis École",
         "audience": "Enfants, jeunes et adultes",
-        "description": "Cours collectifs par niveau et par age, en 1h ou 1h30, pour apprendre et progresser.",
-        "tags": ["Ecole", "Cours", "Progression"]
+        "description": "Cours collectifs par niveau et par âge, en 1h ou 1h30, pour apprendre et progresser.",
+        "tags": ["École", "Cours", "Progression"]
       },
       {
-        "title": "Tennis Competition",
+        "title": "Tennis Compétition",
         "audience": "Adultes",
-        "description": "Pratique competitive en FSGT pour jouer en equipe et en tournoi.",
-        "tags": ["Competition", "FSGT", "Match"]
+        "description": "Pratique compétitive en FSGT pour jouer en équipe et en tournoi.",
+        "tags": ["Compétition", "FSGT", "Match"]
       }
     ],
     "practiceGroups": [
@@ -2133,7 +2133,7 @@
       {
         "id": "tennis-2026-2027-école-1h",
         "season": "2026/2027",
-        "label": "Tennis Ecole - cours 1h",
+        "label": "Tennis École - cours 1h",
         "clubFee": 75,
         "activityFee": 235,
         "total": 310,
@@ -2142,7 +2142,7 @@
       {
         "id": "tennis-2026-2027-école-1h30",
         "season": "2026/2027",
-        "label": "Tennis Ecole - cours 1h30",
+        "label": "Tennis École - cours 1h30",
         "clubFee": 75,
         "activityFee": 305,
         "total": 380,
@@ -2151,7 +2151,7 @@
       {
         "id": "tennis-2026-2027-compétition",
         "season": "2026/2027",
-        "label": "Tennis Competition (FSGT)",
+        "label": "Tennis Compétition (FSGT)",
         "clubFee": 75,
         "activityFee": 125,
         "total": 200,
@@ -2173,7 +2173,7 @@
       },
       {
         "id": "contact-tennis-compétition",
-        "name": "Tennis Competition",
+        "name": "Tennis Compétition",
         "role": "Contact compétition",
         "email": "tennis-compétition@esc15.fr",
         "phone": null
@@ -2202,14 +2202,14 @@
       {
         "title": "Jeunes",
         "audience": "Enfants et moins de 18 ans",
-        "description": "Du panier de balles pour les plus jeunes aux entraînements encadres pour les moins de 18 ans.",
-        "tags": ["Initiation", "Entrainement", "Jeunes"]
+        "description": "Du panier de balles pour les plus jeunes aux entraînements encadrés pour les moins de 18 ans.",
+        "tags": ["Initiation", "Entraînement", "Jeunes"]
       },
       {
         "title": "Adultes",
         "audience": "Adultes",
-        "description": "Entrainement et créneaux loisir pour jouer régulièrement, dans la limite de deux séances par semaine.",
-        "tags": ["Entrainement", "Loisir", "Adultes"]
+        "description": "Entraînement et créneaux loisir pour jouer régulièrement, dans la limite de deux séances par semaine.",
+        "tags": ["Entraînement", "Loisir", "Adultes"]
       }
     ],
     "practiceGroups": [
@@ -2364,41 +2364,41 @@
     "shortName": "Volley",
     "icon": "🏐",
     "shortDescription": "Jeu collectif, coordination et pratique conviviale en salle.",
-    "description": "Une pratique collective orientee coordination, jeu et régularité de groupe.",
+    "description": "Une pratique collective orientée coordination, jeu et régularité de groupe.",
     "category": ["collectif"],
     "publics": ["enfants", "adolescents", "adultes"],
-    "tags": ["equipe", "salle", "loisir"],
+    "tags": ["équipe", "salle", "loisir"],
     "image": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a3d76656c30028b819f6",
     "content": {
-      "heroSubtitle": "Ecole, plaisir, compétition et beach-volley, en salle et en exterieur.",
+      "heroSubtitle": "École, plaisir, compétition et beach-volley, en salle et en extérieur.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
-        "title": "Ecole & perfectionnement",
+        "title": "École & perfectionnement",
         "audience": "Enfants et jeunes (des 8 ans)",
         "description": "Apprentissage des fondamentaux et perfectionnement technique du volley-ball.",
-        "tags": ["Ecole", "Technique", "Progression"]
+        "tags": ["École", "Technique", "Progression"]
       },
       {
         "title": "Plaisir",
         "audience": "Adultes",
-        "description": "Pratique recreative pour d'anciens joueurs et des seniors, hors compétition.",
-        "tags": ["Loisir", "Convivialite", "Adultes"]
+        "description": "Pratique récréative pour d'anciens joueurs et des seniors, hors compétition.",
+        "tags": ["Loisir", "Convivialité", "Adultes"]
       },
       {
-        "title": "Competition & beach-volley",
+        "title": "Compétition & beach-volley",
         "audience": "Adultes",
-        "description": "Competition FSGT en salle (niveau regional minimum) et beach-volley le dimanche.",
-        "tags": ["Competition", "FSGT", "Beach"]
+        "description": "Compétition FSGT en salle (niveau régional minimum) et beach-volley le dimanche.",
+        "tags": ["Compétition", "FSGT", "Beach"]
       }
     ],
     "practiceGroups": [
       {
         "id": "volley-école",
-        "label": "Ecole & perfectionnement",
+        "label": "École & perfectionnement",
         "public": "adolescents",
         "gender": "mixte",
         "sortOrder": 1
@@ -2412,7 +2412,7 @@
       },
       {
         "id": "volley-compétition",
-        "label": "Competition",
+        "label": "Compétition",
         "public": "adultes",
         "gender": "mixte",
         "sortOrder": 3
@@ -2493,7 +2493,7 @@
       {
         "id": "volley-2026-2027-ecole",
         "season": "2026/2027",
-        "label": "Ecole / Perfectionnement",
+        "label": "École / Perfectionnement",
         "ageRange": "8-18 ans",
         "clubFee": 75,
         "activityFee": 70,
@@ -2513,7 +2513,7 @@
     "contacts": [
       {
         "id": "contact-volley-école",
-        "name": "Volley Ecole",
+        "name": "Volley École",
         "role": "Contact école",
         "email": "volley-école@esc15.fr",
         "phone": null
@@ -2533,11 +2533,11 @@
     "title": "Yoga",
     "shortName": "Yoga",
     "icon": "🧘",
-    "shortDescription": "Respiration, mobilité et equilibre pour une pratique reguliere.",
-    "description": "Une pratique douce pour gagner en mobilité, respiration et stabilite au quotidien.",
+    "shortDescription": "Respiration, mobilité et équilibre pour une pratique régulière.",
+    "description": "Une pratique douce pour gagner en mobilité, respiration et stabilité au quotidien.",
     "category": ["forme"],
     "publics": ["adultes"],
-    "tags": ["respiration", "mobilité", "bien-etre"],
+    "tags": ["respiration", "mobilité", "bien-être"],
     "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a3e85168680028df2fa1",
     "content": {
@@ -2549,7 +2549,7 @@
       {
         "title": "Hatha-Yoga",
         "audience": "Adultes, tous niveaux",
-        "description": "Relaxation, respiration, echauffement progressif et postures dynamiques ou douces, a son rythme.",
+        "description": "Relaxation, respiration, échauffement progressif et postures dynamiques ou douces, a son rythme.",
         "tags": ["Respiration", "Postures", "Relaxation"]
       }
     ],

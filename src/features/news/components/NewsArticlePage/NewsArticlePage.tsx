@@ -1,11 +1,11 @@
-import Image from "next/image";
-import type { CSSProperties, ReactNode } from "react";
 import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
 import { NewsList } from "@/features/news/components/NewsList/NewsList";
 import { NewsReadingProgress } from "@/features/news/components/NewsReadingProgress/NewsReadingProgress";
 import type { NewsArticleBlock, NewsItem } from "@/features/news/types/news";
 import { getActivityRoute, routes } from "@/lib/constants/routes";
+import Image from "next/image";
+import type { CSSProperties, ReactNode } from "react";
 import styles from "./NewsArticlePage.module.css";
 
 type NewsArticlePageProps = {
@@ -35,7 +35,7 @@ function getNewsArticleBlocks(newsItem: NewsItem): NewsArticleBlock[] {
     : [
         {
           type: "heading",
-          title: "Actualite",
+          title: "actualité",
         },
         {
           type: "text",
@@ -161,7 +161,7 @@ export function NewsArticlePage({
               icon="arrowLeft"
               className={styles.backButton}
             >
-              Retour aux actualites
+              Retour aux actualités
             </Button>
 
             <div
@@ -241,7 +241,7 @@ export function NewsArticlePage({
                   <p className={styles.sidebarEyebrow}>Navigation</p>
                   <div className={styles.sidebarActions}>
                     <Button href={routes.news} variant="secondary">
-                      Toutes les actualites
+                      Toutes les actualités
                     </Button>
                     {newsItem.activitySlug ? (
                       <Button href={getActivityRoute(newsItem.activitySlug)}>
@@ -259,7 +259,7 @@ export function NewsArticlePage({
           <NewsList
             news={relatedNews}
             eyebrow="A lire aussi"
-            title="Autres actualites"
+            title="Autres actualités"
             surface="soft"
             presentation="carousel"
             carouselLayout="single"

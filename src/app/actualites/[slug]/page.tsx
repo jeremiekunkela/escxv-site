@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { NewsArticlePage } from "@/features/news/components/NewsArticlePage/NewsArticlePage";
 import {
-  getNewsBySlug,
-  getNewsSlugs,
-  getRelatedNews,
+    getNewsBySlug,
+    getNewsSlugs,
+    getRelatedNews,
 } from "@/features/news/data-access/news";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 type NewsArticleRouteProps = {
   params: Promise<{ slug: string }>;
@@ -23,7 +23,7 @@ export async function generateMetadata({
 
   if (!newsItem) {
     return {
-      title: "Actualite introuvable",
+      title: "actualité introuvable",
     };
   }
 
