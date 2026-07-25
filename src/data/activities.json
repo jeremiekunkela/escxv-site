@@ -6,7 +6,7 @@
     "shortName": "Aikibudo",
     "icon": "🥋",
     "shortDescription": "Art martial de maitrise, de précision et de discipline dans un cadre progressif.",
-    "description": "Une pratique martiale axée sur la technique, la posture et le controle, avec une progression adaptée aux adolescents et aux adultes.",
+    "description": "Une pratique martiale axée sur la technique, la posture et le controle, avec une progression adaptée aux adultes.",
     "category": ["arts-martiaux"],
     "publics": ["adultes"],
     "tags": ["technique", "coordination", "discipline"],
@@ -20,7 +20,7 @@
     "programs": [
       {
         "title": "Pratique martiale",
-        "audience": "Adolescents et adultes",
+        "audience": "Adultes",
         "description": "Travail des techniques a mains nues et avec armes, centre sur la posture, le placement et le controle.",
         "tags": ["Technique", "Armes", "Controle"]
       }
@@ -407,7 +407,7 @@
     "programs": [
       {
         "title": "Entrainement baseball",
-        "audience": "Tous publics",
+        "audience": "Adultes",
         "description": "Decouverte et pratique du baseball : lancer, frappe, course et jeu collectif sur le terrain.",
         "tags": ["Collectif", "Technique", "Plein air"]
       }
@@ -692,7 +692,7 @@
     "practiceGroups": [
       {
         "id": "cap-adultes",
-        "label": "Adultes",
+        "label": "Adultes (des 17 ans)",
         "public": "adultes",
         "gender": "mixte",
         "sortOrder": 1
@@ -862,7 +862,7 @@
     "shortDescription": "Grimper, gagner en confiance et developper force, equilibre et lecture.",
     "description": "Une pratique de grimpe progressive pour gagner en confiance, en technique et en autonomie.",
     "category": ["escalade"],
-    "publics": ["adolescents", "adultes"],
+    "publics": ["adultes"],
     "tags": ["force", "equilibre", "confiance"],
     "image": "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/61786cfb1df3f700288f2f43",
@@ -1852,7 +1852,7 @@
     "programs": [
       {
         "title": "Initiation multisports",
-        "audience": "Enfants des 5 ans",
+        "audience": "De 5 a 15 ans",
         "description": "Athletisme, badminton, basket, football, gymnastique, judo... une decouverte variee, encadrée par des étudiants en STAPS.",
         "tags": ["Multisports", "Decouverte", "Encadre"]
       }
@@ -1860,7 +1860,7 @@
     "practiceGroups": [
       {
         "id": "merc-enfants",
-        "label": "Enfants des 5 ans",
+        "label": "De 5 a 15 ans",
         "public": "enfants",
         "gender": "mixte",
         "sortOrder": 1
@@ -2378,7 +2378,7 @@
     "programs": [
       {
         "title": "Ecole & perfectionnement",
-        "audience": "Jeunes et joueurs en progression",
+        "audience": "Enfants et jeunes (des 8 ans)",
         "description": "Apprentissage des fondamentaux et perfectionnement technique du volley-ball.",
         "tags": ["Ecole", "Technique", "Progression"]
       },
