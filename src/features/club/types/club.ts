@@ -1,5 +1,10 @@
 import type { KeyFigure } from "@/types/content";
 
+export type ClubPresentation = {
+  tagline: string;
+  paragraphs: string[];
+};
+
 export type ClubInfo = {
   name: string;
   shortName: string;
@@ -13,6 +18,7 @@ export type ClubInfo = {
   approximateMemberCount: string;
   approximateActivityCount: number;
   description: string;
+  presentation: ClubPresentation;
   values: string[];
   keyFigures: KeyFigure[];
 };

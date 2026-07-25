@@ -1,0 +1,207 @@
+{
+  "bureau": [
+    {
+      "role": "Président d'honneur à titre posthume",
+      "firstName": "Lucien",
+      "lastName": "Jourdain"
+    },
+    {
+      "role": "Président d'honneur à titre posthume",
+      "firstName": "Charles",
+      "lastName": "Patoz"
+    },
+    {
+      "role": "Président d'honneur à titre posthume",
+      "firstName": "Radislav",
+      "lastName": "Petronijevic"
+    },
+    {
+      "role": "Président d'honneur",
+      "firstName": "Jean-Claude",
+      "lastName": "Collin"
+    },
+    { "role": "Président", "firstName": "Julio", "lastName": "Saramago" },
+    {
+      "role": "Secrétaire général",
+      "firstName": "Jean-Philippe",
+      "lastName": "Andrew Debeugny"
+    },
+    {
+      "role": "Secrétaire sportif",
+      "firstName": "Matthieu",
+      "lastName": "Robert"
+    },
+    {
+      "role": "Trésorier général",
+      "firstName": "Thierry",
+      "lastName": "Uhres"
+    },
+    { "role": "Référente VHSS", "firstName": "Awa", "lastName": "Konaré" }
+  ],
+  "committee": [
+    {
+      "section": "Aïkibudo",
+      "email": "aikibudo@esc15.fr",
+      "members": [
+        { "firstName": "Christian", "lastName": "Wiltord" },
+        { "firstName": "Didier", "lastName": "Agenet" }
+      ]
+    },
+    {
+      "section": "Athlétisme",
+      "email": "athletisme@esc15.fr",
+      "members": [
+        { "firstName": "Dérick", "lastName": "Ondée" },
+        { "firstName": "Matieu", "lastName": "Varela" }
+      ]
+    },
+    {
+      "section": "Badminton",
+      "email": "badminton@esc15.fr",
+      "members": [
+        { "firstName": "Emmanuel", "lastName": "Legros" },
+        { "firstName": "Marie", "lastName": "Regnault" },
+        { "firstName": "Julien", "lastName": "Duminy" }
+      ]
+    },
+    {
+      "section": "Baseball",
+      "email": "baseball@esc15.fr",
+      "members": [
+        { "firstName": "David", "lastName": "Stanislas" },
+        { "firstName": "Mikael", "lastName": "Bobinet" }
+      ]
+    },
+    {
+      "section": "Capoeira",
+      "email": "capoeira@esc15.fr",
+      "members": [{ "firstName": "Reda", "lastName": "Iochem" }]
+    },
+    {
+      "section": "Course à pied",
+      "email": "cap@esc15.fr",
+      "members": [
+        { "firstName": "Olivier", "lastName": "Ménégol" },
+        { "firstName": "Julio", "lastName": "Saramago" },
+        { "firstName": "Delphine", "lastName": "Jegou" }
+      ]
+    },
+    {
+      "section": "Danse moderne",
+      "email": "danse@esc15.fr",
+      "members": [
+        { "firstName": "Anne-Hélène", "lastName": "Fardeau" },
+        { "firstName": "Eléonore", "lastName": "Grimberg" }
+      ]
+    },
+    {
+      "section": "Escalade",
+      "email": "escalade@esc15.fr",
+      "members": [
+        { "firstName": "Victoria", "lastName": "Tonnelier" },
+        { "firstName": "Christophe", "lastName": "Galant" }
+      ]
+    },
+    {
+      "section": "Escalade APE",
+      "email": "escalade-ape@esc15.fr",
+      "members": [{ "firstName": "Vincent", "lastName": "Sol" }]
+    },
+    {
+      "section": "Football",
+      "email": "football@esc15.fr",
+      "members": [
+        { "firstName": "Vincent", "lastName": "Kieffer" },
+        { "firstName": "Michel", "lastName": "Blino" },
+        { "firstName": "Jean-Philippe", "lastName": "Andrew Debeugny" }
+      ]
+    },
+    {
+      "section": "Football FSGT",
+      "email": "football@esc15.fr",
+      "members": [
+        { "firstName": "Louis", "lastName": "Renevot" },
+        { "firstName": "Simon", "lastName": "Dujardin" }
+      ]
+    },
+    {
+      "section": "Sport Santé / Gymnastique d'entretien",
+      "email": "gym-entretien@esc15.fr",
+      "members": [{ "firstName": "Michel", "lastName": "Nobili" }]
+    },
+    {
+      "section": "Judo",
+      "email": "judo@esc15.fr",
+      "members": [
+        { "firstName": "Christophe", "lastName": "Lopes" },
+        { "firstName": "Alain", "lastName": "Kansoun" }
+      ]
+    },
+    {
+      "section": "Natation",
+      "email": "natation@esc15.fr",
+      "members": [
+        { "firstName": "Gérald", "lastName": "Marcellus" },
+        { "firstName": "Lassaad", "lastName": "Chekrid" }
+      ]
+    },
+    {
+      "section": "Pilates",
+      "email": "pilates@esc15.fr",
+      "members": [{ "firstName": "Marie", "lastName": "Nadotti" }]
+    },
+    {
+      "section": "Renforcement musculaire",
+      "email": "renf-muscu@esc15.fr",
+      "members": [{ "firstName": "Marie", "lastName": "Nadotti" }]
+    },
+    {
+      "section": "Sport mercredi",
+      "email": "sport-mercredi@esc15.fr",
+      "members": [{ "firstName": "Lisbeth", "lastName": "Connuel" }]
+    },
+    {
+      "section": "Stretching",
+      "email": "stretching@esc15.fr",
+      "members": [{ "firstName": "Marie", "lastName": "Nadotti" }]
+    },
+    {
+      "section": "Tennis",
+      "email": "tennis@esc15.fr",
+      "members": [
+        { "firstName": "Igor", "lastName": "Garcia" },
+        { "firstName": "Fabien", "lastName": "Roulier" }
+      ]
+    },
+    {
+      "section": "Tennis compétition",
+      "email": "tennis-competition@esc15.fr",
+      "members": [
+        { "firstName": "Edouard", "lastName": "Allemand" },
+        { "firstName": "Frédéric", "lastName": "Payet" }
+      ]
+    },
+    {
+      "section": "Tennis de table",
+      "email": "tennis-de-table@esc15.fr",
+      "members": [
+        { "firstName": "Olivier", "lastName": "Bernard" },
+        { "firstName": "Denis", "lastName": "Lestien" }
+      ]
+    },
+    {
+      "section": "Volley-ball",
+      "email": "volley@esc15.fr",
+      "members": [
+        { "firstName": "Thierry", "lastName": "Uhres" },
+        { "firstName": "Matthieu", "lastName": "Robert" },
+        { "firstName": "Sylvain", "lastName": "Moll" }
+      ]
+    },
+    {
+      "section": "Yoga",
+      "email": "yoga@esc15.fr",
+      "members": [{ "firstName": "Carol", "lastName": "Ribaud" }]
+    }
+  ]
+}

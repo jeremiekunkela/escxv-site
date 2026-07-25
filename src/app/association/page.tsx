@@ -2,8 +2,13 @@ import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
 import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
+import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
 import { InstallationsExplorer } from "@/features/activities/components/InstallationsExplorer/InstallationsExplorer";
 import { getInstallations } from "@/features/activities/data-access/activities";
+import { ClubGovernance } from "@/features/club/components/ClubGovernance/ClubGovernance";
+import { ClubPresentation } from "@/features/club/components/ClubPresentation/ClubPresentation";
+import { getClubInfo } from "@/features/club/data-access/club";
+import { getGovernance } from "@/features/club/data-access/governance";
 import styles from "./page.module.css";
 
 const vhssGuideUrl =
@@ -12,27 +17,49 @@ const vhssGuideUrl =
 export const metadata: Metadata = {
   title: "Association",
   description:
-    "Installations et ressources VHSS de l'ESCXV.",
+    "Présentation de l'ESCXV, comité directeur, installations et ressources VHSS.",
 };
 
 export default function AssociationPage() {
+  const club = getClubInfo();
+  const governance = getGovernance();
+
   return (
     <>
       <HeroSection
         eyebrow="Association"
         title="L'ESCXV, association sportive depuis 1910"
-        description="Retrouvez les lieux de pratique du club et les ressources de prévention."
+        description="Découvrez le projet du club, son comité directeur, ses lieux de pratique et les ressources de prévention."
         imageUrl="https://images.unsplash.com/photo-1517130038641-a774d04afb3c?auto=format&fit=crop&w=1800&q=80"
-        primaryCta={{ label: "Voir les installations", href: "#installations" }}
-        secondaryCta={{ label: "Guide VHSS", href: "#vhss" }}
+        primaryCta={{ label: "Découvrir le club", href: "#presentation" }}
+        secondaryCta={{ label: "Comité directeur", href: "#comite" }}
       />
 
       <main>
-        <section className={styles.section}>
+        <section id="presentation" className={styles.section}>
           <Container>
-            <article id="vhss" className={styles.panel}>
-              <p className={styles.eyebrow}>VHSS</p>
-              <h2 className={styles.title}>Prévenir, repérer, agir</h2>
+            <div className={styles.header}>
+              <SectionTitle eyebrow="Le club" title="Notre association" />
+            </div>
+            <ClubPresentation presentation={club.presentation} />
+          </Container>
+        </section>
+
+        <section id="comite" className={`${styles.section} ${styles.softGrid}`}>
+          <Container>
+            <div className={styles.header}>
+              <SectionTitle eyebrow="Gouvernance" title="Le comité directeur" />
+            </div>
+            <ClubGovernance governance={governance} />
+          </Container>
+        </section>
+
+        <section id="vhss" className={styles.section}>
+          <Container>
+            <div className={styles.header}>
+              <SectionTitle eyebrow="VHSS" title="Prévenir, repérer, agir" />
+            </div>
+            <div className={styles.vhssBody}>
               <p className={styles.text}>
                 Le guide de la Ville de Paris accompagne les familles et les
                 encadrants dans la prévention des violences sexuelles sur mineurs.
@@ -45,19 +72,17 @@ export default function AssociationPage() {
               >
                 Ouvrir le guide
               </Button>
-            </article>
+            </div>
           </Container>
         </section>
 
-        <section id="installations" className={styles.installationsSection}>
+        <section
+          id="installations"
+          className={`${styles.section} ${styles.softGrid}`}
+        >
           <Container>
-            <div className={styles.installationsHeader}>
-              <p className={styles.eyebrow}>Installations</p>
-              <h2 className={styles.title}>Les lieux de pratique</h2>
-              <p className={styles.text}>
-                Gymnases, stades, piscines et salles : les installations du club
-                restent consultables depuis la page Association.
-              </p>
+            <div className={styles.header}>
+              <SectionTitle eyebrow="Installations" title="Les lieux de pratique" />
             </div>
           </Container>
           <InstallationsExplorer installations={getInstallations()} />

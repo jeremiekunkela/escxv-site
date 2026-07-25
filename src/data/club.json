@@ -1,5 +1,5 @@
 {
-  "name": "Etoile Sportive Club du XVe",
+  "name": "Évolution Sportive et Culturelle du XVe",
   "shortName": "ESCXV",
   "address": "124 avenue Émile Zola",
   "postalCode": "75015",
@@ -11,6 +11,16 @@
   "approximateMemberCount": "1 900+",
   "approximateActivityCount": 20,
   "description": "Club omnisports de quartier à Paris 15, l'ESCXV accompagne les enfants, les adolescents et les adultes dans une pratique sportive accessible et régulière.",
+  "presentation": {
+    "tagline": "L'ESC XV : le Sport et la Culture pour Toutes et Tous à Paris depuis 1910.",
+    "paragraphs": [
+      "Fondée dans le 15ᵉ arrondissement, l'Évolution Sportive et Culturelle du XVe (ESC XV) est une association omnisports régie par la loi de 1901. Affiliée à la FSGT et, pour certaines disciplines, à des fédérations délégataires, elle développe les pratiques sportives, physiques et culturelles dans un esprit d'ouverture, de partage et de non-discrimination.",
+      "Chaque saison, 1 800 à 2 000 adhérentes et adhérents pratiquent une vingtaine d'activités dans les équipements de l'arrondissement. Loisirs, compétition, initiation, perfectionnement, sport-santé, bien-être et pratiques culturelles : chacun et chacune peut trouver une activité adaptée à ses envies, à son âge et à son niveau.",
+      "L'ESC XV défend un sport accessible à toutes et tous, dont la dimension éducative prime sur le seul résultat. Son projet repose sur l'inclusion, la mixité sociale, la parité, la solidarité et la qualité de l'encadrement.",
+      "Le bénévolat est au cœur de la vie du club. Membres du comité directeur, responsables de sections et adhérents engagés contribuent à son fonctionnement, au développement des activités et à l'organisation de nombreux projets. Leur investissement fait vivre un projet collectif, accessible et fédérateur.",
+      "Rejoignez un club historique, ouvert, convivial et solidaire !"
+    ]
+  },
   "values": [
     "Accessibilité de proximité",
     "Progression pour tous les niveaux",

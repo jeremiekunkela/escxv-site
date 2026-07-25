@@ -1,0 +1,144 @@
+.block {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.group {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.groupTitle {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+}
+
+/* Bureau : cartes compactes role -> nom */
+.bureauGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bureauCard {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-raised);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Président : carte pleine largeur mise en avant, sans aplat de couleur. */
+.bureauCardFeatured {
+  grid-column: 1 / -1;
+  gap: 8px;
+  border-color: rgba(var(--color-brand-rgb), 0.25);
+  padding: 26px 28px;
+}
+
+.featuredName {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.role {
+  margin: 0;
+  color: var(--color-brand);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.names {
+  display: grid;
+  gap: 2px;
+}
+
+.name {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Comité directeur : annuaire en lignes, plus dense que des cartes */
+.committeeList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-raised);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.committeeRow {
+  display: grid;
+  gap: 4px;
+  padding: 16px 22px;
+}
+
+.committeeRow + .committeeRow {
+  border-top: 1px solid var(--color-border);
+}
+
+.rowHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+
+.sectionName {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+}
+
+.members {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+}
+
+.email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  overflow-wrap: anywhere;
+  transition: color var(--transition-standard);
+}
+
+.email svg {
+  flex: none;
+  color: var(--color-brand);
+  opacity: 0.7;
+}
+
+.email:hover {
+  color: var(--color-brand);
+}
+
+.email:hover svg {
+  opacity: 1;
+}
