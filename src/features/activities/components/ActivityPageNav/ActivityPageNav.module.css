@@ -1,0 +1,54 @@
+.nav {
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(20px);
+}
+
+.list {
+  display: flex;
+  gap: var(--space-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* Cinq entrees ne tiennent pas en largeur mobile : on defile, on ne replie pas. */
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 0 var(--space-sm);
+  border-bottom: 2px solid transparent;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    color var(--transition-standard),
+    border-color var(--transition-standard);
+}
+
+.link:hover,
+.link:focus-visible {
+  border-bottom-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+/*
+ * Collant a partir de 760 px seulement : au-dela, 47 px sur une fenetre de
+ * 900 ne se sentent pas, et le defilement coute plus cher a la souris.
+ */
+@media (min-width: 761px) {
+  .nav {
+    position: sticky;
+    top: var(--header-height);
+    z-index: 40;
+  }
+}

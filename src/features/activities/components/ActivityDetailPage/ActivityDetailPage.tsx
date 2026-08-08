@@ -6,6 +6,8 @@ import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
 import { ActivityContactBlocks } from "@/features/activities/components/ActivityContactBlocks/ActivityContactBlocks";
 import { ActivityContactForm } from "@/features/activities/components/ActivityContactForm/ActivityContactForm";
 import { ActivityLocationCards } from "@/features/activities/components/ActivityLocationCards/ActivityLocationCards";
+import { ActivityPageNav } from "@/features/activities/components/ActivityPageNav/ActivityPageNav";
+import type { ActivityPageNavLink } from "@/features/activities/components/ActivityPageNav/ActivityPageNav";
 import { ActivityPriceBlocks } from "@/features/activities/components/ActivityPriceBlocks/ActivityPriceBlocks";
 import { ActivityProgramCards } from "@/features/activities/components/ActivityProgramCards/ActivityProgramCards";
 import { ActivityScheduleCards } from "@/features/activities/components/ActivityScheduleCards/ActivityScheduleCards";
@@ -121,6 +123,19 @@ export function ActivityDetailPage({
   const secondaryCta = hasSchedules
     ? { label: "Voir les horaires", href: "#horaires" }
     : { label: "Voir la présentation", href: "#programmes" };
+  /**
+   * Le sommaire ne liste que les sections reellement rendues : un lien vers
+   * des tarifs absents coute plus de confiance qu'il n'en fait gagner.
+   */
+  const navLinks: ActivityPageNavLink[] = [
+    { href: "#programmes", label: "Présentation", visible: true },
+    { href: "#horaires", label: "Créneaux", visible: hasSchedules },
+    { href: "#tarifs", label: "Tarifs", visible: hasPrices },
+    { href: "#lieux", label: "Lieux", visible: hasLocations },
+    { href: "#contact", label: "Contact", visible: hasContactChannels },
+  ]
+    .filter((link) => link.visible)
+    .map(({ href, label }) => ({ href, label }));
 
   return (
     <>
@@ -134,6 +149,8 @@ export function ActivityDetailPage({
         secondaryCta={secondaryCta}
         enableRegistrationHandoff={Boolean(registrationCta)}
       />
+
+      <ActivityPageNav links={navLinks} />
 
       {registrationCta ? (
         <FloatingRegistrationButton
@@ -195,7 +212,7 @@ export function ActivityDetailPage({
         />
 
         <ActivityDetailPageSection
-          id="pratique"
+          id="tarifs"
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.pricesEyebrow}
           title={ACTIVITY_DETAIL_PAGE_COPY.pricesTitle}
         >
@@ -210,6 +227,7 @@ export function ActivityDetailPage({
         </ActivityDetailPageSection>
 
         <ActivityDetailPageSection
+          id="lieux"
           className={`${styles.section} ${styles.surface}`}
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.locationsEyebrow}
           title={ACTIVITY_DETAIL_PAGE_COPY.locationsTitle}

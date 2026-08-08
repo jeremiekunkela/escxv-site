@@ -63,6 +63,13 @@
   --transition-smooth: 650ms cubic-bezier(0.16, 1, 0.3, 1);
   --layout-max-width: 1200px;
   --layout-gutter: 32px;
+  /*
+   * Hauteur des barres collantes, dont toute ancre doit decaler sa cible.
+   * `--activity-nav-height` tombe a zero sous 760 px, ou le sommaire de fiche
+   * cesse d'etre collant pour ne pas manger un cinquieme de l'ecran.
+   */
+  --header-height: 85px;
+  --activity-nav-height: 47px;
 }
 
 @font-face {
@@ -79,6 +86,20 @@
 
 html {
   scroll-behavior: smooth;
+  /*
+   * Sans cela, une ancre place sa cible sous l'en-tete collant : le titre vise
+   * reste invisible. Concerne aussi les liens deja en place (« Voir les
+   * horaires », « Voir le lieu »). Les pages qui empilent une seconde barre
+   * collante ajoutent sa hauteur via `scroll-margin-top` sur leurs ancres.
+   */
+  scroll-padding-top: calc(var(--header-height) + var(--space-md));
+}
+
+@media (max-width: 760px) {
+  :root {
+    --header-height: 80px;
+    --activity-nav-height: 0px;
+  }
 }
 
 body {
