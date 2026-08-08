@@ -170,3 +170,41 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Bande légale : détachée de la navigation, elle n'est pas du même ordre. */
+.legalBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.copyright {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: var(--font-size-xs);
+}
+
+.legalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.legalLink {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: var(--font-size-xs);
+  transition: color var(--transition-standard);
+}
+
+.legalLink:hover,
+.legalLink:focus-visible {
+  color: var(--color-text-inverse);
+}

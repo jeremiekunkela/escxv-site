@@ -23,6 +23,8 @@ export type FooterContent = {
    * dans un menu deroulant) et la prevention, enfouie au milieu d'une page.
    */
   mainLinks: NavigationLink[];
+  /** Obligations legales : separees de la navigation, jamais melangees a elle. */
+  legalLinks: NavigationLink[];
   club: {
     shortName: string;
     address: string;

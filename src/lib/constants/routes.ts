@@ -3,6 +3,8 @@ export const routes = {
   locations: "/lieux",
   club: "/club",
   news: "/actualites",
+  legalNotice: "/mentions-legales",
+  privacy: "/confidentialite",
 } as const;
 
 export function getActivityRoute(slug: string) {

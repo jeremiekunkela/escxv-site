@@ -80,6 +80,19 @@ export function SiteFooter() {
           ))}
         </nav>
       </Container>
+
+      <Container className={styles.legalBar}>
+        <p className={styles.copyright}>
+          © {new Date().getFullYear()} {footer.club.shortName}
+        </p>
+        <nav className={styles.legalLinks} aria-label="Informations légales">
+          {footer.legalLinks.map((item) => (
+            <Link key={item.href} href={item.href} className={styles.legalLink}>
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+      </Container>
     </footer>
   );
 }

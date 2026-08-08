@@ -49,6 +49,11 @@ const footerLinks: NavigationLink[] = [
   { label: "Prévention et VHSS", href: `${routes.club}#vhss` },
 ];
 
+const legalLinks: NavigationLink[] = [
+  { label: "Mentions légales", href: routes.legalNotice },
+  { label: "Confidentialité", href: routes.privacy },
+];
+
 export function getFooterContent(): FooterContent {
   const club = getClubInfo();
 
@@ -64,5 +69,6 @@ export function getFooterContent(): FooterContent {
       description: club.description,
     },
     mainLinks: footerLinks,
+    legalLinks,
   };
 }
