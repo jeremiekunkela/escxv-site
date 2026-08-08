@@ -16,6 +16,37 @@
   /* Cinq entrees ne tiennent pas en largeur mobile : on defile, on ne replie pas. */
   overflow-x: auto;
   scrollbar-width: none;
+
+  /*
+   * Ombres de defilement : sans indice, personne ne devine qu'il reste des
+   * entrees hors ecran. Quatre calques — deux couvertures blanches attachees
+   * au contenu (`local`), deux ombres attachees au cadre (`scroll`). En butee,
+   * la couverture recouvre son ombre ; si la rangee tient entiere, les deux
+   * ombres restent masquees. L'indice apparait donc exactement quand il y a
+   * quelque chose a atteindre, sans JavaScript ni point de rupture devine.
+   */
+  background:
+    linear-gradient(to right, rgba(255, 255, 255, 0.96) 30%, rgba(255, 255, 255, 0)) left center,
+    linear-gradient(to left, rgba(255, 255, 255, 0.96) 30%, rgba(255, 255, 255, 0)) right center,
+    radial-gradient(
+        farthest-side at 0 50%,
+        rgba(var(--color-brand-rgb), 0.16),
+        rgba(var(--color-brand-rgb), 0)
+      )
+      left center,
+    radial-gradient(
+        farthest-side at 100% 50%,
+        rgba(var(--color-brand-rgb), 0.16),
+        rgba(var(--color-brand-rgb), 0)
+      )
+      right center;
+  background-repeat: no-repeat;
+  background-size:
+    36px 100%,
+    36px 100%,
+    12px 100%,
+    12px 100%;
+  background-attachment: local, local, scroll, scroll;
 }
 
 .list::-webkit-scrollbar {
