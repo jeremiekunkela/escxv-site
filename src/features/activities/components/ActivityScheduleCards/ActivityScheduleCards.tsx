@@ -4,28 +4,24 @@ import { capitalize, formatPublicLabel } from "@/lib/utils";
 import type {
   ActivityPracticeLocation,
   ActivitySchedule,
-  DayOfWeek,
+  LocationSpace,
   PracticeGroup,
   ScheduleType,
 } from "@/features/activities/types/activity";
 import { getActivityLocationAnchorHref } from "@/features/activities/lib/activityRoutes";
+import { getDayRank } from "@/features/activities/lib/days";
 import styles from "./ActivityScheduleCards.module.css";
+
+type Venue = {
+  location: ActivityPracticeLocation;
+  space: LocationSpace;
+};
 
 type ActivityScheduleCardsProps = {
   schedules: ActivitySchedule[];
   practiceGroups: PracticeGroup[];
   locations: ActivityPracticeLocation[];
 };
-
-const DAY_ORDER: DayOfWeek[] = [
-  "lundi",
-  "mardi",
-  "mercredi",
-  "jeudi",
-  "vendredi",
-  "samedi",
-  "dimanche",
-];
 
 const TYPE_SECTIONS: { type: ScheduleType; label: string }[] = [
   { type: "training", label: "Entraînements" },
@@ -45,11 +41,6 @@ const UNKNOWN_SPACE = "espace-a-confirmer";
 
 function formatHour(value: string) {
   return value.replace(":", "h");
-}
-
-function getDayRank(day?: DayOfWeek) {
-  const index = day ? DAY_ORDER.indexOf(day) : -1;
-  return index === -1 ? DAY_ORDER.length : index;
 }
 
 function compareSchedules(left: ActivitySchedule, right: ActivitySchedule) {
@@ -127,6 +118,60 @@ function buildOrderedGroups(
     .filter((entry) => entry.groupSchedules.length > 0);
 }
 
+type ScheduleVenueProps = {
+  venue?: Venue;
+};
+
+function ScheduleVenue({ venue }: ScheduleVenueProps) {
+  const location = venue?.location;
+
+  return (
+    <div className={styles.scheduleHeader}>
+      <MapPin aria-hidden="true" className={styles.icon} size={18} />
+      <div className={styles.locationSummary}>
+        <h5 className={styles.venueTitle}>
+          {location?.name ?? "Lieu à confirmer"}
+        </h5>
+        {venue ? <p className={styles.venueSpace}>{venue.space.label}</p> : null}
+        <p className={styles.address}>
+          {location
+            ? `${location.address}, ${location.postalCode} ${location.city}`
+            : ""}
+        </p>
+      </div>
+      {location ? (
+        <a
+          className={styles.locationButton}
+          href={getActivityLocationAnchorHref(location.id)}
+          aria-label={`Voir le lieu de pratique ${location.name}`}
+        >
+          <MapPin aria-hidden="true" size={15} />
+          <span>Voir le lieu</span>
+        </a>
+      ) : null}
+    </div>
+  );
+}
+
+/**
+ * Espace unique a toute la section : le football tenait seize fois la meme
+ * adresse, une par couple groupe/type, soit deux ecrans mobiles de repetition
+ * pure. On l'annonce alors une seule fois, au-dessus des groupes.
+ *
+ * Des que la section pratique dans deux espaces, l'adresse redevient une
+ * information qui distingue les creneaux : elle retourne dans chaque carte.
+ */
+function getSharedVenue(
+  schedules: ActivitySchedule[],
+  venueBySpaceId: Map<string, Venue>,
+) {
+  const spaceIds = new Set(schedules.map((schedule) => schedule.spaceId));
+
+  return spaceIds.size === 1
+    ? venueBySpaceId.get([...spaceIds][0] ?? "")
+    : undefined;
+}
+
 export function ActivityScheduleCards({
   schedules,
   practiceGroups,
@@ -142,9 +187,18 @@ export function ActivityScheduleCards({
     ),
   );
   const orderedGroups = buildOrderedGroups(schedules, practiceGroups);
+  const sharedVenue = getSharedVenue(schedules, venueBySpaceId);
 
   return (
     <div className={styles.list}>
+      {sharedVenue ? (
+        <div className={styles.sharedVenue} data-reveal="zoom">
+          <p className={styles.sharedVenueEyebrow}>
+            Tous les créneaux ont lieu ici
+          </p>
+          <ScheduleVenue venue={sharedVenue} />
+        </div>
+      ) : null}
       {orderedGroups.map(({ group, groupSchedules }, index) => {
         const badges = getGroupBadges(group);
 
@@ -189,38 +243,11 @@ export function ActivityScheduleCards({
                   </h4>
 
                   <div className={styles.scheduleGroups}>
-                    {schedulesBySpace.map(([spaceId, locationSchedules]) => {
-                      const venue = venueBySpaceId.get(spaceId);
-                      const location = venue?.location;
-
-                      return (
+                    {schedulesBySpace.map(([spaceId, locationSchedules]) => (
                         <section key={spaceId} className={styles.schedule}>
-                          <div className={styles.scheduleHeader}>
-                            <MapPin aria-hidden="true" className={styles.icon} size={18} />
-                            <div className={styles.locationSummary}>
-                              <h5 className={styles.venueTitle}>
-                                {location?.name ?? "Lieu à confirmer"}
-                              </h5>
-                              {venue ? (
-                                <p className={styles.venueSpace}>{venue.space.label}</p>
-                              ) : null}
-                              <p className={styles.address}>
-                                {location
-                                  ? `${location.address}, ${location.postalCode} ${location.city}`
-                                  : ""}
-                              </p>
-                            </div>
-                            {location ? (
-                              <a
-                                className={styles.locationButton}
-                                href={getActivityLocationAnchorHref(location.id)}
-                                aria-label={`Voir le lieu de pratique ${location.name}`}
-                              >
-                                <MapPin aria-hidden="true" size={15} />
-                                <span>Voir le lieu</span>
-                              </a>
-                            ) : null}
-                          </div>
+                          {sharedVenue ? null : (
+                            <ScheduleVenue venue={venueBySpaceId.get(spaceId)} />
+                          )}
 
                           <ul className={styles.slotList}>
                             {locationSchedules.map((schedule) => (
@@ -235,8 +262,7 @@ export function ActivityScheduleCards({
                             ))}
                           </ul>
                         </section>
-                      );
-                    })}
+                    ))}
                   </div>
                 </div>
               );

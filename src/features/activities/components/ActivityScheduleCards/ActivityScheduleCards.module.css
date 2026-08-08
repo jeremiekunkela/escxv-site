@@ -13,6 +13,27 @@
   gap: 24px;
 }
 
+/* Lieu commun a toute la section, annonce une fois au lieu d'etre repete. */
+.sharedVenue {
+  border: 1px solid rgba(var(--color-brand-rgb), 0.16);
+  border-radius: 20px;
+  background: rgba(var(--color-brand-rgb), 0.04);
+  padding: 20px 24px;
+}
+
+.sharedVenueEyebrow {
+  margin: 0 0 12px;
+  color: var(--color-brand);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sharedVenue .scheduleHeader {
+  margin-bottom: 0;
+}
+
 .card {
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 24px;
