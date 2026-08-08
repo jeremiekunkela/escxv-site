@@ -69,15 +69,17 @@ export function SiteFooter() {
 
         <nav className={styles.links} aria-label="Navigation de pied de page">
           <p className={styles.contactTitle}>Aller à</p>
-          {footer.mainLinks.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={styles.link}
-            >
-              {item.label}
-            </Link>
-          ))}
+          <div className={styles.linkRow}>
+            {footer.mainLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={styles.link}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
         </nav>
       </Container>
 

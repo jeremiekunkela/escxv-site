@@ -121,14 +121,22 @@
 }
 
 /*
- * En colonne depuis que le bloc porte un intitule et cinq entrees : une rangee
- * les alignerait sur son titre, et cinq liens se lisent mieux empiles.
+ * Titre au-dessus, liens en rangee qui s'enroule : empiles, les cinq entrees
+ * allongeaient le pied de page de deux cents pixels, sur une zone qui passe
+ * de toute facon en colonne unique sur telephone.
  */
 .links {
+  display: grid;
+  gap: var(--space-xs);
+  max-width: 420px;
+}
+
+/* Les liens portent deja leur propre padding : un ecart serre suffit. */
+.linkRow {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-wrap: wrap;
   gap: var(--space-2xs);
+  margin-left: calc(var(--space-md) * -1);
 }
 
 .link {
