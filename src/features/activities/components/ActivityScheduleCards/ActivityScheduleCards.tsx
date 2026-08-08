@@ -1,5 +1,5 @@
-import { Clock, MapPin, Trophy } from "lucide-react";
-import type { CSSProperties } from "react";
+import { ChevronDown, Clock, MapPin, Trophy } from "lucide-react";
+import type { CSSProperties, ReactNode } from "react";
 import { capitalize, formatPublicLabel } from "@/lib/utils";
 import type {
   ActivityPracticeLocation,
@@ -9,7 +9,11 @@ import type {
   ScheduleType,
 } from "@/features/activities/types/activity";
 import { getActivityLocationAnchorHref } from "@/features/activities/lib/activityRoutes";
-import { getDayRank } from "@/features/activities/lib/days";
+import {
+  formatDayShort,
+  getDayRank,
+  getDistinctDays,
+} from "@/features/activities/lib/days";
 import styles from "./ActivityScheduleCards.module.css";
 
 type Venue = {
@@ -38,6 +42,14 @@ const DEFAULT_SCHEDULE_LABEL = "Horaire à confirmer";
 
 /** Cle de repli pour un creneau dont l'espace n'est pas encore connu. */
 const UNKNOWN_SPACE = "espace-a-confirmer";
+
+/**
+ * Au-dela de ce nombre de groupes, la liste deroulee s'etale sur plusieurs
+ * ecrans : impossible de voir les groupes ensemble, donc de reperer le sien.
+ * Replier les transforme en index lisible d'un coup d'oeil. En deca, les
+ * groupes tiennent deja dans un ecran ou deux et replier ne gagnerait rien.
+ */
+const COLLAPSIBLE_GROUPS_THRESHOLD = 4;
 
 function formatHour(value: string) {
   return value.replace(":", "h");
@@ -80,6 +92,19 @@ function getGroupBadges(group: PracticeGroup) {
   return [formatPublicLabel(group.public), GENDER_LABELS[group.gender], formatBirthYears(group)].filter(
     (value): value is string => Boolean(value),
   );
+}
+
+/**
+ * Ce qu'un groupe replie doit dire sans etre ouvert : quels jours, combien de
+ * creneaux. Avec les badges d'age qui l'accompagnent, la barre repliee porte
+ * de quoi reconnaitre son groupe — c'est le service qu'un filtre par annee de
+ * naissance rendrait, sans exclure les groupes adultes qui n'en ont pas.
+ */
+function formatGroupRecap(schedules: ActivitySchedule[]) {
+  const days = getDistinctDays(schedules).map(formatDayShort).join(" · ");
+  const count = `${schedules.length} créneau${schedules.length > 1 ? "x" : ""}`;
+
+  return days ? `${days} — ${count}` : count;
 }
 
 /**
@@ -172,6 +197,135 @@ function getSharedVenue(
     : undefined;
 }
 
+type ScheduleGroupHeaderProps = {
+  group: PracticeGroup;
+  recap: string | null;
+};
+
+function ScheduleGroupHeader({ group, recap }: ScheduleGroupHeaderProps) {
+  const badges = getGroupBadges(group);
+
+  return (
+    <div className={styles.header}>
+      <h3 className={styles.title}>{group.label}</h3>
+      {badges.length > 0 ? (
+        <div className={styles.badges} aria-label="Public et catégorie">
+          {badges.map((badge) => (
+            <span key={badge} className={styles.badge}>
+              {badge}
+            </span>
+          ))}
+        </div>
+      ) : null}
+      {recap ? <p className={styles.recap}>{recap}</p> : null}
+    </div>
+  );
+}
+
+type ScheduleGroupBodyProps = {
+  groupSchedules: ActivitySchedule[];
+  venueBySpaceId: Map<string, Venue>;
+  sharedVenue?: Venue;
+};
+
+function ScheduleGroupBody({
+  groupSchedules,
+  venueBySpaceId,
+  sharedVenue,
+}: ScheduleGroupBodyProps) {
+  return (
+    <>
+      {TYPE_SECTIONS.map(({ type, label }) => {
+        const typeSchedules = groupSchedules.filter(
+          (schedule) => schedule.type === type,
+        );
+
+        if (typeSchedules.length === 0) {
+          return null;
+        }
+
+        const SectionIcon = type === "training" ? Clock : Trophy;
+        const schedulesBySpace = groupSchedulesBySpace(typeSchedules);
+
+        return (
+          <div key={type} className={styles.schedules}>
+            <h4 className={styles.sectionTitle}>
+              <SectionIcon aria-hidden="true" className={styles.sectionIcon} size={20} />
+              {label}
+            </h4>
+
+            <div className={styles.scheduleGroups}>
+              {schedulesBySpace.map(([spaceId, locationSchedules]) => (
+                <section key={spaceId} className={styles.schedule}>
+                  {sharedVenue ? null : (
+                    <ScheduleVenue venue={venueBySpaceId.get(spaceId)} />
+                  )}
+
+                  <ul className={styles.slotList}>
+                    {locationSchedules.map((schedule) => (
+                      <li key={schedule.id} className={styles.slot}>
+                        <p className={styles.slotLabel}>
+                          {formatScheduleLabel(schedule)}
+                        </p>
+                        {shouldDisplayScheduleNotes(schedule) ? (
+                          <p className={styles.slotNotes}>{schedule.notes}</p>
+                        ) : null}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
+}
+
+type ScheduleGroupCardProps = ScheduleGroupBodyProps & {
+  group: PracticeGroup;
+  collapsible: boolean;
+  index: number;
+};
+
+/**
+ * `details` natif plutot qu'un etat React : le contenu reste dans le document,
+ * donc indexable et trouvable par la recherche du navigateur, et le repli
+ * fonctionne sans hydratation sur un site entierement pre-rendu.
+ */
+function ScheduleGroupCard({
+  group,
+  collapsible,
+  index,
+  ...bodyProps
+}: ScheduleGroupCardProps): ReactNode {
+  const style = { "--reveal-delay": `${index * 70}ms` } as CSSProperties;
+  const body = <ScheduleGroupBody {...bodyProps} />;
+
+  return collapsible ? (
+    <details
+      className={`${styles.card} ${styles.collapsible}`}
+      data-reveal="zoom"
+      style={style}
+    >
+      <summary className={styles.summary}>
+        <ScheduleGroupHeader
+          group={group}
+          recap={formatGroupRecap(bodyProps.groupSchedules)}
+        />
+        <ChevronDown aria-hidden="true" className={styles.chevron} size={22} />
+      </summary>
+      <div className={styles.body}>{body}</div>
+    </details>
+  ) : (
+    <article className={styles.card} data-reveal="zoom" style={style}>
+      <ScheduleGroupHeader group={group} recap={null} />
+      {body}
+    </article>
+  );
+}
+
 export function ActivityScheduleCards({
   schedules,
   practiceGroups,
@@ -188,6 +342,7 @@ export function ActivityScheduleCards({
   );
   const orderedGroups = buildOrderedGroups(schedules, practiceGroups);
   const sharedVenue = getSharedVenue(schedules, venueBySpaceId);
+  const collapsible = orderedGroups.length > COLLAPSIBLE_GROUPS_THRESHOLD;
 
   return (
     <div className={styles.list}>
@@ -199,77 +354,17 @@ export function ActivityScheduleCards({
           <ScheduleVenue venue={sharedVenue} />
         </div>
       ) : null}
-      {orderedGroups.map(({ group, groupSchedules }, index) => {
-        const badges = getGroupBadges(group);
-
-        return (
-          <article
-            key={group.id}
-            className={styles.card}
-            data-reveal="zoom"
-            style={{ "--reveal-delay": `${index * 70}ms` } as CSSProperties}
-          >
-            <div className={styles.header}>
-              <p className={styles.eyebrow}>Groupe de pratique</p>
-              <h3 className={styles.title}>{group.label}</h3>
-              {badges.length > 0 ? (
-                <div className={styles.badges} aria-label="Public et categorie">
-                  {badges.map((badge) => (
-                    <span key={badge} className={styles.badge}>
-                      {badge}
-                    </span>
-                  ))}
-                </div>
-              ) : null}
-            </div>
-
-            {TYPE_SECTIONS.map(({ type, label }) => {
-              const typeSchedules = groupSchedules.filter(
-                (schedule) => schedule.type === type,
-              );
-
-              if (typeSchedules.length === 0) {
-                return null;
-              }
-
-              const SectionIcon = type === "training" ? Clock : Trophy;
-              const schedulesBySpace = groupSchedulesBySpace(typeSchedules);
-
-              return (
-                <div key={type} className={styles.schedules}>
-                  <h4 className={styles.sectionTitle}>
-                    <SectionIcon aria-hidden="true" className={styles.sectionIcon} size={20} />
-                    {label}
-                  </h4>
-
-                  <div className={styles.scheduleGroups}>
-                    {schedulesBySpace.map(([spaceId, locationSchedules]) => (
-                        <section key={spaceId} className={styles.schedule}>
-                          {sharedVenue ? null : (
-                            <ScheduleVenue venue={venueBySpaceId.get(spaceId)} />
-                          )}
-
-                          <ul className={styles.slotList}>
-                            {locationSchedules.map((schedule) => (
-                              <li key={schedule.id} className={styles.slot}>
-                                <p className={styles.slotLabel}>
-                                  {formatScheduleLabel(schedule)}
-                                </p>
-                                {shouldDisplayScheduleNotes(schedule) ? (
-                                  <p className={styles.slotNotes}>{schedule.notes}</p>
-                                ) : null}
-                              </li>
-                            ))}
-                          </ul>
-                        </section>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </article>
-        );
-      })}
+      {orderedGroups.map(({ group, groupSchedules }, index) => (
+        <ScheduleGroupCard
+          key={group.id}
+          group={group}
+          groupSchedules={groupSchedules}
+          venueBySpaceId={venueBySpaceId}
+          sharedVenue={sharedVenue}
+          collapsible={collapsible}
+          index={index}
+        />
+      ))}
     </div>
   );
 }

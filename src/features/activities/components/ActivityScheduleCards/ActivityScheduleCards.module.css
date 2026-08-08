@@ -52,32 +52,77 @@
   border-color: rgba(var(--color-brand-rgb), 0.2);
 }
 
+/* Variante repliee : la carte ne porte plus le padding, summary et corps si. */
+.collapsible {
+  padding: 0;
+}
+
+.summary {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: 24px 32px;
+  border-radius: 24px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.summary:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: -4px;
+}
+
+.chevron {
+  flex: none;
+  margin: 2px 0 0 auto;
+  color: var(--color-brand);
+  transition: transform var(--transition-standard);
+}
+
+.collapsible[open] .chevron {
+  transform: rotate(180deg);
+}
+
+.body {
+  padding: 0 32px 32px;
+}
+
+/* Le premier bloc suit deja le summary : sa marge haute creuserait un trou. */
+.body > .schedules:first-child {
+  margin-top: 0;
+}
+
+.recap {
+  margin: 2px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
 .header {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
-  gap: 10px;
+  min-width: 0;
+  gap: 8px;
 }
 
-.eyebrow {
-  display: inline-flex;
-  width: fit-content;
-  align-items: center;
-  margin: 0;
-  padding: 0.5rem 0.9rem;
-  border-radius: 999px;
-  background: rgba(var(--color-brand-rgb), 0.08);
-  color: var(--color-brand);
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
+/*
+ * Un libelle de groupe fait dix caracteres (« U14 a U16 ») : une taille de
+ * titre de page y etait disproportionnee et coutait une hauteur inutile,
+ * multipliee par le nombre de groupes.
+ */
 .title {
   margin: 0;
   color: #1a202c;
-  font-size: clamp(1.8rem, 2.8vw, 2.2rem);
+  font-size: clamp(1.25rem, 1.8vw, 1.45rem);
   font-weight: 700;
   letter-spacing: -0.01em;
-  line-height: 1.15;
+  line-height: 1.2;
 }
 
 .badges {
@@ -244,14 +289,34 @@
     padding: 24px;
   }
 
-  .title {
-    font-size: 1.6rem;
+  .collapsible {
+    padding: 0;
+  }
+
+  .summary {
+    padding: 20px 24px;
+  }
+
+  .body {
+    padding: 0 24px 24px;
   }
 }
 
 @media (max-width: 480px) {
   .card {
     padding: 20px;
+  }
+
+  .collapsible {
+    padding: 0;
+  }
+
+  .summary {
+    padding: 18px 20px;
+  }
+
+  .body {
+    padding: 0 20px 20px;
   }
 
   .locationButton {
