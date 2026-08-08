@@ -45,26 +45,8 @@
 }
 
 /*
- * Sur telephone, l'onglet souligne est un idiome de bureau : on passe a la
- * rangee de pastilles defilante, celle des filtres d'application. Plus courte
- * de trois pixels, surtout plus lisible au pouce.
+ * Un seul style a toutes les tailles. L'onglet souligne defilant est aussi un
+ * standard tactile, pas un idiome de bureau, et ses 46 px de hauteur tiennent
+ * le minimum recommande pour une cible au doigt (WCAG 2.5.5). Des pastilles
+ * annonceraient un filtre a activer la ou il n'y a que des liens.
  */
-@media (max-width: 760px) {
-  .list {
-    gap: 6px;
-    padding: 5px 0;
-  }
-
-  .link {
-    min-height: 32px;
-    padding: 0 var(--space-sm);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-pill);
-    background: var(--color-surface-muted);
-  }
-
-  .link:hover,
-  .link:focus-visible {
-    border-color: var(--color-brand);
-  }
-}

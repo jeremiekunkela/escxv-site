@@ -65,8 +65,8 @@
   --layout-gutter: 32px;
   /*
    * Hauteur des barres collantes, dont toute ancre doit decaler sa cible.
-   * Le sommaire de fiche colle sous l'en-tete a toutes les tailles ; sur
-   * telephone il passe en pastilles, un peu plus courtes.
+   * Le sommaire de fiche colle sous l'en-tete a toutes les tailles, avec la
+   * meme hauteur : seul l'en-tete du site se resserre sur telephone.
    */
   --header-height: 85px;
   --activity-nav-height: 47px;
@@ -98,7 +98,6 @@ html {
 @media (max-width: 760px) {
   :root {
     --header-height: 80px;
-    --activity-nav-height: 44px;
   }
 }
 

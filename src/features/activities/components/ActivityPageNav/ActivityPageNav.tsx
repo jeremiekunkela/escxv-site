@@ -15,10 +15,10 @@ type ActivityPageNavProps = {
  * contient, une information qu'on n'a aujourd'hui qu'en defilant jusqu'au
  * bout.
  *
- * Collant sous l'en-tete du site a toutes les tailles, en onglets sur bureau
- * et en pastilles defilantes sur telephone. Le bas d'ecran, ou une application
- * logerait sa barre d'onglets, est deja celui du bouton d'inscription : c'est
- * l'action que le club attend, elle ne recule pas d'un cran pour cinq ancres.
+ * Collant sous l'en-tete du site, meme forme a toutes les tailles. Le bas
+ * d'ecran, ou une application logerait sa barre d'onglets, est deja celui du
+ * bouton d'inscription : c'est l'action que le club attend, elle ne recule pas
+ * d'un cran pour cinq ancres.
  *
  * Sans etat ni surlignage de la section courante : de simples ancres suffisent
  * a rendre la page navigable, et le composant reste rendu au build.
