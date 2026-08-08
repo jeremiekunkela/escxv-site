@@ -17,6 +17,11 @@ export type NavigationContent = {
 };
 
 export type FooterContent = {
+  /**
+   * Le pied de page est un point de secours : il reprend la navigation, y
+   * compris ce que l'en-tete n'expose pas (les activites, qui n'y vivent que
+   * dans un menu deroulant) et la prevention, enfouie au milieu d'une page.
+   */
   mainLinks: NavigationLink[];
   club: {
     shortName: string;

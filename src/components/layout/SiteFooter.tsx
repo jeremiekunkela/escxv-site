@@ -67,7 +67,8 @@ export function SiteFooter() {
           </address>
         </div>
 
-        <div className={styles.links}>
+        <nav className={styles.links} aria-label="Navigation de pied de page">
+          <p className={styles.contactTitle}>Aller à</p>
           {footer.mainLinks.map((item) => (
             <Link
               key={item.href}
@@ -77,7 +78,7 @@ export function SiteFooter() {
               {item.label}
             </Link>
           ))}
-        </div>
+        </nav>
       </Container>
     </footer>
   );

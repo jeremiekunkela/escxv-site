@@ -37,6 +37,18 @@ export function getNavigationContent(): NavigationContent {
   };
 }
 
+/**
+ * Les activites n'ont pas de page d'index : l'en-tete les expose en menu
+ * deroulant, le pied de page renvoie donc au repertoire de l'accueil. La
+ * prevention VHSS, elle, est un signal de serieux qu'on ne trouve autrement
+ * qu'en defilant au milieu de la page du club.
+ */
+const footerLinks: NavigationLink[] = [
+  { label: "Activités", href: `${routes.home}#activities` },
+  ...mainLinks,
+  { label: "Prévention et VHSS", href: `${routes.club}#vhss` },
+];
+
 export function getFooterContent(): FooterContent {
   const club = getClubInfo();
 
@@ -51,6 +63,6 @@ export function getFooterContent(): FooterContent {
       email: club.email,
       description: club.description,
     },
-    mainLinks,
+    mainLinks: footerLinks,
   };
 }
