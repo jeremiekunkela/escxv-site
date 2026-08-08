@@ -65,8 +65,8 @@
   --layout-gutter: 32px;
   /*
    * Hauteur des barres collantes, dont toute ancre doit decaler sa cible.
-   * `--activity-nav-height` tombe a zero sous 760 px, ou le sommaire de fiche
-   * cesse d'etre collant pour ne pas manger un cinquieme de l'ecran.
+   * Le sommaire de fiche colle sous l'en-tete a toutes les tailles ; sur
+   * telephone il passe en pastilles, un peu plus courtes.
    */
   --header-height: 85px;
   --activity-nav-height: 47px;
@@ -98,7 +98,7 @@ html {
 @media (max-width: 760px) {
   :root {
     --header-height: 80px;
-    --activity-nav-height: 0px;
+    --activity-nav-height: 44px;
   }
 }
 

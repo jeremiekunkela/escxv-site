@@ -1,4 +1,7 @@
 .nav {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 40;
   border-bottom: 1px solid var(--color-border);
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px);
@@ -42,13 +45,26 @@
 }
 
 /*
- * Collant a partir de 760 px seulement : au-dela, 47 px sur une fenetre de
- * 900 ne se sentent pas, et le defilement coute plus cher a la souris.
+ * Sur telephone, l'onglet souligne est un idiome de bureau : on passe a la
+ * rangee de pastilles defilante, celle des filtres d'application. Plus courte
+ * de trois pixels, surtout plus lisible au pouce.
  */
-@media (min-width: 761px) {
-  .nav {
-    position: sticky;
-    top: var(--header-height);
-    z-index: 40;
+@media (max-width: 760px) {
+  .list {
+    gap: 6px;
+    padding: 5px 0;
+  }
+
+  .link {
+    min-height: 32px;
+    padding: 0 var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    background: var(--color-surface-muted);
+  }
+
+  .link:hover,
+  .link:focus-visible {
+    border-color: var(--color-brand);
   }
 }
