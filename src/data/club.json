@@ -30,22 +30,24 @@
     {
       "label": "Fondé en",
       "value": "1910",
-      "description": "Un ancrage durable dans le 15e arrondissement."
+      "description": "Plus d'un siècle de sport dans le 15e arrondissement."
     },
     {
       "label": "Adhérents",
       "value": "1 900+",
-      "description": "Un volume de pratiquants cohérent avec un grand club omnisports parisien."
+      "description": "Des enfants, des jeunes et des adultes de tout le quartier."
     },
     {
       "label": "Activités",
       "value": "20",
-      "description": "Une offre multisports pour enfants, jeunes et adultes."
+      "source": "activities",
+      "description": "Du loisir à la compétition, de la santé au bien-être."
     },
     {
-      "label": "Ville",
-      "value": "Paris 15",
-      "description": "Des lieux de pratique concentrés dans le sud-ouest parisien."
+      "label": "Lieux de pratique",
+      "value": "13",
+      "source": "locations",
+      "description": "Gymnases, stades et piscines, presque tous dans le 15e."
     }
   ]
 }
