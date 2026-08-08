@@ -3,13 +3,15 @@ import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
 import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
 import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
-import { InstallationsExplorer } from "@/features/activities/components/InstallationsExplorer/InstallationsExplorer";
-import { getInstallations } from "@/features/activities/data-access/activities";
+import { getLocations } from "@/features/activities/data-access/activities";
 import { ClubGovernance } from "@/features/club/components/ClubGovernance/ClubGovernance";
 import { ClubPresentation } from "@/features/club/components/ClubPresentation/ClubPresentation";
 import { getClubInfo } from "@/features/club/data-access/club";
 import { getGovernance } from "@/features/club/data-access/governance";
+import { routes } from "@/lib/constants/routes";
 import styles from "./page.module.css";
+
+const installationCount = getLocations().length;
 
 const vhssGuideUrl =
   "https://s.info.paris.fr/6491/www/Ville%20de%20Paris_Guide%20parents_violences%20sexuelles%20sur%20mineurs_Pr%C3%A9venir%20Rep%C3%A9rer%20Agir.pdf";
@@ -17,7 +19,7 @@ const vhssGuideUrl =
 export const metadata: Metadata = {
   title: "Association",
   description:
-    "Présentation de l'ESCXV, comité directeur, installations et ressources VHSS.",
+    "Présentation de l'ESCXV, comité directeur et ressources de prévention VHSS.",
 };
 
 export default function AssociationPage() {
@@ -82,8 +84,17 @@ export default function AssociationPage() {
             <div className={styles.header}>
               <SectionTitle eyebrow="Installations" title="Les lieux de pratique" />
             </div>
+            <div className={styles.vhssBody}>
+              <p className={styles.text}>
+                Les {installationCount} gymnases, stades et piscines du club
+                sont présentés sur leur propre page, avec les sports pratiqués
+                dans chacun de leurs espaces.
+              </p>
+              <Button href={routes.locations} className={styles.vhssButton}>
+                Voir les lieux de pratique
+              </Button>
+            </div>
           </Container>
-          <InstallationsExplorer installations={getInstallations()} />
         </section>
       </main>
     </>

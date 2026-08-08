@@ -1,5 +1,6 @@
 export const routes = {
   home: "/",
+  locations: "/lieux",
   association: "/association",
   news: "/actualites",
 } as const;

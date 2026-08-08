@@ -8,7 +8,12 @@ import type {
   NavigationLink,
 } from "@/features/navigation/types/navigation";
 
+/**
+ * Les besoins pratiques d'abord, l'institutionnel ensuite : on cherche un lieu
+ * bien plus souvent que les statuts de l'association.
+ */
 const mainLinks: NavigationLink[] = [
+  { label: "Lieux", href: routes.locations },
   { label: "Association", href: routes.association },
   { label: "Actualités", href: routes.news },
 ];
