@@ -64,6 +64,36 @@
   line-height: var(--line-height-body);
 }
 
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md) var(--space-2xl);
+  margin: 26px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.fact {
+  min-width: 0;
+}
+
+.factLabel {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.factValue {
+  margin: 5px 0 0;
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -124,6 +154,17 @@
   .eyebrow {
     padding: 8px 14px;
     font-size: var(--font-size-xs);
+  }
+
+  /* Deux colonnes plutot qu'une ligne de quatre, illisible sous 720 px. */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+  }
+
+  .factValue {
+    font-size: var(--font-size-md);
   }
 }
 

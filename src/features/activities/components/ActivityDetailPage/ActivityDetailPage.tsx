@@ -11,6 +11,7 @@ import { ActivityProgramCards } from "@/features/activities/components/ActivityP
 import { ActivityScheduleCards } from "@/features/activities/components/ActivityScheduleCards/ActivityScheduleCards";
 import { ActivitySocialLinks } from "@/features/activities/components/ActivitySocialLinks/ActivitySocialLinks";
 // `ActivityTrainerCards` removed — trainers section retired
+import { getActivityFacts } from "@/features/activities/lib/activityFacts";
 import type { Activity } from "@/features/activities/types/activity";
 import { NewsList } from "@/features/news/components/NewsList/NewsList";
 import type { NewsItem } from "@/features/news/types/news";
@@ -128,6 +129,7 @@ export function ActivityDetailPage({
         title={activity.title}
         description={heroSubtitle}
         imageUrl={activity.image}
+        facts={getActivityFacts(activity)}
         primaryCta={primaryCta}
         secondaryCta={secondaryCta}
         enableRegistrationHandoff={Boolean(registrationCta)}

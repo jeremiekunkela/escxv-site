@@ -4,11 +4,23 @@ import { Container } from "@/components/ui/Container/Container";
 import type { Cta } from "@/types/content";
 import styles from "./HeroSection.module.css";
 
+export type HeroFact = {
+  label: string;
+  value: string;
+};
+
 type HeroSectionProps = {
   eyebrow: string;
   title: string;
   description?: string;
   imageUrl: string;
+  /**
+   * Faits saillants affiches entre le texte et les boutons : ce qu'un visiteur
+   * doit pouvoir lire sans defiler. Loges dans la banniere plutot que dans un
+   * bandeau propre, qui ajouterait une bande a faire defiler pour la meme
+   * information.
+   */
+  facts?: HeroFact[];
   primaryCta?: Cta;
   secondaryCta?: Cta;
   enableRegistrationHandoff?: boolean;
@@ -19,6 +31,7 @@ export function HeroSection({
   title,
   description,
   imageUrl,
+  facts = [],
   primaryCta,
   secondaryCta,
   enableRegistrationHandoff = false,
@@ -56,6 +69,16 @@ export function HeroSection({
             >
               {description}
             </p>
+          ) : null}
+          {facts.length > 0 ? (
+            <dl className={styles.facts} data-reveal>
+              {facts.map((fact) => (
+                <div key={fact.label} className={styles.fact}>
+                  <dt className={styles.factLabel}>{fact.label}</dt>
+                  <dd className={styles.factValue}>{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
           ) : null}
           {primaryCta || secondaryCta ? (
             <div
