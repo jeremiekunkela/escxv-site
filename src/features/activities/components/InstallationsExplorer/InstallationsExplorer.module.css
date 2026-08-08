@@ -254,6 +254,26 @@
   letter-spacing: 0.04em;
 }
 
+.spaces {
+  display: grid;
+  gap: 10px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.space {
+  border-left: 3px solid var(--color-brand);
+  padding-left: 12px;
+}
+
+.spaceLabel {
+  margin: 0 0 6px;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
 .sports {
   display: flex;
   flex-wrap: wrap;

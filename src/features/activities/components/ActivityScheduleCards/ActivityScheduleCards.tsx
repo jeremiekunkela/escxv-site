@@ -2,7 +2,7 @@ import { Clock, MapPin, Trophy } from "lucide-react";
 import type { CSSProperties } from "react";
 import { capitalize, formatPublicLabel } from "@/lib/utils";
 import type {
-  ActivityLocation,
+  ActivityPracticeLocation,
   ActivitySchedule,
   DayOfWeek,
   PracticeGroup,
@@ -14,7 +14,7 @@ import styles from "./ActivityScheduleCards.module.css";
 type ActivityScheduleCardsProps = {
   schedules: ActivitySchedule[];
   practiceGroups: PracticeGroup[];
-  locations: ActivityLocation[];
+  locations: ActivityPracticeLocation[];
 };
 
 const DAY_ORDER: DayOfWeek[] = [
@@ -28,17 +28,20 @@ const DAY_ORDER: DayOfWeek[] = [
 ];
 
 const TYPE_SECTIONS: { type: ScheduleType; label: string }[] = [
-  { type: "training", label: "Entrainements" },
-  { type: "match", label: "Matchs & competition" },
+  { type: "training", label: "Entraînements" },
+  { type: "match", label: "Matchs & compétition" },
 ];
 
 const GENDER_LABELS: Record<PracticeGroup["gender"], string | null> = {
   mixte: null,
-  feminin: "Feminin",
+  feminin: "Féminin",
   masculin: "Masculin",
 };
 
 const DEFAULT_SCHEDULE_LABEL = "Horaire à confirmer";
+
+/** Cle de repli pour un creneau dont l'espace n'est pas encore connu. */
+const UNKNOWN_SPACE = "espace-a-confirmer";
 
 function formatHour(value: string) {
   return value.replace(":", "h");
@@ -88,12 +91,16 @@ function getGroupBadges(group: PracticeGroup) {
   );
 }
 
-function groupSchedulesByLocation(schedules: ActivitySchedule[]) {
+/**
+ * Regroupement par espace et non par lieu : deux creneaux d'un meme centre
+ * sportif qui se tiennent dans deux salles differentes restent distincts.
+ */
+function groupSchedulesBySpace(schedules: ActivitySchedule[]) {
   return Array.from(
     [...schedules].sort(compareSchedules).reduce(
       (items, schedule) =>
-        items.set(schedule.locationId, [
-          ...(items.get(schedule.locationId) ?? []),
+        items.set(schedule.spaceId ?? UNKNOWN_SPACE, [
+          ...(items.get(schedule.spaceId ?? UNKNOWN_SPACE) ?? []),
           schedule,
         ]),
       new Map<string, ActivitySchedule[]>(),
@@ -129,7 +136,11 @@ export function ActivityScheduleCards({
     return <p className={styles.empty}>Aucun créneau n&apos;est encore renseigné.</p>;
   }
 
-  const locationsById = new Map(locations.map((location) => [location.id, location]));
+  const venueBySpaceId = new Map(
+    locations.flatMap((location) =>
+      location.spaces.map((space) => [space.id, { location, space }] as const),
+    ),
+  );
   const orderedGroups = buildOrderedGroups(schedules, practiceGroups);
 
   return (
@@ -168,7 +179,7 @@ export function ActivityScheduleCards({
               }
 
               const SectionIcon = type === "training" ? Clock : Trophy;
-              const schedulesByLocation = groupSchedulesByLocation(typeSchedules);
+              const schedulesBySpace = groupSchedulesBySpace(typeSchedules);
 
               return (
                 <div key={type} className={styles.schedules}>
@@ -178,17 +189,21 @@ export function ActivityScheduleCards({
                   </h4>
 
                   <div className={styles.scheduleGroups}>
-                    {schedulesByLocation.map(([locationId, locationSchedules]) => {
-                      const location = locationsById.get(locationId);
+                    {schedulesBySpace.map(([spaceId, locationSchedules]) => {
+                      const venue = venueBySpaceId.get(spaceId);
+                      const location = venue?.location;
 
                       return (
-                        <section key={locationId} className={styles.schedule}>
+                        <section key={spaceId} className={styles.schedule}>
                           <div className={styles.scheduleHeader}>
                             <MapPin aria-hidden="true" className={styles.icon} size={18} />
                             <div className={styles.locationSummary}>
                               <h5 className={styles.venueTitle}>
                                 {location?.name ?? "Lieu à confirmer"}
                               </h5>
+                              {venue ? (
+                                <p className={styles.venueSpace}>{venue.space.label}</p>
+                              ) : null}
                               <p className={styles.address}>
                                 {location
                                   ? `${location.address}, ${location.postalCode} ${location.city}`

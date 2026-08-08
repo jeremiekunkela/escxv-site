@@ -213,14 +213,11 @@ export function ActivityDetailPage({
           title={ACTIVITY_DETAIL_PAGE_COPY.locationsTitle}
         >
           {hasLocations ? (
-            <ActivityLocationCards
-              locations={activity.locations}
-              activitySlug={activity.slug}
-            />
+            <ActivityLocationCards locations={activity.locations} />
           ) : (
             <InfoBlock title="Lieux en attente">
-              Les lieux de pratique seront centralises ici quand ils auront ete
-              confirmes.
+              Les lieux de pratique seront centralisés ici quand ils auront été
+              confirmés.
             </InfoBlock>
           )}
         </ActivityDetailPageSection>

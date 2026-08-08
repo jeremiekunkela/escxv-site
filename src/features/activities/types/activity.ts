@@ -32,13 +32,22 @@ export type ActivityContent = {
 };
 
 /**
- * Equipement d'un lieu de pratique (registre partage club-wide).
- * `relatedActivitySlugs` permet de mettre en avant, sur une page d'activité,
- * l'equipement pertinent pour ce sport (un equipement sans slug reste neutre).
+ * Espace de pratique d'un lieu : une meme adresse en abrite plusieurs
+ * (La Plaine : terrain, piscine, salle d'arts martiaux). Le lieu porte
+ * l'adresse et la carte, l'espace porte ce que la section voit reellement.
+ *
+ * `amenities` appartient a l'espace, pas au site : les gradins sont au terrain
+ * de football, pas dans la salle de tennis de table.
+ *
+ * `id` est stable et prefixe par le lieu : future cle primaire de la
+ * collection Directus `location_spaces` (FK vers `locations`).
  */
-export type LocationEquipment = {
+export type LocationSpace = {
+  id: string;
   label: string;
-  relatedActivitySlugs?: string[];
+  description?: string;
+  image?: string | null;
+  amenities?: string[];
   note?: string;
 };
 
@@ -56,7 +65,15 @@ export type ActivityLocation = {
   mapEmbedUrl?: string;
   image?: string | null;
   description?: string;
-  equipments?: LocationEquipment[];
+  spaces?: LocationSpace[];
+};
+
+/**
+ * Lieu tel qu'une section le voit : le registre du lieu, restreint aux espaces
+ * ou elle pratique vraiment. Derive des creneaux, jamais saisi a la main.
+ */
+export type ActivityPracticeLocation = Omit<ActivityLocation, "spaces"> & {
+  spaces: LocationSpace[];
 };
 
 /**
@@ -78,7 +95,12 @@ export type PracticeGroup = {
 export type ActivitySchedule = {
   id: string;
   practiceGroupId: string;
-  locationId: string;
+  /**
+   * Espace ou se deroule le creneau, et non simple lieu : c'est de lui que se
+   * deduisent les lieux de la section. Optionnel car un creneau peut exister
+   * avant que le lieu exact soit connu (cf. volley « Plaisir »).
+   */
+  spaceId?: string;
   type: ScheduleType;
   day?: DayOfWeek;
   startTime?: string;
@@ -135,7 +157,7 @@ export type Activity = {
   content: ActivityContent;
   programs: Program[];
   practiceGroups: PracticeGroup[];
-  locations: ActivityLocation[];
+  locations: ActivityPracticeLocation[];
   schedules: ActivitySchedule[];
   prices: ActivityPrice[];
   contacts: ActivityContact[];
@@ -144,9 +166,8 @@ export type Activity = {
 
 /**
  * Forme de stockage d'une activité (telle qu'elle est dans activities.json
- * et telle que Directus la renverra plus tard) : les lieux ne sont pas
- * embarqués mais référencés par id. La data-access hydrate `locations`.
+ * et telle que Directus la renverra plus tard). L'activité ne declare aucun
+ * lieu : chaque creneau pointe son espace, et `locations` s'en deduit. Une
+ * seule saisie, donc aucune divergence possible entre les deux.
  */
-export type ActivityRecord = Omit<Activity, "locations"> & {
-  locationIds: string[];
-};
+export type ActivityRecord = Omit<Activity, "locations">;

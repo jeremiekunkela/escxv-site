@@ -10,50 +10,61 @@
     "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.5874898712914!2d2.2909721765913282!3d48.827931671328024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67148258f5ebf%3A0x10de109f3d2c443f!2sCentre%20Sportif%20La%20Plaine!5e0!3m2!1sfr!2sfr!4v1779035821251!5m2!1sfr!2sfr",
     "image": "",
     "description": "Centre sportif municipal du 15e arrondissement : terrain en synthétique, piste d'athlétisme, vestiaires et éclairage.",
-    "equipments": [
+    "spaces": [
       {
-        "label": "Piste d'athlétisme circulaire 365 m - 6 couloirs",
-        "relatedActivitySlugs": ["athletisme", "course-a-pied-trail"]
+        "id": "la-plaine-piste",
+        "label": "Piste d'athlétisme",
+        "image": null,
+        "amenities": [
+          "365 m - 6 couloirs",
+          "Saut en hauteur",
+          "Saut en longueur",
+          "Éclairage",
+          "Vestiaires"
+        ]
       },
       {
-        "label": "Saut en hauteur / longueur",
-        "relatedActivitySlugs": ["athletisme"]
-      },
-      {
+        "id": "la-plaine-terrain-football",
         "label": "Terrain de football",
-        "relatedActivitySlugs": ["football"]
+        "image": null,
+        "amenities": ["Gradins", "Éclairage", "Vestiaires"]
       },
       {
+        "id": "la-plaine-salle-arts-martiaux",
         "label": "Salle d'arts martiaux",
-        "relatedActivitySlugs": ["judo", "aikibudo"]
+        "image": null,
+        "amenities": ["Vestiaires"]
       },
       {
-        "label": "Salle de boxe"
+        "id": "la-plaine-salle-boxe",
+        "label": "Salle de boxe",
+        "image": null,
+        "amenities": ["Vestiaires"]
       },
       {
+        "id": "la-plaine-terrain-volley",
         "label": "Terrain de volley-ball",
-        "relatedActivitySlugs": ["volley-ball"]
+        "image": null,
+        "amenities": ["Vestiaires"]
       },
       {
-        "label": "Salle de tennis de table (6 tables)",
-        "relatedActivitySlugs": ["tennis-table"]
+        "id": "la-plaine-salle-tennis-table",
+        "label": "Salle de tennis de table",
+        "image": null,
+        "amenities": ["6 tables", "Vestiaires"]
       },
       {
+        "id": "la-plaine-gymnase",
         "label": "Gymnase",
+        "image": null,
+        "amenities": ["Vestiaires"],
         "note": "Réservé aux clubs et associations, inscription via le Service numérique Paris Asso."
       },
       {
+        "id": "la-plaine-piscine",
         "label": "Piscine",
-        "relatedActivitySlugs": ["natation"]
-      },
-      {
-        "label": "Vestiaires"
-      },
-      {
-        "label": "Gradins"
-      },
-      {
-        "label": "Éclairage"
+        "image": null,
+        "amenities": ["Vestiaires"]
       }
     ]
   },
@@ -67,19 +78,19 @@
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Complexe+sportif+Sablonniere+Paris+75015",
     "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.743135041512!2d2.299360576592251!3d48.84403807133016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6703c5a97ca25%3A0x1a397aa06ea0b07a!2sComplexe%20sportif%20Sablonni%C3%A8re!5e0!3m2!1sfr!2sfr!4v1779035883120!5m2!1sfr!2sfr",
     "image": null,
-    "description": "Site de proximité adapté aux séances jeunes du week-end et au travail technique : piste courte, saut en longueur, lancer du poids.",
-    "equipments": [
+    "description": "Site sportif municipal du 15e arrondissement regroupant plusieurs espaces de pratique, en extérieur comme à l'intérieur du gymnase.",
+    "spaces": [
       {
-        "label": "Piste d'athlétisme 192 m",
-        "relatedActivitySlugs": ["athletisme"]
+        "id": "sablonniere-gymnase",
+        "label": "Gymnase",
+        "description": "Unique salle intérieure du site : elle sert tour à tour de salle de danse, de dojo et d'espace de pratiques douces selon les créneaux.",
+        "image": null
       },
       {
-        "label": "Saut en longueur",
-        "relatedActivitySlugs": ["athletisme"]
-      },
-      {
-        "label": "Lancer du poids",
-        "relatedActivitySlugs": ["athletisme"]
+        "id": "sablonniere-piste",
+        "label": "Aire d'athlétisme",
+        "image": null,
+        "amenities": ["Piste 192 m", "Saut en longueur", "Lancer du poids"]
       }
     ]
   },
@@ -93,7 +104,14 @@
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gymnase%20Croix-Nivert%20107%20rue%20de%20la%20Croix-Nivert%2075015%20Paris",
     "mapEmbedUrl": "https://maps.google.com/maps?q=Gymnase%20Croix-Nivert%20107%20rue%20de%20la%20Croix-Nivert%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
-    "description": "Gymnase du 15e arrondissement accueillant l'escalade et le volley-ball."
+    "description": "Gymnase du 15e arrondissement accueillant l'escalade et le volley-ball.",
+    "spaces": [
+      {
+        "id": "croix-nivert-gymnase",
+        "label": "Gymnase",
+        "image": null
+      }
+    ]
   },
   {
     "id": "keller",
@@ -105,7 +123,14 @@
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Salle%20Keller%2016%20rue%20de%20l'Ingenieur%20Robert%20Keller%2075015%20Paris",
     "mapEmbedUrl": "https://maps.google.com/maps?q=Salle%20Keller%2016%20rue%20de%20l'Ingenieur%20Robert%20Keller%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
-    "description": "Salle du 15e arrondissement utilisée par la section badminton."
+    "description": "Salle du 15e arrondissement utilisée par la section badminton.",
+    "spaces": [
+      {
+        "id": "keller-salle",
+        "label": "Salle",
+        "image": null
+      }
+    ]
   },
   {
     "id": "emile-anthoine",
@@ -117,7 +142,14 @@
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Piscine%20Emile%20Anthoine%209%20rue%20Jean%20Rey%2075015%20Paris",
     "mapEmbedUrl": "https://maps.google.com/maps?q=Piscine%20Emile%20Anthoine%209%20rue%20Jean%20Rey%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
-    "description": "Piscine municipale du 15e arrondissement, près de la tour Eiffel."
+    "description": "Piscine municipale du 15e arrondissement, près de la tour Eiffel.",
+    "spaces": [
+      {
+        "id": "emile-anthoine-bassin",
+        "label": "Bassin",
+        "image": null
+      }
+    ]
   },
   {
     "id": "suzanne-lenglen",
@@ -129,7 +161,14 @@
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Centre%20sportif%20Suzanne%20Lenglen%202%20rue%20Louis%20Armand%2075015%20Paris",
     "mapEmbedUrl": "https://maps.google.com/maps?q=Centre%20sportif%20Suzanne%20Lenglen%202%20rue%20Louis%20Armand%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
-    "description": "Grand centre sportif du 15e, courts de tennis couverts et extérieurs."
+    "description": "Grand centre sportif du 15e, courts de tennis couverts et extérieurs.",
+    "spaces": [
+      {
+        "id": "suzanne-lenglen-courts",
+        "label": "Courts de tennis",
+        "image": null
+      }
+    ]
   },
   {
     "id": "paul-barruel",
@@ -141,7 +180,34 @@
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gymnase%20Paul%20Barruel%2024%20rue%20Paul%20Barruel%2075015%20Paris",
     "mapEmbedUrl": "https://maps.google.com/maps?q=Gymnase%20Paul%20Barruel%2024%20rue%20Paul%20Barruel%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
-    "description": "Équipement sportif du 15e arrondissement, courts de tennis."
+    "description": "Équipement sportif du 15e arrondissement, courts de tennis.",
+    "spaces": [
+      {
+        "id": "paul-barruel-courts",
+        "label": "Courts de tennis",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "tennis-rigoulot",
+    "name": "Tennis-Rigoulot - La Plaine",
+    "address": "18 avenue de la Porte de Brancion",
+    "city": "Paris",
+    "postalCode": "75015",
+    "type": "exterieur",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tennis-Rigoulot%2018%20avenue%20de%20la%20Porte%20de%20Brancion%2075015%20Paris",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Tennis-Rigoulot%2018%20avenue%20de%20la%20Porte%20de%20Brancion%2075015%20Paris&z=16&hl=fr&output=embed",
+    "image": null,
+    "description": "Équipement de tennis de plein air à la porte de Brancion, rattaché au secteur La Plaine.",
+    "spaces": [
+      {
+        "id": "tennis-rigoulot-courts",
+        "label": "Courts de tennis",
+        "image": null,
+        "amenities": ["7 courts découverts", "Synthétique", "Béton poreux"]
+      }
+    ]
   },
   {
     "id": "cevennes",
@@ -153,7 +219,14 @@
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gymnase%20des%20Cevennes%2011%20rue%20de%20la%20Montagne%20d'Aulas%2075015%20Paris",
     "mapEmbedUrl": "https://maps.google.com/maps?q=Gymnase%20des%20Cevennes%2011%20rue%20de%20la%20Montagne%20d'Aulas%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
-    "description": "Gymnase du 15e arrondissement accueillant la section danse."
+    "description": "Gymnase du 15e arrondissement accueillant la section danse.",
+    "spaces": [
+      {
+        "id": "cevennes-gymnase",
+        "label": "Gymnase",
+        "image": null
+      }
+    ]
   },
   {
     "id": "saint-lambert",
@@ -165,7 +238,14 @@
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gymnase%20Saint-Lambert%208%20rue%20Saint-Lambert%2075015%20Paris",
     "mapEmbedUrl": "https://maps.google.com/maps?q=Gymnase%20Saint-Lambert%208%20rue%20Saint-Lambert%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
-    "description": "Gymnase du 15e arrondissement utilisé par la section capoeira."
+    "description": "Gymnase du 15e arrondissement utilisé par la section capoeira.",
+    "spaces": [
+      {
+        "id": "saint-lambert-gymnase",
+        "label": "Gymnase",
+        "image": null
+      }
+    ]
   },
   {
     "id": "lacretelle",
@@ -177,7 +257,14 @@
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gymnase%20Lacretelle%201%20rue%20Lacretelle%2075015%20Paris",
     "mapEmbedUrl": "https://maps.google.com/maps?q=Gymnase%20Lacretelle%201%20rue%20Lacretelle%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
-    "description": "Équipement du 15e arrondissement, près de la porte de Versailles, pour le sport du mercredi."
+    "description": "Équipement du 15e arrondissement, près de la porte de Versailles, pour le sport du mercredi.",
+    "spaces": [
+      {
+        "id": "lacretelle-gymnase",
+        "label": "Gymnase",
+        "image": null
+      }
+    ]
   },
   {
     "id": "brancion",
@@ -189,7 +276,14 @@
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Terrain%20de%20Brancion%20Porte%20de%20Brancion%2075015%20Paris",
     "mapEmbedUrl": "https://maps.google.com/maps?q=Terrain%20de%20Brancion%20Porte%20de%20Brancion%2075015%20Paris&z=16&hl=fr&output=embed",
     "image": null,
-    "description": "Espace extérieur du 15e arrondissement utilisé pour le beach-volley."
+    "description": "Espace extérieur du 15e arrondissement utilisé pour le beach-volley.",
+    "spaces": [
+      {
+        "id": "brancion-terrain",
+        "label": "Terrain extérieur",
+        "image": null
+      }
+    ]
   },
   {
     "id": "pershing",
@@ -201,6 +295,13 @@
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Stade%20Pershing%20Route%20de%20la%20Pyramide%2C%20Bois%20de%20Vincennes%2075012%20Paris",
     "mapEmbedUrl": "https://maps.google.com/maps?q=Stade%20Pershing%20Route%20de%20la%20Pyramide%2C%20Bois%20de%20Vincennes%2075012%20Paris&z=16&hl=fr&output=embed",
     "image": null,
-    "description": "Stade du Bois de Vincennes (12e) accueillant la section baseball."
+    "description": "Stade du Bois de Vincennes (12e) accueillant la section baseball.",
+    "spaces": [
+      {
+        "id": "pershing-terrain",
+        "label": "Terrain",
+        "image": null
+      }
+    ]
   }
 ]

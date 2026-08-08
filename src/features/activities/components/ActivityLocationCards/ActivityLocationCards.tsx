@@ -2,29 +2,32 @@ import Image from "next/image";
 import { MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button/Button";
 import type { CSSProperties } from "react";
-import { EquipmentChips } from "@/features/activities/components/EquipmentChips/EquipmentChips";
-import type {
-  ActivityLocation,
-  LocationEquipment,
-} from "@/features/activities/types/activity";
+import { LocationSpaceHighlights } from "@/features/activities/components/LocationSpaceHighlights/LocationSpaceHighlights";
+import type { ActivityPracticeLocation } from "@/features/activities/types/activity";
 import { getActivityLocationAnchorId } from "@/features/activities/lib/activityRoutes";
 import styles from "./ActivityLocationCards.module.css";
 
 type ActivityLocationCardsProps = {
-  locations: ActivityLocation[];
-  activitySlug: string;
+  locations: ActivityPracticeLocation[];
 };
 
-function isRelevantEquipment(
-  equipment: LocationEquipment,
-  activitySlug: string,
-) {
-  return Boolean(equipment.relatedActivitySlugs?.includes(activitySlug));
+/**
+ * La photo suit la section : on montre l'espace ou elle pratique plutot que
+ * la vue generale du site (le yoga voit la salle, pas la piste). A defaut de
+ * photo d'espace, la photo du lieu.
+ */
+function getMedia(location: ActivityPracticeLocation) {
+  const illustratedSpace = location.spaces.find((space) => space.image);
+
+  return illustratedSpace?.image
+    ? { src: illustratedSpace.image, alt: illustratedSpace.label }
+    : location.image
+      ? { src: location.image, alt: "" }
+      : null;
 }
 
 export function ActivityLocationCards({
   locations,
-  activitySlug,
 }: ActivityLocationCardsProps) {
   if (locations.length === 0) {
     return (
@@ -37,31 +40,23 @@ export function ActivityLocationCards({
   return (
     <div className={styles.grid}>
       {locations.map((location, index) => {
-        const equipments = location.equipments ?? [];
-        const relevantEquipments = equipments.filter((equipment) =>
-          isRelevantEquipment(equipment, activitySlug),
-        );
-        const otherEquipments = equipments.filter(
-          (equipment) => !isRelevantEquipment(equipment, activitySlug),
-        );
+        const media = getMedia(location);
 
         return (
           <article
             id={getActivityLocationAnchorId(location.id)}
             key={location.id}
             className={
-              location.image
-                ? styles.card
-                : `${styles.card} ${styles.withoutMedia}`
+              media ? styles.card : `${styles.card} ${styles.withoutMedia}`
             }
             data-reveal="zoom"
             style={{ "--reveal-delay": `${index * 70}ms` } as CSSProperties}
           >
-            {location.image ? (
+            {media ? (
               <div className={styles.media}>
                 <Image
-                  src={location.image}
-                  alt=""
+                  src={media.src}
+                  alt={media.alt}
                   fill
                   sizes="(max-width: 640px) 100vw, 360px"
                   className={styles.image}
@@ -77,34 +72,7 @@ export function ActivityLocationCards({
               <p className={styles.address}>
                 {location.address}, {location.postalCode} {location.city}
               </p>
-              {location.description ? (
-                <p className={styles.description}>{location.description}</p>
-              ) : null}
-              {equipments.length > 0 ? (
-                <div className={styles.equipmentGroups}>
-                  {relevantEquipments.length > 0 ? (
-                    <div className={styles.equipmentSection}>
-                      <p className={styles.equipmentEyebrow}>
-                        Équipement pour cette section
-                      </p>
-                      <EquipmentChips
-                        equipments={relevantEquipments}
-                        emphasized
-                      />
-                    </div>
-                  ) : null}
-                  {otherEquipments.length > 0 ? (
-                    <div className={styles.equipmentSection}>
-                      <p className={styles.equipmentEyebrow}>
-                        {relevantEquipments.length > 0
-                          ? "Autres équipements du lieu"
-                          : "Équipement du lieu"}
-                      </p>
-                      <EquipmentChips equipments={otherEquipments} />
-                    </div>
-                  ) : null}
-                </div>
-              ) : null}
+              <LocationSpaceHighlights spaces={location.spaces} />
               {location.mapEmbedUrl ? (
                 <div className={styles.mapEmbed}>
                   <iframe

@@ -13,15 +13,15 @@
     "image": "https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a1655168680028df27d6",
     "content": {
-      "heroSubtitle": "Art martial complet, a mains nues et avec armes, les lundis et mercredis a La Plaine.",
+      "heroSubtitle": "Art martial complet, à mains nues et avec armes, les lundis et mercredis à La Plaine.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Pratique martiale",
         "audience": "Adultes",
-        "description": "Travail des techniques a mains nues et avec armes, centre sur la posture, le placement et le contrôle.",
+        "description": "Travail des techniques à mains nues et avec armes, centré sur la posture, le placement et le contrôle.",
         "tags": ["Technique", "Armes", "Contrôle"]
       }
     ],
@@ -34,12 +34,11 @@
         "sortOrder": 1
       }
     ],
-    "locationIds": ["la-plaine"],
     "schedules": [
       {
         "id": "aiki-lundi",
         "practiceGroupId": "aiki-tous",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-salle-arts-martiaux",
         "type": "training",
         "day": "lundi",
         "startTime": "19:30",
@@ -49,7 +48,7 @@
       {
         "id": "aiki-mercredi",
         "practiceGroupId": "aiki-tous",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-salle-arts-martiaux",
         "type": "training",
         "day": "mercredi",
         "startTime": "19:30",
@@ -85,7 +84,7 @@
     "shortName": "Athlé",
     "icon": "🏃",
     "shortDescription": "Sprint, demi-fond et école d'athlétisme pour enfants",
-    "description": "La section athlétisme de l'ESCXV accueille les pratiquants du loisir a la compétition, avec un travail centre sur la piste, la vitesse et la progression technique.",
+    "description": "La section athlétisme de l'ESCXV accueille les pratiquants du loisir à la compétition, avec un travail centré sur la piste, la vitesse et la progression technique.",
     "category": ["athle-running"],
     "publics": ["enfants", "adolescents", "adultes"],
     "tags": ["sprint", "demi-fond", "compétition"],
@@ -99,7 +98,7 @@
       {
         "title": "École d'athlétisme",
         "audience": "Enfants",
-        "description": "Découverte de la course, des sauts et des lancers avec une progression technique accèssible et un cadre collectif.",
+        "description": "Découverte de la course, des sauts et des lancers avec une progression technique accessible et un cadre collectif.",
         "tags": ["Initiation", "Coordination", "Loisir"]
       },
       {
@@ -136,12 +135,11 @@
         "sortOrder": 3
       }
     ],
-    "locationIds": ["la-plaine", "sablonniere"],
     "schedules": [
       {
         "id": "athle-jeunes-mardi-la-plaine-1800",
         "practiceGroupId": "ath-minime-cadet",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-piste",
         "type": "training",
         "day": "mardi",
         "startTime": "18:00",
@@ -151,7 +149,7 @@
       {
         "id": "athle-adultes-mardi-la-plaine-1800",
         "practiceGroupId": "ath-adultes",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-piste",
         "type": "training",
         "day": "mardi",
         "startTime": "18:00",
@@ -162,7 +160,7 @@
       {
         "id": "athle-jeunes-jeudi-la-plaine-1830",
         "practiceGroupId": "ath-minime-cadet",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-piste",
         "type": "training",
         "day": "jeudi",
         "startTime": "18:30",
@@ -172,7 +170,7 @@
       {
         "id": "athle-adultes-jeudi-la-plaine-1830",
         "practiceGroupId": "ath-adultes",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-piste",
         "type": "training",
         "day": "jeudi",
         "startTime": "18:30",
@@ -183,7 +181,7 @@
       {
         "id": "athle-jeunes-samedi-sablonniere-0900",
         "practiceGroupId": "ath-minime-cadet",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-piste",
         "type": "training",
         "day": "samedi",
         "startTime": "09:00",
@@ -193,7 +191,7 @@
       {
         "id": "athle-adultes-samedi-sablonniere-0900",
         "practiceGroupId": "ath-adultes",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-piste",
         "type": "training",
         "day": "samedi",
         "startTime": "09:00",
@@ -204,7 +202,7 @@
       {
         "id": "athle-eveil-samedi-sablonniere-1030",
         "practiceGroupId": "ath-eveil-benjamin",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-piste",
         "type": "training",
         "day": "samedi",
         "startTime": "10:30",
@@ -232,7 +230,7 @@
     "contacts": [
       {
         "id": "contact-athletisme",
-        "name": "Contactez nous",
+        "name": "Contactez-nous",
         "role": "Nos coordonnées",
         "email": "escxv.athletisme@gmail.com",
         "phone": null
@@ -252,16 +250,16 @@
     "shortName": "Bad",
     "icon": "🏸",
     "shortDescription": "Une pratique dynamique pour jouer en simple, double ou loisir.",
-    "description": "Le badminton mélange vitesse, coordination et lecture du jeu, avec une pratique accèssible en loisir comme en progression technique.",
+    "description": "Le badminton mélange vitesse, coordination et lecture du jeu, avec une pratique accessible en loisir comme en progression technique.",
     "category": ["raquette"],
     "publics": ["adultes"],
     "tags": ["raquette", "indoor", "cardio"],
     "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/61786ce31422050021e61a39",
     "content": {
-      "heroSubtitle": "Loisir ou compétition, en simple et en double, a la salle Keller.",
+      "heroSubtitle": "Loisir ou compétition, en simple et en double, à la salle Keller.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -293,12 +291,11 @@
         "sortOrder": 2
       }
     ],
-    "locationIds": ["keller"],
     "schedules": [
       {
         "id": "bad-loisir-lundi-1830",
         "practiceGroupId": "bad-loisir",
-        "locationId": "keller",
+        "spaceId": "keller-salle",
         "type": "training",
         "day": "lundi",
         "startTime": "18:30",
@@ -308,7 +305,7 @@
       {
         "id": "bad-loisir-lundi-2030",
         "practiceGroupId": "bad-loisir",
-        "locationId": "keller",
+        "spaceId": "keller-salle",
         "type": "training",
         "day": "lundi",
         "startTime": "20:30",
@@ -318,7 +315,7 @@
       {
         "id": "bad-loisir-mercredi",
         "practiceGroupId": "bad-loisir",
-        "locationId": "keller",
+        "spaceId": "keller-salle",
         "type": "training",
         "day": "mercredi",
         "startTime": "21:00",
@@ -328,7 +325,7 @@
       {
         "id": "bad-comp-mardi",
         "practiceGroupId": "bad-compétition",
-        "locationId": "keller",
+        "spaceId": "keller-salle",
         "type": "training",
         "day": "mardi",
         "startTime": "20:30",
@@ -339,7 +336,7 @@
       {
         "id": "bad-comp-vendredi",
         "practiceGroupId": "bad-compétition",
-        "locationId": "keller",
+        "spaceId": "keller-salle",
         "type": "training",
         "day": "vendredi",
         "startTime": "19:00",
@@ -402,7 +399,7 @@
     "content": {
       "heroSubtitle": "Pratique du baseball le jeudi soir au stade Pershing (Bois de Vincennes).",
       "schedulesNoticeText": "Créneau du jeudi soir au stade Pershing. Prenez contact avec la section avant votre première venue.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -421,12 +418,11 @@
         "sortOrder": 1
       }
     ],
-    "locationIds": ["pershing"],
     "schedules": [
       {
         "id": "base-jeudi",
         "practiceGroupId": "base-tous",
-        "locationId": "pershing",
+        "spaceId": "pershing-terrain",
         "type": "training",
         "day": "jeudi",
         "startTime": "19:00",
@@ -470,14 +466,14 @@
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a1a634e001002139563c",
     "content": {
-      "heroSubtitle": "Art martial brésilien mêlant mouvement, musicalité et coordination, des 5 ans.",
+      "heroSubtitle": "Art martial brésilien mêlant mouvement, musicalité et coordination, dès 5 ans.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Capoeira enfants et jeunes",
-        "audience": "De 5 a 17 ans",
+        "audience": "De 5 à 17 ans",
         "description": "Apprentissage des mouvements de base, du rythme et de la roda dans un cadre ludique et progressif.",
         "tags": ["Mouvement", "Rythme", "Jeunes"]
       },
@@ -491,21 +487,21 @@
     "practiceGroups": [
       {
         "id": "capo-5-7",
-        "label": "5 a 7 ans",
+        "label": "5 à 7 ans",
         "public": "enfants",
         "gender": "mixte",
         "sortOrder": 1
       },
       {
         "id": "capo-8-11",
-        "label": "8 a 11 ans",
+        "label": "8 à 11 ans",
         "public": "enfants",
         "gender": "mixte",
         "sortOrder": 2
       },
       {
         "id": "capo-12-17",
-        "label": "12 a 17 ans",
+        "label": "12 à 17 ans",
         "public": "adolescents",
         "gender": "mixte",
         "sortOrder": 3
@@ -518,12 +514,11 @@
         "sortOrder": 4
       }
     ],
-    "locationIds": ["saint-lambert", "sablonniere"],
     "schedules": [
       {
         "id": "capo-5-7-mardi",
         "practiceGroupId": "capo-5-7",
-        "locationId": "saint-lambert",
+        "spaceId": "saint-lambert-gymnase",
         "type": "training",
         "day": "mardi",
         "startTime": "17:00",
@@ -533,7 +528,7 @@
       {
         "id": "capo-5-7-samedi",
         "practiceGroupId": "capo-5-7",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "samedi",
         "startTime": "15:00",
@@ -543,7 +538,7 @@
       {
         "id": "capo-8-11-jeudi",
         "practiceGroupId": "capo-8-11",
-        "locationId": "saint-lambert",
+        "spaceId": "saint-lambert-gymnase",
         "type": "training",
         "day": "jeudi",
         "startTime": "18:30",
@@ -553,7 +548,7 @@
       {
         "id": "capo-8-11-samedi",
         "practiceGroupId": "capo-8-11",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "samedi",
         "startTime": "15:00",
@@ -563,7 +558,7 @@
       {
         "id": "capo-12-17-mardi",
         "practiceGroupId": "capo-12-17",
-        "locationId": "saint-lambert",
+        "spaceId": "saint-lambert-gymnase",
         "type": "training",
         "day": "mardi",
         "startTime": "19:00",
@@ -573,7 +568,7 @@
       {
         "id": "capo-12-17-jeudi",
         "practiceGroupId": "capo-12-17",
-        "locationId": "saint-lambert",
+        "spaceId": "saint-lambert-gymnase",
         "type": "training",
         "day": "jeudi",
         "startTime": "19:30",
@@ -583,7 +578,7 @@
       {
         "id": "capo-12-17-samedi",
         "practiceGroupId": "capo-12-17",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "samedi",
         "startTime": "16:30",
@@ -593,7 +588,7 @@
       {
         "id": "capo-adultes-mardi",
         "practiceGroupId": "capo-adultes",
-        "locationId": "saint-lambert",
+        "spaceId": "saint-lambert-gymnase",
         "type": "training",
         "day": "mardi",
         "startTime": "19:00",
@@ -603,7 +598,7 @@
       {
         "id": "capo-adultes-jeudi",
         "practiceGroupId": "capo-adultes",
-        "locationId": "saint-lambert",
+        "spaceId": "saint-lambert-gymnase",
         "type": "training",
         "day": "jeudi",
         "startTime": "19:30",
@@ -613,7 +608,7 @@
       {
         "id": "capo-adultes-samedi",
         "practiceGroupId": "capo-adultes",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "samedi",
         "startTime": "16:30",
@@ -654,7 +649,7 @@
   {
     "id": "course-a-pied-trail",
     "slug": "course-a-pied-trail",
-    "title": "Course a pied / Trail",
+    "title": "Course à pied / Trail",
     "shortName": "CAP Trail",
     "icon": "🏃",
     "shortDescription": "Running, endurance et préparation trail pour adultes.",
@@ -667,7 +662,7 @@
     "content": {
       "heroSubtitle": "Pratique adulte pour courir régulièrement, préparer un objectif et progresser en groupe sur route et sentiers.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -692,18 +687,17 @@
     "practiceGroups": [
       {
         "id": "cap-adultes",
-        "label": "Adultes (des 17 ans)",
+        "label": "Adultes (dès 17 ans)",
         "public": "adultes",
         "gender": "mixte",
         "sortOrder": 1
       }
     ],
-    "locationIds": ["la-plaine", "sablonniere"],
     "schedules": [
       {
         "id": "cap-mardi",
         "practiceGroupId": "cap-adultes",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-piste",
         "type": "training",
         "day": "mardi",
         "startTime": "19:30",
@@ -713,7 +707,7 @@
       {
         "id": "cap-jeudi",
         "practiceGroupId": "cap-adultes",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-piste",
         "type": "training",
         "day": "jeudi",
         "startTime": "20:00",
@@ -723,7 +717,7 @@
       {
         "id": "cap-samedi",
         "practiceGroupId": "cap-adultes",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-piste",
         "type": "training",
         "day": "samedi",
         "startTime": "10:30",
@@ -736,7 +730,7 @@
       {
         "id": "captrail-2026-2027",
         "season": "2026/2027",
-        "label": "Course a pied et trail",
+        "label": "Course à pied et trail",
         "clubFee": 75,
         "activityFee": 145,
         "total": 220,
@@ -751,7 +745,7 @@
     "contacts": [
       {
         "id": "contact-cap",
-        "name": "Section Course a pied / Trail ESCXV",
+        "name": "Section Course à pied / Trail ESCXV",
         "role": "Contact section",
         "email": "cap@esc15.fr",
         "phone": null
@@ -772,9 +766,9 @@
     "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a2076656c30028b813fd",
     "content": {
-      "heroSubtitle": "Danse pour adultes et jeunes adultes, au gymnase des Cévennes ou a Cambronne.",
+      "heroSubtitle": "Danse pour adultes et jeunes adultes, au gymnase des Cévennes ou à Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -800,12 +794,11 @@
         "sortOrder": 2
       }
     ],
-    "locationIds": ["cevennes", "sablonniere"],
     "schedules": [
       {
         "id": "danse-cevennes-mercredi",
         "practiceGroupId": "danse-cevennes",
-        "locationId": "cevennes",
+        "spaceId": "cevennes-gymnase",
         "type": "training",
         "day": "mercredi",
         "startTime": "19:30",
@@ -815,7 +808,7 @@
       {
         "id": "danse-cambronne-vendredi",
         "practiceGroupId": "danse-cambronne",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "vendredi",
         "startTime": "18:00",
@@ -867,9 +860,9 @@
     "image": "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/61786cfb1df3f700288f2f43",
     "content": {
-      "heroSubtitle": "Grimpe adultes et ateliers parent-enfant a La Plaine et a Croix-Nivert.",
+      "heroSubtitle": "Grimpe adultes et ateliers parent-enfant à La Plaine et à Croix-Nivert.",
       "schedulesNoticeText": "D'autres créneaux (mardi, jeudi, dimanche) peuvent exister selon la saison et sont à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -908,12 +901,11 @@
         "sortOrder": 3
       }
     ],
-    "locationIds": ["la-plaine", "croix-nivert"],
     "schedules": [
       {
         "id": "esc-adultes-lundi",
         "practiceGroupId": "esc-adultes",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-gymnase",
         "type": "training",
         "day": "lundi",
         "startTime": "20:00",
@@ -923,7 +915,7 @@
       {
         "id": "esc-adultes-vendredi",
         "practiceGroupId": "esc-adultes",
-        "locationId": "croix-nivert",
+        "spaceId": "croix-nivert-gymnase",
         "type": "training",
         "day": "vendredi",
         "startTime": "19:30",
@@ -933,7 +925,7 @@
       {
         "id": "esc-adultes-samedi",
         "practiceGroupId": "esc-adultes",
-        "locationId": "croix-nivert",
+        "spaceId": "croix-nivert-gymnase",
         "type": "training",
         "day": "samedi",
         "startTime": "18:00",
@@ -943,7 +935,7 @@
       {
         "id": "esc-ape-samedi",
         "practiceGroupId": "esc-ape",
-        "locationId": "croix-nivert",
+        "spaceId": "croix-nivert-gymnase",
         "type": "training",
         "day": "samedi",
         "startTime": "14:00",
@@ -953,7 +945,7 @@
       {
         "id": "esc-ape-plus-jeudi",
         "practiceGroupId": "esc-ape-plus",
-        "locationId": "croix-nivert",
+        "spaceId": "croix-nivert-gymnase",
         "type": "training",
         "day": "jeudi",
         "tags": [],
@@ -1011,9 +1003,9 @@
     "image": "https://images.unsplash.com/photo-1517747614396-d21a78b850e8?auto=format&fit=crop&w=1600&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a25a34e00100213958dd",
     "content": {
-      "heroSubtitle": "Une pratique de proximité pour jouer, apprendre et s'engager en équipe a tout âge.",
+      "heroSubtitle": "Une pratique de proximité pour jouer, apprendre et s'engager en équipe à tout âge.",
       "schedulesNoticeText": "Inscription validée si paiement. Contact: football@esc15.fr.",
-      "contactText": "Inscription validée si paiement. Écrivez a football@esc15.fr pour toute question ou demande d'inscription.",
+      "contactText": "Inscription validée si paiement. Écrivez à football@esc15.fr pour toute question ou demande d'inscription.",
       "contactFormText": "Les demandes d'inscription sont confirmées après réception du paiement."
     },
     "programs": [
@@ -1117,12 +1109,11 @@
         "sortOrder": 9
       }
     ],
-    "locationIds": ["la-plaine"],
     "schedules": [
       {
         "id": "football-u6-u9-mercredi-1800",
         "practiceGroupId": "fg-u6-u9",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "mercredi",
         "startTime": "18:00",
@@ -1133,7 +1124,7 @@
       {
         "id": "football-u6-u9-vendredi-1730",
         "practiceGroupId": "fg-u6-u9",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "vendredi",
         "startTime": "17:30",
@@ -1144,7 +1135,7 @@
       {
         "id": "football-u10-u13-mardi-1800",
         "practiceGroupId": "fg-u10-u13",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "mardi",
         "startTime": "18:00",
@@ -1155,7 +1146,7 @@
       {
         "id": "football-u10-u13-jeudi-1800",
         "practiceGroupId": "fg-u10-u13",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "jeudi",
         "startTime": "18:00",
@@ -1166,7 +1157,7 @@
       {
         "id": "football-u14-u16-mercredi-1800",
         "practiceGroupId": "fg-u14-u16",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "mercredi",
         "startTime": "18:00",
@@ -1177,7 +1168,7 @@
       {
         "id": "football-u14-u16-vendredi-1730",
         "practiceGroupId": "fg-u14-u16",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "vendredi",
         "startTime": "17:30",
@@ -1188,7 +1179,7 @@
       {
         "id": "football-u17-u18-mardi-1900",
         "practiceGroupId": "fg-u17-u18",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "mardi",
         "startTime": "19:00",
@@ -1198,7 +1189,7 @@
       {
         "id": "football-u17-u18-vendredi",
         "practiceGroupId": "fg-u17-u18",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "vendredi",
         "tags": ["jeunes", "technique", "collectif"],
@@ -1207,7 +1198,7 @@
       {
         "id": "football-u19-u20-mardi-1930",
         "practiceGroupId": "fg-u19-u20",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "mardi",
         "startTime": "19:30",
@@ -1217,7 +1208,7 @@
       {
         "id": "football-u19-u20-jeudi-1900",
         "practiceGroupId": "fg-u19-u20",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "jeudi",
         "startTime": "19:00",
@@ -1227,7 +1218,7 @@
       {
         "id": "football-u19-u20-vendredi",
         "practiceGroupId": "fg-u19-u20",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "vendredi",
         "tags": ["jeunes", "technique", "collectif"],
@@ -1236,7 +1227,7 @@
       {
         "id": "football-senior-fsgt-entraînement",
         "practiceGroupId": "fg-seniors-fsgt",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "tags": ["adultes", "entraînement", "fsgt"],
         "notes": "Horaire à confirmer."
@@ -1244,7 +1235,7 @@
       {
         "id": "football-senior-fff-mardi-2030",
         "practiceGroupId": "fg-seniors-fff",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "mardi",
         "startTime": "20:30",
@@ -1254,7 +1245,7 @@
       {
         "id": "football-senior-fff-jeudi",
         "practiceGroupId": "fg-seniors-fff",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "jeudi",
         "tags": ["adultes", "entraînement", "fff"],
@@ -1263,7 +1254,7 @@
       {
         "id": "football-senior-cdm-jeudi-1930",
         "practiceGroupId": "fg-seniors-cdm",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "jeudi",
         "startTime": "19:30",
@@ -1273,7 +1264,7 @@
       {
         "id": "football-loisir-jeudi-1900",
         "practiceGroupId": "fg-loisir",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "jeudi",
         "startTime": "19:00",
@@ -1283,7 +1274,7 @@
       {
         "id": "football-u6-u9-samedi-0900",
         "practiceGroupId": "fg-u6-u9",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "match",
         "day": "samedi",
         "startTime": "09:00",
@@ -1294,7 +1285,7 @@
       {
         "id": "football-u10-u12-samedi-1000",
         "practiceGroupId": "fg-u10-u13",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "match",
         "day": "samedi",
         "tags": ["compétition", "matchs"],
@@ -1303,7 +1294,7 @@
       {
         "id": "football-u13-u14-samedi-1500",
         "practiceGroupId": "fg-u14-u16",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "match",
         "day": "samedi",
         "tags": ["compétition", "matchs"],
@@ -1312,7 +1303,7 @@
       {
         "id": "football-u15-u16-dimanche-1300",
         "practiceGroupId": "fg-u14-u16",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "match",
         "day": "dimanche",
         "startTime": "13:00",
@@ -1322,7 +1313,7 @@
       {
         "id": "football-u17-u18-compétition",
         "practiceGroupId": "fg-u17-u18",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "match",
         "tags": ["compétition", "matchs"],
         "notes": "Selon calendrier. Horaire à confirmer."
@@ -1330,7 +1321,7 @@
       {
         "id": "football-senior-fsgt-vendredi-2030",
         "practiceGroupId": "fg-seniors-fsgt",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "match",
         "day": "vendredi",
         "startTime": "20:30",
@@ -1340,7 +1331,7 @@
       {
         "id": "football-senior-cdm-dimanche-1100",
         "practiceGroupId": "fg-seniors-cdm",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "match",
         "day": "dimanche",
         "startTime": "11:00",
@@ -1350,7 +1341,7 @@
       {
         "id": "football-senior-fff-dimanche-1500",
         "practiceGroupId": "fg-seniors-fff",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-football",
         "type": "match",
         "day": "dimanche",
         "startTime": "15:00",
@@ -1399,7 +1390,7 @@
       {
         "id": "football-2026-2027-seniors-loisir",
         "season": "2026/2027",
-        "label": "Seniors Loisir (lundi soir)",
+        "label": "Seniors Loisir (jeudi soir)",
         "clubFee": 75,
         "activityFee": 85,
         "total": 160,
@@ -1430,15 +1421,15 @@
     "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a32c6656c30028b81870",
     "content": {
-      "heroSubtitle": "Séance d'entretien physique sur l'heure du midi, le jeudi a La Plaine.",
+      "heroSubtitle": "Séance d'entretien physique sur l'heure du midi, le jeudi à La Plaine.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Gymnastique d'entretien",
         "audience": "Adultes",
-        "description": "Mobilité, tonicité, renforcement doux et équilibre dans une séance accèssible a tous.",
+        "description": "Mobilité, tonicité, renforcement doux et équilibre dans une séance accessible à tous.",
         "tags": ["Mobilité", "Tonicité", "Midi"]
       }
     ],
@@ -1451,12 +1442,11 @@
         "sortOrder": 1
       }
     ],
-    "locationIds": ["la-plaine"],
     "schedules": [
       {
         "id": "gym-jeudi",
         "practiceGroupId": "gym-adultes",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-gymnase",
         "type": "training",
         "day": "jeudi",
         "startTime": "12:15",
@@ -1501,7 +1491,7 @@
     "content": {
       "heroSubtitle": "Judo jeunes de 4 à 17 ans, à La Plaine et à Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -1533,12 +1523,11 @@
         "sortOrder": 2
       }
     ],
-    "locationIds": ["la-plaine", "sablonniere"],
     "schedules": [
       {
         "id": "judo-5-8-lundi",
         "practiceGroupId": "judo-5-8",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-salle-arts-martiaux",
         "type": "training",
         "day": "lundi",
         "startTime": "17:30",
@@ -1548,7 +1537,7 @@
       {
         "id": "judo-5-8-mercredi",
         "practiceGroupId": "judo-5-8",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "mercredi",
         "startTime": "13:00",
@@ -1558,7 +1547,7 @@
       {
         "id": "judo-5-8-samedi",
         "practiceGroupId": "judo-5-8",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "samedi",
         "startTime": "13:00",
@@ -1568,7 +1557,7 @@
       {
         "id": "judo-8-13-lundi",
         "practiceGroupId": "judo-8-13",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-salle-arts-martiaux",
         "type": "training",
         "day": "lundi",
         "startTime": "18:30",
@@ -1578,7 +1567,7 @@
       {
         "id": "judo-8-13-mercredi",
         "practiceGroupId": "judo-8-13",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "mercredi",
         "startTime": "14:00",
@@ -1588,7 +1577,7 @@
       {
         "id": "judo-8-13-samedi",
         "practiceGroupId": "judo-8-13",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "samedi",
         "startTime": "14:00",
@@ -1637,14 +1626,14 @@
     "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/61786d201df3f700288f2f44",
     "content": {
-      "heroSubtitle": "Initiation et perfectionnement des 6 ans, le vendredi a la piscine Émile Anthoine.",
+      "heroSubtitle": "Initiation et perfectionnement dès 6 ans, le vendredi à la piscine Émile Anthoine.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Apprentissage et perfectionnement",
-        "audience": "Enfants et jeunes des 6 ans",
+        "audience": "Enfants et jeunes dès 6 ans",
         "description": "Quatre groupes de niveaux, de l'initiation à l'aisance aquatique, au perfectionnement technique et à l'endurance.",
         "tags": ["Initiation", "Technique", "Niveaux"]
       }
@@ -1652,18 +1641,17 @@
     "practiceGroups": [
       {
         "id": "nat-niveaux",
-        "label": "Initiation a perfectionnement (des 6 ans)",
+        "label": "Initiation à perfectionnement (dès 6 ans)",
         "public": "enfants",
         "gender": "mixte",
         "sortOrder": 1
       }
     ],
-    "locationIds": ["emile-anthoine"],
     "schedules": [
       {
         "id": "nat-vendredi",
         "practiceGroupId": "nat-niveaux",
-        "locationId": "emile-anthoine",
+        "spaceId": "emile-anthoine-bassin",
         "type": "training",
         "day": "vendredi",
         "startTime": "19:15",
@@ -1707,9 +1695,9 @@
     "image": "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a35e5168680028df2ebb",
     "content": {
-      "heroSubtitle": "Renforcement profond, posture et contrôle du mouvement, le jeudi a Cambronne.",
+      "heroSubtitle": "Renforcement profond, posture et contrôle du mouvement, le jeudi à Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -1728,12 +1716,11 @@
         "sortOrder": 1
       }
     ],
-    "locationIds": ["sablonniere"],
     "schedules": [
       {
         "id": "pilates-jeudi",
         "practiceGroupId": "pilates-adultes",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "jeudi",
         "startTime": "20:30",
@@ -1776,9 +1763,9 @@
     "image": "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a1f834e001002139584b",
     "content": {
-      "heroSubtitle": "Séances toniques de renforcement, le vendredi a Cambronne.",
+      "heroSubtitle": "Séances toniques de renforcement, le vendredi à Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -1797,12 +1784,11 @@
         "sortOrder": 1
       }
     ],
-    "locationIds": ["sablonniere"],
     "schedules": [
       {
         "id": "renfo-vendredi",
         "practiceGroupId": "renfo-adultes",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "vendredi",
         "startTime": "18:30",
@@ -1845,14 +1831,14 @@
     "image": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a37e34e0010021395b9b",
     "content": {
-      "heroSubtitle": "Initiation multisports pour enfants des 5 ans, le mercredi après-midi.",
+      "heroSubtitle": "Initiation multisports pour enfants dès 5 ans, le mercredi après-midi.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Initiation multisports",
-        "audience": "De 5 a 15 ans",
+        "audience": "De 5 à 15 ans",
         "description": "Athlétisme, badminton, basket, football, gymnastique, judo... une découverte variée, encadrée par des étudiants en STAPS.",
         "tags": ["Multisports", "Découverte", "Encadre"]
       }
@@ -1860,18 +1846,17 @@
     "practiceGroups": [
       {
         "id": "merc-enfants",
-        "label": "De 5 a 15 ans",
+        "label": "De 5 à 15 ans",
         "public": "enfants",
         "gender": "mixte",
         "sortOrder": 1
       }
     ],
-    "locationIds": ["lacretelle"],
     "schedules": [
       {
         "id": "merc-mercredi",
         "practiceGroupId": "merc-enfants",
-        "locationId": "lacretelle",
+        "spaceId": "lacretelle-gymnase",
         "type": "training",
         "day": "mercredi",
         "startTime": "13:30",
@@ -1907,7 +1892,7 @@
     "title": "Stretching",
     "shortName": "Stretching",
     "icon": "⌁",
-    "shortDescription": "Souplesse, mobilité et récupération dans une pratique accèssible.",
+    "shortDescription": "Souplesse, mobilité et récupération dans une pratique accessible.",
     "description": "Une activité douce pour entretenir la mobilité et récupérer sans charge excessive.",
     "category": ["forme"],
     "publics": ["adultes"],
@@ -1915,9 +1900,9 @@
     "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a398ee6b0b0021168741",
     "content": {
-      "heroSubtitle": "Souplesse, mobilité et récupération, le lundi soir a Cambronne.",
+      "heroSubtitle": "Souplesse, mobilité et récupération, le lundi soir à Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -1936,12 +1921,11 @@
         "sortOrder": 1
       }
     ],
-    "locationIds": ["sablonniere"],
     "schedules": [
       {
         "id": "stretch-lundi-2000",
         "practiceGroupId": "stretch-adultes",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "lundi",
         "startTime": "20:00",
@@ -1951,7 +1935,7 @@
       {
         "id": "stretch-lundi-2100",
         "practiceGroupId": "stretch-adultes",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "lundi",
         "startTime": "21:00",
@@ -1996,7 +1980,7 @@
     "content": {
       "heroSubtitle": "École de tennis et tennis compétition, de 5 ans aux adultes.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -2015,21 +1999,21 @@
     "practiceGroups": [
       {
         "id": "tennis-5-7",
-        "label": "5 a 7 ans",
+        "label": "5 à 7 ans",
         "public": "enfants",
         "gender": "mixte",
         "sortOrder": 1
       },
       {
         "id": "tennis-8-12",
-        "label": "8 a 12 ans",
+        "label": "8 à 12 ans",
         "public": "enfants",
         "gender": "mixte",
         "sortOrder": 2
       },
       {
         "id": "tennis-12-16",
-        "label": "12 a 16 ans",
+        "label": "12 à 16 ans",
         "public": "adolescents",
         "gender": "mixte",
         "sortOrder": 3
@@ -2042,12 +2026,11 @@
         "sortOrder": 4
       }
     ],
-    "locationIds": ["suzanne-lenglen", "la-plaine", "paul-barruel"],
     "schedules": [
       {
         "id": "tennis-8-12-mercredi",
         "practiceGroupId": "tennis-8-12",
-        "locationId": "suzanne-lenglen",
+        "spaceId": "suzanne-lenglen-courts",
         "type": "training",
         "day": "mercredi",
         "startTime": "14:00",
@@ -2058,7 +2041,7 @@
       {
         "id": "tennis-12-16-jeudi",
         "practiceGroupId": "tennis-12-16",
-        "locationId": "la-plaine",
+        "spaceId": "tennis-rigoulot-courts",
         "type": "training",
         "day": "jeudi",
         "startTime": "15:00",
@@ -2068,7 +2051,7 @@
       {
         "id": "tennis-adultes-jeudi",
         "practiceGroupId": "tennis-adultes",
-        "locationId": "la-plaine",
+        "spaceId": "tennis-rigoulot-courts",
         "type": "training",
         "day": "jeudi",
         "startTime": "18:00",
@@ -2079,7 +2062,7 @@
       {
         "id": "tennis-adultes-samedi",
         "practiceGroupId": "tennis-adultes",
-        "locationId": "la-plaine",
+        "spaceId": "tennis-rigoulot-courts",
         "type": "training",
         "day": "samedi",
         "startTime": "08:30",
@@ -2090,7 +2073,7 @@
       {
         "id": "tennis-5-7-samedi",
         "practiceGroupId": "tennis-5-7",
-        "locationId": "paul-barruel",
+        "spaceId": "paul-barruel-courts",
         "type": "training",
         "day": "samedi",
         "startTime": "10:00",
@@ -2101,7 +2084,7 @@
       {
         "id": "tennis-8-12-samedi",
         "practiceGroupId": "tennis-8-12",
-        "locationId": "paul-barruel",
+        "spaceId": "paul-barruel-courts",
         "type": "training",
         "day": "samedi",
         "startTime": "11:00",
@@ -2111,7 +2094,7 @@
       {
         "id": "tennis-12-16-samedi-15",
         "practiceGroupId": "tennis-12-16",
-        "locationId": "paul-barruel",
+        "spaceId": "paul-barruel-courts",
         "type": "training",
         "day": "samedi",
         "startTime": "15:00",
@@ -2121,7 +2104,7 @@
       {
         "id": "tennis-12-16-samedi-16",
         "practiceGroupId": "tennis-12-16",
-        "locationId": "paul-barruel",
+        "spaceId": "paul-barruel-courts",
         "type": "training",
         "day": "samedi",
         "startTime": "16:00",
@@ -2175,7 +2158,7 @@
         "id": "contact-tennis-compétition",
         "name": "Tennis Compétition",
         "role": "Contact compétition",
-        "email": "tennis-compétition@esc15.fr",
+        "email": "tennis-competition@esc15.fr",
         "phone": null
       }
     ]
@@ -2186,7 +2169,7 @@
     "title": "Tennis de table",
     "shortName": "Ping",
     "icon": "🏓",
-    "shortDescription": "Réflexes, précision et jeu rapide dans une activité accèssible.",
+    "shortDescription": "Réflexes, précision et jeu rapide dans une activité accessible.",
     "description": "Une activité de salle technique et vive, adaptée aux jeunes comme aux adultes.",
     "category": ["raquette"],
     "publics": ["enfants", "adolescents", "adultes"],
@@ -2194,9 +2177,9 @@
     "image": "https://images.unsplash.com/photo-1611251135345-18c56206b863?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a3c8ee6b0b00211687bc",
     "content": {
-      "heroSubtitle": "Tennis de table pour jeunes et adultes, a La Plaine et a Cambronne.",
+      "heroSubtitle": "Tennis de table pour jeunes et adultes, à La Plaine et à Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
@@ -2215,7 +2198,7 @@
     "practiceGroups": [
       {
         "id": "tt-6-8",
-        "label": "6 a 8 ans",
+        "label": "6 à 8 ans",
         "public": "enfants",
         "gender": "mixte",
         "sortOrder": 1
@@ -2242,12 +2225,11 @@
         "sortOrder": 4
       }
     ],
-    "locationIds": ["la-plaine", "sablonniere"],
     "schedules": [
       {
         "id": "tt-6-8-dimanche",
         "practiceGroupId": "tt-6-8",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "dimanche",
         "startTime": "13:00",
@@ -2258,7 +2240,7 @@
       {
         "id": "tt-jeunes-samedi-14",
         "practiceGroupId": "tt-jeunes",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-salle-tennis-table",
         "type": "training",
         "day": "samedi",
         "startTime": "14:00",
@@ -2268,7 +2250,7 @@
       {
         "id": "tt-jeunes-samedi-16",
         "practiceGroupId": "tt-jeunes",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-salle-tennis-table",
         "type": "training",
         "day": "samedi",
         "startTime": "16:00",
@@ -2278,7 +2260,7 @@
       {
         "id": "tt-jeunes-dimanche",
         "practiceGroupId": "tt-jeunes",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-salle-tennis-table",
         "type": "training",
         "day": "dimanche",
         "startTime": "11:00",
@@ -2288,7 +2270,7 @@
       {
         "id": "tt-adultes-entraînement-lundi",
         "practiceGroupId": "tt-adultes-entraînement",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-salle-tennis-table",
         "type": "training",
         "day": "lundi",
         "startTime": "18:00",
@@ -2298,7 +2280,7 @@
       {
         "id": "tt-adultes-loisir-mercredi-1830",
         "practiceGroupId": "tt-adultes-loisir",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "mercredi",
         "startTime": "18:30",
@@ -2308,7 +2290,7 @@
       {
         "id": "tt-adultes-loisir-mercredi-2015",
         "practiceGroupId": "tt-adultes-loisir",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "mercredi",
         "startTime": "20:15",
@@ -2318,7 +2300,7 @@
       {
         "id": "tt-adultes-loisir-jeudi-1800",
         "practiceGroupId": "tt-adultes-loisir",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "jeudi",
         "startTime": "18:00",
@@ -2328,7 +2310,7 @@
       {
         "id": "tt-adultes-loisir-jeudi-2015",
         "practiceGroupId": "tt-adultes-loisir",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "jeudi",
         "startTime": "20:15",
@@ -2373,12 +2355,12 @@
     "content": {
       "heroSubtitle": "École, plaisir, compétition et beach-volley, en salle et en extérieur.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "École & perfectionnement",
-        "audience": "Enfants et jeunes (des 8 ans)",
+        "audience": "Enfants et jeunes (dès 8 ans)",
         "description": "Apprentissage des fondamentaux et perfectionnement technique du volley-ball.",
         "tags": ["École", "Technique", "Progression"]
       },
@@ -2425,12 +2407,11 @@
         "sortOrder": 4
       }
     ],
-    "locationIds": ["croix-nivert", "la-plaine", "brancion"],
     "schedules": [
       {
         "id": "volley-école-samedi-13",
         "practiceGroupId": "volley-école",
-        "locationId": "croix-nivert",
+        "spaceId": "croix-nivert-gymnase",
         "type": "training",
         "day": "samedi",
         "startTime": "13:00",
@@ -2440,7 +2421,7 @@
       {
         "id": "volley-école-samedi-14",
         "practiceGroupId": "volley-école",
-        "locationId": "croix-nivert",
+        "spaceId": "croix-nivert-gymnase",
         "type": "training",
         "day": "samedi",
         "startTime": "14:00",
@@ -2450,7 +2431,7 @@
       {
         "id": "volley-école-samedi-1830",
         "practiceGroupId": "volley-école",
-        "locationId": "croix-nivert",
+        "spaceId": "croix-nivert-gymnase",
         "type": "training",
         "day": "samedi",
         "startTime": "18:30",
@@ -2460,7 +2441,6 @@
       {
         "id": "volley-plaisir-jeudi",
         "practiceGroupId": "volley-plaisir",
-        "locationId": "a-confirmer",
         "type": "training",
         "day": "jeudi",
         "startTime": "19:30",
@@ -2471,7 +2451,7 @@
       {
         "id": "volley-compétition-mercredi",
         "practiceGroupId": "volley-compétition",
-        "locationId": "la-plaine",
+        "spaceId": "la-plaine-terrain-volley",
         "type": "training",
         "day": "mercredi",
         "startTime": "19:30",
@@ -2481,7 +2461,7 @@
       {
         "id": "volley-beach-dimanche",
         "practiceGroupId": "volley-beach",
-        "locationId": "brancion",
+        "spaceId": "brancion-terrain",
         "type": "training",
         "day": "dimanche",
         "startTime": "09:00",
@@ -2541,15 +2521,15 @@
     "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a3e85168680028df2fa1",
     "content": {
-      "heroSubtitle": "Hatha-yoga ouvert a tous, le mardi soir a Cambronne.",
+      "heroSubtitle": "Hatha-yoga ouvert à tous, le mardi soir à Cambronne.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez a la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
         "title": "Hatha-Yoga",
         "audience": "Adultes, tous niveaux",
-        "description": "Relaxation, respiration, échauffement progressif et postures dynamiques ou douces, a son rythme.",
+        "description": "Relaxation, respiration, échauffement progressif et postures dynamiques ou douces, à son rythme.",
         "tags": ["Respiration", "Postures", "Relaxation"]
       }
     ],
@@ -2562,12 +2542,11 @@
         "sortOrder": 1
       }
     ],
-    "locationIds": ["sablonniere"],
     "schedules": [
       {
         "id": "yoga-mardi-1800",
         "practiceGroupId": "yoga-tous",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "mardi",
         "startTime": "18:00",
@@ -2578,7 +2557,7 @@
       {
         "id": "yoga-mardi-2015",
         "practiceGroupId": "yoga-tous",
-        "locationId": "sablonniere",
+        "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "mardi",
         "startTime": "20:15",

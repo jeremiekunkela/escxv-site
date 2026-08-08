@@ -3,20 +3,45 @@ import locations from "@/data/locations.json";
 import type {
   Activity,
   ActivityLocation,
+  ActivityPracticeLocation,
   ActivityRecord,
+  ActivitySchedule,
+  LocationSpace,
 } from "@/features/activities/types/activity";
 
-const locationsById = new Map(
-  (locations as ActivityLocation[]).map((location) => [location.id, location]),
-);
+const allLocations = locations as ActivityLocation[];
+
+function getSpaceIds(schedules: ActivitySchedule[]) {
+  return new Set(
+    schedules
+      .map((schedule) => schedule.spaceId)
+      .filter((spaceId): spaceId is string => Boolean(spaceId)),
+  );
+}
+
+/**
+ * Lieux de pratique d'une section, deduits de ses creneaux : chaque lieu
+ * n'expose que les espaces ou elle pratique vraiment. C'est ce qui permet a
+ * la page judo de ne montrer que la salle d'arts martiaux, et non la piscine
+ * du meme centre sportif.
+ */
+function derivePracticeLocations(
+  schedules: ActivitySchedule[],
+): ActivityPracticeLocation[] {
+  const spaceIds = getSpaceIds(schedules);
+
+  return allLocations
+    .map((location) => ({
+      ...location,
+      spaces: (location.spaces ?? []).filter((space) => spaceIds.has(space.id)),
+    }))
+    .filter((location) => location.spaces.length > 0);
+}
 
 function hydrateActivity(record: ActivityRecord): Activity {
-  const { locationIds, ...activity } = record;
   return {
-    ...activity,
-    locations: locationIds
-      .map((id) => locationsById.get(id))
-      .filter((location): location is ActivityLocation => Boolean(location)),
+    ...record,
+    locations: derivePracticeLocations(record.schedules),
   };
 }
 
@@ -35,7 +60,7 @@ export function getActivitySlugs() {
 }
 
 export function getLocations() {
-  return locations as ActivityLocation[];
+  return allLocations;
 }
 
 export type InstallationSport = Pick<
@@ -43,29 +68,59 @@ export type InstallationSport = Pick<
   "slug" | "title" | "shortName" | "icon"
 >;
 
-export type Installation = ActivityLocation & {
+export type InstallationSpace = LocationSpace & {
   sports: InstallationSport[];
 };
 
+export type Installation = Omit<ActivityLocation, "spaces"> & {
+  spaces: InstallationSpace[];
+  sports: InstallationSport[];
+};
+
+function toSport(activity: Activity): InstallationSport {
+  return {
+    slug: activity.slug,
+    title: activity.title,
+    shortName: activity.shortName,
+    icon: activity.icon,
+  };
+}
+
+function sortSports(sports: InstallationSport[]) {
+  return sports.toSorted((left, right) =>
+    left.title.localeCompare(right.title),
+  );
+}
+
 /**
- * Index inverse lieu -> sports : pour chaque installation du registre,
- * la liste des activités qui s'y pratiquent (calculée depuis les locationIds).
+ * Index inverse espace -> sports : pour chaque installation du registre, les
+ * sports pratiques dans chacun de ses espaces. Le lieu agrege les sports de
+ * ses espaces, il ne les declare pas.
  */
 export function getInstallations(): Installation[] {
-  return (locations as ActivityLocation[]).map((location) => ({
-    ...location,
-    sports: allActivities
-      .filter((activity) =>
-        activity.locations.some(
-          (activityLocation) => activityLocation.id === location.id,
-        ),
-      )
-      .map((activity) => ({
-        slug: activity.slug,
-        title: activity.title,
-        shortName: activity.shortName,
-        icon: activity.icon,
-      }))
-      .sort((left, right) => left.title.localeCompare(right.title)),
-  }));
+  const sportsBySpaceId = allActivities.reduce((index, activity) => {
+    getSpaceIds(activity.schedules).forEach((spaceId) =>
+      index.set(spaceId, [...(index.get(spaceId) ?? []), toSport(activity)]),
+    );
+    return index;
+  }, new Map<string, InstallationSport[]>());
+
+  return allLocations.map((location) => {
+    const spaces = (location.spaces ?? []).map((space) => ({
+      ...space,
+      sports: sortSports(sportsBySpaceId.get(space.id) ?? []),
+    }));
+
+    return {
+      ...location,
+      spaces,
+      sports: sortSports([
+        ...new Map(
+          spaces.flatMap((space) =>
+            space.sports.map((sport) => [sport.slug, sport] as const),
+          ),
+        ).values(),
+      ]),
+    };
+  });
 }

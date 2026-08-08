@@ -159,6 +159,13 @@
   font-weight: 600;
 }
 
+.venueSpace {
+  margin: 0.2rem 0 0;
+  color: var(--color-brand);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 .address {
   margin: 0.35rem 0 0;
   color: #64748b;

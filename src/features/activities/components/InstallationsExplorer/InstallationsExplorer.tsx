@@ -10,9 +10,9 @@ import { locationTypeLabels } from "@/features/activities/lib/activityLabels";
 import { getActivityLocationAnchorId } from "@/features/activities/lib/activityRoutes";
 import type {
   Installation,
+  InstallationSpace,
   InstallationSport,
 } from "@/features/activities/data-access/activities";
-import type { LocationEquipment } from "@/features/activities/types/activity";
 import { getActivityRoute } from "@/lib/constants/routes";
 import styles from "./InstallationsExplorer.module.css";
 
@@ -34,7 +34,10 @@ function matchesQuery(installation: Installation, query: string) {
     installation.postalCode,
     locationTypeLabels[installation.type],
     installation.description ?? "",
-    ...(installation.equipments ?? []).map((equipment) => equipment.label),
+    ...installation.spaces.flatMap((space) => [
+      space.label,
+      ...(space.amenities ?? []),
+    ]),
     ...installation.sports.map((sport) => sport.title),
   ]
     .join(" ")
@@ -44,8 +47,8 @@ function matchesQuery(installation: Installation, query: string) {
 }
 
 /**
- * Registre des sports proposes au filtre : uniquement ceux rattaches a au moins
- * une installation, dedoublonnes et tries par titre.
+ * Registre des sports proposés au filtre : uniquement ceux rattachés à au moins
+ * une installation, dédoublonnés et triés par titre.
  */
 function collectSports(installations: Installation[]): InstallationSport[] {
   const bySlug = new Map(
@@ -60,18 +63,17 @@ function collectSports(installations: Installation[]): InstallationSport[] {
 }
 
 /**
- * Quand un sport est filtre, son equipement dedie passe en tete de la carte.
+ * Quand un sport est filtre, l'espace ou il se pratique passe en tete.
  */
-function orderEquipments(
-  equipments: LocationEquipment[],
-  activeSport: SportFilter,
-) {
+function orderSpaces(spaces: InstallationSpace[], activeSport: SportFilter) {
+  const isActiveSpace = (space: InstallationSpace) =>
+    space.sports.some((sport) => sport.slug === activeSport);
+
   return activeSport === "all"
-    ? equipments
-    : equipments.toSorted(
+    ? spaces
+    : spaces.toSorted(
         (left, right) =>
-          Number(right.relatedActivitySlugs?.includes(activeSport) ?? false) -
-          Number(left.relatedActivitySlugs?.includes(activeSport) ?? false),
+          Number(isActiveSpace(right)) - Number(isActiveSpace(left)),
       );
 }
 
@@ -162,10 +164,7 @@ export function InstallationsExplorer({
         {filtered.length > 0 ? (
           <div className={styles.list}>
             {filtered.map((installation) => {
-              const equipments = orderEquipments(
-                installation.equipments ?? [],
-                activeSport,
-              );
+              const spaces = orderSpaces(installation.spaces, activeSport);
 
               return (
                 <article
@@ -244,10 +243,19 @@ export function InstallationsExplorer({
                       )}
                     </div>
 
-                    {equipments.length > 0 ? (
+                    {spaces.length > 0 ? (
                       <div className={styles.group}>
-                        <p className={styles.groupTitle}>Équipement</p>
-                        <EquipmentChips equipments={equipments} emphasized />
+                        <p className={styles.groupTitle}>Espaces</p>
+                        <ul className={styles.spaces}>
+                          {spaces.map((space) => (
+                            <li key={space.id} className={styles.space}>
+                              <p className={styles.spaceLabel}>{space.label}</p>
+                              {space.amenities && space.amenities.length > 0 ? (
+                                <EquipmentChips items={space.amenities} />
+                              ) : null}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     ) : null}
 

@@ -1,32 +1,25 @@
-import type { LocationEquipment } from "@/features/activities/types/activity";
 import styles from "./EquipmentChips.module.css";
 
 type EquipmentChipsProps = {
-  equipments: LocationEquipment[];
+  items: string[];
   emphasized?: boolean;
 };
 
+/** Badges plats decrivant ce qu'offre un espace (gradins, eclairage, tables). */
 export function EquipmentChips({
-  equipments,
+  items,
   emphasized = false,
 }: EquipmentChipsProps) {
   return (
     <ul className={styles.list}>
-      {equipments.map((equipment) => (
+      {items.map((item) => (
         <li
-          key={equipment.label}
+          key={item}
           className={
             emphasized ? `${styles.chip} ${styles.chipStrong}` : styles.chip
           }
-          title={equipment.note ?? undefined}
         >
-          {equipment.label}
-          {equipment.note ? (
-            <span className={styles.info} aria-hidden="true">
-              {" "}
-              ⓘ
-            </span>
-          ) : null}
+          {item}
         </li>
       ))}
     </ul>
