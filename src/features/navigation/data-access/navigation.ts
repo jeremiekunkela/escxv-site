@@ -9,13 +9,14 @@ import type {
 } from "@/features/navigation/types/navigation";
 
 /**
- * Les besoins pratiques d'abord, l'institutionnel ensuite : on cherche un lieu
- * bien plus souvent que les statuts de l'association.
+ * Ordre de lecture : les besoins pratiques d'abord, l'institutionnel en
+ * dernier. Le menu deroulant des activites les precede, dans le composant
+ * d'en-tete — c'est la raison de venue la plus frequente.
  */
 const mainLinks: NavigationLink[] = [
   { label: "Lieux", href: routes.locations },
-  { label: "Association", href: routes.association },
   { label: "Actualités", href: routes.news },
+  { label: "Le club", href: routes.club },
 ];
 
 export function getNavigationContent(): NavigationContent {

@@ -6,8 +6,8 @@ import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
 import { ActivityContactBlocks } from "@/features/activities/components/ActivityContactBlocks/ActivityContactBlocks";
 import { ActivityContactForm } from "@/features/activities/components/ActivityContactForm/ActivityContactForm";
 import { ActivityLocationCards } from "@/features/activities/components/ActivityLocationCards/ActivityLocationCards";
-import { ActivityPageNav } from "@/features/activities/components/ActivityPageNav/ActivityPageNav";
-import type { ActivityPageNavLink } from "@/features/activities/components/ActivityPageNav/ActivityPageNav";
+import { PageNav } from "@/components/shared/PageNav/PageNav";
+import type { PageNavLink } from "@/components/shared/PageNav/PageNav";
 import { ActivityPriceBlocks } from "@/features/activities/components/ActivityPriceBlocks/ActivityPriceBlocks";
 import { ActivityProgramCards } from "@/features/activities/components/ActivityProgramCards/ActivityProgramCards";
 import { ActivityScheduleCards } from "@/features/activities/components/ActivityScheduleCards/ActivityScheduleCards";
@@ -127,7 +127,7 @@ export function ActivityDetailPage({
    * Le sommaire ne liste que les sections reellement rendues : un lien vers
    * des tarifs absents coute plus de confiance qu'il n'en fait gagner.
    */
-  const navLinks: ActivityPageNavLink[] = [
+  const navLinks: PageNavLink[] = [
     { href: "#programmes", label: "Présentation", visible: true },
     { href: "#horaires", label: "Créneaux", visible: hasSchedules },
     { href: "#tarifs", label: "Tarifs", visible: hasPrices },
@@ -150,7 +150,7 @@ export function ActivityDetailPage({
         enableRegistrationHandoff={Boolean(registrationCta)}
       />
 
-      <ActivityPageNav links={navLinks} />
+      <PageNav links={navLinks} />
 
       {registrationCta ? (
         <FloatingRegistrationButton

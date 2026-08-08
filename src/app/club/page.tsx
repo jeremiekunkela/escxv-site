@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
 import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
+import { PageNav } from "@/components/shared/PageNav/PageNav";
 import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
 import { getLocations } from "@/features/activities/data-access/activities";
 import { ClubGovernance } from "@/features/club/components/ClubGovernance/ClubGovernance";
@@ -17,23 +18,32 @@ const vhssGuideUrl =
   "https://s.info.paris.fr/6491/www/Ville%20de%20Paris_Guide%20parents_violences%20sexuelles%20sur%20mineurs_Pr%C3%A9venir%20Rep%C3%A9rer%20Agir.pdf";
 
 export const metadata: Metadata = {
-  title: "Association",
+  title: "Le club",
   description:
     "Présentation de l'ESCXV, comité directeur et ressources de prévention VHSS.",
 };
 
-export default function AssociationPage() {
+const navLinks = [
+  { href: "#presentation", label: "Présentation" },
+  { href: "#comite", label: "Comité directeur" },
+  { href: "#vhss", label: "Prévention" },
+  { href: "#installations", label: "Lieux" },
+];
+
+export default function ClubPage() {
   const club = getClubInfo();
   const governance = getGovernance();
 
   return (
     <>
       <HeroSection
-        eyebrow="Association"
+        eyebrow="Le club"
         title="L'ESCXV, association sportive depuis 1910"
         description="Découvrez le projet du club, son comité directeur, ses lieux de pratique et les ressources de prévention."
         imageUrl="https://images.unsplash.com/photo-1517130038641-a774d04afb3c?auto=format&fit=crop&w=1800&q=80"
       />
+
+      <PageNav links={navLinks} />
 
       <main>
         <section id="presentation" className={styles.section}>

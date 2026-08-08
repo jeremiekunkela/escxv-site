@@ -1,7 +1,7 @@
 export const routes = {
   home: "/",
   locations: "/lieux",
-  association: "/association",
+  club: "/club",
   news: "/actualites",
 } as const;
 

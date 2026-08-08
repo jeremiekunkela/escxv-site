@@ -152,16 +152,10 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
         </Link>
 
         <div className={styles.desktopLinks}>
-          {navigation.mainLinks.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={styles.navLink}
-              onClick={(event) => handleNavigationClick(event, item.href)}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {/*
+            Les activites en tete : c'est la raison de venue la plus frequente,
+            et un menu se lit de gauche a droite.
+          */}
           {navigation.activityLinks.length > 0 ? (
             <div
               className={styles.dropdownWrapper}
@@ -214,6 +208,16 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
               </div>
             </div>
           ) : null}
+          {navigation.mainLinks.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={styles.navLink}
+              onClick={(event) => handleNavigationClick(event, item.href)}
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
 
         <div className={styles.mobileMenu} ref={mobileMenuRef}>
@@ -233,16 +237,6 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
           </button>
           {mobileOpen ? (
             <div id={mobileMenuId} className={styles.mobilePanel}>
-              {navigation.mainLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={styles.mobileLink}
-                  onClick={(event) => handleNavigationClick(event, item.href)}
-                >
-                  {item.label}
-                </Link>
-              ))}
               {navigation.activityLinks.length > 0 ? (
                 <>
                   <button
@@ -280,6 +274,16 @@ export function SiteHeaderClient({ navigation }: SiteHeaderClientProps) {
                   ) : null}
                 </>
               ) : null}
+              {navigation.mainLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={styles.mobileLink}
+                  onClick={(event) => handleNavigationClick(event, item.href)}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
           ) : null}
         </div>

@@ -1,6 +1,10 @@
 .section {
   padding: var(--space-section) 0;
   background: var(--color-surface);
+  /* Deux barres collantes se superposent a la cible d'une ancre : on degage. */
+  scroll-margin-top: calc(
+    var(--header-height) + var(--activity-nav-height) + var(--space-md)
+  );
 }
 
 /* Fond "soft grid" partagé avec le reste de l'application (NewsList, pages section). */
