@@ -1040,24 +1040,44 @@
         "sortOrder": 1
       },
       {
-        "id": "fg-u10-u13",
-        "label": "U10 à U13",
-        "code": "U10-U13",
+        "id": "fg-u10",
+        "label": "U10",
+        "code": "U10",
         "public": "enfants",
-        "birthYearMin": 2013,
+        "birthYearMin": 2016,
         "birthYearMax": 2016,
         "gender": "mixte",
         "sortOrder": 2
       },
       {
-        "id": "fg-u14-u16",
-        "label": "U14 à U16",
-        "code": "U14-U16",
+        "id": "fg-u11-u13",
+        "label": "U11 à U13",
+        "code": "U11-U13",
+        "public": "enfants",
+        "birthYearMin": 2013,
+        "birthYearMax": 2015,
+        "gender": "mixte",
+        "sortOrder": 3
+      },
+      {
+        "id": "fg-u14",
+        "label": "U14",
+        "code": "U14",
         "public": "adolescents",
-        "birthYearMin": 2010,
+        "birthYearMin": 2012,
         "birthYearMax": 2012,
         "gender": "masculin",
-        "sortOrder": 3
+        "sortOrder": 4
+      },
+      {
+        "id": "fg-u15-u16",
+        "label": "U15 à U16",
+        "code": "U15-U16",
+        "public": "adolescents",
+        "birthYearMin": 2010,
+        "birthYearMax": 2011,
+        "gender": "masculin",
+        "sortOrder": 5
       },
       {
         "id": "fg-u17-u18",
@@ -1067,7 +1087,7 @@
         "birthYearMin": 2008,
         "birthYearMax": 2009,
         "gender": "mixte",
-        "sortOrder": 4
+        "sortOrder": 6
       },
       {
         "id": "fg-u19-u20",
@@ -1077,21 +1097,21 @@
         "birthYearMin": 2006,
         "birthYearMax": 2007,
         "gender": "mixte",
-        "sortOrder": 5
+        "sortOrder": 7
       },
       {
         "id": "fg-seniors-fff",
         "label": "Seniors FFF",
         "public": "adultes",
         "gender": "mixte",
-        "sortOrder": 6
+        "sortOrder": 8
       },
       {
         "id": "fg-seniors-cdm",
         "label": "Seniors CDM",
         "public": "adultes",
         "gender": "mixte",
-        "sortOrder": 7
+        "sortOrder": 9
       },
       {
         "id": "fg-seniors-fsgt",
@@ -1099,23 +1119,23 @@
         "public": "adultes",
         "birthYearMax": 2006,
         "gender": "mixte",
-        "sortOrder": 8
+        "sortOrder": 10
       },
       {
         "id": "fg-loisir",
         "label": "Loisir",
         "public": "adultes",
         "gender": "mixte",
-        "sortOrder": 9
+        "sortOrder": 11
       }
     ],
     "schedules": [
       {
-        "id": "football-u6-u9-mercredi-1800",
+        "id": "football-u6-u9-lundi-1800",
         "practiceGroupId": "fg-u6-u9",
         "spaceId": "la-plaine-terrain-football",
         "type": "training",
-        "day": "mercredi",
+        "day": "lundi",
         "startTime": "18:00",
         "endTime": "19:30",
         "tags": ["école de foot", "initiation"],
@@ -1133,30 +1153,70 @@
         "notes": "En tenue de sport sur le terrain."
       },
       {
-        "id": "football-u10-u13-mardi-1800",
-        "practiceGroupId": "fg-u10-u13",
+        "id": "football-u10-mardi-1800",
+        "practiceGroupId": "fg-u10",
         "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "mardi",
         "startTime": "18:00",
         "endTime": "19:30",
-        "tags": ["jeunes", "technique", "collectif"],
-        "notes": "Horaires effectifs communiqués par la section."
+        "tags": ["jeunes", "technique", "collectif"]
       },
       {
-        "id": "football-u10-u13-jeudi-1800",
-        "practiceGroupId": "fg-u10-u13",
+        "id": "football-u10-vendredi-1730",
+        "practiceGroupId": "fg-u10",
+        "spaceId": "la-plaine-terrain-football",
+        "type": "training",
+        "day": "vendredi",
+        "startTime": "17:30",
+        "endTime": "19:00",
+        "tags": ["jeunes", "technique", "collectif"]
+      },
+      {
+        "id": "football-u11-u13-mardi-1800",
+        "practiceGroupId": "fg-u11-u13",
+        "spaceId": "la-plaine-terrain-football",
+        "type": "training",
+        "day": "mardi",
+        "startTime": "18:00",
+        "endTime": "19:30",
+        "tags": ["jeunes", "technique", "collectif"]
+      },
+      {
+        "id": "football-u11-u13-jeudi-1800",
+        "practiceGroupId": "fg-u11-u13",
         "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "jeudi",
         "startTime": "18:00",
-        "endTime": "19:45",
-        "tags": ["jeunes", "technique", "collectif"],
-        "notes": "Horaires effectifs communiqués par la section."
+        "endTime": "19:30",
+        "tags": ["jeunes", "technique", "collectif"]
       },
       {
-        "id": "football-u14-u16-mercredi-1800",
-        "practiceGroupId": "fg-u14-u16",
+        "id": "football-u14-lundi-1800",
+        "practiceGroupId": "fg-u14",
+        "spaceId": "la-plaine-terrain-football",
+        "type": "training",
+        "day": "lundi",
+        "startTime": "18:00",
+        "endTime": "19:30",
+        "tags": ["jeunes", "technique", "collectif"],
+        "notes": "En tenue de sport sur le terrain."
+      },
+      {
+        "id": "football-u14-jeudi-1800",
+        "practiceGroupId": "fg-u14",
+        "spaceId": "la-plaine-terrain-football",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "18:00",
+        "endTime": "19:30",
+        "tags": ["jeunes", "technique", "collectif"],
+        "notes": "En tenue de sport sur le terrain."
+      },
+      {
+        "id": "football-u15-u16-mercredi-1800",
+        "practiceGroupId": "fg-u15-u16",
         "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "mercredi",
@@ -1166,8 +1226,8 @@
         "notes": "En tenue de sport sur le terrain."
       },
       {
-        "id": "football-u14-u16-vendredi-1730",
-        "practiceGroupId": "fg-u14-u16",
+        "id": "football-u15-u16-vendredi-1730",
+        "practiceGroupId": "fg-u15-u16",
         "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "vendredi",
@@ -1206,23 +1266,14 @@
         "tags": ["jeunes", "technique", "collectif"]
       },
       {
-        "id": "football-u19-u20-jeudi-1900",
-        "practiceGroupId": "fg-u19-u20",
-        "spaceId": "la-plaine-terrain-football",
-        "type": "training",
-        "day": "jeudi",
-        "startTime": "19:00",
-        "endTime": "20:30",
-        "tags": ["jeunes", "technique", "collectif"]
-      },
-      {
-        "id": "football-u19-u20-vendredi",
+        "id": "football-u19-u20-vendredi-1900",
         "practiceGroupId": "fg-u19-u20",
         "spaceId": "la-plaine-terrain-football",
         "type": "training",
         "day": "vendredi",
-        "tags": ["jeunes", "technique", "collectif"],
-        "notes": "Horaire à confirmer."
+        "startTime": "19:00",
+        "endTime": "20:30",
+        "tags": ["jeunes", "technique", "collectif"]
       },
       {
         "id": "football-senior-fsgt-entraînement",
@@ -1283,8 +1334,8 @@
         "notes": "Plateaux, matchs amicaux et ateliers."
       },
       {
-        "id": "football-u10-u12-samedi-1000",
-        "practiceGroupId": "fg-u10-u13",
+        "id": "football-u10-samedi",
+        "practiceGroupId": "fg-u10",
         "spaceId": "la-plaine-terrain-football",
         "type": "match",
         "day": "samedi",
@@ -1292,8 +1343,17 @@
         "notes": "10h ou 11h selon calendrier FFF."
       },
       {
-        "id": "football-u13-u14-samedi-1500",
-        "practiceGroupId": "fg-u14-u16",
+        "id": "football-u11-u13-samedi",
+        "practiceGroupId": "fg-u11-u13",
+        "spaceId": "la-plaine-terrain-football",
+        "type": "match",
+        "day": "samedi",
+        "tags": ["compétition", "matchs"],
+        "notes": "10h ou 11h selon calendrier FFF."
+      },
+      {
+        "id": "football-u14-samedi",
+        "practiceGroupId": "fg-u14",
         "spaceId": "la-plaine-terrain-football",
         "type": "match",
         "day": "samedi",
@@ -1302,7 +1362,7 @@
       },
       {
         "id": "football-u15-u16-dimanche-1300",
-        "practiceGroupId": "fg-u14-u16",
+        "practiceGroupId": "fg-u15-u16",
         "spaceId": "la-plaine-terrain-football",
         "type": "match",
         "day": "dimanche",
