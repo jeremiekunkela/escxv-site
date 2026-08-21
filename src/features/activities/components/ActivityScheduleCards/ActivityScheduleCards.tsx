@@ -82,6 +82,8 @@ function shouldDisplayScheduleNotes(schedule: ActivitySchedule) {
 
 function formatBirthYears(group: PracticeGroup) {
   const { birthYearMin, birthYearMax } = group;
+  // Un groupe d'une seule annee (U10, U14) : « 2016 » et non « 2016 - 2016 ».
+  if (birthYearMin && birthYearMin === birthYearMax) return `${birthYearMin}`;
   if (birthYearMin && birthYearMax) return `${birthYearMin} - ${birthYearMax}`;
   if (birthYearMax) return `Avant ${birthYearMax + 1}`;
   if (birthYearMin) return `${birthYearMin} et avant`;
