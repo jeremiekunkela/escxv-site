@@ -99,6 +99,7 @@ export function ActivityDetailPage({
     content.schedulesNoticeText,
     "Les horaires seront communiqués par la section dès qu'ils seront confirmés.",
   );
+  const seasonStartText = content.seasonStartText?.trim();
   const emptyContactText = getContentOrFallback(
     content.contactText,
     "Le contact de section sera ajouté dès que la page sera ouverte.",
@@ -187,11 +188,18 @@ export function ActivityDetailPage({
           title={ACTIVITY_DETAIL_PAGE_COPY.schedulesTitle}
         >
           {hasSchedules ? (
-            <ActivityScheduleCards
-              schedules={activity.schedules}
-              practiceGroups={activity.practiceGroups}
-              locations={activity.locations}
-            />
+            <div className={styles.scheduleStack}>
+              {seasonStartText ? (
+                <InfoBlock title="Rentrée de la section">
+                  {seasonStartText}
+                </InfoBlock>
+              ) : null}
+              <ActivityScheduleCards
+                schedules={activity.schedules}
+                practiceGroups={activity.practiceGroups}
+                locations={activity.locations}
+              />
+            </div>
           ) : (
             <InfoBlock title={ACTIVITY_DETAIL_PAGE_COPY.schedulesNoticeTitle}>
               {schedulesNoticeText}
