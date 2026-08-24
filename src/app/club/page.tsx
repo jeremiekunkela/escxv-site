@@ -69,7 +69,7 @@ export default function ClubPage() {
             <div className={styles.header}>
               <SectionTitle eyebrow="VHSS" title="Prévenir, repérer, agir" />
             </div>
-            <div className={styles.vhssBody}>
+            <div className={styles.vhssBody} data-reveal="zoom">
               <p className={styles.text}>
                 Le guide de la Ville de Paris accompagne les familles et les
                 encadrants dans la prévention des violences sexuelles sur mineurs.
@@ -94,11 +94,11 @@ export default function ClubPage() {
             <div className={styles.header}>
               <SectionTitle eyebrow="Installations" title="Les lieux de pratique" />
             </div>
-            <div className={styles.vhssBody}>
+            <div className={styles.vhssBody} data-reveal="zoom">
               <p className={styles.text}>
                 Les {installationCount} gymnases, stades et piscines du club
                 sont présentés sur leur propre page, avec les sports pratiqués
-                dans chacun de leurs espaces.
+                sur chaque site.
               </p>
               <Button href={routes.locations} className={styles.vhssButton}>
                 Voir les lieux de pratique
