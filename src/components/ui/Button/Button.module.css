@@ -33,6 +33,12 @@
     var(--shadow-brand);
 }
 
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
 .label,
 .icon {
   position: relative;

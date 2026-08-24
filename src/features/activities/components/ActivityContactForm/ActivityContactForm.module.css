@@ -76,6 +76,45 @@
   resize: vertical;
 }
 
+/* Champ leurre : hors ecran plutot que `display: none`, que certains robots ignorent. */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.consent {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+}
+
+.consent a {
+  color: var(--color-brand);
+  text-decoration: underline;
+}
+
+/* Reserve sa place en permanence : le retour d'envoi ne decale pas le bouton. */
+.feedback {
+  margin: 0;
+  min-height: 1.4em;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+}
+
+.feedbackSuccess {
+  color: var(--color-brand);
+  font-weight: var(--font-weight-semibold);
+}
+
+.feedbackError {
+  color: #b91c1c;
+  font-weight: var(--font-weight-semibold);
+}
+
 @media (max-width: 640px) {
   .card {
     padding: 24px;

@@ -11,6 +11,7 @@ type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "ghost";
   type?: "button" | "submit";
+  disabled?: boolean;
   className?: string;
   target?: "_blank" | "_self";
   rel?: string;
@@ -59,6 +60,7 @@ export function Button({
   children,
   variant = "primary",
   type = "button",
+  disabled = false,
   className,
   target,
   rel,
@@ -95,6 +97,7 @@ export function Button({
     <button
       type={type}
       className={classNames}
+      disabled={disabled}
       data-activity-registration-source={dataActivityRegistrationSource}
     >
       {icon === "arrowLeft" ? iconElement : null}

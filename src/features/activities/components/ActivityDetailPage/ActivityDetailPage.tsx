@@ -258,7 +258,10 @@ export function ActivityDetailPage({
                   <ActivitySocialLinks socialLinks={socialLinks} />
                 ) : null}
               </div>
-              <ActivityContactForm content={content} />
+              <ActivityContactForm
+                activitySlug={activity.slug}
+                content={content}
+              />
             </div>
           ) : (
             <InfoBlock title="Contact en attente">{emptyContactText}</InfoBlock>

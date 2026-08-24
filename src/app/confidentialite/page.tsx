@@ -49,10 +49,19 @@ export default function ConfidentialitePage() {
 
       <LegalSection title="Si vous nous écrivez">
         <p>
-          Les messages adressés aux responsables de section arrivent dans une
-          boîte courriel ordinaire. Ils ne sont utilisés que pour répondre à
-          votre demande, ne sont transmis à personne d&apos;autre et ne servent
-          à aucun envoi promotionnel.
+          Que vous passiez par le formulaire d&apos;une page de section ou par
+          une adresse courriel, votre message arrive dans la boîte du
+          responsable de la section concernée, et nulle part ailleurs. Il ne
+          sert qu&apos;à vous répondre, n&apos;est transmis à personne
+          d&apos;autre et ne donne lieu à aucun envoi promotionnel.
+        </p>
+        <p>
+          Le formulaire recueille votre nom, votre adresse email, votre
+          téléphone si vous le renseignez, le sujet choisi et votre message.{" "}
+          <strong>Le site n&apos;en conserve aucune copie</strong> : il ne
+          dispose d&apos;aucune base de données. Le message est acheminé par
+          Scaleway, hébergeur français, puis conservé dans la boîte du
+          responsable le temps de traiter votre demande.
         </p>
       </LegalSection>
 
