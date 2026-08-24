@@ -8,19 +8,21 @@ type ActivityProgramCardsProps = {
 
 export function ActivityProgramCards({ programs }: ActivityProgramCardsProps) {
   return (
-    <div className={styles.grid}>
+    <ul className={styles.list}>
       {programs.map((program, index) => (
-        <article
+        <li
           key={program.title}
-          className={styles.card}
-          data-reveal="zoom"
+          className={styles.item}
+          data-reveal="fade-up"
           style={{ "--reveal-delay": `${index * 70}ms` } as CSSProperties}
         >
-          <p className={styles.audience}>{program.audience}</p>
-          <h3 className={styles.title}>{program.title}</h3>
+          <div className={styles.header}>
+            <p className={styles.audience}>{program.audience}</p>
+            <h3 className={styles.title}>{program.title}</h3>
+          </div>
           <p className={styles.description}>{program.description}</p>
-        </article>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }

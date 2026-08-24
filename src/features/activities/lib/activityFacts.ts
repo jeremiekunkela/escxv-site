@@ -17,7 +17,7 @@ function getDaysValue(activity: Activity) {
 
 /**
  * Un seul lieu : on le nomme, c'est l'information que le visiteur cherche.
- * Plusieurs : on compte, car empiler des noms d'equipements municipaux ne se
+ * Plusieurs : on compte, car empiler des noms de lieux municipaux ne se
  * lit pas d'un coup d'oeil — le detail est de toute facon plus bas.
  */
 function getLocationsValue(activity: Activity) {

@@ -159,7 +159,6 @@ function ScheduleVenue({ venue }: ScheduleVenueProps) {
         <h5 className={styles.venueTitle}>
           {location?.name ?? "Lieu à confirmer"}
         </h5>
-        {venue ? <p className={styles.venueSpace}>{venue.space.label}</p> : null}
         <p className={styles.address}>
           {location
             ? `${location.address}, ${location.postalCode} ${location.city}`
