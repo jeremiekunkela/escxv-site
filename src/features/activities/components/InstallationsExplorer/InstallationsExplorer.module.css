@@ -165,6 +165,78 @@
   transform: scale(1.04);
 }
 
+.visualCaption {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 1;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius-pill);
+  background: rgba(16, 24, 40, 0.68);
+  padding: 6px 12px;
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  backdrop-filter: blur(10px);
+}
+
+.carouselControls {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.carouselButton {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: var(--radius-pill);
+  background: rgba(16, 24, 40, 0.68);
+  color: var(--color-text-inverse);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition:
+    background var(--transition-standard),
+    transform var(--transition-standard);
+}
+
+.carouselButton:hover {
+  transform: translateY(-1px);
+  background: rgba(16, 24, 40, 0.82);
+}
+
+.carouselDots {
+  display: flex;
+  gap: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-pill);
+  background: rgba(16, 24, 40, 0.58);
+  padding: 6px 8px;
+  backdrop-filter: blur(10px);
+}
+
+.carouselDot {
+  width: 7px;
+  height: 7px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 0;
+  cursor: pointer;
+}
+
+.carouselDotActive {
+  width: 18px;
+  background: var(--color-text-inverse);
+}
+
 .bodyMap {
   position: relative;
   overflow: hidden;

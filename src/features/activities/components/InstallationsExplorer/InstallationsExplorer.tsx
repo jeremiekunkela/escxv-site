@@ -2,15 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Search } from "lucide-react";
+import { ChevronLeft, ChevronRight, MapPin, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Container } from "@/components/ui/Container/Container";
-import { EquipmentChips } from "@/features/activities/components/EquipmentChips/EquipmentChips";
 import { locationTypeLabels } from "@/features/activities/lib/activityLabels";
 import { getActivityLocationAnchorId } from "@/features/activities/lib/activityRoutes";
 import type {
   Installation,
-  InstallationSpace,
   InstallationSport,
 } from "@/features/activities/data-access/activities";
 import { getActivityRoute } from "@/lib/constants/routes";
@@ -22,8 +20,13 @@ type InstallationsExplorerProps = {
 
 type SportFilter = InstallationSport["slug"] | "all";
 
+type InstallationMedia = {
+  src: string;
+  label: string;
+};
+
 /**
- * La recherche couvre aussi l'equipement, la description et le type : un lieu
+ * La recherche couvre la description et le type : un lieu
  * polyvalent (une piscine dans un centre sportif) doit remonter sur "piscine".
  */
 function matchesQuery(installation: Installation, query: string) {
@@ -34,10 +37,6 @@ function matchesQuery(installation: Installation, query: string) {
     installation.postalCode,
     locationTypeLabels[installation.type],
     installation.description ?? "",
-    ...installation.spaces.flatMap((space) => [
-      space.label,
-      ...(space.amenities ?? []),
-    ]),
     ...installation.sports.map((sport) => sport.title),
   ]
     .join(" ")
@@ -62,19 +61,113 @@ function collectSports(installations: Installation[]): InstallationSport[] {
   );
 }
 
-/**
- * Quand un sport est filtre, l'espace ou il se pratique passe en tete.
- */
-function orderSpaces(spaces: InstallationSpace[], activeSport: SportFilter) {
-  const isActiveSpace = (space: InstallationSpace) =>
-    space.sports.some((sport) => sport.slug === activeSport);
+function collectMedia(
+  installation: Installation,
+  activeSport: SportFilter,
+): InstallationMedia[] {
+  const visibleSpaces = installation.spaces.filter(
+    (space) =>
+      activeSport === "all" ||
+      space.sports.some((sport) => sport.slug === activeSport),
+  );
 
-  return activeSport === "all"
-    ? spaces
-    : spaces.toSorted(
-        (left, right) =>
-          Number(isActiveSpace(right)) - Number(isActiveSpace(left)),
-      );
+  const spaceMedia = visibleSpaces.flatMap((space) =>
+    space.image ? [{ src: space.image, label: space.label }] : [],
+  );
+
+  const locationMedia = installation.image
+    ? [{ src: installation.image, label: installation.name }]
+    : [];
+
+  return [
+    ...new Map(
+      [...spaceMedia, ...locationMedia].map((media) => [media.src, media]),
+    ).values(),
+  ];
+}
+
+function getDisplayMedia(media: InstallationMedia[], installation: Installation) {
+  const isMultiSportInstallation = installation.sports.length > 1;
+
+  return isMultiSportInstallation && media.length === 1 ? [] : media;
+}
+
+function InstallationVisual({
+  installation,
+  media,
+}: {
+  installation: Installation;
+  media: InstallationMedia[];
+}) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeMedia = media[activeIndex % media.length];
+  const hasCarousel = media.length > 1;
+
+  return media.length > 0 ? (
+    <div className={styles.visual}>
+      <Image
+        src={activeMedia.src}
+        alt=""
+        fill
+        sizes="(max-width: 820px) 100vw, 380px"
+        className={styles.image}
+      />
+      <p className={styles.visualCaption}>{activeMedia.label}</p>
+      {hasCarousel ? (
+        <div className={styles.carouselControls}>
+          <button
+            type="button"
+            className={styles.carouselButton}
+            aria-label={`Voir l'image précédente - ${installation.name}`}
+            onClick={() =>
+              setActiveIndex((index) => (index + media.length - 1) % media.length)
+            }
+          >
+            <ChevronLeft aria-hidden="true" size={18} />
+          </button>
+          <div
+            className={styles.carouselDots}
+            aria-label={`Images de ${installation.name}`}
+          >
+            {media.map((item, index) => (
+              <button
+                key={item.src}
+                type="button"
+                className={
+                  item.src === activeMedia.src
+                    ? `${styles.carouselDot} ${styles.carouselDotActive}`
+                    : styles.carouselDot
+                }
+                aria-label={`Afficher ${item.label}`}
+                aria-current={item.src === activeMedia.src ? "true" : undefined}
+                onClick={() => setActiveIndex(index)}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            className={styles.carouselButton}
+            aria-label={`Voir l'image suivante - ${installation.name}`}
+            onClick={() =>
+              setActiveIndex((index) => (index + 1) % media.length)
+            }
+          >
+            <ChevronRight aria-hidden="true" size={18} />
+          </button>
+        </div>
+      ) : null}
+    </div>
+  ) : installation.mapEmbedUrl ? (
+    <div className={styles.visual}>
+      <iframe
+        src={installation.mapEmbedUrl}
+        title={`Carte - ${installation.name}`}
+        loading="lazy"
+        allowFullScreen
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+    </div>
+  ) : null;
 }
 
 export function InstallationsExplorer({
@@ -164,39 +257,22 @@ export function InstallationsExplorer({
         {filtered.length > 0 ? (
           <div className={styles.list}>
             {filtered.map((installation) => {
-              const spaces = orderSpaces(installation.spaces, activeSport);
+              const media = getDisplayMedia(
+                collectMedia(installation, activeSport),
+                installation,
+              );
 
               return (
                 <article
                   id={getActivityLocationAnchorId(installation.id)}
                   key={installation.id}
                   className={
-                    installation.image || installation.mapEmbedUrl
+                    media.length > 0 || installation.mapEmbedUrl
                       ? styles.card
                       : `${styles.card} ${styles.cardNoMedia}`
                   }
                 >
-                  {installation.image ? (
-                    <div className={styles.visual}>
-                      <Image
-                        src={installation.image}
-                        alt=""
-                        fill
-                        sizes="(max-width: 820px) 100vw, 380px"
-                        className={styles.image}
-                      />
-                    </div>
-                  ) : installation.mapEmbedUrl ? (
-                    <div className={styles.visual}>
-                      <iframe
-                        src={installation.mapEmbedUrl}
-                        title={`Carte - ${installation.name}`}
-                        loading="lazy"
-                        allowFullScreen
-                        referrerPolicy="no-referrer-when-downgrade"
-                      />
-                    </div>
-                  ) : null}
+                  <InstallationVisual installation={installation} media={media} />
 
                   <div className={styles.body}>
                     <p className={styles.city}>
@@ -243,23 +319,7 @@ export function InstallationsExplorer({
                       )}
                     </div>
 
-                    {spaces.length > 0 ? (
-                      <div className={styles.group}>
-                        <p className={styles.groupTitle}>Espaces</p>
-                        <ul className={styles.spaces}>
-                          {spaces.map((space) => (
-                            <li key={space.id} className={styles.space}>
-                              <p className={styles.spaceLabel}>{space.label}</p>
-                              {space.amenities && space.amenities.length > 0 ? (
-                                <EquipmentChips items={space.amenities} />
-                              ) : null}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ) : null}
-
-                    {installation.image && installation.mapEmbedUrl ? (
+                    {media.length > 0 && installation.mapEmbedUrl ? (
                       <div className={styles.bodyMap}>
                         <iframe
                           src={installation.mapEmbedUrl}

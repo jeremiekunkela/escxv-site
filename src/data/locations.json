@@ -8,63 +8,49 @@
     "type": "centre-sportif",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Centre+sportif+de+La+Plaine+Paris+75015",
     "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.5874898712914!2d2.2909721765913282!3d48.827931671328024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67148258f5ebf%3A0x10de109f3d2c443f!2sCentre%20Sportif%20La%20Plaine!5e0!3m2!1sfr!2sfr!4v1779035821251!5m2!1sfr!2sfr",
-    "image": "",
+    "image": null,
     "description": "Centre sportif municipal du 15e arrondissement : terrain en synthétique, piste d'athlétisme, vestiaires et éclairage.",
     "spaces": [
       {
         "id": "la-plaine-piste",
         "label": "Piste d'athlétisme",
-        "image": null,
-        "amenities": [
-          "365 m - 6 couloirs",
-          "Saut en hauteur",
-          "Saut en longueur",
-          "Éclairage",
-          "Vestiaires"
-        ]
+        "image": "/images/locations/centre-sportif-la-plaine.jpg"
       },
       {
         "id": "la-plaine-terrain-football",
         "label": "Terrain de football",
-        "image": null,
-        "amenities": ["Gradins", "Éclairage", "Vestiaires"]
+        "image": null
       },
       {
         "id": "la-plaine-salle-arts-martiaux",
         "label": "Salle d'arts martiaux",
-        "image": null,
-        "amenities": ["Vestiaires"]
+        "image": null
       },
       {
         "id": "la-plaine-salle-boxe",
         "label": "Salle de boxe",
-        "image": null,
-        "amenities": ["Vestiaires"]
+        "image": null
       },
       {
         "id": "la-plaine-terrain-volley",
         "label": "Terrain de volley-ball",
-        "image": null,
-        "amenities": ["Vestiaires"]
+        "image": null
       },
       {
         "id": "la-plaine-salle-tennis-table",
         "label": "Salle de tennis de table",
-        "image": null,
-        "amenities": ["6 tables", "Vestiaires"]
+        "image": null
       },
       {
         "id": "la-plaine-gymnase",
         "label": "Gymnase",
         "image": null,
-        "amenities": ["Vestiaires"],
         "note": "Réservé aux clubs et associations, inscription via le Service numérique Paris Asso."
       },
       {
         "id": "la-plaine-piscine",
         "label": "Piscine",
-        "image": null,
-        "amenities": ["Vestiaires"]
+        "image": null
       }
     ]
   },
@@ -89,8 +75,7 @@
       {
         "id": "sablonniere-piste",
         "label": "Aire d'athlétisme",
-        "image": null,
-        "amenities": ["Piste 192 m", "Saut en longueur", "Lancer du poids"]
+        "image": "/images/locations/complexe-sportif-sablonniere.jpg"
       }
     ]
   },
@@ -204,8 +189,7 @@
       {
         "id": "tennis-rigoulot-courts",
         "label": "Courts de tennis",
-        "image": null,
-        "amenities": ["7 courts découverts", "Synthétique", "Béton poreux"]
+        "image": null
       }
     ]
   },

@@ -21,7 +21,6 @@ export type Program = {
   title: string;
   audience: string;
   description: string;
-  tags: string[];
 };
 
 export type ActivityContent = {
@@ -34,10 +33,7 @@ export type ActivityContent = {
 /**
  * Espace de pratique d'un lieu : une meme adresse en abrite plusieurs
  * (La Plaine : terrain, piscine, salle d'arts martiaux). Le lieu porte
- * l'adresse et la carte, l'espace porte ce que la section voit reellement.
- *
- * `amenities` appartient a l'espace, pas au site : les gradins sont au terrain
- * de football, pas dans la salle de tennis de table.
+ * l'adresse et la carte, l'espace porte ce que la section utilise vraiment.
  *
  * `id` est stable et prefixe par le lieu : future cle primaire de la
  * collection Directus `location_spaces` (FK vers `locations`).
@@ -47,7 +43,6 @@ export type LocationSpace = {
   label: string;
   description?: string;
   image?: string | null;
-  amenities?: string[];
   note?: string;
 };
 
