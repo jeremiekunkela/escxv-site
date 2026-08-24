@@ -19,6 +19,9 @@ const DEFAULT_FORM_TEXT =
 const SUCCESS_MESSAGE =
   "Message envoyé. La section vous répondra à l'adresse indiquée.";
 
+const DEVELOPMENT_SUCCESS_MESSAGE =
+  "Message simulé en développement : aucun email réel n'a été envoyé.";
+
 const NETWORK_ERROR_MESSAGE =
   "L'envoi a échoué. Vérifiez votre connexion ou écrivez directement à la section.";
 
@@ -80,7 +83,7 @@ export function ActivityContactForm({
       }),
     }).catch(() => null);
 
-    const payload: { error?: string } | null =
+    const payload: { deliveryMode?: "console" | "email"; error?: string } | null =
       (await response?.json().catch(() => null)) ?? null;
 
     if (!response?.ok) {
@@ -93,7 +96,11 @@ export function ActivityContactForm({
     tokenRequest.current = null;
     form.reset();
     setStatus("sent");
-    setFeedback(SUCCESS_MESSAGE);
+    setFeedback(
+      payload?.deliveryMode === "console"
+        ? DEVELOPMENT_SUCCESS_MESSAGE
+        : SUCCESS_MESSAGE,
+    );
   };
 
   return (

@@ -16,6 +16,12 @@ const DEFAULT_FROM_NAME = "Site ESC XV";
 
 const isProduction = () => process.env.NODE_ENV === "production";
 
+export const resolveDevelopmentRecipientEmail = () => {
+  const email = process.env.CONTACT_DEVELOPMENT_RECIPIENT_EMAIL;
+
+  return !isProduction() && email && email.length > 0 ? email : null;
+};
+
 export const resolveTokenSecret = () => {
   const secret = process.env.CONTACT_TOKEN_SECRET;
 

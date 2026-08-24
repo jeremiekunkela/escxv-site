@@ -98,12 +98,12 @@ export const POST = async (request: Request) => {
   }
 
   try {
-    await send(buildContactMessage(parsed.value, recipient));
+    const delivery = await send(buildContactMessage(parsed.value, recipient));
+
+    return NextResponse.json({ ok: true, deliveryMode: delivery.mode });
   } catch (error) {
     console.error("[contact] envoi impossible", error);
 
     return NextResponse.json({ error: GENERIC_ERROR_MESSAGE }, { status: 502 });
   }
-
-  return NextResponse.json({ ok: true });
 };

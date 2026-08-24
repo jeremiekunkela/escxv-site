@@ -21,6 +21,8 @@ export const createConsoleSender = (): SendContactMessage => async (message) => 
     "[contact] message non envoyé (émetteur de développement)\n",
     message,
   );
+
+  return { mode: "console" };
 };
 
 /**
@@ -51,4 +53,6 @@ export const createScalewaySender =
         `Scaleway Transactional Email a répondu ${response.status}.`,
       );
     }
+
+    return { mode: "email" };
   };

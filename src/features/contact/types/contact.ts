@@ -33,12 +33,20 @@ export type ContactMessage = {
   text: string;
 };
 
+export type ContactDeliveryMode = "console" | "email";
+
+export type ContactDeliveryResult = {
+  mode: ContactDeliveryMode;
+};
+
 /**
  * L'envoi est injecte et non importe : la route ne connait que cette
  * signature. C'est ce qui permet de tout tester avec un emetteur factice et
  * de changer de prestataire sans toucher a la logique.
  */
-export type SendContactMessage = (message: ContactMessage) => Promise<void>;
+export type SendContactMessage = (
+  message: ContactMessage,
+) => Promise<ContactDeliveryResult>;
 
 export type ParseResult<T> =
   | { ok: true; value: T }

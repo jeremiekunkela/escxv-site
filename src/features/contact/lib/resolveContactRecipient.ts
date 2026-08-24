@@ -1,4 +1,5 @@
 import { getActivityBySlug } from "@/features/activities/data-access/activities";
+import { resolveDevelopmentRecipientEmail } from "@/features/contact/lib/contactEnvironment";
 import type { ContactRecipient } from "@/features/contact/types/contact";
 
 /**
@@ -14,8 +15,12 @@ export const resolveContactRecipient = (
 ): ContactRecipient | null => {
   const activity = getActivityBySlug(slug);
   const contact = activity?.contacts[0];
+  const developmentRecipientEmail = resolveDevelopmentRecipientEmail();
 
   return activity && contact
-    ? { email: contact.email, activityTitle: activity.title }
+    ? {
+        email: developmentRecipientEmail ?? contact.email,
+        activityTitle: activity.title,
+      }
     : null;
 };
