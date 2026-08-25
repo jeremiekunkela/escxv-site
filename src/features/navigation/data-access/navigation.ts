@@ -65,7 +65,6 @@ export function getFooterContent(): FooterContent {
       postalCode: club.postalCode,
       city: club.city,
       arrondissement: club.arrondissement,
-      phone: club.phone,
       email: club.email,
       description: club.description,
     },

@@ -31,7 +31,6 @@ export type FooterContent = {
     postalCode: string;
     city: string;
     arrondissement: string;
-    phone: string;
     email: string | null;
     description: string;
   };

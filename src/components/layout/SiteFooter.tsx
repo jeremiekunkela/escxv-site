@@ -1,9 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { getFooterContent } from "@/features/navigation/data-access/navigation";
 import { Container } from "@/components/ui/Container/Container";
-import { formatPhoneHref } from "@/lib/utils";
 import styles from "./SiteFooter.module.css";
 
 
@@ -46,14 +45,6 @@ export function SiteFooter() {
                 {footer.club.postalCode} {footer.club.city}
               </span>
             </span>
-
-            <a
-              href={formatPhoneHref(footer.club.phone)}
-              className={styles.contactLink}
-            >
-              <Phone aria-hidden="true" size={16} />
-              {footer.club.phone}
-            </a>
 
             {footer.club.email ? (
               <a
