@@ -19,7 +19,7 @@ const SUBJECT_LABELS: Record<ContactSubject, string> = {
  * adresse : le responsable de section repond directement depuis sa boite.
  *
  * L'objet reprend la section et le sujet pour que la boite reste triable, et
- * depasse toujours les dix caracteres exiges par Scaleway Transactional Email.
+ * reste explicite pour que la boite de section soit triable.
  */
 export const buildContactMessage = (
   request: ContactRequest,
