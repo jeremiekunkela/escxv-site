@@ -91,7 +91,7 @@ export const POST = async (request: Request) => {
     );
   }
 
-  const recipient = resolveContactRecipient(parsed.value.activitySlug);
+  const recipient = resolveContactRecipient(parsed.value.recipientSlug);
 
   if (!recipient) {
     return NextResponse.json({ error: UNAVAILABLE_MESSAGE }, { status: 400 });

@@ -43,7 +43,7 @@ export const parseContactRequest = (
   payload: unknown,
 ): ParseResult<ContactRequest> => {
   const raw = readRecord(payload);
-  const activitySlug = readString(raw.activitySlug);
+  const recipientSlug = readString(raw.recipientSlug);
   const name = readString(raw.name);
   const email = readString(raw.email);
   const phone = readString(raw.phone);
@@ -51,7 +51,7 @@ export const parseContactRequest = (
   const subject = SUBJECTS.find((candidate) => candidate === readString(raw.subject));
 
   const violations = [
-    activitySlug.length === 0 && "La section destinataire est manquante.",
+    recipientSlug.length === 0 && "Le destinataire est manquant.",
     name.length < LIMITS.name.min && "Merci d'indiquer votre nom.",
     name.length > LIMITS.name.max && "Le nom est trop long.",
     HEADER_BREAK_PATTERN.test(name) && "Le nom contient des caractères invalides.",
@@ -72,7 +72,7 @@ export const parseContactRequest = (
   return {
     ok: true,
     value: {
-      activitySlug,
+      recipientSlug,
       name,
       email,
       phone: phone.length > 0 ? phone : null,

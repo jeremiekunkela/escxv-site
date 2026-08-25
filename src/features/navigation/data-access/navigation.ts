@@ -17,6 +17,7 @@ const mainLinks: NavigationLink[] = [
   { label: "Lieux", href: routes.locations },
   { label: "Actualités", href: routes.news },
   { label: "Le club", href: routes.club },
+  { label: "Contact", href: routes.contact },
 ];
 
 export function getNavigationContent(): NavigationContent {

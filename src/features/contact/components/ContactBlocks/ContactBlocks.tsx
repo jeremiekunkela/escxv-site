@@ -1,23 +1,23 @@
 import { Mail, Phone } from "lucide-react";
 import type { CSSProperties } from "react";
-import type { ActivityContact } from "@/features/activities/types/activity";
-import styles from "./ActivityContactBlocks.module.css";
+import type { ContactChannel } from "@/features/contact/types/contact";
+import styles from "./ContactBlocks.module.css";
 
-type ActivityContactBlocksProps = {
-  contacts: ActivityContact[];
+type ContactBlocksProps = {
+  contacts: ContactChannel[];
+  emptyText?: string;
 };
 
 function toPhoneHref(phone: string) {
   return `tel:${phone.replace(/[^\d+]/g, "")}`;
 }
 
-export function ActivityContactBlocks({ contacts }: ActivityContactBlocksProps) {
+const DEFAULT_EMPTY_TEXT =
+  "Les coordonnées de la section ne sont pas encore disponibles.";
+
+export function ContactBlocks({ contacts, emptyText }: ContactBlocksProps) {
   if (contacts.length === 0) {
-    return (
-      <div className={styles.empty}>
-        Les coordonnées de la section ne sont pas encore disponibles.
-      </div>
-    );
+    return <div className={styles.empty}>{emptyText ?? DEFAULT_EMPTY_TEXT}</div>;
   }
 
   return (

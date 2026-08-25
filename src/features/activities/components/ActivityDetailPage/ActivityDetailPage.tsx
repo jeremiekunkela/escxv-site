@@ -3,7 +3,7 @@ import { InfoBlock } from "@/components/shared/InfoBlock/InfoBlock";
 import { Container } from "@/components/ui/Container/Container";
 import { FloatingRegistrationButton } from "@/components/shared/FloatingRegistrationButton/FloatingRegistrationButton";
 import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
-import { ActivityContactBlocks } from "@/features/activities/components/ActivityContactBlocks/ActivityContactBlocks";
+import { ContactBlocks } from "@/features/contact/components/ContactBlocks/ContactBlocks";
 import { ActivityContactForm } from "@/features/activities/components/ActivityContactForm/ActivityContactForm";
 import { ActivityLocationCards } from "@/features/activities/components/ActivityLocationCards/ActivityLocationCards";
 import { PageNav } from "@/components/shared/PageNav/PageNav";
@@ -252,6 +252,7 @@ export function ActivityDetailPage({
 
         <ActivityDetailPageSection
           id="contact"
+          className={`${styles.section} ${styles.gridSurface}`}
           headerClassName={styles.contactIntro}
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.contactEyebrow}
           title={ACTIVITY_DETAIL_PAGE_COPY.contactTitle}
@@ -260,7 +261,7 @@ export function ActivityDetailPage({
             <div className={styles.contactGrid}>
               <div className={styles.contactChannels}>
                 {hasContacts ? (
-                  <ActivityContactBlocks contacts={activity.contacts} />
+                  <ContactBlocks contacts={activity.contacts} />
                 ) : null}
                 {hasSocialLinks ? (
                   <ActivitySocialLinks socialLinks={socialLinks} />
@@ -269,6 +270,7 @@ export function ActivityDetailPage({
               {hasContacts ? (
                 <ActivityContactForm
                   activitySlug={activity.slug}
+                  activityTitle={activity.title}
                   content={activity.content}
                 />
               ) : null}
