@@ -15,6 +15,8 @@ const DEFAULT_FROM_NAME = "Site ESC XV";
 
 const isProduction = () => process.env.NODE_ENV === "production";
 
+const readEnv = (name: string) => process.env[name]?.trim() ?? "";
+
 const isProductionDeployment = () =>
   process.env.VERCEL_ENV
     ? process.env.VERCEL_ENV === "production"
@@ -22,14 +24,14 @@ const isProductionDeployment = () =>
 
 export const resolveRecipientOverrideEmail = () => {
   const email =
-    process.env.CONTACT_RECIPIENT_OVERRIDE_EMAIL ??
-    process.env.CONTACT_DEVELOPMENT_RECIPIENT_EMAIL;
+    readEnv("CONTACT_RECIPIENT_OVERRIDE_EMAIL") ||
+    readEnv("CONTACT_DEVELOPMENT_RECIPIENT_EMAIL");
 
   return !isProductionDeployment() && email && email.length > 0 ? email : null;
 };
 
 export const resolveTokenSecret = () => {
-  const secret = process.env.CONTACT_TOKEN_SECRET;
+  const secret = readEnv("CONTACT_TOKEN_SECRET");
 
   return secret && secret.length > 0
     ? secret
@@ -45,14 +47,15 @@ export const resolveTokenSecret = () => {
  * dans le vide.
  */
 export const resolveContactSender = (): SendContactMessage | null => {
-  const apiKey = process.env.RESEND_API_KEY;
-  const fromEmail = process.env.CONTACT_FROM_EMAIL;
+  const apiKey = readEnv("RESEND_API_KEY");
+  const fromEmail = readEnv("CONTACT_FROM_EMAIL");
+  const fromName = readEnv("CONTACT_FROM_NAME") || DEFAULT_FROM_NAME;
 
   return apiKey && fromEmail
     ? createResendSender({
         apiKey,
         fromEmail,
-        fromName: process.env.CONTACT_FROM_NAME ?? DEFAULT_FROM_NAME,
+        fromName,
       })
     : isProduction()
       ? null
