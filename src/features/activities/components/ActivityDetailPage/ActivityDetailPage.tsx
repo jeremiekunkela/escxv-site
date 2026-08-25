@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container/Container";
 import { FloatingRegistrationButton } from "@/components/shared/FloatingRegistrationButton/FloatingRegistrationButton";
 import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
 import { ActivityContactBlocks } from "@/features/activities/components/ActivityContactBlocks/ActivityContactBlocks";
+import { ActivityContactForm } from "@/features/activities/components/ActivityContactForm/ActivityContactForm";
 import { ActivityLocationCards } from "@/features/activities/components/ActivityLocationCards/ActivityLocationCards";
 import { PageNav } from "@/components/shared/PageNav/PageNav";
 import type { PageNavLink } from "@/components/shared/PageNav/PageNav";
@@ -265,11 +266,12 @@ export function ActivityDetailPage({
                   <ActivitySocialLinks socialLinks={socialLinks} />
                 ) : null}
               </div>
-              <InfoBlock title="Contact direct">
-                Pour le lancement du nouveau site, contactez la section
-                directement avec l&apos;adresse email indiquée ici. Le formulaire
-                de contact sera activé dans un second temps.
-              </InfoBlock>
+              {hasContacts ? (
+                <ActivityContactForm
+                  activitySlug={activity.slug}
+                  content={activity.content}
+                />
+              ) : null}
             </div>
           ) : (
             <InfoBlock title="Contact en attente">{emptyContactText}</InfoBlock>

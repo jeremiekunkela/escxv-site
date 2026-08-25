@@ -1,6 +1,6 @@
 import {
   createConsoleSender,
-  createScalewaySender,
+  createResendSender,
 } from "@/features/contact/data-access/contactSenders";
 import type { SendContactMessage } from "@/features/contact/types/contact";
 
@@ -11,15 +11,21 @@ import type { SendContactMessage } from "@/features/contact/types/contact";
  */
 const DEVELOPMENT_TOKEN_SECRET = "dev-only-contact-token-secret";
 
-const DEFAULT_REGION = "fr-par";
 const DEFAULT_FROM_NAME = "Site ESC XV";
 
 const isProduction = () => process.env.NODE_ENV === "production";
 
-export const resolveDevelopmentRecipientEmail = () => {
-  const email = process.env.CONTACT_DEVELOPMENT_RECIPIENT_EMAIL;
+const isProductionDeployment = () =>
+  process.env.VERCEL_ENV
+    ? process.env.VERCEL_ENV === "production"
+    : isProduction();
 
-  return !isProduction() && email && email.length > 0 ? email : null;
+export const resolveRecipientOverrideEmail = () => {
+  const email =
+    process.env.CONTACT_RECIPIENT_OVERRIDE_EMAIL ??
+    process.env.CONTACT_DEVELOPMENT_RECIPIENT_EMAIL;
+
+  return !isProductionDeployment() && email && email.length > 0 ? email : null;
 };
 
 export const resolveTokenSecret = () => {
@@ -34,21 +40,18 @@ export const resolveTokenSecret = () => {
 
 /**
  * Racine de composition : le seul endroit qui lit l'environnement et decide
- * quel emetteur brancher. Tant que les acces Scaleway manquent, le
+ * quel emetteur brancher. Tant que la cle Resend manque, le
  * developpement tourne sur la console ; la production, elle, refuse d'envoyer
  * dans le vide.
  */
 export const resolveContactSender = (): SendContactMessage | null => {
-  const secretKey = process.env.SCW_SECRET_KEY;
-  const projectId = process.env.SCW_DEFAULT_PROJECT_ID;
+  const apiKey = process.env.RESEND_API_KEY;
   const fromEmail = process.env.CONTACT_FROM_EMAIL;
 
-  return secretKey && projectId && fromEmail
-    ? createScalewaySender({
-        secretKey,
-        projectId,
+  return apiKey && fromEmail
+    ? createResendSender({
+        apiKey,
         fromEmail,
-        region: process.env.SCW_DEFAULT_REGION ?? DEFAULT_REGION,
         fromName: process.env.CONTACT_FROM_NAME ?? DEFAULT_FROM_NAME,
       })
     : isProduction()
