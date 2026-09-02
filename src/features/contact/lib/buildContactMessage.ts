@@ -18,8 +18,8 @@ const SUBJECT_LABELS: Record<ContactSubject, string> = {
  * echouerait a l'authentification du domaine. C'est `Reply-To` qui porte son
  * adresse : le responsable de section repond directement depuis sa boite.
  *
- * L'objet reprend la section et le sujet pour que la boite reste triable, et
- * depasse toujours les dix caracteres exiges par Scaleway Transactional Email.
+ * L'objet reprend le destinataire et le sujet pour que la boite reste
+ * triable, qu'il s'agisse d'une section ou du club.
  */
 export const buildContactMessage = (
   request: ContactRequest,
@@ -27,13 +27,13 @@ export const buildContactMessage = (
 ): ContactMessage => ({
   to: recipient.email,
   replyTo: request.email,
-  subject: `[${recipient.activityTitle}] ${SUBJECT_LABELS[request.subject]} — ${request.name}`,
+  subject: `[${recipient.label}] ${SUBJECT_LABELS[request.subject]} — ${request.name}`,
   text: [
     `Nom : ${request.name}`,
     `Email : ${request.email}`,
     `Téléphone : ${request.phone ?? "non communiqué"}`,
     `Sujet : ${SUBJECT_LABELS[request.subject]}`,
-    `Section : ${recipient.activityTitle}`,
+    `Destinataire : ${recipient.label}`,
     "",
     "Message :",
     request.message,

@@ -1,11 +1,11 @@
 [
   {
     "id": "club-nouveau-site-2026",
-    "title": "L'ESCXV lance son nouveau site : plus clair, plus complet, plus pratique",
+    "title": "Le nouveau site de l'ESCXV est en ligne",
     "slug": "nouveau-site-esc-xv-2026",
-    "subtitle": "Un site repensé autour des sections, des lieux de pratique et des informations vraiment utiles aux familles.",
-    "excerpt": "Le club met en ligne un nouveau site pour retrouver plus facilement les sections, les horaires, les lieux de pratique et les actualités.",
-    "content": "L'ESCXV met en ligne un nouveau site pour rendre l'information plus simple à trouver : sections, horaires, lieux de pratique et contacts sont désormais regroupés au même endroit.",
+    "subtitle": "Vingt sections, treize lieux de pratique, des créneaux et des tarifs à jour : voici où trouver quoi.",
+    "excerpt": "Créneaux, groupes, tarifs, contacts, installations : le site du club rassemble désormais les informations que les adhérents et les familles cherchaient jusqu'ici un peu partout.",
+    "content": "Le nouveau site de l'ESCXV réunit les vingt sections du club, leurs créneaux, leurs groupes, leurs tarifs et leurs contacts, ainsi que les treize lieux de pratique du 15e arrondissement.",
     "coverImage": "https://images.unsplash.com/photo-1573867639040-6dd25fa5f597?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "coverImageAlt": "Une équipe travaille ensemble autour d'un ordinateur portable.",
     "publishedAt": "2026-07-03T09:00:00.000Z",
@@ -13,47 +13,75 @@
     "type": "club",
     "isPinned": true,
     "activitySlug": null,
-    "seoDescription": "Découvrez le nouveau site de l'ESCXV : sections, lieux de pratique, horaires et actualités au même endroit.",
+    "seoDescription": "Le nouveau site de l'ESCXV réunit les 20 sections du club, leurs créneaux, leurs tarifs, leurs contacts et les 13 lieux de pratique du 15e arrondissement.",
     "readingTime": "2 min",
     "summaryPoints": [
-      "Toutes les sections réunies au même endroit",
-      "Lieux de pratique par section",
-      "Informations pratiques mises a jour"
+      "Une page par section : créneaux, groupes, tarifs et contact direct",
+      "Treize lieux de pratique, filtrables par sport",
+      "Des contenus enrichis au fil de la saison"
     ],
     "blocks": [
       {
         "type": "heading",
-        "title": "Un site pensé pour aller à l'essentiel",
-        "subtitle": "Moins de contenu générique, davantage d'informations pratiques et fiables."
+        "title": "Pourquoi un nouveau site",
+        "subtitle": "Les informations pratiques du club étaient dispersées. Elles sont désormais réunies."
       },
       {
         "type": "text",
         "paragraphs": [
-          "Le club met en ligne un nouveau site pour faciliter le quotidien des adhérents et des familles. L'objectif est simple : permettre a chacun de trouver rapidement la bonne information, sans avoir a chercher longtemps.",
-          "Les sections, les horaires, les lieux de pratique et les contacts sont désormais regroupés et présentés de manière cohérente d'une page à l'autre."
+          "Depuis 1910, l'ESCXV fait vivre le sport dans le 15e arrondissement : vingt activités, plus de 1 900 adhérentes et adhérents, treize gymnases, stades et piscines. Jusqu'ici, connaître l'horaire d'un groupe, le tarif d'une section ou l'adresse d'un entraînement demandait souvent d'écrire à quelqu'un.",
+          "Le nouveau site rassemble ces informations et les présente de la même manière d'une section à l'autre. Rien de spectaculaire : simplement de quoi répondre seul aux questions que l'on se pose avant d'inscrire un enfant ou de reprendre une activité."
         ]
       },
       {
         "type": "heading",
-        "title": "Ce que vous pouvez faire des maintenant"
+        "title": "Une page par section"
       },
       {
         "type": "text",
         "paragraphs": [
-          "Explorez les sections pour découvrir les disciplines proposées et trouver celle qui vous correspond : chaque activité détaille ses créneaux, ses groupes, ses tarifs et son contact.",
-          "Repérez où vous entraîner du côté des installations : adresse et sports pratiqués sur chaque site, avec un filtre par sport pour aller droit au but.",
-          "Suivez la vie du club dans les actualités : annonces et informations pratiques y sont publiées au fil de l'eau, les plus récentes en premier."
+          "De l'aïkibudo au volley-ball, en passant par la natation, le judo, l'escalade ou le yoga, chaque section a sa fiche. On y trouve les créneaux de la saison, les groupes par âge et par niveau, les tarifs, les lieux d'entraînement et les liens vers les réseaux de la section quand elle en a.",
+          "Chaque fiche se termine par un formulaire dont le message part directement dans la boîte de la section, qui répond par email. Pour une question générale, la page Contact laisse choisir le destinataire, le club étant proposé par défaut."
         ]
       },
       {
         "type": "heading",
-        "title": "Un site qui va continuer d'évoluer"
+        "title": "Treize lieux de pratique, filtrables par sport"
       },
       {
         "type": "text",
         "paragraphs": [
-          "Ce nouveau site est une première étape. Les contenus seront enrichis au fil des semaines avec de nouvelles actualités, des informations complémentaires par section et des mises a jour au rythme des responsables.",
-          "N.hésitez pas à revenir régulièrement : les informations pratiques et les actualités du club seront publiées ici en priorité."
+          "La page Lieux regroupe les équipements utilisés par le club, presque tous dans le 15e : le centre sportif de La Plaine, Suzanne-Lenglen, la piscine Émile Anthoine, les gymnases Croix-Nivert, Saint-Lambert, Paul Barruel, Lacretelle, des Cévennes, la salle Keller, le terrain de Brancion ou encore le stade Pershing.",
+          "Chaque fiche indique l'adresse et les sports qui s'y pratiquent. Un filtre par sport permet de ne garder que les lieux concernés par votre activité, et d'en repérer le plus proche de chez vous."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "/images/locations/complexe-sportif-sablonniere.jpg",
+        "alt": "Vue en hauteur des terrains extérieurs du complexe sportif Sablonnière, entourés d'immeubles parisiens.",
+        "caption": "Le complexe sportif Sablonnière, l'un des treize lieux de pratique du club.",
+        "size": "wide"
+      },
+      {
+        "type": "heading",
+        "title": "Le club, les actualités, l'inscription"
+      },
+      {
+        "type": "text",
+        "paragraphs": [
+          "La page Club retrace l'histoire de l'association, son projet et la composition de son comité directeur. Les actualités — celle-ci ouvre la série — accueilleront les annonces du club et des sections : rentrée, stages, événements, changements de créneaux.",
+          "L'inscription, elle, se fait toujours en ligne sur la plateforme d'adhésion, accessible depuis l'accueil et depuis chaque page de section."
+        ]
+      },
+      {
+        "type": "heading",
+        "title": "La suite"
+      },
+      {
+        "type": "text",
+        "paragraphs": [
+          "Le site continuera de s'étoffer au fil de la saison : photos des sections, informations complémentaires et actualités publiées au rythme des responsables.",
+          "Un créneau qui a changé, un tarif inexact, une information manquante ? Signalez-le par le formulaire de contact : la correction sera faite."
         ]
       }
     ]

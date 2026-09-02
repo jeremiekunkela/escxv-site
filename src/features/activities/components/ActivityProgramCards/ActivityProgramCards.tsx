@@ -16,10 +16,7 @@ export function ActivityProgramCards({ programs }: ActivityProgramCardsProps) {
           data-reveal="fade-up"
           style={{ "--reveal-delay": `${index * 70}ms` } as CSSProperties}
         >
-          <div className={styles.header}>
-            <p className={styles.audience}>{program.audience}</p>
-            <h3 className={styles.title}>{program.title}</h3>
-          </div>
+          <h3 className={styles.title}>{program.title}</h3>
           <p className={styles.description}>{program.description}</p>
         </li>
       ))}

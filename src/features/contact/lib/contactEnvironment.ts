@@ -1,6 +1,6 @@
 import {
   createConsoleSender,
-  createScalewaySender,
+  createResendSender,
 } from "@/features/contact/data-access/contactSenders";
 import type { SendContactMessage } from "@/features/contact/types/contact";
 
@@ -11,19 +11,38 @@ import type { SendContactMessage } from "@/features/contact/types/contact";
  */
 const DEVELOPMENT_TOKEN_SECRET = "dev-only-contact-token-secret";
 
-const DEFAULT_REGION = "fr-par";
 const DEFAULT_FROM_NAME = "Site ESC XV";
 
 const isProduction = () => process.env.NODE_ENV === "production";
 
-export const resolveDevelopmentRecipientEmail = () => {
-  const email = process.env.CONTACT_DEVELOPMENT_RECIPIENT_EMAIL;
+const readEnv = (name: string) => process.env[name]?.trim() ?? "";
 
-  return !isProduction() && email && email.length > 0 ? email : null;
+const isProductionDeployment = () =>
+  process.env.VERCEL_ENV
+    ? process.env.VERCEL_ENV === "production"
+    : isProduction();
+
+/**
+ * Formulaires coupes sur le deploiement de production : la page bascule sur
+ * les adresses de section et la route refuse de servir. Le defaut est
+ * l'extinction, pour qu'un oubli de variable ne rouvre pas l'envoi tout seul ;
+ * `CONTACT_FORM_ENABLED=true` les rallume sans toucher au code.
+ *
+ * Preview et developpement gardent le formulaire : c'est la qu'on le teste.
+ */
+export const isContactFormEnabled = () =>
+  readEnv("CONTACT_FORM_ENABLED") === "true" || !isProductionDeployment();
+
+export const resolveRecipientOverrideEmail = () => {
+  const email =
+    readEnv("CONTACT_RECIPIENT_OVERRIDE_EMAIL") ||
+    readEnv("CONTACT_DEVELOPMENT_RECIPIENT_EMAIL");
+
+  return !isProductionDeployment() && email && email.length > 0 ? email : null;
 };
 
 export const resolveTokenSecret = () => {
-  const secret = process.env.CONTACT_TOKEN_SECRET;
+  const secret = readEnv("CONTACT_TOKEN_SECRET");
 
   return secret && secret.length > 0
     ? secret
@@ -34,22 +53,20 @@ export const resolveTokenSecret = () => {
 
 /**
  * Racine de composition : le seul endroit qui lit l'environnement et decide
- * quel emetteur brancher. Tant que les acces Scaleway manquent, le
+ * quel emetteur brancher. Tant que la cle Resend manque, le
  * developpement tourne sur la console ; la production, elle, refuse d'envoyer
  * dans le vide.
  */
 export const resolveContactSender = (): SendContactMessage | null => {
-  const secretKey = process.env.SCW_SECRET_KEY;
-  const projectId = process.env.SCW_DEFAULT_PROJECT_ID;
-  const fromEmail = process.env.CONTACT_FROM_EMAIL;
+  const apiKey = readEnv("RESEND_API_KEY");
+  const fromEmail = readEnv("CONTACT_FROM_EMAIL");
+  const fromName = readEnv("CONTACT_FROM_NAME") || DEFAULT_FROM_NAME;
 
-  return secretKey && projectId && fromEmail
-    ? createScalewaySender({
-        secretKey,
-        projectId,
+  return apiKey && fromEmail
+    ? createResendSender({
+        apiKey,
         fromEmail,
-        region: process.env.SCW_DEFAULT_REGION ?? DEFAULT_REGION,
-        fromName: process.env.CONTACT_FROM_NAME ?? DEFAULT_FROM_NAME,
+        fromName,
       })
     : isProduction()
       ? null

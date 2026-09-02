@@ -1,20 +1,16 @@
+import { Resend } from "resend";
 import type { SendContactMessage } from "@/features/contact/types/contact";
 
-type ScalewaySenderConfig = {
-  secretKey: string;
-  projectId: string;
-  region: string;
+type ResendSenderConfig = {
+  apiKey: string;
   fromEmail: string;
   fromName: string;
 };
 
-const TEM_ENDPOINT =
-  "https://api.scaleway.com/transactional-email/v1alpha1/regions";
-
 /**
  * Emetteur de developpement : rien ne part, le message s'affiche dans la
- * console du serveur. Il permet d'eprouver tout le parcours sans attendre les
- * acces Scaleway, et n'est jamais retenu en production.
+ * console du serveur. Il permet d'eprouver tout le parcours sans attendre la
+ * cle Resend, et n'est jamais retenu en production.
  */
 export const createConsoleSender = (): SendContactMessage => async (message) => {
   console.info(
@@ -26,32 +22,23 @@ export const createConsoleSender = (): SendContactMessage => async (message) => 
 };
 
 /**
- * Adaptateur Scaleway Transactional Email. `additional_headers` est le seul
- * moyen d'y poser un `Reply-To` : il n'existe pas de champ dedie.
+ * Adaptateur Resend. L'adresse `from` doit appartenir a un domaine verifie
+ * dans Resend ; l'adresse du visiteur reste en `replyTo`.
  */
-export const createScalewaySender =
-  (config: ScalewaySenderConfig): SendContactMessage =>
+export const createResendSender =
+  (config: ResendSenderConfig): SendContactMessage =>
   async (message) => {
-    const response = await fetch(`${TEM_ENDPOINT}/${config.region}/emails`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Auth-Token": config.secretKey,
-      },
-      body: JSON.stringify({
-        from: { name: config.fromName, email: config.fromEmail },
-        to: [{ email: message.to }],
-        subject: message.subject,
-        text: message.text,
-        project_id: config.projectId,
-        additional_headers: [{ key: "Reply-To", value: message.replyTo }],
-      }),
+    const resend = new Resend(config.apiKey);
+    const { error } = await resend.emails.send({
+      from: `${config.fromName} <${config.fromEmail}>`,
+      to: [message.to],
+      subject: message.subject,
+      text: message.text,
+      replyTo: message.replyTo,
     });
 
-    if (!response.ok) {
-      throw new Error(
-        `Scaleway Transactional Email a répondu ${response.status}.`,
-      );
+    if (error) {
+      throw new Error(`Resend a refuse l'envoi : ${error.message}`);
     }
 
     return { mode: "email" };

@@ -3,7 +3,8 @@ import { InfoBlock } from "@/components/shared/InfoBlock/InfoBlock";
 import { Container } from "@/components/ui/Container/Container";
 import { FloatingRegistrationButton } from "@/components/shared/FloatingRegistrationButton/FloatingRegistrationButton";
 import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
-import { ActivityContactBlocks } from "@/features/activities/components/ActivityContactBlocks/ActivityContactBlocks";
+import { ContactBlocks } from "@/features/contact/components/ContactBlocks/ContactBlocks";
+import { ActivityContactForm } from "@/features/activities/components/ActivityContactForm/ActivityContactForm";
 import { ActivityLocationCards } from "@/features/activities/components/ActivityLocationCards/ActivityLocationCards";
 import { PageNav } from "@/components/shared/PageNav/PageNav";
 import type { PageNavLink } from "@/components/shared/PageNav/PageNav";
@@ -13,6 +14,7 @@ import { ActivityScheduleCards } from "@/features/activities/components/Activity
 import { ActivitySocialLinks } from "@/features/activities/components/ActivitySocialLinks/ActivitySocialLinks";
 // `ActivityTrainerCards` removed — trainers section retired
 import { getActivityFacts } from "@/features/activities/lib/activityFacts";
+import { isContactFormEnabled } from "@/features/contact/lib/contactEnvironment";
 import type { Activity } from "@/features/activities/types/activity";
 import { NewsList } from "@/features/news/components/NewsList/NewsList";
 import type { NewsItem } from "@/features/news/types/news";
@@ -95,6 +97,7 @@ export function ActivityDetailPage({
   const socialLinks = activity.socialLinks ?? [];
   const hasSocialLinks = socialLinks.length > 0;
   const hasContactChannels = hasContacts || hasSocialLinks;
+  const showContactForm = hasContacts && isContactFormEnabled();
   const schedulesNoticeText = getContentOrFallback(
     content.schedulesNoticeText,
     "Les horaires seront communiqués par la section dès qu'ils seront confirmés.",
@@ -251,6 +254,7 @@ export function ActivityDetailPage({
 
         <ActivityDetailPageSection
           id="contact"
+          className={`${styles.section} ${styles.gridSurface}`}
           headerClassName={styles.contactIntro}
           eyebrow={ACTIVITY_DETAIL_PAGE_COPY.contactEyebrow}
           title={ACTIVITY_DETAIL_PAGE_COPY.contactTitle}
@@ -259,17 +263,19 @@ export function ActivityDetailPage({
             <div className={styles.contactGrid}>
               <div className={styles.contactChannels}>
                 {hasContacts ? (
-                  <ActivityContactBlocks contacts={activity.contacts} />
+                  <ContactBlocks contacts={activity.contacts} />
                 ) : null}
                 {hasSocialLinks ? (
                   <ActivitySocialLinks socialLinks={socialLinks} />
                 ) : null}
               </div>
-              <InfoBlock title="Contact direct">
-                Pour le lancement du nouveau site, contactez la section
-                directement avec l&apos;adresse email indiquée ici. Le formulaire
-                de contact sera activé dans un second temps.
-              </InfoBlock>
+              {showContactForm ? (
+                <ActivityContactForm
+                  activitySlug={activity.slug}
+                  activityTitle={activity.title}
+                  content={activity.content}
+                />
+              ) : null}
             </div>
           ) : (
             <InfoBlock title="Contact en attente">{emptyContactText}</InfoBlock>

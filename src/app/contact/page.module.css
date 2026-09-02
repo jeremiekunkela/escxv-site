@@ -1,0 +1,37 @@
+.section {
+  padding: var(--space-section) 0;
+}
+
+/* Fond "soft grid" partagé avec le reste de l'application (club, pages de
+   section, actualités) : les cartes blanches s'y détachent. */
+.gridSurface {
+  background-color: #f8fafc;
+  background-image:
+    linear-gradient(rgba(var(--color-brand-rgb), 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--color-brand-rgb), 0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Meme gabarit que la section contact des pages d'activite : les coordonnees
+   a gauche, le formulaire a droite. */
+.header {
+  margin-bottom: var(--space-xl);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.contactChannels {
+  display: grid;
+  gap: 16px;
+}
+
+@media (max-width: 880px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}

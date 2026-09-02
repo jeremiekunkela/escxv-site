@@ -3,6 +3,7 @@ export const routes = {
   locations: "/lieux",
   club: "/club",
   news: "/actualites",
+  contact: "/contact",
   legalNotice: "/mentions-legales",
   privacy: "/confidentialite",
 } as const;
