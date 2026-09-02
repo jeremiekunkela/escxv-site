@@ -335,7 +335,7 @@
       {
         "title": "Groupe compétition",
         "practiceGroupIds": [
-          "bad-compétition"
+          "bad-competition"
         ],
         "description": "Entraînement encadré par un moniteur pour progresser techniquement et aborder la compétition."
       }
@@ -349,7 +349,7 @@
         "sortOrder": 1
       },
       {
-        "id": "bad-compétition",
+        "id": "bad-competition",
         "label": "Compétition",
         "public": "adultes",
         "gender": "mixte",
@@ -389,7 +389,7 @@
       },
       {
         "id": "bad-comp-mardi",
-        "practiceGroupId": "bad-compétition",
+        "practiceGroupId": "bad-competition",
         "spaceId": "keller-salle",
         "type": "training",
         "day": "mardi",
@@ -400,7 +400,7 @@
       },
       {
         "id": "bad-comp-vendredi",
-        "practiceGroupId": "bad-compétition",
+        "practiceGroupId": "bad-competition",
         "spaceId": "keller-salle",
         "type": "training",
         "day": "vendredi",
@@ -1505,7 +1505,7 @@
         ]
       },
       {
-        "id": "football-senior-fsgt-entraînement",
+        "id": "football-senior-fsgt-entrainement",
         "practiceGroupId": "fg-seniors-fsgt",
         "spaceId": "la-plaine-terrain-football",
         "type": "training",
@@ -1636,7 +1636,7 @@
         "notes": "Horaire de fin à confirmer."
       },
       {
-        "id": "football-u17-u18-compétition",
+        "id": "football-u17-u18-competition",
         "practiceGroupId": "fg-u17-u18",
         "spaceId": "la-plaine-terrain-football",
         "type": "match",
@@ -2552,7 +2552,7 @@
     ],
     "prices": [
       {
-        "id": "tennis-2026-2027-école-1h",
+        "id": "tennis-2026-2027-ecole-1h",
         "season": "2026/2027",
         "label": "Tennis École - cours 1h",
         "clubFee": 75,
@@ -2561,7 +2561,7 @@
         "extraFees": []
       },
       {
-        "id": "tennis-2026-2027-école-1h30",
+        "id": "tennis-2026-2027-ecole-1h30",
         "season": "2026/2027",
         "label": "Tennis École - cours 1h30",
         "clubFee": 75,
@@ -2570,7 +2570,7 @@
         "extraFees": []
       },
       {
-        "id": "tennis-2026-2027-compétition",
+        "id": "tennis-2026-2027-competition",
         "season": "2026/2027",
         "label": "Tennis Compétition (FSGT)",
         "clubFee": 75,
@@ -2593,7 +2593,7 @@
         "phone": null
       },
       {
-        "id": "contact-tennis-compétition",
+        "id": "contact-tennis-competition",
         "name": "Tennis Compétition",
         "role": "Contact compétition",
         "email": "tennis-competition@esc15.fr",
@@ -2641,7 +2641,7 @@
       {
         "title": "Adultes",
         "practiceGroupIds": [
-          "tt-adultes-entraînement",
+          "tt-adultes-entrainement",
           "tt-adultes-loisir"
         ],
         "description": "Entraînement et créneaux loisir pour jouer régulièrement, dans la limite de deux séances par semaine."
@@ -2663,7 +2663,7 @@
         "sortOrder": 2
       },
       {
-        "id": "tt-adultes-entraînement",
+        "id": "tt-adultes-entrainement",
         "label": "Adultes - entraînement",
         "public": "adultes",
         "gender": "mixte",
@@ -2720,8 +2720,8 @@
         "tags": []
       },
       {
-        "id": "tt-adultes-entraînement-lundi",
-        "practiceGroupId": "tt-adultes-entraînement",
+        "id": "tt-adultes-entrainement-lundi",
+        "practiceGroupId": "tt-adultes-entrainement",
         "spaceId": "la-plaine-salle-tennis-table",
         "type": "training",
         "day": "lundi",
@@ -2823,7 +2823,7 @@
       {
         "title": "École & perfectionnement",
         "practiceGroupIds": [
-          "volley-école"
+          "volley-ecole"
         ],
         "description": "Apprentissage des fondamentaux et perfectionnement technique du volley-ball."
       },
@@ -2837,7 +2837,7 @@
       {
         "title": "Compétition & beach-volley",
         "practiceGroupIds": [
-          "volley-compétition",
+          "volley-competition",
           "volley-beach"
         ],
         "description": "Compétition FSGT en salle (niveau régional minimum) et beach-volley le dimanche."
@@ -2845,7 +2845,7 @@
     ],
     "practiceGroups": [
       {
-        "id": "volley-école",
+        "id": "volley-ecole",
         "label": "École & perfectionnement",
         "public": "adolescents",
         "gender": "mixte",
@@ -2859,7 +2859,7 @@
         "sortOrder": 2
       },
       {
-        "id": "volley-compétition",
+        "id": "volley-competition",
         "label": "Compétition",
         "public": "adultes",
         "gender": "mixte",
@@ -2875,8 +2875,8 @@
     ],
     "schedules": [
       {
-        "id": "volley-école-samedi-13",
-        "practiceGroupId": "volley-école",
+        "id": "volley-ecole-samedi-13",
+        "practiceGroupId": "volley-ecole",
         "spaceId": "croix-nivert-gymnase",
         "type": "training",
         "day": "samedi",
@@ -2885,8 +2885,8 @@
         "tags": []
       },
       {
-        "id": "volley-école-samedi-14",
-        "practiceGroupId": "volley-école",
+        "id": "volley-ecole-samedi-14",
+        "practiceGroupId": "volley-ecole",
         "spaceId": "croix-nivert-gymnase",
         "type": "training",
         "day": "samedi",
@@ -2895,8 +2895,8 @@
         "tags": []
       },
       {
-        "id": "volley-école-samedi-1830",
-        "practiceGroupId": "volley-école",
+        "id": "volley-ecole-samedi-1830",
+        "practiceGroupId": "volley-ecole",
         "spaceId": "croix-nivert-gymnase",
         "type": "training",
         "day": "samedi",
@@ -2915,8 +2915,8 @@
         "notes": "Lieu à confirmer auprès de la section."
       },
       {
-        "id": "volley-compétition-mercredi",
-        "practiceGroupId": "volley-compétition",
+        "id": "volley-competition-mercredi",
+        "practiceGroupId": "volley-competition",
         "spaceId": "la-plaine-terrain-volley",
         "type": "training",
         "day": "mercredi",
