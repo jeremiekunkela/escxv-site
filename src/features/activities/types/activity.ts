@@ -139,7 +139,11 @@ export type ActivityContact = {
   phone: string | null;
 };
 
-export type ActivitySocialNetwork = "facebook" | "instagram" | "x";
+export type ActivitySocialNetwork =
+  | "facebook"
+  | "instagram"
+  | "tiktok"
+  | "x";
 
 export type ActivitySocialLink = {
   network: ActivitySocialNetwork;
