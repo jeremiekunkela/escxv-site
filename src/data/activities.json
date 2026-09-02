@@ -1135,6 +1135,10 @@
       {
         "network": "x",
         "handle": "esc15escalade"
+      },
+      {
+        "network": "instagram",
+        "handle": "esc15escalade"
       }
     ]
   },
@@ -1749,6 +1753,10 @@
       {
         "network": "instagram",
         "handle": "esc15_foot"
+      },
+      {
+        "network": "instagram",
+        "handle": "esc.xv"
       }
     ]
   },
@@ -2960,6 +2968,12 @@
         "role": "Contact section",
         "email": "volley@esc15.fr",
         "phone": null
+      }
+    ],
+    "socialLinks": [
+      {
+        "network": "instagram",
+        "handle": "volley_escxv"
       }
     ]
   },
