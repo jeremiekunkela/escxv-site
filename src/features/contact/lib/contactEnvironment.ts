@@ -4,47 +4,39 @@ import {
 } from "@/features/contact/data-access/contactSenders";
 import type { SendContactMessage } from "@/features/contact/types/contact";
 
-/**
- * Secret de repli, reserve au developpement. En production un secret connu
- * rendrait le jeton falsifiable, donc inutile : la route refuse alors de
- * servir plutot que de faire semblant de proteger.
- */
-const DEVELOPMENT_TOKEN_SECRET = "dev-only-contact-token-secret";
-
 const DEFAULT_FROM_NAME = "Site ESC XV";
-
-const isProduction = () => process.env.NODE_ENV === "production";
 
 const readEnv = (name: string) => process.env[name]?.trim() ?? "";
 
-const isProductionDeployment = () =>
-  process.env.VERCEL_ENV
-    ? process.env.VERCEL_ENV === "production"
-    : isProduction();
-
-export const resolveRecipientOverrideEmail = () => {
-  const email =
-    readEnv("CONTACT_RECIPIENT_OVERRIDE_EMAIL") ||
-    readEnv("CONTACT_DEVELOPMENT_RECIPIENT_EMAIL");
-
-  return !isProductionDeployment() && email && email.length > 0 ? email : null;
-};
-
-export const resolveTokenSecret = () => {
-  const secret = readEnv("CONTACT_TOKEN_SECRET");
-
-  return secret && secret.length > 0
-    ? secret
-    : isProduction()
-      ? null
-      : DEVELOPMENT_TOKEN_SECRET;
-};
+/**
+ * Racine de composition du contact : le seul endroit qui lit l'environnement.
+ *
+ * Aucune regle ne depend du deploiement. Une configuration qui se devine
+ * (secret de repli en developpement, emetteur console implicite, destinataire
+ * force ignore en production) se teste mal : ce qu'on voit en local ne dit
+ * plus ce que fera la production. Ici tout se declare, et la meme
+ * configuration donne partout le meme comportement.
+ */
 
 /**
- * Racine de composition : le seul endroit qui lit l'environnement et decide
- * quel emetteur brancher. Tant que la cle Resend manque, le
- * developpement tourne sur la console ; la production, elle, refuse d'envoyer
- * dans le vide.
+ * Destinataire force : tout part a cette adresse au lieu des boites de
+ * section. Utile pour eprouver le parcours sans ecrire aux responsables. La
+ * variable seule decide — un override silencieusement ignore ferait croire a
+ * un test reussi.
+ */
+export const resolveRecipientOverrideEmail = () =>
+  readEnv("CONTACT_RECIPIENT_OVERRIDE_EMAIL") ||
+  readEnv("CONTACT_DEVELOPMENT_RECIPIENT_EMAIL") ||
+  null;
+
+/** Sans secret declare, pas de jeton : la route refuse plutot que de faire
+ * semblant de proteger avec une valeur connue. */
+export const resolveTokenSecret = () => readEnv("CONTACT_TOKEN_SECRET") || null;
+
+/**
+ * Emetteur : Resend des que la cle et l'adresse d'envoi sont la.
+ * `CONTACT_SENDER=console` affiche le message dans la console du serveur sans
+ * rien envoyer, pour eprouver le parcours sans clef. Rien sinon.
  */
 export const resolveContactSender = (): SendContactMessage | null => {
   const apiKey = readEnv("RESEND_API_KEY");
@@ -52,20 +44,16 @@ export const resolveContactSender = (): SendContactMessage | null => {
   const fromName = readEnv("CONTACT_FROM_NAME") || DEFAULT_FROM_NAME;
 
   return apiKey && fromEmail
-    ? createResendSender({
-        apiKey,
-        fromEmail,
-        fromName,
-      })
-    : isProduction()
-      ? null
-      : createConsoleSender();
+    ? createResendSender({ apiKey, fromEmail, fromName })
+    : readEnv("CONTACT_SENDER") === "console"
+      ? createConsoleSender()
+      : null;
 };
 
 /**
- * Interrupteur des formulaires. `CONTACT_FORM_ENABLED=false` les coupe
- * partout : les pages basculent sur les adresses email et la route refuse de
- * servir, sans redeploiement de code.
+ * Interrupteur des formulaires. `CONTACT_FORM_ENABLED=false` les coupe : les
+ * pages basculent sur les adresses email et la route refuse de servir, sans
+ * redeploiement de code.
  *
  * Un formulaire ne s'affiche de toute facon que si l'envoi est configure —
  * secret de jeton et emetteur. Mieux vaut l'adresse de la section qu'un champ

@@ -1,3 +1,6 @@
+/** Adresse publique du site : metadonnees, liens absolus, corps des emails. */
+export const siteUrl = "https://escxv.fr";
+
 export const routes = {
   home: "/",
   locations: "/lieux",

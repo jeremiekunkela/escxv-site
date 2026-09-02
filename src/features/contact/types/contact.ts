@@ -44,7 +44,9 @@ export type ContactMessage = {
   to: string;
   replyTo: string;
   subject: string;
+  /** Repli des clients en texte seul, et seul corps affiche par la console. */
   text: string;
+  html: string;
 };
 
 export type ContactDeliveryMode = "console" | "email";

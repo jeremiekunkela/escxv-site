@@ -137,7 +137,7 @@ export function ContactForm({
           </label>
         )}
         <label className={styles.label}>
-          Nom *
+          Nom complet *
           <input
             type="text"
             name="name"
