@@ -2,6 +2,7 @@ import {
   createConsoleSender,
   createResendSender,
 } from "@/features/contact/data-access/contactSenders";
+import { isSendableEmail } from "@/features/contact/lib/emailAddress";
 import type { SendContactMessage } from "@/features/contact/types/contact";
 
 const DEFAULT_FROM_NAME = "Site ESC XV";
@@ -46,7 +47,7 @@ export const resolveRecipientCopyEmails = (slug: string) =>
   readEnv(`CONTACT_CC_${toEnvSuffix(slug)}`)
     .split(",")
     .map((email) => email.trim())
-    .filter((email) => email.length > 0);
+    .filter(isSendableEmail);
 
 /** Sans secret declare, pas de jeton : la route refuse plutot que de faire
  * semblant de proteger avec une valeur connue. */
@@ -62,7 +63,7 @@ export const resolveContactSender = (): SendContactMessage | null => {
   const fromEmail = readEnv("CONTACT_FROM_EMAIL");
   const fromName = readEnv("CONTACT_FROM_NAME") || DEFAULT_FROM_NAME;
 
-  return apiKey && fromEmail
+  return apiKey && isSendableEmail(fromEmail)
     ? createResendSender({ apiKey, fromEmail, fromName })
     : readEnv("CONTACT_SENDER") === "console"
       ? createConsoleSender()

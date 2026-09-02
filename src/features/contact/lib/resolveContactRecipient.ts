@@ -4,6 +4,7 @@ import {
   resolveRecipientCopyEmails,
   resolveRecipientOverrideEmail,
 } from "@/features/contact/lib/contactEnvironment";
+import { isSendableEmail } from "@/features/contact/lib/emailAddress";
 import type { ContactRecipient } from "@/features/contact/types/contact";
 
 /**
@@ -63,6 +64,20 @@ export const resolveContactRecipient = (
     ? []
     : resolveRecipientCopyEmails(slug);
 
+  /**
+   * Une adresse de section mal saisie est une erreur de donnees, pas une
+   * erreur du visiteur : on refuse avant d'appeler l'emetteur, et le journal
+   * la nomme pour qu'elle soit corrigee.
+   */
+  const isDeliverable = email !== null && isSendableEmail(email);
+
+  if (email !== null && !isDeliverable) {
+    console.error("[contact] adresse de destinataire invalide", {
+      recipientSlug: slug,
+      recipient: maskEmail(email),
+    });
+  }
+
   console.info("[contact] destinataire resolu", {
     recipientSlug: slug,
     vercelEnv: process.env.VERCEL_ENV ?? "hors-vercel",
@@ -76,5 +91,7 @@ export const resolveContactRecipient = (
     copyCount: copyEmails.length,
   });
 
-  return recipient && email ? { ...recipient, email, copyEmails } : null;
+  return recipient && email && isDeliverable
+    ? { ...recipient, email, copyEmails }
+    : null;
 };
