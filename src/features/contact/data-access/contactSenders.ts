@@ -32,6 +32,7 @@ export const createResendSender =
     const { error } = await resend.emails.send({
       from: `${config.fromName} <${config.fromEmail}>`,
       to: [message.to],
+      cc: message.copyEmails.length > 0 ? message.copyEmails : undefined,
       subject: message.subject,
       text: message.text,
       html: message.html,

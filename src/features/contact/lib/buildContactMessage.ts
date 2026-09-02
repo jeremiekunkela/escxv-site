@@ -29,6 +29,7 @@ export const buildContactMessage = (
   recipient: ContactRecipient,
 ): ContactMessage => ({
   to: recipient.email,
+  copyEmails: recipient.copyEmails,
   replyTo: request.email,
   subject: `[${recipient.label}] ${SUBJECT_LABELS[request.subject]} — ${request.name}`,
   html: renderContactEmailHtml({
