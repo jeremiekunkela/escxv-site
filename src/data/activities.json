@@ -291,6 +291,10 @@
       {
         "network": "instagram",
         "handle": "escxv_athle"
+      },
+      {
+        "network": "tiktok",
+        "handle": "escxv_athle"
       }
     ]
   },
@@ -519,6 +523,12 @@
         "role": "Contact section",
         "email": "baseball@esc15.fr",
         "phone": null
+      }
+    ],
+    "socialLinks": [
+      {
+        "network": "facebook",
+        "handle": "baseballesc15"
       }
     ]
   },
@@ -851,6 +861,17 @@
         "email": "cap@esc15.fr",
         "phone": null
       }
+    ],
+    "socialLinks": [
+      {
+        "network": "instagram",
+        "handle": "escxvrunning"
+      },
+      {
+        "network": "facebook",
+        "handle": "esc15captrail",
+        "url": "https://www.facebook.com/groups/esc15captrail/"
+      }
     ]
   },
   {
@@ -1108,6 +1129,16 @@
         "role": "Contact APE",
         "email": "escalade-ape@esc15.fr",
         "phone": null
+      }
+    ],
+    "socialLinks": [
+      {
+        "network": "x",
+        "handle": "esc15escalade"
+      },
+      {
+        "network": "instagram",
+        "handle": "esc15escalade"
       }
     ]
   },
@@ -1716,6 +1747,18 @@
         "role": "Contact section",
         "email": "football@esc15.fr",
         "phone": null
+      }
+    ],
+    "socialLinks": [
+      {
+        "network": "instagram",
+        "handle": "esc15_foot",
+        "label": "FFF"
+      },
+      {
+        "network": "instagram",
+        "handle": "esc.xv",
+        "label": "FSGT"
       }
     ]
   },
@@ -2927,6 +2970,12 @@
         "role": "Contact section",
         "email": "volley@esc15.fr",
         "phone": null
+      }
+    ],
+    "socialLinks": [
+      {
+        "network": "instagram",
+        "handle": "volley_escxv"
       }
     ]
   },
