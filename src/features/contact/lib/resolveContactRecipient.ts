@@ -1,6 +1,9 @@
 import { getActivityBySlug } from "@/features/activities/data-access/activities";
 import { getClubInfo } from "@/features/club/data-access/club";
-import { resolveRecipientOverrideEmail } from "@/features/contact/lib/contactEnvironment";
+import {
+  resolveRecipientCopyEmails,
+  resolveRecipientOverrideEmail,
+} from "@/features/contact/lib/contactEnvironment";
 import type { ContactRecipient } from "@/features/contact/types/contact";
 
 /**
@@ -22,14 +25,16 @@ const findRecipient = (slug: string): ContactRecipient | null => {
   const club = getClubInfo();
 
   if (slug === CLUB_RECIPIENT_SLUG) {
-    return club.email ? { email: club.email, label: club.shortName } : null;
+    return club.email
+      ? { email: club.email, label: club.shortName, copyEmails: [] }
+      : null;
   }
 
   const activity = getActivityBySlug(slug);
   const contact = activity?.contacts[0];
 
   return activity && contact
-    ? { email: contact.email, label: activity.title }
+    ? { email: contact.email, label: activity.title, copyEmails: [] }
     : null;
 };
 
@@ -49,6 +54,14 @@ export const resolveContactRecipient = (
   const email = recipient
     ? (recipientOverrideEmail ?? recipient.email)
     : null;
+  /**
+   * Un destinataire force sert a ne pas ecrire aux vraies boites : les copies
+   * tombent avec lui, sinon le test arriverait quand meme chez les personnes
+   * qu'il s'agissait d'epargner.
+   */
+  const copyEmails = recipientOverrideEmail
+    ? []
+    : resolveRecipientCopyEmails(slug);
 
   console.info("[contact] destinataire resolu", {
     recipientSlug: slug,
@@ -60,7 +73,8 @@ export const resolveContactRecipient = (
         ? "club"
         : "section",
     recipient: email ? maskEmail(email) : null,
+    copyCount: copyEmails.length,
   });
 
-  return recipient && email ? { ...recipient, email } : null;
+  return recipient && email ? { ...recipient, email, copyEmails } : null;
 };
