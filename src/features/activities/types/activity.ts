@@ -139,12 +139,22 @@ export type ActivityContact = {
   phone: string | null;
 };
 
-export type ActivitySocialNetwork = "facebook" | "instagram" | "x";
+export type ActivitySocialNetwork =
+  | "facebook"
+  | "instagram"
+  | "tiktok"
+  | "x";
 
 export type ActivitySocialLink = {
   network: ActivitySocialNetwork;
   handle: string;
   url?: string;
+  /**
+   * Precision affichee a cote du reseau. Necessaire des qu'une section tient
+   * deux comptes sur le meme reseau — le football en a un par federation, et
+   * deux lignes « Instagram » identiques n'apprendraient rien.
+   */
+  label?: string;
 };
 
 export type Activity = {
