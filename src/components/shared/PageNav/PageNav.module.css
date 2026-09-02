@@ -16,6 +16,8 @@
   /* Cinq entrees ne tiennent pas en largeur mobile : on defile, on ne replie pas. */
   overflow-x: auto;
   scrollbar-width: none;
+  /* La rangee se recentre sur la section lue : le glissement doit suivre. */
+  scroll-behavior: smooth;
 
   /*
    * Ombres de defilement : sans indice, personne ne devine qu'il reste des
@@ -73,6 +75,12 @@
 .link:focus-visible {
   border-bottom-color: var(--color-brand);
   color: var(--color-brand);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .list {
+    scroll-behavior: auto;
+  }
 }
 
 /*
