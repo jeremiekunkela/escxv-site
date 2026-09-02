@@ -77,6 +77,12 @@ export default function ConfidentialitePage() {
           Scaleway, hébergeur français, puis conservé dans la boîte du
           responsable le temps de traiter votre demande.
         </p>
+        <p>
+          Si l&apos;envoi échoue, une alerte technique prévient l&apos;équipe du
+          site. Elle contient la section concernée, la cause de la panne et{" "}
+          <strong>votre adresse email, afin de pouvoir vous recontacter</strong>{" "}
+          — jamais le contenu de votre message.
+        </p>
       </LegalSection>
 
       <LegalSection title="Vos droits">
