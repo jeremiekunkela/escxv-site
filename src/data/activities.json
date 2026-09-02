@@ -755,32 +755,32 @@
     "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a1ce34e001002139579a",
     "content": {
-      "heroSubtitle": "Pratique adulte pour courir régulièrement, préparer un objectif et progresser en groupe sur route et sentiers.",
+      "heroSubtitle": "Trois séances par semaine, du débutant au coureur confirmé : piste, fractionné et renforcement musculaire.",
       "seasonStartText": "Rentrée 2026 : Course à pied / Trail le 1er septembre.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
-        "title": "Footing et endurance",
+        "title": "Mardi et jeudi : piste et fractionné",
         "practiceGroupIds": [
           "cap-adultes"
         ],
-        "description": "Courir régulièrement, travailler le fond et construire une base aérobie durable."
+        "description": "Travail d'allure, de vitesse et d'endurance, avec du renforcement musculaire. Chacun suit son objectif : premier 5 ou 10 km, semi-marathon, marathon, ou distances plus longues."
       },
       {
-        "title": "Préparation trail",
+        "title": "Samedi : renforcement",
         "practiceGroupIds": [
           "cap-adultes"
         ],
-        "description": "Sorties plus longues avec dénivelé, gestion de rythme et adaptation aux objectifs de trail."
+        "description": "Peu de course, surtout du travail musculaire. Séance ouverte à tous les niveaux, sans recherche de performance : entretenir sa forme ou compléter les entraînements de la semaine."
       },
       {
-        "title": "Séances fractionnées",
+        "title": "Une adhésion, trois séances",
         "practiceGroupIds": [
           "cap-adultes"
         ],
-        "description": "Travail de rythme et d'allure pour progresser sans perdre la logique collective du groupe."
+        "description": "L'adhésion donne accès aux trois séances de la semaine, chacun vient à celles qu'il veut. Une séance d'essai est possible avant de s'inscrire."
       }
     ],
     "practiceGroups": [
@@ -801,7 +801,8 @@
         "day": "mardi",
         "startTime": "19:30",
         "endTime": "21:00",
-        "tags": []
+        "tags": [],
+        "notes": "Course sur piste : fractionné, allure, vitesse et endurance, avec renforcement."
       },
       {
         "id": "cap-jeudi",
@@ -811,7 +812,8 @@
         "day": "jeudi",
         "startTime": "20:00",
         "endTime": "21:30",
-        "tags": []
+        "tags": [],
+        "notes": "Course sur piste : fractionné, allure, vitesse et endurance, avec renforcement."
       },
       {
         "id": "cap-samedi",
@@ -822,7 +824,7 @@
         "startTime": "10:30",
         "endTime": "12:00",
         "tags": [],
-        "notes": "Footing et renforcement musculaire."
+        "notes": "Renforcement et entretien physique, peu de course. Accessible à tous les niveaux."
       }
     ],
     "prices": [
