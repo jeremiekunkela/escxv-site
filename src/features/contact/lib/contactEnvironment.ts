@@ -29,6 +29,25 @@ export const resolveRecipientOverrideEmail = () =>
   readEnv("CONTACT_DEVELOPMENT_RECIPIENT_EMAIL") ||
   null;
 
+/**
+ * Suffixe de variable pour un destinataire : `course-a-pied-trail` devient
+ * `COURSE_A_PIED_TRAIL`, le club `CLUB`.
+ */
+const toEnvSuffix = (slug: string) =>
+  slug.toUpperCase().replace(/[^A-Z0-9]+/g, "_");
+
+/**
+ * Adresses en copie d'un destinataire, declarees une variable par section :
+ * `CONTACT_CC_FOOTBALL`, `CONTACT_CC_CLUB`... Absente, personne n'est en
+ * copie — c'est le cas courant, on ne declare que les sections qui en ont
+ * besoin. Plusieurs adresses se separent par des virgules.
+ */
+export const resolveRecipientCopyEmails = (slug: string) =>
+  readEnv(`CONTACT_CC_${toEnvSuffix(slug)}`)
+    .split(",")
+    .map((email) => email.trim())
+    .filter((email) => email.length > 0);
+
 /** Sans secret declare, pas de jeton : la route refuse plutot que de faire
  * semblant de proteger avec une valeur connue. */
 export const resolveTokenSecret = () => readEnv("CONTACT_TOKEN_SECRET") || null;
