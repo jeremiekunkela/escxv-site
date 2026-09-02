@@ -11,12 +11,7 @@
   padding: 24px 0;
 }
 
-.header {
-  display: grid;
-  gap: 6px;
-}
-
-.audience {
+.title {
   width: fit-content;
   margin: 0;
   color: var(--color-brand);
@@ -24,15 +19,6 @@
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.02em;
   text-transform: uppercase;
-}
-
-.title {
-  margin: 0;
-  color: var(--color-text-primary);
-  font-size: clamp(1.25rem, 2vw, 1.55rem);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: -0.02em;
-  line-height: 1.05;
 }
 
 .description {

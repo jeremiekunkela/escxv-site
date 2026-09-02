@@ -1,3 +1,16 @@
+/**
+ * Coordonnees affichees d'un interlocuteur : une section, ou le club. Meme
+ * forme que `ActivityContact`, dont elle prend le relais des que le contact
+ * n'est plus rattache a une activite.
+ */
+export type ContactChannel = {
+  id: string;
+  name: string;
+  role: string;
+  email: string;
+  phone: string | null;
+};
+
 export type ContactSubject =
   | "inscription"
   | "cours-essai"
@@ -7,7 +20,7 @@ export type ContactSubject =
 
 /** Demande validee, prete a etre transformee en message. */
 export type ContactRequest = {
-  activitySlug: string;
+  recipientSlug: string;
   name: string;
   email: string;
   phone: string | null;
@@ -16,13 +29,14 @@ export type ContactRequest = {
 };
 
 /**
- * Destinataire resolu cote serveur a partir du slug. Le navigateur ne fournit
- * jamais d'adresse : sinon la route servirait de relais pour ecrire a
- * n'importe qui depuis le domaine du club.
+ * Destinataire resolu cote serveur a partir du slug : une section, ou le club
+ * lui-meme pour les demandes qui ne relevent d'aucune section. Le navigateur
+ * ne fournit jamais d'adresse, sinon la route servirait de relais pour ecrire
+ * a n'importe qui depuis le domaine du club.
  */
 export type ContactRecipient = {
   email: string;
-  activityTitle: string;
+  label: string;
 };
 
 /** Message tel qu'il part, une fois le destinataire resolu. */

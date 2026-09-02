@@ -26,8 +26,6 @@ export default function MentionsLegalesPage() {
           {club.name} ({club.shortName}), association sportive.
           <br />
           {club.address}, {club.postalCode} {club.city}
-          <br />
-          Téléphone : {club.phone}
           {club.email ? (
             <>
               <br />
