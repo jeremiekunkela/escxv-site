@@ -40,6 +40,13 @@ const findRecipient = (slug: string): ContactRecipient | null => {
 };
 
 /**
+ * Le slug designe-t-il une section ou le club ? La route s'en sert pour
+ * distinguer une adresse fantaisiste, qui ne merite aucune alerte, d'une
+ * section reelle dont l'adresse est inexploitable.
+ */
+export const isKnownRecipientSlug = (slug: string) => findRecipient(slug) !== null;
+
+/**
  * Le destinataire se deduit du slug, jamais d'une adresse envoyee par le
  * navigateur : sans cela, la route permettrait d'ecrire a n'importe qui
  * depuis le domaine du club.

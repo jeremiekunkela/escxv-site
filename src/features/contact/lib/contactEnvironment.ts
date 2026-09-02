@@ -83,3 +83,10 @@ export const isContactFormEnabled = () =>
   readEnv("CONTACT_FORM_ENABLED") !== "false" &&
   resolveTokenSecret() !== null &&
   resolveContactSender() !== null;
+
+/**
+ * Webhook d'alerte, appele quand un message n'a pas pu partir. Vide, il ne se
+ * passe rien : le journal serveur reste la seule trace.
+ */
+export const resolveAlertWebhookUrl = () =>
+  readEnv("CONTACT_ALERT_WEBHOOK_URL") || null;
