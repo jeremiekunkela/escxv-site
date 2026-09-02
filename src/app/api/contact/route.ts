@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { buildContactMessage } from "@/features/contact/lib/buildContactMessage";
+import { sendContactAlert } from "@/features/contact/lib/contactAlert";
 import {
   isContactFormEnabled,
   resolveContactSender,
@@ -14,7 +15,10 @@ import {
   readRecord,
   readString,
 } from "@/features/contact/lib/parseContactRequest";
-import { resolveContactRecipient } from "@/features/contact/lib/resolveContactRecipient";
+import {
+  isKnownRecipientSlug,
+  resolveContactRecipient,
+} from "@/features/contact/lib/resolveContactRecipient";
 
 /** `node:crypto` signe le jeton : la route a besoin du runtime Node. */
 export const runtime = "nodejs";
@@ -100,9 +104,24 @@ export const POST = async (request: Request) => {
     );
   }
 
+  const requestId = request.headers.get("x-vercel-id") ?? undefined;
   const recipient = resolveContactRecipient(parsed.value.recipientSlug);
 
   if (!recipient) {
+    /**
+     * Un slug inconnu vient d'une requete forgee et ne merite pas d'alerte.
+     * Une section reelle sans adresse exploitable, si : son formulaire est
+     * casse et personne ne le verra autrement.
+     */
+    if (isKnownRecipientSlug(parsed.value.recipientSlug)) {
+      await sendContactAlert({
+        reason: "adresse de section inexploitable",
+        recipientSlug: parsed.value.recipientSlug,
+        visitorEmail: parsed.value.email,
+        requestId,
+      });
+    }
+
     return NextResponse.json({ error: UNAVAILABLE_MESSAGE }, { status: 400 });
   }
 
@@ -112,6 +131,15 @@ export const POST = async (request: Request) => {
     return NextResponse.json({ ok: true, deliveryMode: delivery.mode });
   } catch (error) {
     console.error("[contact] envoi impossible", error);
+
+    await sendContactAlert({
+      reason: "envoi refuse par l'emetteur",
+      recipientSlug: parsed.value.recipientSlug,
+      visitorEmail: parsed.value.email,
+      errorName: error instanceof Error ? error.name : undefined,
+      errorMessage: error instanceof Error ? error.message : String(error),
+      requestId,
+    });
 
     return NextResponse.json({ error: GENERIC_ERROR_MESSAGE }, { status: 502 });
   }

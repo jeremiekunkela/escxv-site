@@ -40,7 +40,14 @@ export const createResendSender =
     });
 
     if (error) {
-      throw new Error(`Resend a refuse l'envoi : ${error.message}`);
+      // Le nom du refus (`validation_error`, `rate_limit_exceeded`...) est ce
+      // qui permet de trancher entre donnee fautive et incident passager.
+      console.error("[contact] Resend a refuse l'envoi", {
+        name: error.name,
+        message: error.message,
+      });
+
+      throw new Error(`Resend a refuse l'envoi : ${error.name} — ${error.message}`);
     }
 
     return { mode: "email" };
