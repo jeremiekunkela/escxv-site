@@ -12,6 +12,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "lucide-react": "latest",
     "next": "latest",
     "react": "latest",
