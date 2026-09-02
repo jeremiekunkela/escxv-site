@@ -8,9 +8,19 @@
   box-shadow: var(--shadow-sm);
 }
 
+/*
+ * Trois cartes par ligne au maximum : au-dela, les tarifs d'une meme saison
+ * se lisent comme un tableau de prix et non comme des offres distinctes. La
+ * borne basse vaut donc le tiers de la ligne, gouttieres deduites, sans
+ * jamais descendre sous 260px — `auto-fit` ne peut plus en loger une
+ * quatrieme, et replie normalement des que la place manque.
+ */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(max(260px, (100% - 2 * 16px) / 3), 1fr)
+  );
   gap: 16px;
 }
 
