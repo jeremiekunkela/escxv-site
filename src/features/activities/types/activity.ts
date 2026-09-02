@@ -17,9 +17,19 @@ export type DayOfWeek =
 
 export type ScheduleType = "training" | "match";
 
+/**
+ * Carte de presentation d'une offre de la section. Le public n'est pas saisi
+ * ici : le programme pointe les groupes de pratique qu'il concerne, et la
+ * carte affiche leurs libelles. Une seule source de verite, celle qui sert
+ * deja aux creneaux — un `audience` en texte libre finissait par diverger
+ * (« Enfants » ici, « Groupe initiation » vingt lignes plus bas).
+ *
+ * Liste vide ou couvrant tous les groupes : pas de chapeau, il ne
+ * distinguerait rien que le hero ne dise deja.
+ */
 export type Program = {
   title: string;
-  audience: string;
+  practiceGroupIds: string[];
   description: string;
 };
 

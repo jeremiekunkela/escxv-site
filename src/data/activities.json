@@ -28,7 +28,9 @@
     "programs": [
       {
         "title": "Pratique martiale",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "aiki-tous"
+        ],
         "description": "Travail des techniques à mains nues et avec armes, centré sur la posture, le placement et le contrôle."
       }
     ],
@@ -115,12 +117,17 @@
     "programs": [
       {
         "title": "École d'athlétisme",
-        "audience": "Enfants",
+        "practiceGroupIds": [
+          "ath-eveil-benjamin"
+        ],
         "description": "Découverte de la course, des sauts et des lancers avec une progression technique accessible et un cadre collectif."
       },
       {
         "title": "Sprint et demi-fond",
-        "audience": "Adolescents et adultes",
+        "practiceGroupIds": [
+          "ath-minime-cadet",
+          "ath-adultes"
+        ],
         "description": "Travail de vitesse, de foulée, de placement et d'endurance spécifique pour progresser de façon structurée."
       }
     ],
@@ -316,12 +323,16 @@
     "programs": [
       {
         "title": "Groupe loisir",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "bad-loisir"
+        ],
         "description": "Pratique libre en simple ou en double, pour jouer régulièrement dans une ambiance conviviale."
       },
       {
         "title": "Groupe compétition",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "bad-compétition"
+        ],
         "description": "Entraînement encadré par un moniteur pour progresser techniquement et aborder la compétition."
       }
     ],
@@ -462,7 +473,9 @@
     "programs": [
       {
         "title": "Entraînement baseball",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "base-tous"
+        ],
         "description": "Découverte et pratique du baseball : lancer, frappe, course et jeu collectif sur le terrain."
       }
     ],
@@ -541,12 +554,18 @@
     "programs": [
       {
         "title": "Capoeira enfants et jeunes",
-        "audience": "De 5 à 17 ans",
+        "practiceGroupIds": [
+          "capo-5-7",
+          "capo-8-11",
+          "capo-12-17"
+        ],
         "description": "Apprentissage des mouvements de base, du rythme et de la roda dans un cadre ludique et progressif."
       },
       {
         "title": "Capoeira adultes",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "capo-adultes"
+        ],
         "description": "Travail technique, musicalité et jeu, pour développer mobilité et coordination."
       }
     ],
@@ -744,17 +763,23 @@
     "programs": [
       {
         "title": "Footing et endurance",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "cap-adultes"
+        ],
         "description": "Courir régulièrement, travailler le fond et construire une base aérobie durable."
       },
       {
         "title": "Préparation trail",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "cap-adultes"
+        ],
         "description": "Sorties plus longues avec dénivelé, gestion de rythme et adaptation aux objectifs de trail."
       },
       {
         "title": "Séances fractionnées",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "cap-adultes"
+        ],
         "description": "Travail de rythme et d'allure pour progresser sans perdre la logique collective du groupe."
       }
     ],
@@ -855,7 +880,10 @@
     "programs": [
       {
         "title": "Danse moderne",
-        "audience": "Adultes et jeunes adultes",
+        "practiceGroupIds": [
+          "danse-cevennes",
+          "danse-cambronne"
+        ],
         "description": "Échauffement progressif, travail du mouvement et enchaînements chorégraphiques sur des styles variés."
       }
     ],
@@ -956,12 +984,17 @@
     "programs": [
       {
         "title": "Grimpe adultes",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "esc-adultes"
+        ],
         "description": "Pratique encadrée pour progresser en technique, en force et en lecture de voie, du débutant au confirmé."
       },
       {
         "title": "Atelier Parent-Enfant (APE)",
-        "audience": "Parents et enfants",
+        "practiceGroupIds": [
+          "esc-ape",
+          "esc-ape-plus"
+        ],
         "description": "Un créneau partage parent-enfant pour découvrir l'escalade ensemble en toute sécurité."
       }
     ],
@@ -1109,17 +1142,31 @@
     "programs": [
       {
         "title": "École de foot",
-        "audience": "Enfants",
+        "practiceGroupIds": [
+          "fg-u6-u9",
+          "fg-u10",
+          "fg-u11-u13"
+        ],
         "description": "Découverte du jeu, motricité, coordination et apprentissage des fondamentaux dans un cadre sécurisant."
       },
       {
         "title": "Parcours jeunes",
-        "audience": "Adolescents",
+        "practiceGroupIds": [
+          "fg-u14",
+          "fg-u15-u16",
+          "fg-u17-u18",
+          "fg-u19-u20"
+        ],
         "description": "Séances structurées pour progresser techniquement, comprendre le jeu et s'inscrire dans une dynamique d'équipe."
       },
       {
         "title": "Loisir et compétition",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "fg-seniors-fff",
+          "fg-seniors-cdm",
+          "fg-seniors-fsgt",
+          "fg-loisir"
+        ],
         "description": "Des groupes adultes pour pratiquer régulièrement, garder du rythme ou rejoindre une logique plus compétitive."
       }
     ],
@@ -1699,7 +1746,9 @@
     "programs": [
       {
         "title": "Gymnastique d'entretien",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "gym-adultes"
+        ],
         "description": "Mobilité, tonicité, renforcement doux et équilibre dans une séance accessible à tous."
       }
     ],
@@ -1775,12 +1824,16 @@
     "programs": [
       {
         "title": "Judo jeunes - initiation",
-        "audience": "Enfants",
+        "practiceGroupIds": [
+          "judo-5-8"
+        ],
         "description": "Découverte du judo, motricité, chutes et premiers automatismes dans un cadre sécurisant."
       },
       {
         "title": "Judo jeunes - progression",
-        "audience": "Jeunes",
+        "practiceGroupIds": [
+          "judo-8-13"
+        ],
         "description": "Apprentissage technique, progression par ceintures et initiation à la compétition."
       }
     ],
@@ -1919,7 +1972,9 @@
     "programs": [
       {
         "title": "Apprentissage et perfectionnement",
-        "audience": "Enfants et jeunes dès 6 ans",
+        "practiceGroupIds": [
+          "nat-niveaux"
+        ],
         "description": "Quatre groupes de niveaux, de l'initiation à l'aisance aquatique, au perfectionnement technique et à l'endurance."
       }
     ],
@@ -1995,7 +2050,9 @@
     "programs": [
       {
         "title": "Pilates",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "pilates-adultes"
+        ],
         "description": "Renforcement profond, gainage, posture et contrôle du mouvement."
       }
     ],
@@ -2070,7 +2127,9 @@
     "programs": [
       {
         "title": "Renforcement musculaire",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "renfo-adultes"
+        ],
         "description": "Séances toniques de renforcement global : force, gainage et condition physique."
       }
     ],
@@ -2147,7 +2206,9 @@
     "programs": [
       {
         "title": "Initiation multisports",
-        "audience": "De 5 à 15 ans",
+        "practiceGroupIds": [
+          "merc-enfants"
+        ],
         "description": "Athlétisme, badminton, basket, football, gymnastique, judo... une découverte variée, encadrée par des étudiants en STAPS."
       }
     ],
@@ -2223,7 +2284,9 @@
     "programs": [
       {
         "title": "Stretching",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "stretch-adultes"
+        ],
         "description": "Travail de souplesse, de mobilité et de récupération dans une pratique douce."
       }
     ],
@@ -2310,12 +2373,19 @@
     "programs": [
       {
         "title": "Tennis École",
-        "audience": "Enfants, jeunes et adultes",
+        "practiceGroupIds": [
+          "tennis-5-7",
+          "tennis-8-12",
+          "tennis-12-16",
+          "tennis-adultes"
+        ],
         "description": "Cours collectifs par niveau et par âge, en 1h ou 1h30, pour apprendre et progresser."
       },
       {
         "title": "Tennis Compétition",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "tennis-adultes"
+        ],
         "description": "Pratique compétitive en FSGT pour jouer en équipe et en tournoi."
       }
     ],
@@ -2517,12 +2587,18 @@
     "programs": [
       {
         "title": "Jeunes",
-        "audience": "Enfants et moins de 18 ans",
+        "practiceGroupIds": [
+          "tt-6-8",
+          "tt-jeunes"
+        ],
         "description": "Du panier de balles pour les plus jeunes aux entraînements encadrés pour les moins de 18 ans."
       },
       {
         "title": "Adultes",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "tt-adultes-entraînement",
+          "tt-adultes-loisir"
+        ],
         "description": "Entraînement et créneaux loisir pour jouer régulièrement, dans la limite de deux séances par semaine."
       }
     ],
@@ -2701,17 +2777,24 @@
     "programs": [
       {
         "title": "École & perfectionnement",
-        "audience": "Enfants et jeunes (dès 8 ans)",
+        "practiceGroupIds": [
+          "volley-école"
+        ],
         "description": "Apprentissage des fondamentaux et perfectionnement technique du volley-ball."
       },
       {
         "title": "Plaisir",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "volley-plaisir"
+        ],
         "description": "Pratique récréative pour d'anciens joueurs et des seniors, hors compétition."
       },
       {
         "title": "Compétition & beach-volley",
-        "audience": "Adultes",
+        "practiceGroupIds": [
+          "volley-compétition",
+          "volley-beach"
+        ],
         "description": "Compétition FSGT en salle (niveau régional minimum) et beach-volley le dimanche."
       }
     ],
@@ -2874,7 +2957,9 @@
     "programs": [
       {
         "title": "Hatha-Yoga",
-        "audience": "Adultes, tous niveaux",
+        "practiceGroupIds": [
+          "yoga-tous"
+        ],
         "description": "Relaxation, respiration, échauffement progressif et postures dynamiques ou douces, à son rythme."
       }
     ],
