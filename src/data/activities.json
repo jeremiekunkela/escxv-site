@@ -1752,11 +1752,13 @@
     "socialLinks": [
       {
         "network": "instagram",
-        "handle": "esc15_foot"
+        "handle": "esc15_foot",
+        "label": "FFF"
       },
       {
         "network": "instagram",
-        "handle": "esc.xv"
+        "handle": "esc.xv",
+        "label": "FSGT"
       }
     ]
   },

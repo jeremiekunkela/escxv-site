@@ -87,7 +87,11 @@ export function ActivitySocialLinks({ socialLinks }: ActivitySocialLinksProps) {
                 <SocialNetworkIcon network={socialLink.network} />
               </span>
               <span className={styles.label}>
-                <span>{networkLabel}</span>
+                <span>
+                  {socialLink.label
+                    ? `${networkLabel} · ${socialLink.label}`
+                    : networkLabel}
+                </span>
                 <strong>@{handle}</strong>
               </span>
               <ExternalLink size={16} aria-hidden="true" />
