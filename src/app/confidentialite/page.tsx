@@ -73,9 +73,10 @@ export default function ConfidentialitePage() {
           Le formulaire recueille votre nom, votre adresse email, votre
           téléphone si vous le renseignez, le sujet choisi et votre message.{" "}
           <strong>Le site n&apos;en conserve aucune copie</strong> : il ne
-          dispose d&apos;aucune base de données. Le message est acheminé par
-          Scaleway, hébergeur français, puis conservé dans la boîte du
-          responsable le temps de traiter votre demande.
+          dispose d&apos;aucune base de données. Le message est acheminé par{" "}
+          <strong>Resend</strong>, prestataire d&apos;envoi d&apos;emails établi
+          aux États-Unis, puis conservé dans la boîte du responsable le temps de
+          traiter votre demande.
         </p>
         <p>
           Si l&apos;envoi échoue, une alerte technique prévient l&apos;équipe du
