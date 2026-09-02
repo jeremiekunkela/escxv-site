@@ -34,6 +34,7 @@ export const createResendSender =
       to: [message.to],
       subject: message.subject,
       text: message.text,
+      html: message.html,
       replyTo: message.replyTo,
     });
 
