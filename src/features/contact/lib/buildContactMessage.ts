@@ -1,3 +1,6 @@
+import { getClubInfo } from "@/features/club/data-access/club";
+import { renderContactEmailHtml } from "@/features/contact/lib/contactEmailTemplate";
+import { siteUrl } from "@/lib/constants/routes";
 import type {
   ContactMessage,
   ContactRecipient,
@@ -28,6 +31,18 @@ export const buildContactMessage = (
   to: recipient.email,
   replyTo: request.email,
   subject: `[${recipient.label}] ${SUBJECT_LABELS[request.subject]} — ${request.name}`,
+  html: renderContactEmailHtml({
+    recipientLabel: recipient.label,
+    name: request.name,
+    email: request.email,
+    phone: request.phone,
+    subjectLabel: SUBJECT_LABELS[request.subject],
+    message: request.message,
+    siteUrl,
+    siteName: new URL(siteUrl).host,
+    logoUrl: `${siteUrl}/escxv-logo.png`,
+    clubName: getClubInfo().shortName,
+  }),
   text: [
     `Nom : ${request.name}`,
     `Email : ${request.email}`,
@@ -39,7 +54,7 @@ export const buildContactMessage = (
     request.message,
     "",
     "—",
-    "Envoyé depuis le formulaire de contact du site. Répondre à ce message",
-    "écrit directement à la personne qui l'a envoyé.",
+    `Répondez à ce message pour écrire à ${request.name}, à l'adresse ci-dessus.`,
+    "Envoyé depuis le formulaire de contact du site.",
   ].join("\n"),
 });
