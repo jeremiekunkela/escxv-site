@@ -1,6 +1,11 @@
 .track {
   position: fixed;
-  top: 85px;
+  /*
+   * Collee sous l'en-tete, dont la hauteur se resserre sur telephone. La
+   * valeur etait recopiee a la main, avec un point de rupture different de
+   * celui du jeton : la barre passait sous l'en-tete et disparaissait.
+   */
+  top: var(--header-height);
   left: 0;
   z-index: 45;
   width: 100%;
@@ -14,10 +19,4 @@
   transform-origin: left center;
   background: linear-gradient(90deg, var(--color-brand), var(--color-brand-bright));
   transition: transform 120ms linear;
-}
-
-@media (max-width: 720px) {
-  .track {
-    top: 76px;
-  }
 }
