@@ -17,14 +17,27 @@ export default function ConfidentialitePage() {
     <LegalPage
       eyebrow="Informations légales"
       title="Politique de confidentialité"
-      description="Ce site est volontairement sobre : il ne vous suit pas et ne crée aucun compte."
+      description="Ce site est volontairement sobre : il ne dépose aucun cookie, ne vous suit pas d'un site à l'autre et ne crée aucun compte."
     >
       <LegalSection title="Ce que ce site ne fait pas">
         <p>
-          Il ne dépose aucun cookie, n&apos;utilise aucun outil de mesure
-          d&apos;audience et ne crée aucun profil de visiteur. Les pages sont
-          générées à l&apos;avance et servies telles quelles : aucune donnée de
-          navigation n&apos;est enregistrée par l&apos;association.
+          Il ne dépose aucun cookie, ne crée aucun profil de visiteur et ne
+          vous suit pas d&apos;un site à l&apos;autre. Les pages sont générées
+          à l&apos;avance et servies telles quelles : l&apos;association
+          n&apos;enregistre aucune donnée de navigation et ne dispose
+          d&apos;aucune base de données.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="Mesure d'audience">
+        <p>
+          Nous comptons les visites et les pages consultées, pour savoir ce qui
+          est utile et ce qui ne l&apos;est pas. La mesure est assurée par
+          <strong> Vercel Web Analytics</strong>, l&apos;hébergeur du site :
+          elle fonctionne <strong>sans cookie</strong> et sans identifiant
+          persistant, ne conserve que des totaux agrégés, et ne permet ni de
+          vous reconnaître d&apos;une visite à l&apos;autre, ni de vous suivre
+          ailleurs sur le web.
         </p>
       </LegalSection>
 
