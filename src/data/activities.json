@@ -2958,10 +2958,10 @@
     ],
     "contacts": [
       {
-        "id": "contact-volley-école",
+        "id": "contact-volley-ecole",
         "name": "Volley École",
         "role": "Contact école",
-        "email": "volley-école@esc15.fr",
+        "email": "volley-ecole@esc15.fr",
         "phone": null
       },
       {
