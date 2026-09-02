@@ -1,5 +1,9 @@
-/** Adresse publique du site : metadonnees, liens absolus, corps des emails. */
-export const siteUrl = "https://escxv.fr";
+/**
+ * Adresse publique du site : metadonnees, liens absolus, corps des emails.
+ * Forme canonique avec `www` — l'apex redirige en 308, et un client de
+ * messagerie ne suit pas forcement une redirection pour charger une image.
+ */
+export const siteUrl = "https://www.esc15.fr";
 
 export const routes = {
   home: "/",
