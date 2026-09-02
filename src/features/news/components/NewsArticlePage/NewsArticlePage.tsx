@@ -19,6 +19,9 @@ type NewsArticleBlockRenderProps<Block extends NewsArticleBlock> = {
   index: number;
 };
 
+/** Cible de la barre de progression : le corps de l'article, rien d'autre. */
+const ARTICLE_CONTENT_ID = "article-content";
+
 const dateFormatter = new Intl.DateTimeFormat("fr-FR", {
   day: "numeric",
   month: "long",
@@ -140,7 +143,7 @@ export function NewsArticlePage({
 
   return (
     <>
-      <NewsReadingProgress />
+      <NewsReadingProgress targetId={ARTICLE_CONTENT_ID} />
       <section className={styles.hero}>
         {newsItem.coverImage ? (
           <Image
@@ -208,7 +211,7 @@ export function NewsArticlePage({
         <section className={styles.section}>
           <Container>
             <div className={styles.layout}>
-              <article className={styles.article}>
+              <article id={ARTICLE_CONTENT_ID} className={styles.article}>
                 {newsArticleBlocks.map((block, index) => (
                   <NewsArticleContentBlock
                     key={`${newsItem.slug}-${block.type}-${index}`}
