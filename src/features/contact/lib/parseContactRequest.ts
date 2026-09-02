@@ -1,3 +1,4 @@
+import { isAsciiEmail, isSendableEmail } from "@/features/contact/lib/emailAddress";
 import type {
   ContactRequest,
   ContactSubject,
@@ -18,12 +19,6 @@ const LIMITS = {
   phone: { max: 30 },
   message: { min: 10, max: 2000 },
 } as const;
-
-/**
- * Volontairement permissive : le seul verdict fiable sur une adresse est
- * l'envoi reel. Elle ecarte les fautes de frappe, pas les adresses mortes.
- */
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 /**
  * Un retour a la ligne dans un champ recopie en en-tete permettrait d'en
@@ -55,7 +50,10 @@ export const parseContactRequest = (
     name.length < LIMITS.name.min && "Merci d'indiquer votre nom.",
     name.length > LIMITS.name.max && "Le nom est trop long.",
     HEADER_BREAK_PATTERN.test(name) && "Le nom contient des caractères invalides.",
-    !EMAIL_PATTERN.test(email) && "L'adresse email n'est pas valide.",
+    !isSendableEmail(email) &&
+      (isAsciiEmail(email)
+        ? "L'adresse email n'est pas valide."
+        : "Les adresses email accentuées ne sont pas acceptées."),
     email.length > LIMITS.email.max && "L'adresse email est trop longue.",
     phone.length > LIMITS.phone.max && "Le numéro de téléphone est trop long.",
     !subject && "Merci de choisir un sujet.",
