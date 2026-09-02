@@ -22,17 +22,6 @@ const isProductionDeployment = () =>
     ? process.env.VERCEL_ENV === "production"
     : isProduction();
 
-/**
- * Formulaires coupes sur le deploiement de production : la page bascule sur
- * les adresses de section et la route refuse de servir. Le defaut est
- * l'extinction, pour qu'un oubli de variable ne rouvre pas l'envoi tout seul ;
- * `CONTACT_FORM_ENABLED=true` les rallume sans toucher au code.
- *
- * Preview et developpement gardent le formulaire : c'est la qu'on le teste.
- */
-export const isContactFormEnabled = () =>
-  readEnv("CONTACT_FORM_ENABLED") === "true" || !isProductionDeployment();
-
 export const resolveRecipientOverrideEmail = () => {
   const email =
     readEnv("CONTACT_RECIPIENT_OVERRIDE_EMAIL") ||
@@ -72,3 +61,17 @@ export const resolveContactSender = (): SendContactMessage | null => {
       ? null
       : createConsoleSender();
 };
+
+/**
+ * Interrupteur des formulaires. `CONTACT_FORM_ENABLED=false` les coupe
+ * partout : les pages basculent sur les adresses email et la route refuse de
+ * servir, sans redeploiement de code.
+ *
+ * Un formulaire ne s'affiche de toute facon que si l'envoi est configure —
+ * secret de jeton et emetteur. Mieux vaut l'adresse de la section qu'un champ
+ * qui echoue une fois rempli.
+ */
+export const isContactFormEnabled = () =>
+  readEnv("CONTACT_FORM_ENABLED") !== "false" &&
+  resolveTokenSecret() !== null &&
+  resolveContactSender() !== null;
