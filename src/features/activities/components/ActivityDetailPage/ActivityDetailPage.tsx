@@ -14,6 +14,7 @@ import { ActivityScheduleCards } from "@/features/activities/components/Activity
 import { ActivitySocialLinks } from "@/features/activities/components/ActivitySocialLinks/ActivitySocialLinks";
 // `ActivityTrainerCards` removed — trainers section retired
 import { getActivityFacts } from "@/features/activities/lib/activityFacts";
+import { isContactFormEnabled } from "@/features/contact/lib/contactEnvironment";
 import type { Activity } from "@/features/activities/types/activity";
 import { NewsList } from "@/features/news/components/NewsList/NewsList";
 import type { NewsItem } from "@/features/news/types/news";
@@ -96,6 +97,7 @@ export function ActivityDetailPage({
   const socialLinks = activity.socialLinks ?? [];
   const hasSocialLinks = socialLinks.length > 0;
   const hasContactChannels = hasContacts || hasSocialLinks;
+  const showContactForm = hasContacts && isContactFormEnabled();
   const schedulesNoticeText = getContentOrFallback(
     content.schedulesNoticeText,
     "Les horaires seront communiqués par la section dès qu'ils seront confirmés.",
@@ -267,7 +269,7 @@ export function ActivityDetailPage({
                   <ActivitySocialLinks socialLinks={socialLinks} />
                 ) : null}
               </div>
-              {hasContacts ? (
+              {showContactForm ? (
                 <ActivityContactForm
                   activitySlug={activity.slug}
                   activityTitle={activity.title}

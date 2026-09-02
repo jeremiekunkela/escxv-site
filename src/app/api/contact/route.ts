@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { buildContactMessage } from "@/features/contact/lib/buildContactMessage";
 import {
+  isContactFormEnabled,
   resolveContactSender,
   resolveTokenSecret,
 } from "@/features/contact/lib/contactEnvironment";
@@ -51,12 +52,20 @@ const readBody = async (request: Request) => {
 export const GET = () => {
   const secret = resolveTokenSecret();
 
-  return secret
+  return isContactFormEnabled() && secret
     ? NextResponse.json({ token: createContactToken(Date.now(), secret) })
     : NextResponse.json({ error: UNAVAILABLE_MESSAGE }, { status: 503 });
 };
 
 export const POST = async (request: Request) => {
+  /**
+   * Les pages cessent d'afficher le formulaire, mais la route reste publique :
+   * elle refuse elle aussi, sinon un envoi direct passerait encore.
+   */
+  if (!isContactFormEnabled()) {
+    return NextResponse.json({ error: UNAVAILABLE_MESSAGE }, { status: 503 });
+  }
+
   const secret = resolveTokenSecret();
   const send = resolveContactSender();
 

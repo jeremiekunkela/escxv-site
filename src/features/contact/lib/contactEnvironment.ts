@@ -22,6 +22,17 @@ const isProductionDeployment = () =>
     ? process.env.VERCEL_ENV === "production"
     : isProduction();
 
+/**
+ * Formulaires coupes sur le deploiement de production : la page bascule sur
+ * les adresses de section et la route refuse de servir. Le defaut est
+ * l'extinction, pour qu'un oubli de variable ne rouvre pas l'envoi tout seul ;
+ * `CONTACT_FORM_ENABLED=true` les rallume sans toucher au code.
+ *
+ * Preview et developpement gardent le formulaire : c'est la qu'on le teste.
+ */
+export const isContactFormEnabled = () =>
+  readEnv("CONTACT_FORM_ENABLED") === "true" || !isProductionDeployment();
+
 export const resolveRecipientOverrideEmail = () => {
   const email =
     readEnv("CONTACT_RECIPIENT_OVERRIDE_EMAIL") ||
