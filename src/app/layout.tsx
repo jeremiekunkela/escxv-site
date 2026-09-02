@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ScrollReveal } from "@/components/shared/ScrollReveal/ScrollReveal";
+import { siteUrl } from "@/lib/constants/routes";
 import { getClubInfo } from "@/features/club/data-access/club";
 import "@/styles/globals.css";
 
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     template: `%s | ${club.shortName}`,
   },
   description: club.description,
-  metadataBase: new URL("https://escxv.fr"),
+  metadataBase: new URL(siteUrl),
   icons: {
     icon: [{ url: "/favicon.png", type: "image/png", sizes: "512x512" }],
     shortcut: "/favicon.png",
