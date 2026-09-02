@@ -32,12 +32,13 @@ export default function ConfidentialitePage() {
       <LegalSection title="Mesure d'audience">
         <p>
           Nous comptons les visites et les pages consultées, pour savoir ce qui
-          est utile et ce qui ne l&apos;est pas. La mesure est assurée par
-          <strong> Vercel Web Analytics</strong>, l&apos;hébergeur du site :
-          elle fonctionne <strong>sans cookie</strong> et sans identifiant
-          persistant, ne conserve que des totaux agrégés, et ne permet ni de
-          vous reconnaître d&apos;une visite à l&apos;autre, ni de vous suivre
-          ailleurs sur le web.
+          est utile et ce qui ne l&apos;est pas, ainsi que les temps de
+          chargement, pour repérer les pages trop lentes. Ces mesures sont
+          assurées par <strong>Vercel</strong>, l&apos;hébergeur du site :
+          elles fonctionnent <strong>sans cookie</strong> et sans identifiant
+          persistant, ne conservent que des totaux agrégés, et ne permettent ni
+          de vous reconnaître d&apos;une visite à l&apos;autre, ni de vous
+          suivre ailleurs sur le web.
         </p>
       </LegalSection>
 
