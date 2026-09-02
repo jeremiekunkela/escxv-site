@@ -1,0 +1,115 @@
+.page {
+  padding: var(--space-2xl) 0 var(--space-section);
+}
+
+.inner {
+  max-width: 760px;
+}
+
+.header {
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-brand);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: var(--space-xs) 0 0;
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-tight);
+}
+
+.description {
+  margin: var(--space-sm) 0 0;
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-body);
+}
+
+.actions {
+  margin-top: var(--space-lg);
+}
+
+.section {
+  display: grid;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: var(--font-size-lg);
+}
+
+.destinations {
+  display: grid;
+  gap: var(--space-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.destination {
+  display: grid;
+  gap: 2px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  text-decoration: none;
+  transition:
+    border-color var(--transition-standard),
+    background var(--transition-standard);
+}
+
+.destination:hover,
+.destination:focus-visible {
+  border-color: var(--color-border-strong);
+  background: var(--color-brand-soft);
+}
+
+.destinationLabel {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.destinationDescription {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
+}
+
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.activity {
+  display: inline-flex;
+  padding: 7px 13px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition:
+    border-color var(--transition-standard),
+    color var(--transition-standard);
+}
+
+.activity:hover,
+.activity:focus-visible {
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+}
