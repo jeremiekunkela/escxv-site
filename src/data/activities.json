@@ -3118,12 +3118,12 @@
     ],
     "schedules": [
       {
-        "id": "yoga-mardi-1800",
+        "id": "yoga-mardi-1830",
         "practiceGroupId": "yoga-tous",
         "spaceId": "sablonniere-gymnase",
         "type": "training",
         "day": "mardi",
-        "startTime": "18:00",
+        "startTime": "18:30",
         "endTime": "20:00",
         "tags": [],
         "notes": "Salle de danse."
