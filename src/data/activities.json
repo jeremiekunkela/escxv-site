@@ -2004,7 +2004,7 @@
       {
         "id": "judo-5-8-mercredi",
         "practiceGroupId": "judo-5-8",
-        "spaceId": "sablonniere-gymnase",
+        "spaceId": "la-plaine-salle-arts-martiaux",
         "type": "training",
         "day": "mercredi",
         "startTime": "13:00",
@@ -2034,7 +2034,7 @@
       {
         "id": "judo-8-13-mercredi",
         "practiceGroupId": "judo-8-13",
-        "spaceId": "sablonniere-gymnase",
+        "spaceId": "la-plaine-salle-arts-martiaux",
         "type": "training",
         "day": "mercredi",
         "startTime": "14:00",
