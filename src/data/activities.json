@@ -3094,16 +3094,17 @@
     "registrationUrl": "https://escxv.monclub.app/app/6245a3e85168680028df2fa1",
     "content": {
       "heroSubtitle": "Hatha-yoga ouvert à tous, le mardi soir à Cambronne.",
+      "seasonStartText": "Rentrée 2026 : reprise des cours le mardi 15 septembre.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
       {
-        "title": "Hatha-Yoga",
+        "title": "Hatha Yoga · Yoga postural",
         "practiceGroupIds": [
           "yoga-tous"
         ],
-        "description": "Relaxation, respiration, échauffement progressif et postures dynamiques ou douces, à son rythme."
+        "description": "Une pratique alliant respiration, relaxation, échauffement progressif, mobilité, étirements profonds et renforcement musculaire, à travers des postures dynamiques et douces. Une approche basée sur l'anatomie du mouvement et la compréhension du corps, dans le respect de la morphologie, des possibilités et des besoins de chacun. Cours tous niveaux."
       }
     ],
     "practiceGroups": [
