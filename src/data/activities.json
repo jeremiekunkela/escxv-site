@@ -990,6 +990,8 @@
       "escalade"
     ],
     "publics": [
+      "enfants",
+      "adolescents",
       "adultes"
     ],
     "tags": [
@@ -1000,11 +1002,20 @@
     "image": "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/61786cfb1df3f700288f2f43",
     "content": {
-      "heroSubtitle": "Grimpe adultes et ateliers parent-enfant à La Plaine et à Croix-Nivert.",
-      "schedulesNoticeText": "D'autres créneaux (mardi, jeudi, dimanche) peuvent exister selon la saison et sont à confirmer auprès de la section.",
+      "heroSubtitle": "Grimpe jeunes dès 7 ans, adultes et ateliers parent-enfant à La Plaine et à Croix-Nivert.",
+      "schedulesNoticeText": "Un créneau du dimanche peut exister selon la saison et est à confirmer auprès de la section.",
       "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
     "programs": [
+      {
+        "title": "Escalade jeunes",
+        "practiceGroupIds": [
+          "esc-jeunes-7-10",
+          "esc-jeunes-11-13",
+          "esc-jeunes-14-plus"
+        ],
+        "description": "Nouvelle section enfants et ados : apprentissage de la grimpe, de la sécurité et de l'autonomie sur le mur de La Plaine, le mardi et le jeudi soir."
+      },
       {
         "title": "Grimpe adultes",
         "practiceGroupIds": [
@@ -1023,28 +1034,89 @@
     ],
     "practiceGroups": [
       {
+        "id": "esc-jeunes-7-10",
+        "label": "Enfants (7-10 ans)",
+        "public": "enfants",
+        "gender": "mixte",
+        "sortOrder": 1
+      },
+      {
+        "id": "esc-jeunes-11-13",
+        "label": "Enfants (11-13 ans)",
+        "public": "adolescents",
+        "gender": "mixte",
+        "sortOrder": 2
+      },
+      {
+        "id": "esc-jeunes-14-plus",
+        "label": "Jeunes (14 ans et +)",
+        "public": "adolescents",
+        "gender": "mixte",
+        "sortOrder": 3
+      },
+      {
         "id": "esc-adultes",
         "label": "Adultes",
         "public": "adultes",
         "gender": "mixte",
-        "sortOrder": 1
+        "sortOrder": 4
       },
       {
         "id": "esc-ape",
         "label": "Atelier Parent-Enfant (APE)",
         "public": "enfants",
         "gender": "mixte",
-        "sortOrder": 2
+        "sortOrder": 5
       },
       {
         "id": "esc-ape-plus",
         "label": "APE Plus",
         "public": "adultes",
         "gender": "mixte",
-        "sortOrder": 3
+        "sortOrder": 6
       }
     ],
     "schedules": [
+      {
+        "id": "esc-jeunes-7-10-mardi",
+        "practiceGroupId": "esc-jeunes-7-10",
+        "spaceId": "la-plaine-gymnase",
+        "type": "training",
+        "day": "mardi",
+        "startTime": "18:00",
+        "endTime": "19:00",
+        "tags": []
+      },
+      {
+        "id": "esc-jeunes-7-10-jeudi",
+        "practiceGroupId": "esc-jeunes-7-10",
+        "spaceId": "la-plaine-gymnase",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "18:00",
+        "endTime": "19:00",
+        "tags": []
+      },
+      {
+        "id": "esc-jeunes-11-13-mardi",
+        "practiceGroupId": "esc-jeunes-11-13",
+        "spaceId": "la-plaine-gymnase",
+        "type": "training",
+        "day": "mardi",
+        "startTime": "18:00",
+        "endTime": "19:00",
+        "tags": []
+      },
+      {
+        "id": "esc-jeunes-14-plus-jeudi",
+        "practiceGroupId": "esc-jeunes-14-plus",
+        "spaceId": "la-plaine-gymnase",
+        "type": "training",
+        "day": "jeudi",
+        "startTime": "19:00",
+        "endTime": "20:30",
+        "tags": []
+      },
       {
         "id": "esc-adultes-lundi",
         "practiceGroupId": "esc-adultes",
@@ -1096,6 +1168,26 @@
       }
     ],
     "prices": [
+      {
+        "id": "escalade-2026-2027-enfants",
+        "season": "2026/2027",
+        "label": "Escalade - Adhésion Enfants",
+        "ageRange": "7-13 ans",
+        "clubFee": 75,
+        "activityFee": 165,
+        "total": 240,
+        "extraFees": []
+      },
+      {
+        "id": "escalade-2026-2027-jeunes",
+        "season": "2026/2027",
+        "label": "Escalade - Adhésion Jeunes",
+        "ageRange": "14 ans et +",
+        "clubFee": 75,
+        "activityFee": 195,
+        "total": 270,
+        "extraFees": []
+      },
       {
         "id": "escalade-2026-2027-adultes",
         "season": "2026/2027",
