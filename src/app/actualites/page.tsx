@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Les dernières actualités publiées par l'ESCXV et ses sections.",
 };
 
-export default function NewsPage() {
+export default function NewsPage() {                                                   
   const news = getPublishedNews();
   const activityLabelsBySlug = Object.fromEntries(
     getActivities().map((activity) => [activity.slug, activity.title]),
