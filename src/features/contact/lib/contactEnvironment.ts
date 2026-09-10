@@ -2,6 +2,7 @@ import {
   createConsoleSender,
   createResendSender,
 } from "@/features/contact/data-access/contactSenders";
+import { IS_CONTACT_MAINTENANCE } from "@/features/contact/lib/contactMaintenance";
 import { isSendableEmail } from "@/features/contact/lib/emailAddress";
 import type { SendContactMessage } from "@/features/contact/types/contact";
 
@@ -73,13 +74,15 @@ export const resolveContactSender = (): SendContactMessage | null => {
 /**
  * Interrupteur des formulaires. `CONTACT_FORM_ENABLED=false` les coupe : les
  * pages basculent sur les adresses email et la route refuse de servir, sans
- * redeploiement de code.
+ * redeploiement de code. La maintenance de la messagerie les coupe de meme,
+ * depuis le code cette fois — cf. contactMaintenance.
  *
  * Un formulaire ne s'affiche de toute facon que si l'envoi est configure —
  * secret de jeton et emetteur. Mieux vaut l'adresse de la section qu'un champ
  * qui echoue une fois rempli.
  */
 export const isContactFormEnabled = () =>
+  !IS_CONTACT_MAINTENANCE &&
   readEnv("CONTACT_FORM_ENABLED") !== "false" &&
   resolveTokenSecret() !== null &&
   resolveContactSender() !== null;
