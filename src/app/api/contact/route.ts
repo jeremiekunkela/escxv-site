@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 import { buildContactMessage } from "@/features/contact/lib/buildContactMessage";
 import { sendContactAlert } from "@/features/contact/lib/contactAlert";
 import {
+  CONTACT_MAINTENANCE_TEXT,
+  IS_CONTACT_MAINTENANCE,
+} from "@/features/contact/lib/contactMaintenance";
+import {
   isContactFormEnabled,
   resolveContactSender,
   resolveTokenSecret,
@@ -32,6 +36,13 @@ const MAX_BODY_LENGTH = 8_000;
 const UNAVAILABLE_MESSAGE =
   "Le formulaire est momentanément indisponible. Écrivez directement à la section.";
 
+/**
+ * Un envoi force pendant la maintenance recoit la raison plutot que le renvoi
+ * vers l'adresse de section : elle ne recoit rien non plus.
+ */
+const unavailableMessage = () =>
+  IS_CONTACT_MAINTENANCE ? CONTACT_MAINTENANCE_TEXT : UNAVAILABLE_MESSAGE;
+
 const GENERIC_ERROR_MESSAGE =
   "L'envoi a échoué. Réessayez dans un instant ou écrivez directement à la section.";
 
@@ -58,7 +69,7 @@ export const GET = () => {
 
   return isContactFormEnabled() && secret
     ? NextResponse.json({ token: createContactToken(Date.now(), secret) })
-    : NextResponse.json({ error: UNAVAILABLE_MESSAGE }, { status: 503 });
+    : NextResponse.json({ error: unavailableMessage() }, { status: 503 });
 };
 
 export const POST = async (request: Request) => {
@@ -67,7 +78,7 @@ export const POST = async (request: Request) => {
    * elle refuse elle aussi, sinon un envoi direct passerait encore.
    */
   if (!isContactFormEnabled()) {
-    return NextResponse.json({ error: UNAVAILABLE_MESSAGE }, { status: 503 });
+    return NextResponse.json({ error: unavailableMessage() }, { status: 503 });
   }
 
   const secret = resolveTokenSecret();
