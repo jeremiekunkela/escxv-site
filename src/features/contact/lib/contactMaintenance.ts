@@ -9,7 +9,7 @@
  *
  * Pour lever la maintenance : repasser ce drapeau a false, rien d'autre.
  */
-export const IS_CONTACT_MAINTENANCE: boolean = true;
+export const IS_CONTACT_MAINTENANCE: boolean = false;
 
 export const CONTACT_MAINTENANCE_TITLE = "Formulaire en maintenance";
 
