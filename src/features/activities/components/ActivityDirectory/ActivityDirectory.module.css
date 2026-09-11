@@ -3,42 +3,38 @@
   gap: var(--space-md);
 }
 
-.filters {
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm) var(--space-md);
+}
+
+.menus {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
 }
 
-.filterButton {
-  min-height: 42px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
-  background: var(--color-surface-raised);
+.resultCount {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 0;
   color: var(--color-text-secondary);
-  padding: 0 var(--space-md);
-  cursor: pointer;
-  font-family: inherit;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
-  transition:
-    border-color var(--transition-standard),
-    background var(--transition-standard),
-    color var(--transition-standard),
-    box-shadow var(--transition-standard),
-    transform var(--transition-standard);
 }
 
-.filterButton:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-border-strong);
+/* Le chiffre est ce qui change : il porte l'echelle et la couleur de marque. */
+.resultNumber {
   color: var(--color-brand);
-}
-
-.filterButtonActive {
-  border-color: var(--color-brand);
-  background: var(--color-brand);
-  color: var(--color-text-inverse);
-  box-shadow: 0 8px 24px rgba(var(--color-brand-rgb), 0.22);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  animation: countPop var(--transition-standard) both;
 }
 
 .tiles {
@@ -48,6 +44,56 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+/*
+ * Cascade rejouee a chaque filtrage : la liste se recompose sous l'oeil, au
+ * lieu de sauter d'un etat a l'autre. C'est le seul moment ou le repertoire
+ * bouge — le mouvement dit qu'il a repondu.
+ */
+.tiles > li {
+  animation: tileIn var(--transition-smooth) var(--tile-delay, 0ms) both;
+}
+
+@keyframes tileIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes countPop {
+  from {
+    transform: scale(0.72);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.noResult {
+  margin: 0;
+  animation: tileIn var(--transition-smooth) both;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-raised);
+  padding: 22px;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 640px) {
+  .menus {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
 }
 
 @media (max-width: 520px) {

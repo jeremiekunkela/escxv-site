@@ -163,3 +163,21 @@
     aspect-ratio: 16 / 9;
   }
 }
+
+.locationLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--space-xs);
+  color: var(--color-brand);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: gap var(--transition-standard);
+}
+
+.locationLink:hover {
+  gap: 10px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

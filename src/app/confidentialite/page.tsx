@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { routes } from "@/lib/constants/routes";
 import {
   LegalPage,
   LegalSection,
@@ -10,6 +11,7 @@ const club = getClubInfo();
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
   description: `Ce que le site de ${club.shortName} collecte, ce qu'il ne collecte pas, et comment exercer vos droits.`,
+  alternates: { canonical: routes.privacy },
 };
 
 export default function ConfidentialitePage() {

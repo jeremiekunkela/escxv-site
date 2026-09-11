@@ -2,15 +2,23 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, MapPin, Search } from "lucide-react";
-import { useMemo, useState } from "react";
+import { ChevronLeft, ChevronRight, Search } from "lucide-react";
+import type { CSSProperties } from "react";
+import { useState } from "react";
+import { ActiveFilters } from "@/components/shared/ActiveFilters/ActiveFilters";
+import type { ActiveFilter } from "@/components/shared/ActiveFilters/ActiveFilters";
+import { FilterMenu } from "@/components/shared/FilterMenu/FilterMenu";
+import type { FilterOption } from "@/components/shared/FilterMenu/FilterMenu";
 import { Container } from "@/components/ui/Container/Container";
-import { locationTypeLabels } from "@/features/activities/lib/activityLabels";
+import {
+  collectFilterableSports,
+  filterInstallations,
+  NO_INSTALLATION_FILTER,
+} from "@/features/activities/lib/installationFilters";
+import type { InstallationFilters } from "@/features/activities/lib/installationFilters";
+import { removeFilterValue, toggleFilterValue } from "@/lib/utils";
 import { getActivityLocationAnchorId } from "@/features/activities/lib/activityRoutes";
-import type {
-  Installation,
-  InstallationSport,
-} from "@/features/activities/data-access/activities";
+import type { Installation } from "@/features/activities/data-access/activities";
 import { getActivityRoute } from "@/lib/constants/routes";
 import styles from "./InstallationsExplorer.module.css";
 
@@ -18,57 +26,34 @@ type InstallationsExplorerProps = {
   installations: Installation[];
 };
 
-type SportFilter = InstallationSport["slug"] | "all";
-
 type InstallationMedia = {
   src: string;
   label: string;
 };
 
 /**
- * La recherche couvre la description et le type : un lieu
- * polyvalent (une piscine dans un centre sportif) doit remonter sur "piscine".
+ * Les fiches de lieu sont hautes : une poignee suffit a l'ecran, le decalage
+ * se fige donc plus tot que pour les tuiles d'activites.
+ *
+ * La liste ne porte volontairement aucune cle de rendu, la ou le repertoire
+ * des activites en a une pour rejouer sa cascade : ici, remonter la liste
+ * rechargerait les treize plans Google a chaque lettre tapee. Seules les
+ * fiches qui entrent vraiment s'animent, les autres gardent leur carte.
  */
-function matchesQuery(installation: Installation, query: string) {
-  const haystack = [
-    installation.name,
-    installation.address,
-    installation.city,
-    installation.postalCode,
-    locationTypeLabels[installation.type],
-    installation.description ?? "",
-    ...installation.sports.map((sport) => sport.title),
-  ]
-    .join(" ")
-    .toLowerCase();
+const CARD_STAGGER_STEP_MS = 45;
+const MAX_STAGGERED_CARDS = 6;
 
-  return haystack.includes(query);
-}
-
-/**
- * Registre des sports proposés au filtre : uniquement ceux rattachés à au moins
- * une installation, dédoublonnés et triés par titre.
- */
-function collectSports(installations: Installation[]): InstallationSport[] {
-  const bySlug = new Map(
-    installations.flatMap((installation) =>
-      installation.sports.map((sport) => [sport.slug, sport] as const),
-    ),
-  );
-
-  return [...bySlug.values()].toSorted((left, right) =>
-    left.title.localeCompare(right.title),
-  );
-}
+const getCardDelay = (index: number) =>
+  `${Math.min(index, MAX_STAGGERED_CARDS) * CARD_STAGGER_STEP_MS}ms`;
 
 function collectMedia(
   installation: Installation,
-  activeSport: SportFilter,
+  activeSportSlugs: string[],
 ): InstallationMedia[] {
   const visibleSpaces = installation.spaces.filter(
     (space) =>
-      activeSport === "all" ||
-      space.sports.some((sport) => sport.slug === activeSport),
+      activeSportSlugs.length === 0 ||
+      space.sports.some((sport) => activeSportSlugs.includes(sport.slug)),
   );
 
   const spaceMedia = visibleSpaces.flatMap((space) =>
@@ -173,22 +158,23 @@ function InstallationVisual({
 export function InstallationsExplorer({
   installations,
 }: InstallationsExplorerProps) {
-  const [query, setQuery] = useState("");
-  const [activeSport, setActiveSport] = useState<SportFilter>("all");
-
-  const availableSports = useMemo(
-    () => collectSports(installations),
-    [installations],
+  const [filters, setFilters] = useState<InstallationFilters>(
+    NO_INSTALLATION_FILTER,
   );
 
-  const normalizedQuery = query.trim().toLowerCase();
+  const sportOptions: FilterOption<string>[] = collectFilterableSports(
+    installations,
+  ).map((sport) => ({ value: sport.slug, label: sport.title }));
 
-  const filtered = installations.filter(
-    (installation) =>
-      (activeSport === "all" ||
-        installation.sports.some((sport) => sport.slug === activeSport)) &&
-      (normalizedQuery.length === 0 ||
-        matchesQuery(installation, normalizedQuery)),
+  const filtered = filterInstallations(installations, filters);
+
+  const activeFilters: ActiveFilter<"sportSlugs">[] = filters.sportSlugs.map(
+    (value) => ({
+      key: "sportSlugs" as const,
+      value,
+      label:
+        sportOptions.find((option) => option.value === value)?.label ?? value,
+    }),
   );
 
   return (
@@ -203,62 +189,64 @@ export function InstallationsExplorer({
               size={20}
             />
             <input
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
+              value={filters.query}
+              onChange={(event) =>
+                setFilters((current) => ({
+                  ...current,
+                  query: event.target.value,
+                }))
+              }
               placeholder="Rechercher : gymnase, La Plaine, judo, piscine..."
               className={styles.searchInput}
             />
           </label>
 
-          <div className={styles.filterGroup}>
-            <p className={styles.filterLabel} id="sport-filter-label">
-              Filtrer par sport
-            </p>
-            <div className={styles.filters} aria-labelledby="sport-filter-label">
-              <button
-                type="button"
-                aria-pressed={activeSport === "all"}
-                onClick={() => setActiveSport("all")}
-                className={
-                  activeSport === "all"
-                    ? `${styles.filterButton} ${styles.filterButtonActive}`
-                    : styles.filterButton
+          <div className={styles.toolbar}>
+            <div
+              className={styles.menus}
+              role="group"
+              aria-label="Filtrer les lieux"
+            >
+              <FilterMenu
+                label="Sport"
+                options={sportOptions}
+                selected={filters.sportSlugs}
+                onToggle={(value) =>
+                  setFilters((current) => ({
+                    ...current,
+                    sportSlugs: toggleFilterValue(current.sportSlugs, value),
+                  }))
                 }
-              >
-                Tous les sports
-              </button>
-              {availableSports.map((sport) => {
-                const isActive = activeSport === sport.slug;
-
-                return (
-                  <button
-                    key={sport.slug}
-                    type="button"
-                    aria-pressed={isActive}
-                    onClick={() => setActiveSport(sport.slug)}
-                    className={
-                      isActive
-                        ? `${styles.filterButton} ${styles.filterButtonActive}`
-                        : styles.filterButton
-                    }
-                  >
-                    {sport.title}
-                  </button>
-                );
-              })}
+                onClear={() =>
+                  setFilters((current) => ({ ...current, sportSlugs: [] }))
+                }
+              />
             </div>
+
+            <p className={styles.resultCount} role="status">
+              <span key={filtered.length} className={styles.resultNumber}>
+                {filtered.length}
+              </span>
+              installation{filtered.length > 1 ? "s" : ""}
+            </p>
           </div>
         </div>
 
-        <p className={styles.resultCount} role="status">
-          {filtered.length} installation{filtered.length > 1 ? "s" : ""}
-        </p>
+        <div className={styles.activeFilters}>
+          <ActiveFilters
+            filters={activeFilters}
+            onRemove={(key, value) =>
+              setFilters((current) => removeFilterValue(current, key, value))
+            }
+            onClear={() => setFilters(NO_INSTALLATION_FILTER)}
+          />
+        </div>
 
         {filtered.length > 0 ? (
           <div className={styles.list}>
-            {filtered.map((installation) => {
+            {filtered.map((installation, index) => {
               const media = getDisplayMedia(
-                collectMedia(installation, activeSport),
+                collectMedia(installation, filters.sportSlugs),
                 installation,
               );
 
@@ -266,6 +254,7 @@ export function InstallationsExplorer({
                 <article
                   id={getActivityLocationAnchorId(installation.id)}
                   key={installation.id}
+                  style={{ "--card-delay": getCardDelay(index) } as CSSProperties}
                   className={
                     media.length > 0 || installation.mapEmbedUrl
                       ? styles.card
@@ -275,13 +264,6 @@ export function InstallationsExplorer({
                   <InstallationVisual installation={installation} media={media} />
 
                   <div className={styles.body}>
-                    <p className={styles.city}>
-                      <MapPin aria-hidden="true" size={16} />
-                      {installation.city} {installation.postalCode}
-                      <span className={styles.typeTag}>
-                        {locationTypeLabels[installation.type]}
-                      </span>
-                    </p>
                     <h2 className={styles.title}>{installation.name}</h2>
                     <p className={styles.address}>
                       {installation.address}, {installation.postalCode}{" "}
@@ -293,6 +275,19 @@ export function InstallationsExplorer({
                       </p>
                     ) : null}
 
+                    {installation.spaces.length > 1 ? (
+                      <div className={styles.group}>
+                        <p className={styles.groupTitle}>Espaces de pratique</p>
+                        <ul className={styles.spaces}>
+                          {installation.spaces.map((space) => (
+                            <li key={space.id} className={styles.space}>
+                              <p className={styles.spaceLabel}>{space.label}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+
                     <div className={styles.group}>
                       <p className={styles.groupTitle}>Sports pratiqués ici</p>
                       {installation.sports.length > 0 ? (
@@ -302,7 +297,7 @@ export function InstallationsExplorer({
                               <Link
                                 href={getActivityRoute(sport.slug)}
                                 className={
-                                  sport.slug === activeSport
+                                  filters.sportSlugs.includes(sport.slug)
                                     ? `${styles.sport} ${styles.sportActive}`
                                     : styles.sport
                                 }
@@ -343,10 +338,7 @@ export function InstallationsExplorer({
             <button
               type="button"
               className={styles.resetButton}
-              onClick={() => {
-                setQuery("");
-                setActiveSport("all");
-              }}
+              onClick={() => setFilters(NO_INSTALLATION_FILTER)}
             >
               Réinitialiser les filtres
             </button>

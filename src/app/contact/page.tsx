@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { routes } from "@/lib/constants/routes";
+import { JsonLd } from "@/components/shared/JsonLd/JsonLd";
+import { buildBreadcrumbSchema } from "@/lib/seo/structuredData";
 import { Container } from "@/components/ui/Container/Container";
 import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
 import { InfoBlock } from "@/components/shared/InfoBlock/InfoBlock";
@@ -25,6 +28,7 @@ const channels = getClubContactChannels();
 export const metadata: Metadata = {
   title: "Contact",
   description: `Écrire au ${club.shortName} ou directement à l'une de ses sections.`,
+  alternates: { canonical: routes.contact },
 };
 
 export default function ContactPage() {
@@ -32,6 +36,12 @@ export default function ContactPage() {
 
   return (
     <>
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: getClubInfo().shortName, path: routes.home },
+          { name: "Contact", path: routes.contact },
+        ])}
+      />
       <HeroSection
         eyebrow="Contact"
         title="Écrire au club"
