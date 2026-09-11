@@ -2,6 +2,7 @@ import {
   createConsoleSender,
   createResendSender,
 } from "@/features/contact/data-access/contactSenders";
+import { getClubInfo } from "@/features/club/data-access/club";
 import { IS_CONTACT_MAINTENANCE } from "@/features/contact/lib/contactMaintenance";
 import { isSendableEmail } from "@/features/contact/lib/emailAddress";
 import type { SendContactMessage } from "@/features/contact/types/contact";
@@ -40,13 +41,32 @@ export const resolveTokenSecret = () => readEnv("CONTACT_TOKEN_SECRET") || null;
  * `CONTACT_SENDER=console` affiche le message dans la console du serveur sans
  * rien envoyer, pour eprouver le parcours sans clef. Rien sinon.
  */
-export const resolveContactSender = (): SendContactMessage | null => {
+export type ContactSenderConfig = {
+  apiKey: string;
+  fromEmail: string;
+  fromName: string;
+};
+
+/**
+ * Acces Resend, quand il est declare. La route de rebond s'en sert aussi :
+ * elle relit le message refuse et le renvoie, ce qui demande la meme cle et
+ * la meme adresse d'expedition que l'envoi d'origine.
+ */
+export const resolveContactSenderConfig = (): ContactSenderConfig | null => {
   const apiKey = readEnv("RESEND_API_KEY");
   const fromEmail = readEnv("CONTACT_FROM_EMAIL");
   const fromName = readEnv("CONTACT_FROM_NAME") || DEFAULT_FROM_NAME;
 
   return apiKey && isSendableEmail(fromEmail)
-    ? createResendSender({ apiKey, fromEmail, fromName })
+    ? { apiKey, fromEmail, fromName }
+    : null;
+};
+
+export const resolveContactSender = (): SendContactMessage | null => {
+  const config = resolveContactSenderConfig();
+
+  return config
+    ? createResendSender(config)
     : readEnv("CONTACT_SENDER") === "console"
       ? createConsoleSender()
       : null;
@@ -67,6 +87,27 @@ export const isContactFormEnabled = () =>
   readEnv("CONTACT_FORM_ENABLED") !== "false" &&
   resolveTokenSecret() !== null &&
   resolveContactSender() !== null;
+
+/**
+ * Secret de signature des evenements Resend. Sans lui, la route de rebond
+ * refuse tout : une signature qu'on ne peut pas verifier ne prouve rien, et
+ * un endpoint qui accepte n'importe quel corps declencherait des envois sur
+ * commande.
+ */
+export const resolveWebhookSecret = () =>
+  readEnv("RESEND_WEBHOOK_SECRET") || null;
+
+/**
+ * Adresse de repli d'un message refuse par une boite de section. Elle est
+ * decidee ici et nulle part ailleurs : ni le navigateur, ni l'evenement de
+ * rebond n'ont voix au chapitre, sans quoi un tiers choisirait ou le site
+ * envoie. Sans variable, c'est l'adresse generale du club.
+ */
+export const resolveFallbackEmail = () => {
+  const declared = readEnv("CONTACT_FALLBACK_EMAIL");
+
+  return isSendableEmail(declared) ? declared : getClubInfo().email;
+};
 
 /**
  * Webhook d'alerte, appele quand un message n'a pas pu partir. Vide, il ne se
