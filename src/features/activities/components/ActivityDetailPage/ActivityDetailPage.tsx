@@ -19,7 +19,6 @@ import {
   CONTACT_MAINTENANCE_TEXT,
   CONTACT_MAINTENANCE_TITLE,
   IS_CONTACT_MAINTENANCE,
-  isMaintainedEmail,
 } from "@/features/contact/lib/contactMaintenance";
 import type { Activity } from "@/features/activities/types/activity";
 import { NewsList } from "@/features/news/components/NewsList/NewsList";
@@ -106,14 +105,12 @@ export function ActivityDetailPage({
   const showContactForm = hasContacts && isContactFormEnabled();
   /**
    * Le formulaire disparait sans rien dire quand l'envoi n'est pas configure :
-   * la page garde alors les adresses, qui suffisent. Pendant la maintenance
-   * elles ne recoivent plus, il faut donc le dire — mais seulement aux
-   * sections dont la boite est sur le domaine concerne.
+   * la page garde alors les adresses, qui suffisent. Pendant la maintenance on
+   * le dit quand meme, sinon son absence passe pour une panne : le mot precise
+   * que l'adresse affichee, elle, recoit.
    */
   const showMaintenanceNotice =
-    IS_CONTACT_MAINTENANCE &&
-    !showContactForm &&
-    activity.contacts.some((contact) => isMaintainedEmail(contact.email));
+    IS_CONTACT_MAINTENANCE && !showContactForm && hasContacts;
   const schedulesNoticeText = getContentOrFallback(
     content.schedulesNoticeText,
     "Les horaires seront communiqués par la section dès qu'ils seront confirmés.",
