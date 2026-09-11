@@ -3,7 +3,10 @@ import {
   getActivityBySlug,
 } from "@/features/activities/data-access/activities";
 import { getClubInfo } from "@/features/club/data-access/club";
-import { resolveRecipientOverrideEmail } from "@/features/contact/lib/contactEnvironment";
+import {
+  resolveFallbackEmail,
+  resolveRecipientOverrideEmail,
+} from "@/features/contact/lib/contactEnvironment";
 import { isInactiveContactEmail } from "@/features/contact/lib/contactMaintenance";
 import { isSendableEmail } from "@/features/contact/lib/emailAddress";
 import type { ContactRecipient } from "@/features/contact/types/contact";
@@ -47,28 +50,32 @@ const findRecipient = (slug: string): ContactRecipient | null => {
   const club = getClubInfo();
 
   if (slug === CLUB_RECIPIENT_SLUG) {
-    return club.email ? { email: club.email, label: club.shortName } : null;
+    return club.email
+      ? { email: club.email, label: club.shortName, reroutedFrom: null }
+      : null;
   }
 
   const named = findActivityContact(slug);
 
   if (named) {
-    return { email: named.contact.email, label: named.activity.title };
+    return {
+      email: named.contact.email,
+      label: named.activity.title,
+      reroutedFrom: null,
+    };
   }
 
   const activity = getActivityBySlug(slug);
   const contact = activity?.contacts[0];
 
   return activity && contact
-    ? { email: contact.email, label: activity.title }
+    ? { email: contact.email, label: activity.title, reroutedFrom: null }
     : null;
 };
 
 /**
  * La boite de la section est-elle encore fermee ? Le test porte sur l'adresse
- * declaree, pas sur celle qui recevra : un destinataire force sert a eprouver
- * le parcours, et le bloquer ici vaut mieux que laisser croire qu'une section
- * injoignable repond.
+ * declaree, pas sur celle qui recevra : c'est elle qui decide du deroutement.
  */
 export const isInactiveRecipientSlug = (slug: string) => {
   const recipient = findRecipient(slug);
@@ -90,11 +97,29 @@ export const isKnownRecipientSlug = (slug: string) => findRecipient(slug) !== nu
  *
  * Une section peut declarer plusieurs contacts (escalade : adultes et APE).
  * Le premier fait foi, c'est l'adresse generale de la section.
+ *
+ * Une boite pas encore ouverte n'est jamais appelee : le message part au club
+ * directement. Lui ecrire pour qu'il rebondisse serait fabriquer un echec de
+ * livraison a chaque envoi, et une reputation d'expedition se paie sur tous
+ * les autres messages du club, pas seulement sur celui-la.
+ *
+ * Le deroutement ne se demande pas au visiteur : le club et sa section sont
+ * la meme association, et router un message de l'une vers l'autre releve du
+ * fonctionnement interne, pas d'un transfert a un tiers. Ce qui lui est du,
+ * c'est de savoir ou son message atterrit — la page de section le dit.
  */
 export const resolveContactRecipient = (
   slug: string,
 ): ContactRecipient | null => {
-  const recipient = findRecipient(slug);
+  const declared = findRecipient(slug);
+  const isInactive = declared !== null && isInactiveContactEmail(declared.email);
+  const fallbackEmail = resolveFallbackEmail();
+
+  const recipient =
+    declared && isInactive && fallbackEmail
+      ? { ...declared, email: fallbackEmail, reroutedFrom: declared.email }
+      : declared;
+
   const recipientOverrideEmail = resolveRecipientOverrideEmail();
   const email = recipient
     ? (recipientOverrideEmail ?? recipient.email)
@@ -123,6 +148,7 @@ export const resolveContactRecipient = (
         ? "club"
         : "section",
     recipient: email ? maskEmail(email) : null,
+    reroutedFrom: recipient?.reroutedFrom ? maskEmail(recipient.reroutedFrom) : null,
   });
 
   return recipient && email && isDeliverable ? { ...recipient, email } : null;

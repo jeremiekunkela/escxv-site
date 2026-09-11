@@ -1,17 +1,7 @@
 import { getActivities } from "@/features/activities/data-access/activities";
-import type { Activity } from "@/features/activities/types/activity";
 import { getClubInfo } from "@/features/club/data-access/club";
-import { isInactiveContactEmail } from "@/features/contact/lib/contactMaintenance";
 import { CLUB_RECIPIENT_SLUG } from "@/features/contact/lib/resolveContactRecipient";
 import type { ContactFormRecipient } from "@/features/contact/components/ContactForm/ContactForm";
-
-/**
- * Contacts d'une section a qui un message arrive vraiment. Une boite pas
- * encore ouverte est ecartee ici plutot qu'en aval : ce qui n'est pas
- * proposable n'a pas a etre propose.
- */
-export const getReachableContacts = (activity: Activity) =>
-  activity.contacts.filter((contact) => !isInactiveContactEmail(contact.email));
 
 /**
  * Destinataires proposes par le formulaire general. On n'expose que le slug
@@ -27,21 +17,23 @@ export const getReachableContacts = (activity: Activity) =>
  * « Contact adultes », « Contact competition » — la ou le nom du contact
  * repeterait celui de la section. Une section a contact unique garde son
  * titre seul.
+ *
+ * Un contact dont la boite n'est pas encore ouverte reste propose : le
+ * serveur deroute son message vers le club. Le retirer priverait la section
+ * de tout formulaire, donc d'inscriptions, pour une boite qui s'ouvrira.
  */
 export const getContactRecipients = (): ContactFormRecipient[] => [
   {
     slug: CLUB_RECIPIENT_SLUG,
     label: `${getClubInfo().shortName} — question générale`,
   },
-  ...getActivities().flatMap((activity) => {
-    const reachable = getReachableContacts(activity);
-
-    return reachable.map((contact) => ({
+  ...getActivities().flatMap((activity) =>
+    activity.contacts.map((contact) => ({
       slug: contact.id,
       label:
-        reachable.length > 1
+        activity.contacts.length > 1
           ? `${activity.title} — ${contact.role}`
           : activity.title,
-    }));
-  }),
+    })),
+  ),
 ];

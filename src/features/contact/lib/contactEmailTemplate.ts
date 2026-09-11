@@ -55,6 +55,12 @@ export type ContactEmailContent = {
   siteName: string;
   logoUrl: string;
   clubName: string;
+  /**
+   * Adresse que le message visait, quand sa boite n'est pas encore ouverte.
+   * Qui releve la boite du club doit le savoir : sans cela, un message de
+   * section ressemble a une demande adressee au secretariat.
+   */
+  reroutedFrom?: string | null;
 };
 
 /**
@@ -78,6 +84,14 @@ export const renderContactEmailHtml = (content: ContactEmailContent) => {
     renderField("Téléphone", escapeHtml(content.phone ?? "non communiqué")),
     renderField("Sujet", escapeHtml(content.subjectLabel)),
     renderField("Pour", escapeHtml(content.recipientLabel)),
+    ...(content.reroutedFrom
+      ? [
+          renderField(
+            "Transmis",
+            `Ce message visait ${escapeHtml(content.reroutedFrom)}, dont la boîte n'est pas encore ouverte. Le visiteur a accepté qu'il soit traité par le secrétariat.`,
+          ),
+        ]
+      : []),
   ].join("");
 
   return `<!DOCTYPE html>

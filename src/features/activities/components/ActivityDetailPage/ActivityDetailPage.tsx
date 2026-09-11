@@ -15,7 +15,6 @@ import { ActivitySocialLinks } from "@/features/activities/components/ActivitySo
 // `ActivityTrainerCards` removed — trainers section retired
 import { getActivityFacts } from "@/features/activities/lib/activityFacts";
 import { getClubInfo } from "@/features/club/data-access/club";
-import { getReachableContacts } from "@/features/contact/data-access/contactRecipients";
 import { isContactFormEnabled } from "@/features/contact/lib/contactEnvironment";
 import {
   buildInactiveContactText,
@@ -108,17 +107,14 @@ export function ActivityDetailPage({
   const hasSocialLinks = socialLinks.length > 0;
   const hasContactChannels = hasContacts || hasSocialLinks;
   /**
-   * Le formulaire ecrit au contact choisi. Toutes boites fermees, il n'a plus
-   * personne a qui ecrire et disparait : mieux vaut pas de champ qu'un champ
-   * qui avale un message.
+   * Le formulaire reste, meme quand la boite visee n'est pas ouverte : le
+   * serveur deroute alors le message vers le club. Ce qui change, c'est ce
+   * que la page en dit.
    */
-  const reachableContacts = getReachableContacts(activity);
   const inactiveEmails = activity.contacts
     .map((contact) => contact.email)
     .filter(isInactiveContactEmail);
-  const isRecipientInactive = hasContacts && reachableContacts.length === 0;
-  const showContactForm =
-    reachableContacts.length > 0 && isContactFormEnabled();
+  const showContactForm = hasContacts && isContactFormEnabled();
   /**
    * Le formulaire disparait sans rien dire quand l'envoi n'est pas configure :
    * la page garde alors les adresses, qui suffisent. Pendant la maintenance on
@@ -135,7 +131,6 @@ export function ActivityDetailPage({
     !showMaintenanceNotice && inactiveEmails.length > 0
       ? buildInactiveContactText({
           inactiveEmails,
-          isRecipientInactive,
           isFormAvailable: showContactForm,
           clubEmail: getClubInfo().email,
         })
@@ -318,7 +313,7 @@ export function ActivityDetailPage({
               </div>
               {showContactForm ? (
                 <ActivityContactForm
-                  contacts={reachableContacts}
+                  contacts={activity.contacts}
                   content={activity.content}
                 />
               ) : showMaintenanceNotice ? (

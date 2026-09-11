@@ -9,48 +9,14 @@ import {
 
 const primaryTags = {
   recipient: "contact-tennis",
-  allow_fallback: "true",
   delivery_type: "primary",
 };
 
 describe("decideBounceOutcome", () => {
-  it("renvoie quand le visiteur l'a autorise et que le message d'origine est retrouve", () => {
+  it("renvoie quand le message d'origine est retrouve", () => {
     expect(
       decideBounceOutcome({ tags: primaryTags, hasOriginalMessage: true }),
     ).toEqual({ action: "fallback" });
-  });
-
-  it("ne renvoie pas sans autorisation du visiteur", () => {
-    const outcome = decideBounceOutcome({
-      tags: { ...primaryTags, allow_fallback: "false" },
-      hasOriginalMessage: true,
-    });
-
-    expect(outcome.action).toBe("alert-only");
-    expect(outcome).toHaveProperty(
-      "reason",
-      expect.stringContaining("autorise"),
-    );
-  });
-
-  it("traite toute valeur autre que « true » comme un refus", () => {
-    ["", "1", "TRUE", "oui"].forEach((allow_fallback) => {
-      const outcome = decideBounceOutcome({
-        tags: { ...primaryTags, allow_fallback },
-        hasOriginalMessage: true,
-      });
-
-      expect(outcome.action).toBe("alert-only");
-    });
-  });
-
-  it("refuse aussi quand l'etiquette d'autorisation manque", () => {
-    const outcome = decideBounceOutcome({
-      tags: { recipient: "contact-tennis", delivery_type: "primary" },
-      hasOriginalMessage: true,
-    });
-
-    expect(outcome.action).toBe("alert-only");
   });
 
   it("ne renvoie jamais le rebond d'un renvoi : c'est la boucle a couper", () => {
@@ -63,9 +29,9 @@ describe("decideBounceOutcome", () => {
     expect(outcome).toHaveProperty("reason", expect.stringContaining("renvoi"));
   });
 
-  it("coupe la boucle avant meme de regarder l'autorisation", () => {
+  it("coupe la boucle meme sans les autres etiquettes", () => {
     const outcome = decideBounceOutcome({
-      tags: { allow_fallback: "true", delivery_type: "fallback" },
+      tags: { delivery_type: "fallback" },
       hasOriginalMessage: true,
     });
 
