@@ -32,6 +32,7 @@ export type FooterContent = {
     city: string;
     arrondissement: string;
     email: string | null;
+    technicalEmail: string | null;
     description: string;
   };
 };

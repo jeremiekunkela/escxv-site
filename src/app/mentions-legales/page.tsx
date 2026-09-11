@@ -35,6 +35,33 @@ export default function MentionsLegalesPage() {
         </p>
       </LegalSection>
 
+      <LegalSection title="Contact">
+        <p>
+          Deux adresses, selon la nature de la demande. Une question sur une
+          activité, une adhésion ou la vie du club va au secrétariat ; un
+          affichage fautif, un lien mort ou une erreur sur une page relève de
+          l&apos;équipe technique, qui n&apos;a pas accès aux dossiers
+          d&apos;adhésion.
+        </p>
+        <p>
+          {club.email ? (
+            <>
+              Contact général :{" "}
+              <a href={`mailto:${club.email}`}>{club.email}</a>
+              <br />
+            </>
+          ) : null}
+          {club.technicalEmail ? (
+            <>
+              Contact technique du site :{" "}
+              <a href={`mailto:${club.technicalEmail}`}>
+                {club.technicalEmail}
+              </a>
+            </>
+          ) : null}
+        </p>
+      </LegalSection>
+
       <LegalSection title="Directeur de la publication">
         <p>
           {publicationDirector
