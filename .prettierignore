@@ -1,0 +1,5 @@
+# Gabarit de signature e-mail : il est fait pour etre copie tel quel dans
+# l'editeur d'un webmail. Prettier y reecrit les guillemets simples en entites
+# et eclate chaque style en ligne sur vingt lignes — le bloc devient illisible
+# a copier sans que le rendu y gagne quoi que ce soit.
+docs/signature-email.html
