@@ -1,5 +1,6 @@
 import { getActivities } from "@/features/activities/data-access/activities";
 import { getClubInfo } from "@/features/club/data-access/club";
+import { isInactiveContactEmail } from "@/features/contact/lib/contactMaintenance";
 import { CLUB_RECIPIENT_SLUG } from "@/features/contact/lib/resolveContactRecipient";
 import type { ContactFormRecipient } from "@/features/contact/components/ContactForm/ContactForm";
 
@@ -10,7 +11,9 @@ import type { ContactFormRecipient } from "@/features/contact/components/Contact
  * Le club vient en premier et sert de choix par defaut : qui arrive sur
  * /contact sans savoir quelle section joindre doit pouvoir ecrire sans
  * choisir. Une section sans contact declare est ecartee, la route ne saurait
- * pas ou livrer le message.
+ * pas ou livrer le message ; une section dont la boite n'est pas ouverte
+ * l'est aussi, plutot que de la proposer et refuser le message une fois
+ * ecrit.
  */
 export const getContactRecipients = (): ContactFormRecipient[] => [
   {
@@ -18,6 +21,10 @@ export const getContactRecipients = (): ContactFormRecipient[] => [
     label: `${getClubInfo().shortName} — question générale`,
   },
   ...getActivities()
-    .filter((activity) => activity.contacts.length > 0)
+    .filter(
+      (activity) =>
+        activity.contacts.length > 0 &&
+        !isInactiveContactEmail(activity.contacts[0].email),
+    )
     .map((activity) => ({ slug: activity.slug, label: activity.title })),
 ];

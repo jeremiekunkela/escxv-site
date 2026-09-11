@@ -20,6 +20,7 @@ import {
   readString,
 } from "@/features/contact/lib/parseContactRequest";
 import {
+  isInactiveRecipientSlug,
   isKnownRecipientSlug,
   resolveContactRecipient,
 } from "@/features/contact/lib/resolveContactRecipient";
@@ -42,6 +43,9 @@ const UNAVAILABLE_MESSAGE =
  */
 const unavailableMessage = () =>
   IS_CONTACT_MAINTENANCE ? CONTACT_MAINTENANCE_TEXT : UNAVAILABLE_MESSAGE;
+
+const INACTIVE_RECIPIENT_MESSAGE =
+  "La boîte de cette section n'est pas encore ouverte : son formulaire est désactivé le temps de l'activation. Écrivez au club, qui transmettra.";
 
 const GENERIC_ERROR_MESSAGE =
   "L'envoi a échoué. Réessayez dans un instant ou écrivez directement à la section.";
@@ -112,6 +116,18 @@ export const POST = async (request: Request) => {
     return NextResponse.json(
       { error: parsed.violations[0], violations: parsed.violations },
       { status: 400 },
+    );
+  }
+
+  /**
+   * La page de la section n'affiche pas le formulaire quand sa boite est
+   * fermee, mais la route reste publique : sans ce refus, un envoi direct
+   * partirait vers une adresse qui ne rend meme pas d'erreur.
+   */
+  if (isInactiveRecipientSlug(parsed.value.recipientSlug)) {
+    return NextResponse.json(
+      { error: INACTIVE_RECIPIENT_MESSAGE },
+      { status: 503 },
     );
   }
 
