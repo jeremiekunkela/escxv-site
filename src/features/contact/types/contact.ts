@@ -33,12 +33,6 @@ export type ContactRequest = {
   phone: string | null;
   subject: ContactSubject;
   message: string;
-  /**
-   * Le visiteur accepte-t-il que ce message parte au club si la boite de la
-   * section le refuse ? Le choix ne vaut que pour cet envoi : rien ne le
-   * retient, ni pour la section, ni pour ses messages suivants.
-   */
-  allowFallback: boolean;
 };
 
 /**
@@ -50,6 +44,13 @@ export type ContactRequest = {
 export type ContactRecipient = {
   email: string;
   label: string;
+  /**
+   * Adresse que le message visait, quand sa boite n'est pas encore ouverte et
+   * qu'il part au club a la place. Le nom de la section reste dans le libelle
+   * — c'est elle que le visiteur voulait joindre, et c'est a elle que le
+   * secretariat transmettra.
+   */
+  reroutedFrom: string | null;
 };
 
 /** Message tel qu'il part, une fois le destinataire resolu. */
@@ -75,7 +76,6 @@ export type ContactMessage = {
  */
 export type ContactMessageMetadata = {
   recipientSlug: string;
-  allowFallback: boolean;
   deliveryType: ContactDeliveryType;
 };
 

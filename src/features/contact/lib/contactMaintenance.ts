@@ -56,22 +56,20 @@ export const isInactiveContactEmail = (email: string) =>
 export const INACTIVE_CONTACT_TITLE = "Adresse en cours d'activation";
 
 /**
- * Le texte nomme l'adresse morte : sans cela, une section qui en a deux
+ * Le texte nomme l'adresse fermee : sans cela, une section qui en a deux
  * laisse croire que les deux sont coupees, ou que la bonne l'est aussi.
  *
- * Quand le formulaire tombe avec elle, le visiteur a besoin d'une porte de
- * sortie — l'adresse du club, qui transmet. Quand une autre adresse de la
- * section reste vive, il suffit de le dire : la page la montre deja.
+ * Il dit aussi ou va le message. Le formulaire reste ouvert — le serveur
+ * deroute vers le club ce qui visait une boite fermee — mais ecrire soi-meme
+ * a l'adresse fermee ne mene toujours nulle part : c'est cette difference que
+ * le visiteur doit lire.
  */
 export const buildInactiveContactText = ({
   inactiveEmails,
-  isRecipientInactive,
   isFormAvailable,
   clubEmail,
 }: {
   inactiveEmails: readonly string[];
-  /** L'adresse fermee est-elle celle a qui le formulaire ecrit ? */
-  isRecipientInactive: boolean;
   isFormAvailable: boolean;
   clubEmail: string | null;
 }) => {
@@ -82,21 +80,11 @@ export const buildInactiveContactText = ({
   const undelivered = isPlural
     ? " : les messages qui leur sont adressés n'arrivent pas"
     : " : les messages qui lui sont adressés n'arrivent pas";
-  /**
-   * Le formulaire peut manquer pour une tout autre raison que cette adresse.
-   * Ne lui imputer que ce qui lui revient : sinon le mot explique une absence
-   * par une cause fausse, et l'adresse passera pour ouverte quand elle le sera
-   * sans que le formulaire revienne.
-   */
-  const consequence = isRecipientInactive
-    ? ", et le formulaire de cette section est désactivé le temps de l'ouverture."
-    : isFormAvailable
-      ? ". Passez par le formulaire ou par l'autre adresse de la section."
-      : ". Utilisez l'autre adresse de la section.";
-  const fallback =
-    isRecipientInactive && clubEmail
-      ? ` En attendant, écrivez au club à ${clubEmail}, qui transmettra à la section.`
-      : "";
+  const guidance = isFormAvailable
+    ? ". Utilisez le formulaire : votre message sera reçu par le secrétariat du club, qui le transmettra à la section."
+    : clubEmail
+      ? `. Écrivez au club à ${clubEmail}, qui transmettra à la section.`
+      : ".";
 
-  return `${subject}${undelivered}${consequence}${fallback}`;
+  return `${subject}${undelivered}${guidance}`;
 };

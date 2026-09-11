@@ -32,7 +32,6 @@ export const buildContactMessage = (
   replyTo: request.email,
   metadata: {
     recipientSlug: request.recipientSlug,
-    allowFallback: request.allowFallback,
     deliveryType: "primary",
   },
   subject: `[${recipient.label}] ${SUBJECT_LABELS[request.subject]} — ${request.name}`,
@@ -47,8 +46,16 @@ export const buildContactMessage = (
     siteName: new URL(siteUrl).host,
     logoUrl: `${siteUrl}/escxv-logo.png`,
     clubName: getClubInfo().shortName,
+    reroutedFrom: recipient.reroutedFrom,
   }),
   text: [
+    ...(recipient.reroutedFrom
+      ? [
+          `Ce message visait ${recipient.reroutedFrom}, dont la boîte n'est pas encore ouverte.`,
+          "Le visiteur a accepté qu'il soit traité par le secrétariat du club.",
+          "",
+        ]
+      : []),
     `Nom : ${request.name}`,
     `Email : ${request.email}`,
     `Téléphone : ${request.phone ?? "non communiqué"}`,
