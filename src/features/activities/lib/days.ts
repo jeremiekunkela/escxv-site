@@ -32,6 +32,14 @@ export function formatDayShort(day: DayOfWeek) {
 }
 
 /**
+ * Nom entier du jour : un filtre se lit, la ou un resume de creneau se
+ * parcourt. « Mer. » economise une ligne dans une carte, pas dans un bouton.
+ */
+export function formatDay(day: DayOfWeek) {
+  return `${day.charAt(0).toUpperCase()}${day.slice(1)}`;
+}
+
+/**
  * Jours distincts couverts par des creneaux, dans l'ordre de la semaine.
  * Sert a resumer un rythme sans detailler les horaires.
  */

@@ -39,83 +39,100 @@
 .searchInput {
   width: 100%;
   border: 0;
-  outline: 0;
   background: transparent;
   color: var(--color-text-primary);
   font-size: var(--font-size-sm);
 }
 
-.filterGroup {
-  display: grid;
-  gap: 10px;
+/*
+ * L'anneau global de focus se superposait au halo de la barre, qui signale
+ * deja l'etat : deux cadres l'un dans l'autre. On garde celui de la barre,
+ * jamais on ne retire les deux.
+ */
+.searchInput:focus-visible {
+  outline: none;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm) var(--space-md);
   padding-top: var(--space-sm);
   border-top: 1px solid var(--color-border);
 }
 
-.filterLabel {
-  margin: 0;
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.filters {
+.menus {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
 }
 
-.filterButton {
-  min-height: 40px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
-  background: var(--color-surface);
-  color: var(--color-text-secondary);
-  padding: 0 var(--space-sm);
-  cursor: pointer;
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  transition:
-    border-color var(--transition-standard),
-    background var(--transition-standard),
-    color var(--transition-standard),
-    box-shadow var(--transition-standard),
-    transform var(--transition-standard);
-}
-
-.filterButton:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-border-strong);
-  color: var(--color-brand);
-}
-
-.filterButtonActive {
-  border-color: var(--color-brand);
-  background: linear-gradient(
-    135deg,
-    var(--color-brand),
-    var(--color-brand-bright)
-  );
-  color: var(--color-text-inverse);
-  box-shadow: 0 8px 25px rgba(var(--color-brand-rgb), 0.25);
-}
-
 .resultCount {
-  margin: var(--space-md) 0 0;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 0;
   color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
 }
 
+/* Le chiffre est ce qui change : il porte l'echelle et la couleur de marque. */
+.resultNumber {
+  color: var(--color-brand);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  animation: countPop var(--transition-standard) both;
+}
+
+@keyframes countPop {
+  from {
+    transform: scale(0.72);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.activeFilters {
+  margin-top: var(--space-md);
+}
+
+/* Aucun filtre coche : pas d'etiquettes, donc pas d'espace reserve non plus. */
+.activeFilters:empty {
+  display: none;
+}
+
 .list {
-  margin-top: var(--space-sm);
+  margin-top: var(--space-md);
   display: grid;
   gap: 20px;
 }
 
+/*
+ * La liste se recompose sous l'oeil au lieu de sauter d'un etat a l'autre :
+ * c'est le seul moment ou le registre bouge, et le mouvement dit qu'il a
+ * repondu au filtre.
+ */
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
 .card {
+  animation: cardIn var(--transition-smooth) var(--card-delay, 0ms) both;
   display: grid;
   grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
   overflow: hidden;
@@ -263,29 +280,6 @@
   padding: 28px 32px;
 }
 
-.city {
-  display: flex;
-  align-items: center;
-  gap: var(--space-xs);
-  margin: 0;
-  color: var(--color-brand);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-}
-
-.typeTag {
-  margin-left: auto;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
-  background: var(--color-surface);
-  padding: 3px 10px;
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
 .title {
   margin: 0;
   color: var(--color-text-primary);
@@ -425,6 +419,14 @@
 .resetButton:hover {
   background: var(--color-brand);
   color: var(--color-text-inverse);
+}
+
+@media (max-width: 640px) {
+  .menus {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
 }
 
 @media (max-width: 820px) {

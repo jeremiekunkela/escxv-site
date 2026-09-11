@@ -318,11 +318,11 @@
       "cardio"
     ],
     "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1400&q=80",
-    "registrationUrl": "https://escxv.monclub.app/app/61786ce31422050021e61a39",
+    "registrationUrl": "https://escxv.monclub.app/app/624ef2f0a97bce00285cf16e",
     "content": {
       "heroSubtitle": "Loisir ou compétition, en simple et en double, à la salle Keller.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
-      "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
+      "contactText": "Écrivez à la section pour toute question sur l'inscription ou le choix du groupe."
     },
     "programs": [
       {
@@ -330,14 +330,14 @@
         "practiceGroupIds": [
           "bad-loisir"
         ],
-        "description": "Pratique libre en simple ou en double, pour jouer régulièrement dans une ambiance conviviale."
+        "description": "Pratique libre en simple ou en double, pour jouer régulièrement dans une ambiance conviviale. Nous ne fournissons pas les raquettes ni les volants. Nous ne proposons pas de séance d'essai. Les séances sont ouvertes aux débutants."
       },
       {
         "title": "Groupe compétition",
         "practiceGroupIds": [
           "bad-competition"
         ],
-        "description": "Entraînement encadré par un moniteur pour progresser techniquement et aborder la compétition."
+        "description": "Pratique en jeu libre pour des personnes plus confirmée (niveau démarrant à P10) avec la possibilité de participer aux compétitions par équipe. Pour ce groupe merci de nous contacter par mail (cf section contact ci-dessous)."
       }
     ],
     "practiceGroups": [
@@ -395,8 +395,7 @@
         "day": "mardi",
         "startTime": "20:30",
         "endTime": "22:30",
-        "tags": [],
-        "notes": "Séance avec moniteur."
+        "tags": []
       },
       {
         "id": "bad-comp-vendredi",
@@ -420,22 +419,18 @@
         "extraFees": []
       },
       {
-        "id": "badminton-2026-2027-competition-sans-licence",
+        "id": "badminton-2026-2027-competition",
         "season": "2026/2027",
-        "label": "Badminton - Compétition (sans licence FFBad)",
+        "label": "Badminton - Compétition",
         "clubFee": 75,
         "activityFee": 145,
         "total": 220,
-        "extraFees": []
-      },
-      {
-        "id": "badminton-2026-2027-competition",
-        "season": "2026/2027",
-        "label": "Badminton - Compétition (avec licence FFBad)",
-        "clubFee": 75,
-        "activityFee": 195,
-        "total": 270,
-        "extraFees": []
+        "extraFees": [
+          {
+            "label": "Licence FFBad optionnelle",
+            "amount": 50
+          }
+        ]
       }
     ],
     "contacts": [
@@ -762,7 +757,7 @@
       "endurance",
       "sorties"
     ],
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1400&q=80",
+    "image": "https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?auto=format&fit=crop&w=1400&q=80",
     "registrationUrl": "https://escxv.monclub.app/app/6245a1ce34e001002139579a",
     "content": {
       "heroSubtitle": "Trois séances par semaine, du débutant au coureur confirmé : piste, fractionné et renforcement musculaire.",
@@ -1937,8 +1932,8 @@
     "title": "Judo",
     "shortName": "Judo",
     "icon": "🥋",
-    "shortDescription": "Discipline, respect, technique et progression par ceintures.",
-    "description": "Le judo combine apprentissage technique, progression individuelle et cadre collectif structurant.",
+    "shortDescription": "Un judo familial et ambitieux, du premier cours à la compétition.",
+    "description": "Un judo familial et ambitieux : apprentissage technique, progression par ceintures et ouverture à la compétition, dans une ambiance bienveillante.",
     "category": [
       "arts-martiaux"
     ],
@@ -1954,7 +1949,7 @@
     "image": "/images/activities/judo.jpg",
     "registrationUrl": "https://escxv.monclub.app/app/6245a33e5168680028df2e8a",
     "content": {
-      "heroSubtitle": "Judo jeunes de 4 à 17 ans, à La Plaine et à Cambronne.",
+      "heroSubtitle": "Judo de 4 à 17 ans à La Plaine et à Cambronne, encadré par un ancien judoka international diplômé du BPJEPS.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
@@ -1964,14 +1959,14 @@
         "practiceGroupIds": [
           "judo-5-8"
         ],
-        "description": "Découverte du judo, motricité, chutes et premiers automatismes dans un cadre sécurisant."
+        "description": "Découverte du judo, motricité, chutes et premiers automatismes dans un cadre sécurisant et bienveillant."
       },
       {
         "title": "Judo jeunes - progression",
         "practiceGroupIds": [
           "judo-8-13"
         ],
-        "description": "Apprentissage technique, progression par ceintures et initiation à la compétition."
+        "description": "Apprentissage technique et progression par ceintures, du judo loisir à la préparation des compétitions."
       }
     ],
     "practiceGroups": [

@@ -96,6 +96,11 @@ function sortSports(sports: InstallationSport[]) {
  * Index inverse espace -> sports : pour chaque installation du registre, les
  * sports pratiques dans chacun de ses espaces. Le lieu agrege les sports de
  * ses espaces, il ne les declare pas.
+ *
+ * Les espaces ou le club ne pratique pas sont ecartes : le registre decrit
+ * l'equipement municipal entier, le site ne parle que du club. La Plaine a une
+ * salle de boxe et une piscine ou aucune section ne va — les afficher, ou les
+ * rendre trouvables, promettrait une boxe qui n'existe pas ici.
  */
 export function getInstallations(): Installation[] {
   const sportsBySpaceId = allActivities.reduce((index, activity) => {
@@ -106,10 +111,12 @@ export function getInstallations(): Installation[] {
   }, new Map<string, InstallationSport[]>());
 
   return allLocations.map((location) => {
-    const spaces = (location.spaces ?? []).map((space) => ({
-      ...space,
-      sports: sortSports(sportsBySpaceId.get(space.id) ?? []),
-    }));
+    const spaces = (location.spaces ?? [])
+      .map((space) => ({
+        ...space,
+        sports: sortSports(sportsBySpaceId.get(space.id) ?? []),
+      }))
+      .filter((space) => space.sports.length > 0);
 
     return {
       ...location,

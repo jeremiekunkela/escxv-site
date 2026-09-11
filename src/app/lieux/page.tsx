@@ -1,18 +1,33 @@
 import type { Metadata } from "next";
+import { routes } from "@/lib/constants/routes";
 import { HeroSection } from "@/components/shared/HeroSection/HeroSection";
 import { InstallationsExplorer } from "@/features/activities/components/InstallationsExplorer/InstallationsExplorer";
 import { getInstallations } from "@/features/activities/data-access/activities";
+import { JsonLd } from "@/components/shared/JsonLd/JsonLd";
+import { getClubInfo } from "@/features/club/data-access/club";
+import {
+  buildBreadcrumbSchema,
+  buildInstallationsSchema,
+} from "@/lib/seo/structuredData";
 
 const installations = getInstallations();
 
 export const metadata: Metadata = {
   title: "Lieux de pratique",
   description: `Les ${installations.length} gymnases, stades et piscines où s'entraînent les sections de l'ESCXV, avec les sports pratiqués sur chaque site.`,
+  alternates: { canonical: routes.locations },
 };
 
 export default function LieuxPage() {
   return (
     <>
+      <JsonLd data={buildInstallationsSchema(installations, routes.locations)} />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: getClubInfo().shortName, path: routes.home },
+          { name: "Lieux de pratique", path: routes.locations },
+        ])}
+      />
       <HeroSection
         eyebrow="Lieux de pratique"
         title="Où pratiquer à l'ESCXV"

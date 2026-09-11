@@ -1,9 +1,14 @@
 import Image from "next/image";
-import { MapPin } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button/Button";
 import type { CSSProperties } from "react";
 import type { ActivityPracticeLocation } from "@/features/activities/types/activity";
-import { getActivityLocationAnchorId } from "@/features/activities/lib/activityRoutes";
+import {
+  getActivityLocationAnchorHref,
+  getActivityLocationAnchorId,
+} from "@/features/activities/lib/activityRoutes";
+import { routes } from "@/lib/constants/routes";
 import styles from "./ActivityLocationCards.module.css";
 
 type ActivityLocationCardsProps = {
@@ -66,6 +71,19 @@ export function ActivityLocationCards({
               <p className={styles.address}>
                 {location.address}, {location.postalCode} {location.city}
               </p>
+
+              {/*
+               * La fiche complete du lieu — ses espaces, les autres sections
+               * qui s'y entrainent — vit sur la page Lieux. L'ancre existait
+               * des deux cotes, rien ne la suivait.
+               */}
+              <Link
+                href={`${routes.locations}${getActivityLocationAnchorHref(location.id)}`}
+                className={styles.locationLink}
+              >
+                Voir le lieu et ses équipements
+                <ArrowRight aria-hidden="true" size={16} />
+              </Link>
               {location.mapEmbedUrl ? (
                 <div className={styles.mapEmbed}>
                   <iframe
