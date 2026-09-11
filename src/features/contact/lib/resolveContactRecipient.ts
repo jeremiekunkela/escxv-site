@@ -1,6 +1,7 @@
 import { getActivityBySlug } from "@/features/activities/data-access/activities";
 import { getClubInfo } from "@/features/club/data-access/club";
 import { resolveRecipientOverrideEmail } from "@/features/contact/lib/contactEnvironment";
+import { isInactiveContactEmail } from "@/features/contact/lib/contactMaintenance";
 import { isSendableEmail } from "@/features/contact/lib/emailAddress";
 import type { ContactRecipient } from "@/features/contact/types/contact";
 
@@ -32,6 +33,18 @@ const findRecipient = (slug: string): ContactRecipient | null => {
   return activity && contact
     ? { email: contact.email, label: activity.title }
     : null;
+};
+
+/**
+ * La boite de la section est-elle encore fermee ? Le test porte sur l'adresse
+ * declaree, pas sur celle qui recevra : un destinataire force sert a eprouver
+ * le parcours, et le bloquer ici vaut mieux que laisser croire qu'une section
+ * injoignable repond.
+ */
+export const isInactiveRecipientSlug = (slug: string) => {
+  const recipient = findRecipient(slug);
+
+  return recipient !== null && isInactiveContactEmail(recipient.email);
 };
 
 /**
