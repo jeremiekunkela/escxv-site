@@ -8,8 +8,13 @@ type ActivityContactFormProps = {
   content: ActivityContent;
 };
 
+/**
+ * « Part vers », et non « arrive » : le site n'apprend le refus d'une boite
+ * que plus tard, par l'evenement de rebond. Promettre l'arrivee ferait de
+ * chaque echec un mensonge.
+ */
 const DEFAULT_FORM_TEXT =
-  "Votre message arrive directement dans la boîte de la section, qui vous répondra par email.";
+  "Votre message part directement vers la boîte de la section, qui vous répondra par email.";
 
 /**
  * Sur une page de section, la section est connue : le selecteur ne sert qu'a

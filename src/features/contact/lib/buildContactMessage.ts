@@ -30,6 +30,11 @@ export const buildContactMessage = (
 ): ContactMessage => ({
   to: recipient.email,
   replyTo: request.email,
+  metadata: {
+    recipientSlug: request.recipientSlug,
+    allowFallback: request.allowFallback,
+    deliveryType: "primary",
+  },
   subject: `[${recipient.label}] ${SUBJECT_LABELS[request.subject]} — ${request.name}`,
   html: renderContactEmailHtml({
     recipientLabel: recipient.label,

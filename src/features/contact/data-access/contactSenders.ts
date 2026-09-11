@@ -1,5 +1,8 @@
 import { Resend } from "resend";
-import type { SendContactMessage } from "@/features/contact/types/contact";
+import type {
+  ContactMessage,
+  SendContactMessage,
+} from "@/features/contact/types/contact";
 
 type ResendSenderConfig = {
   apiKey: string;
@@ -18,8 +21,19 @@ export const createConsoleSender = (): SendContactMessage => async (message) => 
     message,
   );
 
-  return { mode: "console" };
+  return { mode: "console", messageId: null };
 };
+
+/**
+ * Etiquettes Resend. Leurs valeurs n'acceptent que des lettres ASCII, des
+ * chiffres, `_` et `-` : les slugs et les booleens passent tels quels, et
+ * rien d'autre n'a besoin de voyager par la.
+ */
+const toResendTags = (metadata: ContactMessage["metadata"]) => [
+  { name: "recipient", value: metadata.recipientSlug },
+  { name: "allow_fallback", value: metadata.allowFallback ? "true" : "false" },
+  { name: "delivery_type", value: metadata.deliveryType },
+];
 
 /**
  * Adaptateur Resend. L'adresse `from` doit appartenir a un domaine verifie
@@ -29,13 +43,14 @@ export const createResendSender =
   (config: ResendSenderConfig): SendContactMessage =>
   async (message) => {
     const resend = new Resend(config.apiKey);
-    const { error } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: `${config.fromName} <${config.fromEmail}>`,
       to: [message.to],
       subject: message.subject,
       text: message.text,
       html: message.html,
       replyTo: message.replyTo,
+      tags: toResendTags(message.metadata),
     });
 
     if (error) {
@@ -49,5 +64,9 @@ export const createResendSender =
       throw new Error(`Resend a refuse l'envoi : ${error.name} — ${error.message}`);
     }
 
-    return { mode: "email" };
+    /**
+     * L'identifiant est la seule prise sur ce message une fois parti : c'est
+     * lui que portera l'evenement si la boite distante le refuse.
+     */
+    return { mode: "email", messageId: data?.id ?? null };
   };

@@ -120,3 +120,19 @@
     padding: 24px;
   }
 }
+
+.checkbox {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: flex-start;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-body);
+  cursor: pointer;
+}
+
+.checkbox input {
+  margin-top: 3px;
+  accent-color: var(--color-brand);
+  flex-shrink: 0;
+}

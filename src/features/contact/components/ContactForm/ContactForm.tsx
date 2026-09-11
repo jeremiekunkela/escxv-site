@@ -24,6 +24,11 @@ type ContactFormProps = {
 
 type SubmissionStatus = "idle" | "sending" | "sent" | "error";
 
+/**
+ * L'emetteur accuse reception, pas la boite du destinataire : celle-la peut
+ * encore refuser, des minutes plus tard. Le mot dit donc l'envoi, jamais
+ * l'arrivee.
+ */
 const SUCCESS_MESSAGE =
   "Message envoyé. Vous recevrez une réponse à l'adresse indiquée.";
 
@@ -86,6 +91,7 @@ export function ContactForm({
         phone: fields.get("phone"),
         subject: fields.get("subject"),
         message: fields.get("message"),
+        allowFallback: fields.get("allowFallback") === "on",
         website: fields.get("website"),
       }),
     }).catch(() => null);
@@ -189,6 +195,22 @@ export function ContactForm({
             maxLength={2000}
             required
           />
+        </label>
+
+        {/*
+          Cochee par defaut : le renvoi ne sort pas du club et sert le
+          visiteur, dont le message serait perdu sans lui. Qui ne veut ecrire
+          qu'a la section decoche — la case reste sous ses yeux, et son choix
+          ne vaut que pour cet envoi.
+        */}
+        <label className={styles.checkbox}>
+          <input type="checkbox" name="allowFallback" defaultChecked />
+          <span>
+            Si l&apos;adresse de la section est temporairement indisponible,
+            j&apos;accepte que mon message soit transmis à l&apos;adresse
+            générale de contact de l&apos;ESCXV afin qu&apos;il puisse être
+            traité.
+          </span>
         </label>
 
         {/* Champ leurre : hors ecran et hors tabulation, seuls les robots le remplissent. */}
