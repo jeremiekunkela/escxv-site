@@ -167,7 +167,6 @@ export const POST = async (request: Request) => {
       replyTo: visitorEmail,
       tags: [
         { name: "recipient", value: tags?.recipient ?? "inconnue" },
-        { name: "allow_fallback", value: "false" },
         { name: "delivery_type", value: "fallback" },
       ],
     },

@@ -3,10 +3,10 @@ import type { ContactDeliveryType } from "@/features/contact/types/contact";
 /**
  * Ce qu'un message rebondi peut encore devenir.
  *
- * Le renvoi n'est jamais un acquis : il tient a un consentement donne pour ce
- * message-la, et a la certitude qu'on parle bien du premier envoi. Le doute
- * ne se tranche pas en faveur du renvoi — un message qui part ou personne ne
- * l'attend vaut moins qu'une alerte a qui sait quoi en faire.
+ * Le renvoi n'est jamais un acquis : il tient a la certitude qu'on parle bien
+ * du premier envoi. Le doute ne se tranche pas en faveur du renvoi — un
+ * message qui part ou personne ne l'attend vaut moins qu'une alerte a qui
+ * sait quoi en faire.
  */
 export type BounceOutcome =
   { action: "fallback" } | { action: "alert-only"; reason: string };
@@ -50,13 +50,6 @@ export const decideBounceOutcome = ({
     return {
       action: "alert-only",
       reason: "message non identifie : pas d'etiquette d'envoi",
-    };
-  }
-
-  if (tags?.allow_fallback !== "true") {
-    return {
-      action: "alert-only",
-      reason: "le visiteur n'avait pas autorise le renvoi",
     };
   }
 

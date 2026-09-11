@@ -31,7 +31,6 @@ export const createConsoleSender = (): SendContactMessage => async (message) => 
  */
 const toResendTags = (metadata: ContactMessage["metadata"]) => [
   { name: "recipient", value: metadata.recipientSlug },
-  { name: "allow_fallback", value: metadata.allowFallback ? "true" : "false" },
   { name: "delivery_type", value: metadata.deliveryType },
 ];
 

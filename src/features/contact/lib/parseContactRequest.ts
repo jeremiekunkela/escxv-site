@@ -44,12 +44,6 @@ export const parseContactRequest = (
   const phone = readString(raw.phone);
   const message = readString(raw.message);
   const subject = SUBJECTS.find((candidate) => candidate === readString(raw.subject));
-  /**
-   * Case a cocher : seul un vrai booleen vaut acceptation. Une chaine, un 1 ou
-   * un champ absent valent refus — un consentement se donne, il ne se deduit
-   * pas d'une valeur approchante.
-   */
-  const allowFallback = raw.allowFallback === true;
 
   const violations = [
     recipientSlug.length === 0 && "Le destinataire est manquant.",
@@ -82,7 +76,6 @@ export const parseContactRequest = (
       phone: phone.length > 0 ? phone : null,
       subject,
       message,
-      allowFallback,
     },
   };
 };
