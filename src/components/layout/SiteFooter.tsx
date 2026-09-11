@@ -78,12 +78,23 @@ export function SiteFooter() {
         <p className={styles.copyright}>
           © {new Date().getFullYear()} {footer.club.shortName}
         </p>
-        <nav className={styles.legalLinks} aria-label="Informations légales">
+        <nav
+          className={styles.legalLinks}
+          aria-label="Informations légales et contact"
+        >
           {footer.legalLinks.map((item) => (
             <Link key={item.href} href={item.href} className={styles.legalLink}>
               {item.label}
             </Link>
           ))}
+          {footer.club.technicalEmail ? (
+            <a
+              href={`mailto:${footer.club.technicalEmail}`}
+              className={styles.legalLink}
+            >
+              Signaler un problème sur le site
+            </a>
+          ) : null}
         </nav>
       </Container>
     </footer>

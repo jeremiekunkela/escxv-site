@@ -66,6 +66,7 @@ export function getFooterContent(): FooterContent {
       city: club.city,
       arrondissement: club.arrondissement,
       email: club.email,
+      technicalEmail: club.technicalEmail,
       description: club.description,
     },
     mainLinks: footerLinks,
