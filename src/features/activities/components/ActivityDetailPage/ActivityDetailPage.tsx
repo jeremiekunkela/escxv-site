@@ -14,11 +14,15 @@ import { ActivityScheduleCards } from "@/features/activities/components/Activity
 import { ActivitySocialLinks } from "@/features/activities/components/ActivitySocialLinks/ActivitySocialLinks";
 // `ActivityTrainerCards` removed — trainers section retired
 import { getActivityFacts } from "@/features/activities/lib/activityFacts";
+import { getClubInfo } from "@/features/club/data-access/club";
 import { isContactFormEnabled } from "@/features/contact/lib/contactEnvironment";
 import {
+  buildInactiveContactText,
   CONTACT_MAINTENANCE_TEXT,
   CONTACT_MAINTENANCE_TITLE,
+  INACTIVE_CONTACT_TITLE,
   IS_CONTACT_MAINTENANCE,
+  isInactiveContactEmail,
 } from "@/features/contact/lib/contactMaintenance";
 import type { Activity } from "@/features/activities/types/activity";
 import { NewsList } from "@/features/news/components/NewsList/NewsList";
@@ -102,7 +106,18 @@ export function ActivityDetailPage({
   const socialLinks = activity.socialLinks ?? [];
   const hasSocialLinks = socialLinks.length > 0;
   const hasContactChannels = hasContacts || hasSocialLinks;
-  const showContactForm = hasContacts && isContactFormEnabled();
+  /**
+   * Le formulaire ecrit a la premiere adresse de la section. Fermee, elle
+   * emporte le formulaire avec elle : mieux vaut pas de champ qu'un champ qui
+   * avale un message.
+   */
+  const inactiveEmails = activity.contacts
+    .map((contact) => contact.email)
+    .filter(isInactiveContactEmail);
+  const isRecipientInactive =
+    hasContacts && isInactiveContactEmail(activity.contacts[0].email);
+  const showContactForm =
+    hasContacts && !isRecipientInactive && isContactFormEnabled();
   /**
    * Le formulaire disparait sans rien dire quand l'envoi n'est pas configure :
    * la page garde alors les adresses, qui suffisent. Pendant la maintenance on
@@ -111,6 +126,19 @@ export function ActivityDetailPage({
    */
   const showMaintenanceNotice =
     IS_CONTACT_MAINTENANCE && !showContactForm && hasContacts;
+  /**
+   * Une adresse fermee se signale meme quand le formulaire tient : la section
+   * en affiche parfois deux, et rien ne distingue a l'oeil celle qui recoit.
+   */
+  const inactiveContactText =
+    !showMaintenanceNotice && inactiveEmails.length > 0
+      ? buildInactiveContactText({
+          inactiveEmails,
+          isRecipientInactive,
+          isFormAvailable: showContactForm,
+          clubEmail: getClubInfo().email,
+        })
+      : null;
   const schedulesNoticeText = getContentOrFallback(
     content.schedulesNoticeText,
     "Les horaires seront communiqués par la section dès qu'ils seront confirmés.",
@@ -278,6 +306,11 @@ export function ActivityDetailPage({
                 {hasContacts ? (
                   <ContactBlocks contacts={activity.contacts} />
                 ) : null}
+                {inactiveContactText && showContactForm ? (
+                  <InfoBlock title={INACTIVE_CONTACT_TITLE}>
+                    {inactiveContactText}
+                  </InfoBlock>
+                ) : null}
                 {hasSocialLinks ? (
                   <ActivitySocialLinks socialLinks={socialLinks} />
                 ) : null}
@@ -291,6 +324,10 @@ export function ActivityDetailPage({
               ) : showMaintenanceNotice ? (
                 <InfoBlock title={CONTACT_MAINTENANCE_TITLE}>
                   {CONTACT_MAINTENANCE_TEXT}
+                </InfoBlock>
+              ) : inactiveContactText ? (
+                <InfoBlock title={INACTIVE_CONTACT_TITLE}>
+                  {inactiveContactText}
                 </InfoBlock>
               ) : null}
             </div>
