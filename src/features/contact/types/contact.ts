@@ -37,8 +37,6 @@ export type ContactRequest = {
 export type ContactRecipient = {
   email: string;
   label: string;
-  /** Adresses en copie, declarees par environnement. Souvent vide. */
-  copyEmails: string[];
 };
 
 /** Message tel qu'il part, une fois le destinataire resolu. */
@@ -46,7 +44,6 @@ export type ContactMessage = {
   to: string;
   replyTo: string;
   subject: string;
-  copyEmails: string[];
   /** Repli des clients en texte seul, et seul corps affiche par la console. */
   text: string;
   html: string;

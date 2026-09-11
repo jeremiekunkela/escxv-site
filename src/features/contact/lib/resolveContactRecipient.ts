@@ -1,9 +1,6 @@
 import { getActivityBySlug } from "@/features/activities/data-access/activities";
 import { getClubInfo } from "@/features/club/data-access/club";
-import {
-  resolveRecipientCopyEmails,
-  resolveRecipientOverrideEmail,
-} from "@/features/contact/lib/contactEnvironment";
+import { resolveRecipientOverrideEmail } from "@/features/contact/lib/contactEnvironment";
 import { isSendableEmail } from "@/features/contact/lib/emailAddress";
 import type { ContactRecipient } from "@/features/contact/types/contact";
 
@@ -26,16 +23,14 @@ const findRecipient = (slug: string): ContactRecipient | null => {
   const club = getClubInfo();
 
   if (slug === CLUB_RECIPIENT_SLUG) {
-    return club.email
-      ? { email: club.email, label: club.shortName, copyEmails: [] }
-      : null;
+    return club.email ? { email: club.email, label: club.shortName } : null;
   }
 
   const activity = getActivityBySlug(slug);
   const contact = activity?.contacts[0];
 
   return activity && contact
-    ? { email: contact.email, label: activity.title, copyEmails: [] }
+    ? { email: contact.email, label: activity.title }
     : null;
 };
 
@@ -63,15 +58,6 @@ export const resolveContactRecipient = (
     ? (recipientOverrideEmail ?? recipient.email)
     : null;
   /**
-   * Un destinataire force sert a ne pas ecrire aux vraies boites : les copies
-   * tombent avec lui, sinon le test arriverait quand meme chez les personnes
-   * qu'il s'agissait d'epargner.
-   */
-  const copyEmails = recipientOverrideEmail
-    ? []
-    : resolveRecipientCopyEmails(slug);
-
-  /**
    * Une adresse de section mal saisie est une erreur de donnees, pas une
    * erreur du visiteur : on refuse avant d'appeler l'emetteur, et le journal
    * la nomme pour qu'elle soit corrigee.
@@ -95,10 +81,7 @@ export const resolveContactRecipient = (
         ? "club"
         : "section",
     recipient: email ? maskEmail(email) : null,
-    copyCount: copyEmails.length,
   });
 
-  return recipient && email && isDeliverable
-    ? { ...recipient, email, copyEmails }
-    : null;
+  return recipient && email && isDeliverable ? { ...recipient, email } : null;
 };
