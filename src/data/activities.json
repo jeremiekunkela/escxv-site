@@ -1932,8 +1932,8 @@
     "title": "Judo",
     "shortName": "Judo",
     "icon": "🥋",
-    "shortDescription": "Discipline, respect, technique et progression par ceintures.",
-    "description": "Le judo combine apprentissage technique, progression individuelle et cadre collectif structurant.",
+    "shortDescription": "Un judo familial et ambitieux, du premier cours à la compétition.",
+    "description": "Un judo familial et ambitieux : apprentissage technique, progression par ceintures et ouverture à la compétition, dans une ambiance bienveillante.",
     "category": [
       "arts-martiaux"
     ],
@@ -1949,7 +1949,7 @@
     "image": "/images/activities/judo.jpg",
     "registrationUrl": "https://escxv.monclub.app/app/6245a33e5168680028df2e8a",
     "content": {
-      "heroSubtitle": "Judo jeunes de 4 à 17 ans, à La Plaine et à Cambronne.",
+      "heroSubtitle": "Judo de 4 à 17 ans à La Plaine et à Cambronne, encadré par un ancien judoka international diplômé du BPJEPS.",
       "schedulesNoticeText": "Les créneaux affichés correspondent à la saison 2026/2027 et restent à confirmer auprès de la section.",
       "contactText": "Écrivez à la section pour toute question sur l'inscription, la séance d'essai ou le choix du groupe."
     },
@@ -1959,14 +1959,14 @@
         "practiceGroupIds": [
           "judo-5-8"
         ],
-        "description": "Découverte du judo, motricité, chutes et premiers automatismes dans un cadre sécurisant."
+        "description": "Découverte du judo, motricité, chutes et premiers automatismes dans un cadre sécurisant et bienveillant."
       },
       {
         "title": "Judo jeunes - progression",
         "practiceGroupIds": [
           "judo-8-13"
         ],
-        "description": "Apprentissage technique, progression par ceintures et initiation à la compétition."
+        "description": "Apprentissage technique et progression par ceintures, du judo loisir à la préparation des compétitions."
       }
     ],
     "practiceGroups": [
