@@ -1,7 +1,17 @@
 import type {
   ActivityCategory,
-  LocationType,
+  ActivityPublic,
 } from "@/features/activities/types/activity";
+
+/**
+ * « Jeunes » plutot qu'« Adolescents » : c'est le mot des familles et des
+ * sections. Le code garde le terme du modele, l'ecran garde le leur.
+ */
+export const publicLabels: Record<ActivityPublic, string> = {
+  enfants: "Enfants",
+  adolescents: "Jeunes",
+  adultes: "Adultes",
+};
 
 export const categoryLabels: Record<ActivityCategory, string> = {
   "arts-martiaux": "Arts martiaux",
@@ -12,13 +22,4 @@ export const categoryLabels: Record<ActivityCategory, string> = {
   escalade: "Escalade",
   forme: "Forme & sante",
   raquette: "Raquette",
-};
-
-export const locationTypeLabels: Record<LocationType, string> = {
-  "centre-sportif": "Centre sportif",
-  gymnase: "Gymnase",
-  stade: "Stade",
-  piscine: "Piscine",
-  salle: "Salle",
-  exterieur: "Exterieur",
 };

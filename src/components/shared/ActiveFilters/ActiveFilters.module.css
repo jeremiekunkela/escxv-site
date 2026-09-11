@@ -1,0 +1,75 @@
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.chip {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(
+    135deg,
+    var(--color-brand),
+    var(--color-brand-bright)
+  );
+  color: var(--color-text-inverse);
+  padding: 0 12px 0 14px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: 0 6px 18px rgba(var(--color-brand-rgb), 0.22);
+  /* Chaque etiquette arrive a son tour : la barre se remplit, elle n'apparait pas. */
+  animation: chipIn var(--transition-smooth) var(--chip-delay, 0ms) both;
+  transition:
+    transform var(--transition-standard),
+    box-shadow var(--transition-standard);
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(var(--color-brand-rgb), 0.3);
+}
+
+.chip svg {
+  opacity: 0.75;
+  transition: opacity var(--transition-standard);
+}
+
+.chip:hover svg {
+  opacity: 1;
+}
+
+.clearAll {
+  border: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  padding: 0 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-standard);
+}
+
+.clearAll:hover {
+  color: var(--color-brand);
+}
+
+@keyframes chipIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
