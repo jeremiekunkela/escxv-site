@@ -1,0 +1,93 @@
+<!--
+  ============================================================================
+  Signature e-mail ESCXV — gabarit
+  ============================================================================
+
+  Variables a remplacer (garder les accolades nulle part dans le rendu final) :
+
+    {{firstName}}   Prenom                          ex. Camille
+    {{lastName}}    Nom                             ex. Durand
+    {{role}}        Fonction                        ex. Responsable de section
+    {{sectionName}} Section — ligne optionnelle     ex. Badminton
+    {{phone}}       Telephone affiche               ex. 01 23 45 67 89
+    {{phoneRaw}}    Telephone au format tel:        ex. +33123456789
+    {{email}}       Adresse e-mail                  ex. badminton@esc15.fr
+    {{logoUrl}}     URL ABSOLUE du logo             https://www.esc15.fr/escxv-logo.png
+    {{siteUrl}}     URL du site                     https://www.esc15.fr
+
+  Le logo doit etre servi par une URL publique : une image jointe ou un
+  fichier local n'est pas rendu chez le destinataire. Le fichier du depot est
+  `public/escxv-logo.png`, donc `https://<domaine-du-site>/escxv-logo.png`.
+
+  Les blocs entre <!-- OPTIONNEL --> se suppriment en entier quand la donnee
+  n'existe pas. Ce commentaire d'en-tete se supprime avant de coller.
+  ============================================================================
+-->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;background-color:#ffffff;border:1px solid #ebebeb;border-radius:16px;max-width:560px;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <tr>
+    <td style="padding:20px 24px 16px 24px;">
+
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+        <tr>
+          <!-- Logo : 560x445 se simplifie en 112x89, le seul entier au ratio exact -->
+          <td valign="top" width="112" style="width:112px;padding:0 20px 0 0;">
+            <a href="{{siteUrl}}" style="text-decoration:none;">
+              <img src="{{logoUrl}}" width="112" height="89" alt="ESCXV" style="display:block;width:112px;height:auto;max-width:112px;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" />
+            </a>
+          </td>
+
+          <!-- Filet vert : le rappel de l'UI du site -->
+          <td valign="top" style="border-left:2px solid #1c392e;padding:2px 0 2px 20px;">
+
+            <div style="margin:0 0 2px 0;font-size:17px;line-height:24px;mso-line-height-rule:exactly;font-weight:700;letter-spacing:-0.2px;color:#1c392e;">
+              {{firstName}} {{lastName}}
+            </div>
+
+            <div style="margin:0 0 12px 0;font-size:13px;line-height:20px;mso-line-height-rule:exactly;font-weight:600;color:#2f6350;">
+              {{role}}
+              <!-- OPTIONNEL : retirer le separateur et la section si elle n'existe pas -->
+              &nbsp;·&nbsp; Section {{sectionName}}
+              <!-- /OPTIONNEL -->
+            </div>
+
+            <div style="margin:0 0 2px 0;font-size:14px;line-height:22px;mso-line-height-rule:exactly;font-weight:600;color:#1a202c;">
+              ESCXV
+            </div>
+
+            <div style="margin:0 0 10px 0;font-size:13px;line-height:20px;mso-line-height-rule:exactly;color:#64748b;">
+              Évolution Sportive et Culturelle du XV<sup style="font-size:9px;line-height:0;">e</sup><br />
+              124 avenue Émile Zola, 75015 Paris
+            </div>
+
+            <!-- OPTIONNEL : ligne telephone -->
+            <div style="margin:0 0 2px 0;font-size:13px;line-height:20px;mso-line-height-rule:exactly;color:#64748b;">
+              <a href="tel:{{phoneRaw}}" style="color:#64748b;text-decoration:none;">{{phone}}</a>
+            </div>
+            <!-- /OPTIONNEL -->
+
+            <div style="margin:0;font-size:13px;line-height:20px;mso-line-height-rule:exactly;color:#1c392e;">
+              <a href="mailto:{{email}}" style="color:#1c392e;text-decoration:none;font-weight:600;">{{email}}</a>
+              &nbsp;·&nbsp;
+              <a href="{{siteUrl}}" style="color:#1c392e;text-decoration:none;font-weight:600;">esc15.fr</a>
+            </div>
+
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+
+  <!-- Pied : baseline du club, sur un filet clair -->
+  <tr>
+    <td style="padding:0 24px 18px 24px;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;width:100%;">
+        <tr>
+          <td style="border-top:1px solid #ebebeb;padding:12px 0 0 0;font-size:12px;line-height:18px;mso-line-height-rule:exactly;color:#94a3b8;">
+            Le Sport et la Culture pour Toutes et Tous à Paris depuis 1910.
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
