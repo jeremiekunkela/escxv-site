@@ -54,9 +54,7 @@ export default function ContactPage() {
                 title={
                   contactFormEnabled
                     ? "Un message, un destinataire"
-                    : IS_CONTACT_MAINTENANCE
-                      ? "Nous écrire, bientôt de nouveau"
-                      : "Écrire au club"
+                    : "Écrire au club"
                 }
               />
             </div>

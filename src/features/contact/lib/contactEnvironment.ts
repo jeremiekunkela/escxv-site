@@ -74,7 +74,7 @@ export const resolveContactSender = (): SendContactMessage | null => {
 /**
  * Interrupteur des formulaires. `CONTACT_FORM_ENABLED=false` les coupe : les
  * pages basculent sur les adresses email et la route refuse de servir, sans
- * redeploiement de code. La maintenance de la messagerie les coupe de meme,
+ * redeploiement de code. La maintenance du formulaire le coupe de meme,
  * depuis le code cette fois — cf. contactMaintenance.
  *
  * Un formulaire ne s'affiche de toute facon que si l'envoi est configure —

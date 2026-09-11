@@ -37,8 +37,8 @@ const UNAVAILABLE_MESSAGE =
   "Le formulaire est momentanément indisponible. Écrivez directement à la section.";
 
 /**
- * Un envoi force pendant la maintenance recoit la raison plutot que le renvoi
- * vers l'adresse de section : elle ne recoit rien non plus.
+ * Un envoi force pendant la maintenance recoit la raison de la coupure : les
+ * deux messages renvoient vers l'adresse de section, qui elle recoit.
  */
 const unavailableMessage = () =>
   IS_CONTACT_MAINTENANCE ? CONTACT_MAINTENANCE_TEXT : UNAVAILABLE_MESSAGE;
