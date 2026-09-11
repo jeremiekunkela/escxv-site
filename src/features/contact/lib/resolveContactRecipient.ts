@@ -1,4 +1,7 @@
-import { getActivityBySlug } from "@/features/activities/data-access/activities";
+import {
+  getActivities,
+  getActivityBySlug,
+} from "@/features/activities/data-access/activities";
 import { getClubInfo } from "@/features/club/data-access/club";
 import { resolveRecipientOverrideEmail } from "@/features/contact/lib/contactEnvironment";
 import { isInactiveContactEmail } from "@/features/contact/lib/contactMaintenance";
@@ -19,12 +22,38 @@ const maskEmail = (email: string) => {
   return domain.length > 0 ? `${localPreview}***@${domain}` : "***";
 };
 
-/** Destinataire nomme par le slug, avant application d'un eventuel override. */
+/**
+ * Contact designe par son identifiant, ou il est declare. Les identifiants
+ * sont uniques d'une section a l'autre, la recherche n'a donc pas besoin de
+ * savoir de quelle section il s'agit.
+ */
+const findActivityContact = (contactId: string) =>
+  getActivities()
+    .flatMap((activity) =>
+      activity.contacts.map((contact) => ({ activity, contact })),
+    )
+    .find(({ contact }) => contact.id === contactId) ?? null;
+
+/**
+ * Destinataire nomme par le slug, avant application d'un eventuel override.
+ *
+ * Trois formes, de la plus precise a la plus ancienne : le club, un contact
+ * nomme — une section en declare parfois deux, et le visiteur a choisi — puis
+ * un slug de section, qui retombe sur son premier contact. Cette derniere
+ * forme sert les pages ouvertes avant que le choix ne porte sur le contact :
+ * leur envoi arrive encore quelque part plutot que d'echouer.
+ */
 const findRecipient = (slug: string): ContactRecipient | null => {
   const club = getClubInfo();
 
   if (slug === CLUB_RECIPIENT_SLUG) {
     return club.email ? { email: club.email, label: club.shortName } : null;
+  }
+
+  const named = findActivityContact(slug);
+
+  if (named) {
+    return { email: named.contact.email, label: named.activity.title };
   }
 
   const activity = getActivityBySlug(slug);
