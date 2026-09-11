@@ -3,10 +3,15 @@ import { getActivities } from "@/features/activities/data-access/activities";
 import { NewsExplorer } from "@/features/news/components/NewsExplorer/NewsExplorer";
 import { getPublishedNews } from "@/features/news/data-access/news";
 import type { Metadata } from "next";
+import { routes } from "@/lib/constants/routes";
+import { JsonLd } from "@/components/shared/JsonLd/JsonLd";
+import { getClubInfo } from "@/features/club/data-access/club";
+import { buildBreadcrumbSchema } from "@/lib/seo/structuredData";
 
 export const metadata: Metadata = {
   title: "Actualités",
   description: "Les dernières actualités publiées par l'ESCXV et ses sections.",
+  alternates: { canonical: routes.news },
 };
 
 export default function NewsPage() {                                                   
@@ -17,6 +22,12 @@ export default function NewsPage() {
 
   return (
     <>
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: getClubInfo().shortName, path: routes.home },
+          { name: "Actualités", path: routes.news },
+        ])}
+      />
       <HeroSection
         eyebrow="Actualités"
         title="Les nouvelles du club et des sections"

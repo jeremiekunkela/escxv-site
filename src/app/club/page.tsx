@@ -10,6 +10,8 @@ import { ClubPresentation } from "@/features/club/components/ClubPresentation/Cl
 import { getClubInfo } from "@/features/club/data-access/club";
 import { getGovernance } from "@/features/club/data-access/governance";
 import { routes } from "@/lib/constants/routes";
+import { JsonLd } from "@/components/shared/JsonLd/JsonLd";
+import { buildBreadcrumbSchema } from "@/lib/seo/structuredData";
 import styles from "./page.module.css";
 
 const installationCount = getLocations().length;
@@ -21,6 +23,7 @@ export const metadata: Metadata = {
   title: "Le club",
   description:
     "Présentation de l'ESCXV, comité directeur et ressources de prévention VHSS.",
+  alternates: { canonical: routes.club },
 };
 
 const navLinks = [
@@ -36,6 +39,12 @@ export default function ClubPage() {
 
   return (
     <>
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: getClubInfo().shortName, path: routes.home },
+          { name: "Le club", path: routes.club },
+        ])}
+      />
       <HeroSection
         eyebrow="Le club"
         title="L'ESCXV, association sportive depuis 1910"

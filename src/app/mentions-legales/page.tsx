@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { routes } from "@/lib/constants/routes";
 import {
   LegalPage,
   LegalSection,
@@ -12,6 +13,7 @@ const publicationDirector = getPublicationDirector();
 export const metadata: Metadata = {
   title: "Mentions légales",
   description: `Éditeur, directeur de la publication et hébergeur du site de ${club.shortName}.`,
+  alternates: { canonical: routes.legalNotice },
 };
 
 export default function MentionsLegalesPage() {
