@@ -15,6 +15,7 @@ import { ActivitySocialLinks } from "@/features/activities/components/ActivitySo
 // `ActivityTrainerCards` removed — trainers section retired
 import { getActivityFacts } from "@/features/activities/lib/activityFacts";
 import { getClubInfo } from "@/features/club/data-access/club";
+import { getReachableContacts } from "@/features/contact/data-access/contactRecipients";
 import { isContactFormEnabled } from "@/features/contact/lib/contactEnvironment";
 import {
   buildInactiveContactText,
@@ -107,17 +108,17 @@ export function ActivityDetailPage({
   const hasSocialLinks = socialLinks.length > 0;
   const hasContactChannels = hasContacts || hasSocialLinks;
   /**
-   * Le formulaire ecrit a la premiere adresse de la section. Fermee, elle
-   * emporte le formulaire avec elle : mieux vaut pas de champ qu'un champ qui
-   * avale un message.
+   * Le formulaire ecrit au contact choisi. Toutes boites fermees, il n'a plus
+   * personne a qui ecrire et disparait : mieux vaut pas de champ qu'un champ
+   * qui avale un message.
    */
+  const reachableContacts = getReachableContacts(activity);
   const inactiveEmails = activity.contacts
     .map((contact) => contact.email)
     .filter(isInactiveContactEmail);
-  const isRecipientInactive =
-    hasContacts && isInactiveContactEmail(activity.contacts[0].email);
+  const isRecipientInactive = hasContacts && reachableContacts.length === 0;
   const showContactForm =
-    hasContacts && !isRecipientInactive && isContactFormEnabled();
+    reachableContacts.length > 0 && isContactFormEnabled();
   /**
    * Le formulaire disparait sans rien dire quand l'envoi n'est pas configure :
    * la page garde alors les adresses, qui suffisent. Pendant la maintenance on
@@ -317,8 +318,7 @@ export function ActivityDetailPage({
               </div>
               {showContactForm ? (
                 <ActivityContactForm
-                  activitySlug={activity.slug}
-                  activityTitle={activity.title}
+                  contacts={reachableContacts}
                   content={activity.content}
                 />
               ) : showMaintenanceNotice ? (

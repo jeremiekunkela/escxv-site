@@ -1,9 +1,10 @@
 import { ContactForm } from "@/features/contact/components/ContactForm/ContactForm";
+import type { ActivityContact } from "@/features/activities/types/activity";
 import type { ActivityContent } from "@/features/activities/types/activity";
 
 type ActivityContactFormProps = {
-  activitySlug: string;
-  activityTitle: string;
+  /** Contacts joignables de la section, dans l'ordre ou elle les declare. */
+  contacts: ActivityContact[];
   content: ActivityContent;
 };
 
@@ -11,13 +12,17 @@ const DEFAULT_FORM_TEXT =
   "Votre message arrive directement dans la boîte de la section, qui vous répondra par email.";
 
 /**
- * Sur une page de section, le destinataire est connu : pas de selecteur, le
- * visiteur a deja choisi en arrivant ici. Seul le formulaire general de
- * /contact laisse choisir.
+ * Sur une page de section, la section est connue : le selecteur ne sert qu'a
+ * departager ses contacts, quand elle en declare plusieurs — l'escalade
+ * adultes et l'atelier parent-enfant, par exemple. Un seul contact, il
+ * disparait : le visiteur a deja choisi en arrivant ici.
+ *
+ * Le libelle reprend le role du contact, celui-la meme qui coiffe sa carte a
+ * cote du formulaire : le visiteur retrouve dans la liste ce qu'il vient de
+ * lire. Le nom de la section n'y figure pas, la page entiere le porte.
  */
 export function ActivityContactForm({
-  activitySlug,
-  activityTitle,
+  contacts,
   content,
 }: ActivityContactFormProps) {
   const contactFormText =
@@ -27,7 +32,11 @@ export function ActivityContactForm({
 
   return (
     <ContactForm
-      recipients={[{ slug: activitySlug, label: activityTitle }]}
+      recipients={contacts.map((contact) => ({
+        slug: contact.id,
+        label: contact.role,
+      }))}
+      defaultRecipientSlug={contacts[0]?.id}
       title="Envoyer un message"
       description={contactFormText}
     />
