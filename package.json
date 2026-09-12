@@ -32,5 +32,8 @@
     "postcss": "latest",
     "typescript": "latest",
     "vitest": "^5.0.0"
+  },
+  "allowScripts": {
+    "unrs-resolver@1.11.1": true
   }
 }
