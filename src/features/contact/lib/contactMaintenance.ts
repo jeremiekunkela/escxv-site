@@ -37,14 +37,11 @@ export const CONTACT_MAINTENANCE_SHORT_TEXT =
  */
 const INACTIVE_CONTACT_EMAILS = [
   "capoeira@esc15.fr",
-  "escalade-ape@esc15.fr",
   "football@esc15.fr",
   "michel.blino@esc15.fr",
   "tennis-competition@esc15.fr",
   "tennis@esc15.fr",
   "vincent.kieffer@esc15.fr",
-  "volley@esc15.fr",
-  "yoga@esc15.fr",
 ] as const;
 
 const inactiveContactEmails = new Set<string>(INACTIVE_CONTACT_EMAILS);
