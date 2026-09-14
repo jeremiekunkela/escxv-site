@@ -37,7 +37,6 @@ export const CONTACT_MAINTENANCE_SHORT_TEXT =
  */
 const INACTIVE_CONTACT_EMAILS = [
   "capoeira@esc15.fr",
-  "football@esc15.fr",
   "michel.blino@esc15.fr",
   "tennis-competition@esc15.fr",
   "tennis@esc15.fr",
